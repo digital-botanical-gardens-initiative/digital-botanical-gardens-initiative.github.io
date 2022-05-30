@@ -1,9 +1,9 @@
 {
-  "name": "Hugo Minimal Theme",
-  "short_name": "Hugo Minimal Theme",
+  "name": "Wowchemy Research Group",
+  "short_name": "Wowchemy Research Group",
   "lang": "en-us",
-  "theme_color": "#bbdefb",
-  "background_color": "#bbdefb",
+  "theme_color": "#1565c0",
+  "background_color": "#1565c0",
   "icons": [{
     "src": "/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_192x192_fill_lanczos_center_3.png",
     "sizes": "192x192",
