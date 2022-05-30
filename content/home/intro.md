@@ -20,7 +20,7 @@ design:
     color: black
     # gradient_start: DarkGreen
     # gradient_end: ForestGreen
-    image: dbgi_metasequoia # Name of image in `static/media/`.
+    image: dbgi_metasequoia.jpeg # Name of image in `static/media/`.
     image_darken: 0.4
     image_size: cover
     image_position: right
