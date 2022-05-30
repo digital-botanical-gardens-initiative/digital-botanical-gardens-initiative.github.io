@@ -3,8 +3,8 @@
 # Hugo Documentation: https://gohugo.io/getting-started/configuration/#all-configuration-settings
 # This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
 
-title: Hugo Minimal Theme # Website name
-baseURL: 'https://digital-botanical-gardens-initiative.io/' # Website URL
+title: Wowchemy Research Group # Website name
+baseURL: 'https://example.com/' # Website URL
 
 ############################
 ## LANGUAGE
@@ -21,8 +21,8 @@ removePathAccents: true
 
 module:
   imports:
+    - path: github.com/wowchemy/wowchemy-hugo-modules/wowchemy-cms/v5
     - path: github.com/wowchemy/wowchemy-hugo-modules/wowchemy/v5
-#    - path: github.com/wowchemy/wowchemy-hugo-modules/wowchemy-cms/v5
 
 ############################
 ## ADVANCED
@@ -39,6 +39,7 @@ permalinks:
   authors: '/author/:slug/'
   tags: '/tag/:slug/'
   categories: '/category/:slug/'
+  publication_types: '/publication-type/:slug/'
 disableAliases: true
 outputs:
   home: [HTML, RSS, JSON, WebAppManifest, headers, redirects]
@@ -51,6 +52,7 @@ timeout: 600000
 taxonomies:
   tag: tags
   category: categories
+  publication_type: publication_types
   author: authors
 markup:
   _merge: deep

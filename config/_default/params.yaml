@@ -6,8 +6,8 @@
 # Appearance
 
 appearance:
-  theme_day:
-  theme_night: minimal
+  theme_day: minimal
+  theme_night:
   font: native
   font_size: L
 
@@ -15,10 +15,10 @@ appearance:
 
 marketing:
   seo:
-    site_type: Person
+    site_type: Organization
     local_business_type: ''
     org_name: ''
-    description: 'A highly-customizable Hugo minimal theme powered by Wowchemy website builder.'
+    description: 'A highly-customizable Hugo research group theme powered by Wowchemy website builder.'
     twitter: 'wowchemy'
   analytics:
     google_analytics: ''
@@ -31,13 +31,15 @@ marketing:
 
 header:
   navbar:
-    enable: false
+    enable: true
     align: r
-    show_logo: false
+    show_logo: true
     show_language: false
     show_day_night: true
     show_search: true
     highlight_active_link: false
+
+# Site footer
 
 footer:
   copyright:
@@ -53,6 +55,7 @@ footer:
 locale:
   date_format: 'Jan 2, 2006'
   time_format: '3:04 PM'
+  address_format: en-us
 
 # Site features
 
@@ -88,13 +91,21 @@ features:
       index_name: ''
       show_logo: false
   map:
-    provider: ''
+    provider: 'mapnik'
     api_key: ''
     zoom: 15
+
+# Extensions
 
 extensions:
   cms:
     branch: main
     local_backend: false
   academicons:
-    enable: false
+    enable: true
+
+# Citation style
+
+publications:
+  date_format: January 2006
+  citation_style: apa
