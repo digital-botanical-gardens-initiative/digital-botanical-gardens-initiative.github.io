@@ -4,7 +4,7 @@
 # This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
 
 title: Hugo Minimal Theme # Website name
-baseURL: 'https://digital-botanical-gardens-initiative.io' # Website URL
+baseURL: 'https://digital-botanical-gardens-initiative.io/' # Website URL
 
 ############################
 ## LANGUAGE
