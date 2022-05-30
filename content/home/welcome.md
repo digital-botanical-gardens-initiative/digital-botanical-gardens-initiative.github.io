@@ -9,7 +9,7 @@ weight: 10 # Order that this section will appear.
 title: |
   Wowchemy  
   Research Group
-hero_media: welcome.jpg
+hero_media: dbgi_metasequoia.jpeg
 design:
   # Choose how many columns the section has. Valid values: 1 or 2.
   columns: '1'
