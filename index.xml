@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>The DBGI</title>
-    <link>https://digital-botanical-gardens-initiative.github.io/</link>
-      <atom:link href="https://digital-botanical-gardens-initiative.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://www.dbgi.org/</link>
+      <atom:link href="https://www.dbgi.org/index.xml" rel="self" type="application/rss+xml" />
     <description>The DBGI</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sat, 01 Jun 2030 13:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://digital-botanical-gardens-initiative.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
+      <url>https://www.dbgi.org/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
       <title>The DBGI</title>
-      <link>https://digital-botanical-gardens-initiative.github.io/</link>
+      <link>https://www.dbgi.org/</link>
     </image>
     
     <item>
       <title>Example Event</title>
-      <link>https://digital-botanical-gardens-initiative.github.io/event/example/</link>
+      <link>https://www.dbgi.org/event/example/</link>
       <pubDate>Sat, 01 Jun 2030 13:00:00 +0000</pubDate>
-      <guid>https://digital-botanical-gardens-initiative.github.io/event/example/</guid>
+      <guid>https://www.dbgi.org/event/example/</guid>
       <description>&lt;p&gt;Slides can be added in a few ways:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Create&lt;/strong&gt; slides using Wowchemy&amp;rsquo;s &lt;a href=&#34;https://wowchemy.com/docs/managing-content/#create-slides&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;em&gt;Slides&lt;/em&gt;&lt;/a&gt; feature and link using &lt;code&gt;slides&lt;/code&gt; parameter in the front matter of the talk file&lt;/li&gt;
@@ -29,9 +29,9 @@
     
     <item>
       <title>Jian Yang and Monica Hall Win the Best Paper Award at Wowchemy 2020</title>
-      <link>https://digital-botanical-gardens-initiative.github.io/post/20-12-02-icml-best-paper/</link>
+      <link>https://www.dbgi.org/post/20-12-02-icml-best-paper/</link>
       <pubDate>Wed, 02 Dec 2020 00:00:00 +0000</pubDate>
-      <guid>https://digital-botanical-gardens-initiative.github.io/post/20-12-02-icml-best-paper/</guid>
+      <guid>https://www.dbgi.org/post/20-12-02-icml-best-paper/</guid>
       <description>&lt;p&gt;Congratulations to Jian Yang and Monica Hall for winning the Best Paper Award at the 2020 Conference on Wowchemy for their paper “Learning Wowchemy”.&lt;/p&gt;
 &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tempus augue non tempor egestas. Proin nisl nunc, dignissim in accumsan dapibus, auctor ullamcorper neque. Quisque at elit felis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aenean eget elementum odio. Cras interdum eget risus sit amet aliquet. In volutpat, nisl ut fringilla dignissim, arcu nisl suscipit ante, at accumsan sapien nisl eu eros.&lt;/p&gt;
 &lt;p&gt;Sed eu dui nec ligula bibendum dapibus. Nullam imperdiet auctor tortor, vel cursus mauris malesuada non. Quisque ultrices euismod dapibus. Aenean sed gravida risus. Sed nisi tortor, vulputate nec quam non, placerat porta nisl. Nunc varius lobortis urna, condimentum facilisis ipsum molestie eu. Ut molestie eleifend ligula sed dignissim. Duis ut tellus turpis. Praesent tincidunt, nunc sed congue malesuada, mauris enim maximus massa, eget interdum turpis urna et ante. Morbi sem nisl, cursus quis mollis et, interdum luctus augue. Aliquam laoreet, leo et accumsan tincidunt, libero neque aliquet lectus, a ultricies lorem mi a orci.&lt;/p&gt;
@@ -40,9 +40,9 @@
     
     <item>
       <title>Richard Hendricks Wins First Place in the Wowchemy Prize</title>
-      <link>https://digital-botanical-gardens-initiative.github.io/post/20-12-01-wowchemy-prize/</link>
+      <link>https://www.dbgi.org/post/20-12-01-wowchemy-prize/</link>
       <pubDate>Tue, 01 Dec 2020 00:00:00 +0000</pubDate>
-      <guid>https://digital-botanical-gardens-initiative.github.io/post/20-12-01-wowchemy-prize/</guid>
+      <guid>https://www.dbgi.org/post/20-12-01-wowchemy-prize/</guid>
       <description>&lt;p&gt;Congratulations to Richard Hendricks for winning first place in the Wowchemy Prize.&lt;/p&gt;
 &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tempus augue non tempor egestas. Proin nisl nunc, dignissim in accumsan dapibus, auctor ullamcorper neque. Quisque at elit felis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aenean eget elementum odio. Cras interdum eget risus sit amet aliquet. In volutpat, nisl ut fringilla dignissim, arcu nisl suscipit ante, at accumsan sapien nisl eu eros.&lt;/p&gt;
 &lt;p&gt;Sed eu dui nec ligula bibendum dapibus. Nullam imperdiet auctor tortor, vel cursus mauris malesuada non. Quisque ultrices euismod dapibus. Aenean sed gravida risus. Sed nisi tortor, vulputate nec quam non, placerat porta nisl. Nunc varius lobortis urna, condimentum facilisis ipsum molestie eu. Ut molestie eleifend ligula sed dignissim. Duis ut tellus turpis. Praesent tincidunt, nunc sed congue malesuada, mauris enim maximus massa, eget interdum turpis urna et ante. Morbi sem nisl, cursus quis mollis et, interdum luctus augue. Aliquam laoreet, leo et accumsan tincidunt, libero neque aliquet lectus, a ultricies lorem mi a orci.&lt;/p&gt;
@@ -51,18 +51,18 @@
     
     <item>
       <title>An example preprint / working paper</title>
-      <link>https://digital-botanical-gardens-initiative.github.io/publication/preprint/</link>
+      <link>https://www.dbgi.org/publication/preprint/</link>
       <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
-      <guid>https://digital-botanical-gardens-initiative.github.io/publication/preprint/</guid>
+      <guid>https://www.dbgi.org/publication/preprint/</guid>
       <description>&lt;p&gt;Supplementary notes can be added here, including &lt;a href=&#34;https://wowchemy.com/docs/content/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;code and math&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>An example journal article</title>
-      <link>https://digital-botanical-gardens-initiative.github.io/publication/journal-article/</link>
+      <link>https://www.dbgi.org/publication/journal-article/</link>
       <pubDate>Tue, 01 Sep 2015 00:00:00 +0000</pubDate>
-      <guid>https://digital-botanical-gardens-initiative.github.io/publication/journal-article/</guid>
+      <guid>https://www.dbgi.org/publication/journal-article/</guid>
       <description>&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
@@ -74,9 +74,9 @@
     
     <item>
       <title>An example conference paper</title>
-      <link>https://digital-botanical-gardens-initiative.github.io/publication/conference-paper/</link>
+      <link>https://www.dbgi.org/publication/conference-paper/</link>
       <pubDate>Mon, 01 Jul 2013 00:00:00 +0000</pubDate>
-      <guid>https://digital-botanical-gardens-initiative.github.io/publication/conference-paper/</guid>
+      <guid>https://www.dbgi.org/publication/conference-paper/</guid>
       <description>&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
@@ -88,33 +88,33 @@
     
     <item>
       <title></title>
-      <link>https://digital-botanical-gardens-initiative.github.io/admin/config.yml</link>
+      <link>https://www.dbgi.org/admin/config.yml</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://digital-botanical-gardens-initiative.github.io/admin/config.yml</guid>
+      <guid>https://www.dbgi.org/admin/config.yml</guid>
       <description></description>
     </item>
     
     <item>
       <title></title>
-      <link>https://digital-botanical-gardens-initiative.github.io/contact/</link>
+      <link>https://www.dbgi.org/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://digital-botanical-gardens-initiative.github.io/contact/</guid>
+      <guid>https://www.dbgi.org/contact/</guid>
       <description></description>
     </item>
     
     <item>
       <title></title>
-      <link>https://digital-botanical-gardens-initiative.github.io/people/</link>
+      <link>https://www.dbgi.org/people/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://digital-botanical-gardens-initiative.github.io/people/</guid>
+      <guid>https://www.dbgi.org/people/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Tour</title>
-      <link>https://digital-botanical-gardens-initiative.github.io/tour/</link>
+      <link>https://www.dbgi.org/tour/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://digital-botanical-gardens-initiative.github.io/tour/</guid>
+      <guid>https://www.dbgi.org/tour/</guid>
       <description></description>
     </item>
     
