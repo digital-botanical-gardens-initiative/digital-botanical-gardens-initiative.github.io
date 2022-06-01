@@ -4,7 +4,7 @@
 # This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
 
 title: The DBGI # Website name
-baseURL: 'https://digital-botanical-gardens-initiative.github.io/' # Website URL
+baseURL: 'www.dbgi.org' # Website URL
 
 ############################
 ## LANGUAGE
