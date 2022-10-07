@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gregor Kozlowski | The DBGI</title>
+    <link>https://www.dbgi.org/author/gregor-kozlowski/</link>
+      <atom:link href="https://www.dbgi.org/author/gregor-kozlowski/index.xml" rel="self" type="application/rss+xml" />
+    <description>Gregor Kozlowski</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language>
+    <image>
+      <url>https://www.dbgi.org/author/gregor-kozlowski/avatar_hu6a3e5c0e987c77b3327ce8646f6b75cd_71882_270x270_fill_q75_lanczos_center.jpg</url>
+      <title>Gregor Kozlowski</title>
+      <link>https://www.dbgi.org/author/gregor-kozlowski/</link>
+    </image>
+    
+  </channel>
+</rss>
