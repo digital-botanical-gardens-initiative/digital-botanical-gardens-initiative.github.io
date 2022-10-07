@@ -1,16 +1,16 @@
 ---
 # Display name
-title: "Emmanuel Defossez"
+title: "Blaise Mulhauser"
 
 # Username (this should match the folder name and the name on publications)
 authors:
-- "emmanuel-defossez"
+- "blaise-mulhauser"
 
 # Is this the primary user of the site?
-superuser: true
+superuser: false
 
 # Role/position (e.g., Professor of Artificial Intelligence)
-role: DBGI Initiator
+role:
 
 # Organizations/Affiliations
 organizations:
@@ -66,6 +66,6 @@ highlight_name: false
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-  - Researchers
-  - DBGI Consortium
+- Group 1
+- Group 2
 ---
