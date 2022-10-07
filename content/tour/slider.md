@@ -23,6 +23,11 @@ content:
         color: '#666'
         brightness: 0.7
         media: dbgi_metasequoia.jpeg
+      link:
+        icon: location-question
+        icon_pack: fas
+        text: Want to know more ?
+        url: ../contact/
     - title: Lunch & Learn ☕️
       content: 'Share your knowledge with the group and explore exciting new topics together!'
       align: left
