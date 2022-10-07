@@ -7,10 +7,10 @@ authors:
 - "emmanuel-defossez"
 
 # Is this the primary user of the site?
-superuser: false
+superuser: true
 
 # Role/position (e.g., Professor of Artificial Intelligence)
-role:
+role: DBGI Initiator
 
 # Organizations/Affiliations
 organizations:
