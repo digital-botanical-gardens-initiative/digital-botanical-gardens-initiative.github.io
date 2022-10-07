@@ -23,14 +23,6 @@ content:
         color: '#666'
         brightness: 0.7
         media: dbgi_metasequoia.jpeg
-    # - title: Lunch & Learn ☕️
-    #   content: 'Share your knowledge with the group and explore exciting new topics together!'
-    #   align: left
-    #   background:
-    #     position: center
-    #     color: '#555'
-    #     brightness: 0.7
-    #     media: contact.jpg
     - title: Who are we ?
       content: Meet the DBGI consortium !
       align: right
