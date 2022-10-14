@@ -46,6 +46,8 @@
   <url>
     <loc>https://www.dbgi.org/people/</loc><changefreq>weekly</changefreq></url>
   <url>
+    <loc>https://www.dbgi.org/about/</loc><changefreq>weekly</changefreq></url>
+  <url>
     <loc>https://www.dbgi.org/author/blaise-mulhauser/</loc><changefreq>weekly</changefreq></url>
   <url>
     <loc>https://www.dbgi.org/categories/</loc><changefreq>weekly</changefreq></url>
@@ -54,6 +56,4 @@
   <url>
     <loc>https://www.dbgi.org/author/gregor-kozlowski/</loc><changefreq>weekly</changefreq></url>
   <url>
-    <loc>https://www.dbgi.org/author/pierre-marie-allard/</loc><changefreq>weekly</changefreq></url>
-  <url>
-    <loc>https://www.dbgi.org/tour/</loc><changefreq>weekly</changefreq></url></urlset>
+    <loc>https://www.dbgi.org/author/pierre-marie-allard/</loc><changefreq>weekly</changefreq></url></urlset>
