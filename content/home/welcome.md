@@ -30,7 +30,7 @@ content:
         position: center
         color: '#333'
         brightness: 0.2
-        media: welcome.jpg
+        media: morning_garden.jpg
       link:
         icon: graduation-cap
         icon_pack: fas
