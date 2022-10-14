@@ -29,7 +29,7 @@ content:
       background:
         position: center
         color: '#333'
-        brightness: 0.2
+        brightness: 0.7
         media: morning_garden.jpg
       link:
         icon: graduation-cap
