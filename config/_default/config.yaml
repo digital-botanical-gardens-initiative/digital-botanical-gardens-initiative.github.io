@@ -3,7 +3,7 @@
 # Hugo Documentation: https://gohugo.io/getting-started/configuration/#all-configuration-settings
 # This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
 
-title: The DBGI # Website name
+title: The Digital Botanical Gardens Initiative # Website name
 baseURL: 'https://www.dbgi.org' # Website URL
 
 

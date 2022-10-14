@@ -15,7 +15,7 @@ design:
 
 content:
   slides:
-    - title: 👋 What is Digital Botanical Initiative ?
+    - title: 👋 What is Digital Botanical Gardens Initiative ?
       content: Take a look at what we're working on...
       align: center
       background:
