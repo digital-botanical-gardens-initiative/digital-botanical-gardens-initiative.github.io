@@ -23,6 +23,11 @@ content:
         color: '#666'
         brightness: 0.7
         media: dbgi_metasequoia.jpeg
+      link:
+        icon: graduation-cap
+        icon_pack: fas
+        text: Join Us
+        url: ../tour/
     - title: Who are we ?
       content: Meet the DBGI consortium !
       align: right
