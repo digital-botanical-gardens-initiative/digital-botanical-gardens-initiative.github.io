@@ -4,11 +4,39 @@
   
   
   <url>
+    <loc>https://www.dbgi.org/course/data-science/python/</loc><lastmod>2021-01-01T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
+  <url>
+    <loc>https://www.dbgi.org/course/robotics/python/</loc><lastmod>2021-01-01T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
+  <url>
+    <loc>https://www.dbgi.org/course/data-science/visualization/</loc><lastmod>2021-01-01T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
+  <url>
+    <loc>https://www.dbgi.org/course/robotics/visualization/</loc><lastmod>2021-01-01T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
+  <url>
+    <loc>https://www.dbgi.org/course/data-science/stats/</loc><lastmod>2021-01-01T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
+  <url>
+    <loc>https://www.dbgi.org/course/robotics/stats/</loc><lastmod>2021-01-01T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
+  <url>
     <loc>https://www.dbgi.org/event/example/</loc><lastmod>2030-06-01T13:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
   <url>
     <loc>https://www.dbgi.org/event/</loc><lastmod>2030-06-01T13:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
   <url>
     <loc>https://www.dbgi.org/</loc><lastmod>2030-06-01T13:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
+  <url>
+    <loc>https://www.dbgi.org/course/</loc><lastmod>2021-01-24T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
+  <url>
+    <loc>https://www.dbgi.org/tag/current/</loc><lastmod>2021-01-24T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
+  <url>
+    <loc>https://www.dbgi.org/course/data-science/</loc><lastmod>2021-01-24T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
+  <url>
+    <loc>https://www.dbgi.org/course/robotics/</loc><lastmod>2021-01-24T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
+  <url>
+    <loc>https://www.dbgi.org/tag/previous/</loc><lastmod>2021-01-24T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
+  <url>
+    <loc>https://www.dbgi.org/tags/</loc><lastmod>2021-01-24T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
+  <url>
+    <loc>https://www.dbgi.org/tag/data-visualization/</loc><lastmod>2021-01-01T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
+  <url>
+    <loc>https://www.dbgi.org/tag/statistics/</loc><lastmod>2021-01-01T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
   <url>
     <loc>https://www.dbgi.org/post/20-12-02-icml-best-paper/</loc><lastmod>2020-12-02T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
   <url>
@@ -29,8 +57,6 @@
     <loc>https://www.dbgi.org/publication/</loc><lastmod>2019-04-07T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
   <url>
     <loc>https://www.dbgi.org/tag/source-themes/</loc><lastmod>2019-04-07T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
-  <url>
-    <loc>https://www.dbgi.org/tags/</loc><lastmod>2019-04-07T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
   <url>
     <loc>https://www.dbgi.org/publication-type/2/</loc><lastmod>2015-09-01T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
   <url>
@@ -56,4 +82,6 @@
   <url>
     <loc>https://www.dbgi.org/author/gregor-kozlowski/</loc><changefreq>weekly</changefreq></url>
   <url>
-    <loc>https://www.dbgi.org/author/pierre-marie-allard/</loc><changefreq>weekly</changefreq></url></urlset>
+    <loc>https://www.dbgi.org/author/pierre-marie-allard/</loc><changefreq>weekly</changefreq></url>
+  <url>
+    <loc>https://www.dbgi.org/tag/preface/</loc><changefreq>weekly</changefreq></url></urlset>
