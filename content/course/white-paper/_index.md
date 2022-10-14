@@ -1,5 +1,5 @@
 ---
-title: 📊 DBGI White Paper
+title: 📄 DBGI White Paper 
 linkTitle: White paper
 summary: An example of using Wowchemy's Book layout for publishing online courses.
 date: '2021-01-24'
