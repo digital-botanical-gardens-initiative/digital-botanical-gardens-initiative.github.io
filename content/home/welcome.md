@@ -27,7 +27,7 @@ content:
         icon: graduation-cap
         icon_pack: fas
         text: Join Us
-        url: ../tour/
+        url: ../about/
     - title: Who are we ?
       content: Meet the DBGI consortium !
       align: right
