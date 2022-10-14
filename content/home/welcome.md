@@ -37,7 +37,4 @@ content:
         text: Join Us
         url: ../contact/
 
-      figure: 
-        src : "https://github.com/digital-botanical-gardens-initiative/taxonomical-preparator/blob/main/data/out/DBGI_tree.html" 
-       
 ---
