@@ -1,5 +1,5 @@
 ---
-title: 📚 Courses
+title: 📚 Research proposal
 type: page
 tags:
   - preface
