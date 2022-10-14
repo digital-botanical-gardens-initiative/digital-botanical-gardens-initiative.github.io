@@ -1,5 +1,6 @@
 ---
 title: Example Event
+active: false
 
 event: Wowchemy Conference
 event_url: https://example.org
