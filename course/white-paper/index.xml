@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>📊 DBGI White Paper | The Digital Botanical Gardens Initiative</title>
+    <title>📄 DBGI White Paper | The Digital Botanical Gardens Initiative</title>
     <link>https://www.dbgi.org/course/white-paper/</link>
       <atom:link href="https://www.dbgi.org/course/white-paper/index.xml" rel="self" type="application/rss+xml" />
-    <description>📊 DBGI White Paper</description>
+    <description>📄 DBGI White Paper</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 24 Jan 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://www.dbgi.org/course/white-paper/featured.jpg</url>
-      <title>📊 DBGI White Paper</title>
+      <title>📄 DBGI White Paper</title>
       <link>https://www.dbgi.org/course/white-paper/</link>
     </image>
     
