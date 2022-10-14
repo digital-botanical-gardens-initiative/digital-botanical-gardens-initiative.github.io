@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Recent &amp; Upcoming Events | The DBGI</title>
+    <title>Recent &amp; Upcoming Events | The Digital Botanical Gardens Initiative</title>
     <link>https://www.dbgi.org/event/</link>
       <atom:link href="https://www.dbgi.org/event/index.xml" rel="self" type="application/rss+xml" />
     <description>Recent &amp; Upcoming Events</description>
