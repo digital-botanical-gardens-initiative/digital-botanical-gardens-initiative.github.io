@@ -341,6 +341,14 @@ The variance of the distribution is $\sigma^{2}$.
     </item>
     
     <item>
+      <title>An example title</title>
+      <link>https://www.dbgi.org/page/</link>
+      <pubDate>Thu, 28 Jun 2018 00:00:00 +0000</pubDate>
+      <guid>https://www.dbgi.org/page/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>An example journal article</title>
       <link>https://www.dbgi.org/publication/journal-article/</link>
       <pubDate>Tue, 01 Sep 2015 00:00:00 +0000</pubDate>
