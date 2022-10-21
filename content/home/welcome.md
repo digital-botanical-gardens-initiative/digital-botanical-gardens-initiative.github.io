@@ -13,9 +13,6 @@ design:
   # Duration of transition between slides (in ms)
   interval: 2000
 
-appearance:
-  font_size: S
-
 content:
   slides:
     - title: 👋 What is Digital Botanical Gardens Initiative ?
