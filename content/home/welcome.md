@@ -24,10 +24,10 @@ content:
         brightness: 0.7
         media: dbgi_metasequoia.jpeg
       link:
-        icon: graduation-cap
+        icon: file
         icon_pack: fas
-        text: Join Us
-        url: ../about/
+        text: Read the DBGI White Paper
+        url: http://www.dbgi.org/dbgi-white-paper/
     - title: Who are we ?
       content: Meet the DBGI consortium !
       align: right
