@@ -14,7 +14,7 @@ design:
   interval: 2000
 
 appearance:
-  font_size: s
+  font_size: S
 
 content:
   slides:
