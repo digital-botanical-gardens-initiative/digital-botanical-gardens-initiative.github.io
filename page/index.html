@@ -623,6 +623,23 @@
     <div class="article-style">
       <p>ldfghjkdfohgid</p>
 <p>dfgdfgdfjhg</p>
+<p>And check this data  
+
+<div id="chart-725369148" class="chart"></div>
+<script>
+  (function() {
+    let a = setInterval( function() {
+      if ( typeof window.Plotly === 'undefined' ) {
+        return;
+      }
+      clearInterval( a );
+
+      Plotly.d3.json("./inat.json", function(chart) {
+        Plotly.plot('chart-725369148', chart.data, chart.layout, {responsive: true});
+      });
+    }, 500 );
+  })();
+</script></p>
 
     </div>
 
@@ -784,6 +801,8 @@
     
 
     
+    
+      <script src="https://cdn.jsdelivr.net/gh/plotly/plotly.js@v1.55.2/dist/plotly.min.js" integrity="sha512-gttPT9uTUiaLBj6XZdcB0ydKXiDaBwstInkN4Qvp1Nz3iwXNc8TTQplIEPIGxyJBDqERjwkKxf2OyO47/0EHbQ==" crossorigin="anonymous"></script>
     
 
     

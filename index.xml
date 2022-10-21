@@ -347,6 +347,23 @@ The variance of the distribution is $\sigma^{2}$.
       <guid>https://www.dbgi.org/page/</guid>
       <description>&lt;p&gt;ldfghjkdfohgid&lt;/p&gt;
 &lt;p&gt;dfgdfgdfjhg&lt;/p&gt;
+&lt;p&gt;And check this data  
+
+&lt;div id=&#34;chart-725369148&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
+&lt;script&gt;
+  (function() {
+    let a = setInterval( function() {
+      if ( typeof window.Plotly === &#39;undefined&#39; ) {
+        return;
+      }
+      clearInterval( a );
+
+      Plotly.d3.json(&#34;./inat.json&#34;, function(chart) {
+        Plotly.plot(&#39;chart-725369148&#39;, chart.data, chart.layout, {responsive: true});
+      });
+    }, 500 );
+  })();
+&lt;/script&gt;&lt;/p&gt;
 </description>
     </item>
     
