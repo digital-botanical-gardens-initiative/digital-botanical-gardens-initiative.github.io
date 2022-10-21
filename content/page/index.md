@@ -21,3 +21,4 @@ dfgdfgdfjhg
 
 
 And check this data  {{< chart data="inat" >}}
+And check this data  {{< chart data="DBGI_tree" >}}
