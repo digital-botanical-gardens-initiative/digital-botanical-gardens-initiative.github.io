@@ -29,8 +29,7 @@ content:
         text: Read the DBGI White Paper
         url: http://www.dbgi.org/dbgi-white-paper/
     - title: Who are we ?
-      content: Meet the DBGI consortium !
-      And check this data  {{< chart data="inat" >}}
+      content: Meet the DBGI consortium ! And check this data  {{< chart data="inat" >}}
       align: right
       background:
         position: center
