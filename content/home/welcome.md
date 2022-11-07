@@ -16,7 +16,7 @@ design:
 content:
   slides:
     - title: 👋 What is Digital Botanical Gardens Initiative ?
-      content: The Digital Botanical Gardens Initiative (DBGI) ambitions to explore innovative solutions for the collection, management and sharing of digital information acquired on living botanical collections. A particular focus will be placed on the large scale characterization of the chemodiversity of living plants collections through mass spectrometric approaches. The acquired data will be structured, organized and connected with relevant metadata through semantic web technology. The gathered knowledge will then inform ecosystem functioning research and orient biodiversity conservation projects. The DBGI initially aims to take advantage of the readily available living collections of Swiss botanical gardens to establish robust and scalable chemo- and biodiversity digitisation workflows. The ultimate goal is to apply these approaches in the field and at the global scale in wild ecosystems.
+      content: An Open Science initiative to explore and establish robust and scalable workflows for the digitization of chemo and biodiversity at a global scale in wild ecosystems.
       font_size: XS
       align: center
       background:
