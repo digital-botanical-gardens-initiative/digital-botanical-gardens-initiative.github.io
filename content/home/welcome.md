@@ -15,7 +15,7 @@ design:
 
 content:
   slides:
-    - title: 👋 What is Digital Botanical Gardens Initiative ?
+    - title: 🪴 What is the Digital Botanical Gardens Initiative ?
       content: An Open Science initiative to explore and establish robust and scalable workflows for the digitization of chemo and biodiversity at a global scale in wild ecosystems.
       font_size: XS
       align: center
@@ -29,7 +29,7 @@ content:
         icon_pack: fas
         text: Read the DBGI Green Paper
         url: http://www.dbgi.org/dbgi-green-paper/
-    - title: Who are we ?
+    - title: 👋 Who are we ?
       content: Meet the DBGI consortium !
       align: right
       background:
