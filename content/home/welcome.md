@@ -16,7 +16,7 @@ design:
 content:
   slides:
     - title: 🪴 What is the Digital Botanical Gardens Initiative ?
-      content: _An Open Science initiative to explore and establish robust and scalable workflows for the digitization of chemo and biodiversity at a global scale in wild ecosystems._
+      content: _An Open Science initiative to explore and establish robust and scalable workflows for the digitization of chemo- and biodiversity, at the global scale in wild ecosystems._
       font_size: XS
       align: center
       background:
@@ -38,9 +38,9 @@ content:
         brightness: 0.7
         media: morning_garden.jpg
       link:
-        icon: graduation-cap
+        icon: users
         icon_pack: fas
-        text: Join Us
-        url: ../contact/
+        text: The people
+        url: ../people/
 
 ---
