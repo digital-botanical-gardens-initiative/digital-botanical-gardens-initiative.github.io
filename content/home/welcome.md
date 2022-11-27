@@ -27,7 +27,7 @@ content:
       link:
         icon: file
         icon_pack: fas
-        text: Read the DBGI White Paper
+        text: Read the DBGI Green Paper
         url: http://www.dbgi.org/dbgi-green-paper/
     - title: Who are we ?
       content: Meet the DBGI consortium !
