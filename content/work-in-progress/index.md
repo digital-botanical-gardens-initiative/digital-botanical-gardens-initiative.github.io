@@ -26,6 +26,6 @@ Expect to find strange ideas, badly formulated text and poorly written code. How
 ## Code
 
 The code written in the frame of the DBGI is versioned and centralized under the following Github organization https://github.com/digital-botanical-gardens-initiative.
-Feel free to raise an issue on the corresponding repositories if you have any question, comment or suggestion on the code.
+Feel free to raise an issue on the corresponding repositories if you have any question, comment or suggestion on the code. We see this github organization as a place for everybody to learn ! We are looking forward for your inputs.
 
 
