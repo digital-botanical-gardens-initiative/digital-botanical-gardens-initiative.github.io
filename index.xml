@@ -349,7 +349,7 @@ The variance of the distribution is $\sigma^{2}$.
 &lt;p&gt;dfgdfgdfjhg&lt;/p&gt;
 &lt;p&gt;And check this data  
 
-&lt;div id=&#34;chart-649218753&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;chart-671983542&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
 &lt;script&gt;
   (function() {
     let a = setInterval( function() {
@@ -359,14 +359,14 @@ The variance of the distribution is $\sigma^{2}$.
       clearInterval( a );
 
       Plotly.d3.json(&#34;./inat.json&#34;, function(chart) {
-        Plotly.plot(&#39;chart-649218753&#39;, chart.data, chart.layout, {responsive: true});
+        Plotly.plot(&#39;chart-671983542&#39;, chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
 &lt;/script&gt;
 And check this data  
 
-&lt;div id=&#34;chart-853294716&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;chart-365912784&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
 &lt;script&gt;
   (function() {
     let a = setInterval( function() {
@@ -376,11 +376,27 @@ And check this data
       clearInterval( a );
 
       Plotly.d3.json(&#34;./DBGI_tree.json&#34;, function(chart) {
-        Plotly.plot(&#39;chart-853294716&#39;, chart.data, chart.layout, {responsive: true});
+        Plotly.plot(&#39;chart-365912784&#39;, chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
 &lt;/script&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>What are we working on now ?</title>
+      <link>https://www.dbgi.org/work-in-progress/</link>
+      <pubDate>Thu, 28 Jun 2018 00:00:00 +0000</pubDate>
+      <guid>https://www.dbgi.org/work-in-progress/</guid>
+      <description>&lt;p&gt;In the frame of the DBGI we &amp;ldquo;work with the garage door up&amp;rdquo; as describes Andy Matuschak &lt;a href=&#34;https://notes.andymatuschak.org/z21cgR9K3UcQ5a7yPsj2RUim3oM2TzdBByZu&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. When applying this idea to a scientific research endeavor we understand it as respecting the core concepts of Open Science. These are also the principles of &lt;a href=&#34;https://en.wikipedia.org/wiki/Open-notebook_science&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open Notebook Science&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;For the projects of the DBGI we will follow such approach in order to share early ideas and results but also the less shiny parts of the research projects. We share our early research outputs in several places.&lt;/p&gt;
+&lt;h2 id=&#34;ideas-notes-and-lab-notebook&#34;&gt;Ideas, notes and lab notebook&lt;/h2&gt;
+&lt;p&gt;To gather these we use the &lt;a href=&#34;https://www.dendron.so/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Dendron&lt;/a&gt; note managing system. The DBGI Dendron is reachable at &lt;a href=&#34;https://www.dbgi.org/dendron-dbgi/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.dbgi.org/dendron-dbgi/&lt;/a&gt;
+Expect to find strange ideas, badly formulated text and poorly written code. However if you have time and interest you should be able to observe and participate at each step of the process. When we take notes these are meant for others but also for us, in the future. Hopefully this will lead to enhanced collaboration and participation. Maybe yes, maybe not. We are making it a methodological experiment !&lt;/p&gt;
+&lt;h2 id=&#34;code&#34;&gt;Code&lt;/h2&gt;
+&lt;p&gt;The code written in the frame of the DBGI is versioned and centralized under the following Github organization &lt;a href=&#34;https://github.com/digital-botanical-gardens-initiative&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://github.com/digital-botanical-gardens-initiative&lt;/a&gt;.
+Feel free to raise an issue on the corresponding repositories if you have any question, comment or suggestion on the code.&lt;/p&gt;
 </description>
     </item>
     
