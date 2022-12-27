@@ -349,7 +349,7 @@ The variance of the distribution is $\sigma^{2}$.
 &lt;p&gt;dfgdfgdfjhg&lt;/p&gt;
 &lt;p&gt;And check this data  
 
-&lt;div id=&#34;chart-671983542&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;chart-823564179&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
 &lt;script&gt;
   (function() {
     let a = setInterval( function() {
@@ -359,14 +359,14 @@ The variance of the distribution is $\sigma^{2}$.
       clearInterval( a );
 
       Plotly.d3.json(&#34;./inat.json&#34;, function(chart) {
-        Plotly.plot(&#39;chart-671983542&#39;, chart.data, chart.layout, {responsive: true});
+        Plotly.plot(&#39;chart-823564179&#39;, chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
 &lt;/script&gt;
 And check this data  
 
-&lt;div id=&#34;chart-365912784&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;chart-219654387&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
 &lt;script&gt;
   (function() {
     let a = setInterval( function() {
@@ -376,7 +376,7 @@ And check this data
       clearInterval( a );
 
       Plotly.d3.json(&#34;./DBGI_tree.json&#34;, function(chart) {
-        Plotly.plot(&#39;chart-365912784&#39;, chart.data, chart.layout, {responsive: true});
+        Plotly.plot(&#39;chart-219654387&#39;, chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -396,7 +396,7 @@ And check this data
 Expect to find strange ideas, badly formulated text and poorly written code. However if you have time and interest you should be able to observe and participate at each step of the process. When we take notes these are meant for others but also for us, in the future. Hopefully this will lead to enhanced collaboration and participation. Maybe yes, maybe not. We are making it a methodological experiment !&lt;/p&gt;
 &lt;h2 id=&#34;code&#34;&gt;Code&lt;/h2&gt;
 &lt;p&gt;The code written in the frame of the DBGI is versioned and centralized under the following Github organization &lt;a href=&#34;https://github.com/digital-botanical-gardens-initiative&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://github.com/digital-botanical-gardens-initiative&lt;/a&gt;.
-Feel free to raise an issue on the corresponding repositories if you have any question, comment or suggestion on the code.&lt;/p&gt;
+Feel free to raise an issue on the corresponding repositories if you have any question, comment or suggestion on the code. We see this github organization as a place for everybody to learn ! We are looking forward for your inputs.&lt;/p&gt;
 </description>
     </item>
     
