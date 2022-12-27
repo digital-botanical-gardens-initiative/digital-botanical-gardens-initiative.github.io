@@ -22,9 +22,9 @@ main:
   - name: Contact
     url: contact
     weight: 60
-  # - name: Research proposal
-  #   url: course
-  #   weight: 70
+  - name: Research proposal
+    url: course
+    weight: 70
   # - name: Page
   #   url: page
   #   weight: 70
