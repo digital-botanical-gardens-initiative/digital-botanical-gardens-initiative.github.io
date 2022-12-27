@@ -84,13 +84,21 @@
   <url>
     <loc>https://www.dbgi.org/about/</loc><changefreq>weekly</changefreq></url>
   <url>
+    <loc>https://www.dbgi.org/author/ana-claudia-sima/</loc><changefreq>weekly</changefreq></url>
+  <url>
+    <loc>https://www.dbgi.org/author/bernd-rinn/</loc><changefreq>weekly</changefreq></url>
+  <url>
     <loc>https://www.dbgi.org/author/blaise-mulhauser/</loc><changefreq>weekly</changefreq></url>
   <url>
     <loc>https://www.dbgi.org/categories/</loc><changefreq>weekly</changefreq></url>
   <url>
+    <loc>https://www.dbgi.org/author/christophe-dessimoz/</loc><changefreq>weekly</changefreq></url>
+  <url>
     <loc>https://www.dbgi.org/author/emmanuel-defossez/</loc><changefreq>weekly</changefreq></url>
   <url>
     <loc>https://www.dbgi.org/author/gregor-kozlowski/</loc><changefreq>weekly</changefreq></url>
+  <url>
+    <loc>https://www.dbgi.org/author/henry-lutcke/</loc><changefreq>weekly</changefreq></url>
   <url>
     <loc>https://www.dbgi.org/author/maelle-wannier/</loc><changefreq>weekly</changefreq></url>
   <url>
@@ -99,5 +107,7 @@
     <loc>https://www.dbgi.org/tag/preface/</loc><changefreq>weekly</changefreq></url>
   <url>
     <loc>https://www.dbgi.org/author/sergio-rasmann/</loc><changefreq>weekly</changefreq></url>
+  <url>
+    <loc>https://www.dbgi.org/author/tarcisio-mendes-de-farias/</loc><changefreq>weekly</changefreq></url>
   <url>
     <loc>https://www.dbgi.org/author/thomas-walker/</loc><changefreq>weekly</changefreq></url></urlset>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Christophe Dessimoz | The Digital Botanical Gardens Initiative</title>
+    <link>https://www.dbgi.org/author/christophe-dessimoz/</link>
+      <atom:link href="https://www.dbgi.org/author/christophe-dessimoz/index.xml" rel="self" type="application/rss+xml" />
+    <description>Christophe Dessimoz</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language>
+    <image>
+      <url>https://www.dbgi.org/author/christophe-dessimoz/avatar_hu30f2bec200093ab997d9e4a26436d2de_71240_270x270_fill_q75_lanczos_center.jpg</url>
+      <title>Christophe Dessimoz</title>
+      <link>https://www.dbgi.org/author/christophe-dessimoz/</link>
+    </image>
+    
+  </channel>
+</rss>
