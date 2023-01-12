@@ -244,6 +244,45 @@
 
 
 
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-M4H5MS3B2Y"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'G-M4H5MS3B2Y', {});
+  gtag('set', {'cookie_flags': 'SameSite=None;Secure'});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
   
 
 
@@ -289,9 +328,6 @@
     
   
   <meta property="twitter:card" content="summary" />
-  
-    <meta property="twitter:site" content="@allard_pm" />
-    <meta property="twitter:creator" content="@allard_pm" />
   
   <meta property="og:site_name" content="The Digital Botanical Gardens Initiative" />
   <meta property="og:url" content="https://www.dbgi.org/page/" />
@@ -627,7 +663,7 @@
 <p>dfgdfgdfjhg</p>
 <p>And check this data  
 
-<div id="chart-823564179" class="chart"></div>
+<div id="chart-547312968" class="chart"></div>
 <script>
   (function() {
     let a = setInterval( function() {
@@ -637,14 +673,14 @@
       clearInterval( a );
 
       Plotly.d3.json("./inat.json", function(chart) {
-        Plotly.plot('chart-823564179', chart.data, chart.layout, {responsive: true});
+        Plotly.plot('chart-547312968', chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
 </script>
 And check this data  
 
-<div id="chart-219654387" class="chart"></div>
+<div id="chart-619452387" class="chart"></div>
 <script>
   (function() {
     let a = setInterval( function() {
@@ -654,7 +690,7 @@ And check this data
       clearInterval( a );
 
       Plotly.d3.json("./DBGI_tree.json", function(chart) {
-        Plotly.plot('chart-219654387', chart.data, chart.layout, {responsive: true});
+        Plotly.plot('chart-619452387', chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
