@@ -110,3 +110,10 @@ extensions:
 publications:
   date_format: January 2006
   citation_style: apa
+
+# Google analytics
+
+marketing:
+  analytics:
+    google_analytics: G-M4H5MS3B2Y
+
