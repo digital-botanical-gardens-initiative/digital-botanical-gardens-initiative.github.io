@@ -1,16 +1,16 @@
 ---
 # Display name
-title: "Egon Willighagen"
+title: "Nadir Alvarez"
 
 # Username (this should match the folder name and the name on publications)
 authors:
-- "willighagen_egon"
+- "alvarez_nadir"
 
 # Is this the primary user of the site?
 superuser: true
 
 # Role/position (e.g., Professor of Artificial Intelligence)
-role: DBGI-KM External Advisor - Open Science
+role: DBGI-KM External Advisor - Biodiversity digitization
 
 # Organizations/Affiliations
 organizations:
@@ -68,4 +68,5 @@ highlight_name: false
 user_groups:
   - DBGI-KM External Advisors
   - DBGI Contributors
+
 ---
