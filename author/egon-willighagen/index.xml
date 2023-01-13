@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Egon Willighagen | The Digital Botanical Gardens Initiative</title>
+    <link>https://www.dbgi.org/author/egon-willighagen/</link>
+      <atom:link href="https://www.dbgi.org/author/egon-willighagen/index.xml" rel="self" type="application/rss+xml" />
+    <description>Egon Willighagen</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language>
+    <image>
+      <url>https://www.dbgi.org/author/egon-willighagen/avatar_hu9f210daf1175756c32318a6d922e5eaf_6466_270x270_fill_q75_lanczos_center.jpg</url>
+      <title>Egon Willighagen</title>
+      <link>https://www.dbgi.org/author/egon-willighagen/</link>
+    </image>
+    
+  </channel>
+</rss>

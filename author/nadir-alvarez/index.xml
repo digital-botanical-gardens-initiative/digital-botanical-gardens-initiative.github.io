@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nadir Alvarez | The Digital Botanical Gardens Initiative</title>
+    <link>https://www.dbgi.org/author/nadir-alvarez/</link>
+      <atom:link href="https://www.dbgi.org/author/nadir-alvarez/index.xml" rel="self" type="application/rss+xml" />
+    <description>Nadir Alvarez</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language>
+    <image>
+      <url>https://www.dbgi.org/author/nadir-alvarez/avatar_hu802a0e113888ff1f2e1a9f80840b189e_7548_270x270_fill_q75_lanczos_center.jpeg</url>
+      <title>Nadir Alvarez</title>
+      <link>https://www.dbgi.org/author/nadir-alvarez/</link>
+    </image>
+    
+  </channel>
+</rss>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Edouard Brüelhart | The Digital Botanical Gardens Initiative</title>
+    <link>https://www.dbgi.org/author/edouard-bruelhart/</link>
+      <atom:link href="https://www.dbgi.org/author/edouard-bruelhart/index.xml" rel="self" type="application/rss+xml" />
+    <description>Edouard Brüelhart</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language>
+    <image>
+      <url>https://www.dbgi.org/author/edouard-bruelhart/avatar_hu58cdadd5327f983a74266633e3c2a5af_665472_270x270_fill_q75_lanczos_center.jpeg</url>
+      <title>Edouard Brüelhart</title>
+      <link>https://www.dbgi.org/author/edouard-bruelhart/</link>
+    </image>
+    
+  </channel>
+</rss>
