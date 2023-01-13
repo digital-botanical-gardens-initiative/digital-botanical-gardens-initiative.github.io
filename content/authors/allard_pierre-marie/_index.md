@@ -6,7 +6,7 @@ title: Pierre-Marie Allard
 superuser: true
 
 # Role/position
-role: DBGI Initiator
+role: EMI Initiator
 
 # Organizations/Affiliations
 organizations:
@@ -52,13 +52,11 @@ social:
   - icon: mastodon
     icon_pack: fab
     link: https://fosstodon.org/@grndstt
-
-
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
-# - icon: cv
-#   icon_pack: ai
-#   link: files/cv.pdf
+  - icon: cv
+    icon_pack: ai
+    link: files/cv_pma.pdf
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 email: ''
@@ -71,6 +69,7 @@ highlight_name: true
 user_groups:
   - Researchers
   - DBGI Consortium
+  - EMI Initiators
 ---
 
 Pierre-Marie Allard launched the [COMMONS Lab](https://www.unifr.ch/bio/en/groups/allard/) at the Department of Biology of the University of Fribourg in 2021. He is also head of the Metabolomics Platform of the Department. His research interests focus on natural products, from their discovery to their structural elucidation, from the study of their uses by humans across the world to the understanding of their roles in the biosphere. The [COMMONS Lab](https://www.unifr.ch/bio/en/groups/allard/) is dedicated to the exploration and establishment of novel knowledge management solutions (from knowledge acquisition to knowledge organization and knowledge dissemination) in the field of natural products. Here, computational metabolomics outputs and relevant metadata are transformed in and combined to [Linked Open Data](https://en.wikipedia.org/wiki/Linked_data#Linked_open_data) and handled via semantic web technologies. The lab is strongly committed to follow the Open Science ideals.

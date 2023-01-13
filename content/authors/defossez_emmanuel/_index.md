@@ -1,16 +1,16 @@
 ---
 # Display name
-title: "Bernd Rinn"
+title: "Emmanuel Defossez"
 
 # Username (this should match the folder name and the name on publications)
 authors:
-- "Bernd Rinn"
+- "defossez_emmanuel"
 
 # Is this the primary user of the site?
-superuser: false
+superuser: true
 
 # Role/position (e.g., Professor of Artificial Intelligence)
-role:
+role: EMI Initiator
 
 # Organizations/Affiliations
 organizations:
@@ -53,9 +53,9 @@ social:
   link: https://github.com/USERNAME
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
-# - icon: cv
-#   icon_pack: ai
-#   link: files/cv.pdf
+- icon: cv
+  icon_pack: ai
+  link: files/cv_manu.pdf
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 email: ""
@@ -66,6 +66,5 @@ highlight_name: false
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-- DBGI Consortium
-
+  - EMI Initiators
 ---
