@@ -69,4 +69,5 @@ user_groups:
   - EMI Initiators
   - DBGI Consortium
   - DBGI Initiators
+  - DBGI Contributors
 ---
