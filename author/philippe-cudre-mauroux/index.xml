@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Philippe Cudre-Mauroux | The Digital Botanical Gardens Initiative</title>
+    <link>https://www.dbgi.org/author/philippe-cudre-mauroux/</link>
+      <atom:link href="https://www.dbgi.org/author/philippe-cudre-mauroux/index.xml" rel="self" type="application/rss+xml" />
+    <description>Philippe Cudre-Mauroux</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language>
+    <image>
+      <url>https://www.dbgi.org/author/philippe-cudre-mauroux/avatar_hu0c92648d96b8ccf7a7622860a3c5dc77_2311_270x270_fill_q75_lanczos_center.jpeg</url>
+      <title>Philippe Cudre-Mauroux</title>
+      <link>https://www.dbgi.org/author/philippe-cudre-mauroux/</link>
+    </image>
+    
+  </channel>
+</rss>

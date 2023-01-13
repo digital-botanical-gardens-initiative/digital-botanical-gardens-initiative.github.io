@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Daniel Mietchen | The Digital Botanical Gardens Initiative</title>
+    <link>https://www.dbgi.org/author/daniel-mietchen/</link>
+      <atom:link href="https://www.dbgi.org/author/daniel-mietchen/index.xml" rel="self" type="application/rss+xml" />
+    <description>Daniel Mietchen</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language>
+    <image>
+      <url>https://www.dbgi.org/author/daniel-mietchen/avatar_hu8f50209a2d261830e92abfde67bad76b_4493_270x270_fill_q75_lanczos_center.jpeg</url>
+      <title>Daniel Mietchen</title>
+      <link>https://www.dbgi.org/author/daniel-mietchen/</link>
+    </image>
+    
+  </channel>
+</rss>
