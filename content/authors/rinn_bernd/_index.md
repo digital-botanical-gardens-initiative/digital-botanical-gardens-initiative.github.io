@@ -1,16 +1,16 @@
 ---
 # Display name
-title: "Gregor Kozlowski"
+title: "Bernd Rinn"
 
 # Username (this should match the folder name and the name on publications)
 authors:
-- "gregor-kozlowski"
+- "Bernd Rinn"
 
 # Is this the primary user of the site?
 superuser: false
 
 # Role/position (e.g., Professor of Artificial Intelligence)
-role: DBGI Contributor - Botanical Garden Director
+role: DBGI-KM Contributor
 
 # Organizations/Affiliations
 organizations:
@@ -67,5 +67,6 @@ highlight_name: false
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
 - EMI Contributors
-- DBGI Consortium
+- DBGI-KM Contributors
+
 ---

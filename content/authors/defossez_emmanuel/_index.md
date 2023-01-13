@@ -10,7 +10,7 @@ authors:
 superuser: true
 
 # Role/position (e.g., Professor of Artificial Intelligence)
-role: EMI Initiator
+role: DBGI Initiator
 
 # Organizations/Affiliations
 organizations:
@@ -67,4 +67,6 @@ highlight_name: false
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
   - EMI Initiators
+  - DBGI Consortium
+  - DBGI Initiators
 ---

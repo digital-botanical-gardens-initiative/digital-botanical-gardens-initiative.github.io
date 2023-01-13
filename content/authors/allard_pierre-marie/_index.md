@@ -6,7 +6,7 @@ title: Pierre-Marie Allard
 superuser: true
 
 # Role/position
-role: EMI Initiator
+role: DBGI Initiator
 
 # Organizations/Affiliations
 organizations:
@@ -69,6 +69,7 @@ highlight_name: true
 user_groups:
   - Researchers
   - DBGI Consortium
+  - DBGI Initiators
   - EMI Initiators
 ---
 

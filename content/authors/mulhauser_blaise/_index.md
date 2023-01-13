@@ -10,7 +10,7 @@ authors:
 superuser: false
 
 # Role/position (e.g., Professor of Artificial Intelligence)
-role: DBGI Contributor
+role: DBGI Contributor - Botanical Garden Director
 
 # Organizations/Affiliations
 organizations:
@@ -67,5 +67,5 @@ highlight_name: false
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
 - EMI Contributors
-
+- DBGI Consortium
 ---
