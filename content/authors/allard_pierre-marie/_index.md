@@ -40,9 +40,6 @@ social:
   - icon: envelope
     icon_pack: fas
     link: 'mailto:pierre-marie.allard@unifr.ch'
-  - icon: twitter
-    icon_pack: fab
-    link: https://twitter.com/allard_pm
   - icon: google-scholar
     icon_pack: ai
     link: https://scholar.google.co.uk/citations?user=bPfFArgAAAAJ
