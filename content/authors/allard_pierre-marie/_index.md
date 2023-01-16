@@ -51,9 +51,9 @@ social:
     link: https://fosstodon.org/@grndstt
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
-  - icon: cv
-    icon_pack: ai
-    link: files/cv_pma.pdf
+  # - icon: cv
+  #   icon_pack: ai
+  #   link: files/cv_pma.pdf
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 email: ''
