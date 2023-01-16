@@ -7,7 +7,7 @@ authors:
 - "bruelhart_edouard"
 
 # Is this the primary user of the site?
-superuser: true
+superuser: false
 
 # Role/position (e.g., Professor of Artificial Intelligence)
 role: DBGI Contributor
