@@ -1,6 +1,6 @@
 ---
 # Display name
-title: "Tarcisio Mendes De Farias"
+title: "Tarcisio Mendes de Farias"
 
 # Username (this should match the folder name and the name on publications)
 authors:
@@ -14,16 +14,19 @@ role: DBGI-KM Contributor
 
 # Organizations/Affiliations
 organizations:
-- name: 
-  url: ""
+- name: SIB Swiss Institute of Bioinformatics
+  url: "https://www.sib.swiss"
 
 # Short bio (displayed in user profile at end of posts)
-bio: 
+bio: Dr. Tarcisio Mendes de Farias is a computer scientist specialized in data and knowledge management, working as a computational biologist at the SIB Swiss Institute of Bioinformatics. He is also the IT chair of the International Society for Biocuration. A full list of his scientific publications is available at https://purl.org/tarcisio/scholar.
 
 # List each interest with a dash
 interests:
-- Interest 1
-- Interest 2
+- Semantic Web applied to life science data
+- Ontology design and development
+- Natural language processing
+- Applied AI
+- Data integration and interoperability among biological data sources
 
 education:
   courses:
@@ -41,14 +44,14 @@ education:
 social:
 - icon: envelope
   icon_pack: fas
-  link: '#contact'  # For a direct email link, use "mailto:test@example.org".
+  link: '#contact'  # For a direct email link, use "mailto:tarcisio.mendes@sib.swiss".
 
 - icon: google-scholar
   icon_pack: ai
-  link: https://scholar.google.com/citations?user=PERSON-ID
+  link: https://scholar.google.com/citations?user=sB87J-cAAAAJ
 - icon: github
   icon_pack: fab
-  link: https://github.com/USERNAME
+  link: https://github.com/tarcisiotmf
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
 # - icon: cv
