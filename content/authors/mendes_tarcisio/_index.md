@@ -22,7 +22,7 @@ bio: Dr. Tarcisio Mendes de Farias is a computer scientist specialized in data a
 
 # List each interest with a dash
 interests:
-- Semantic Web applied to life science data
+- Semantic Web for life science
 - Ontology design and development
 - Natural language processing
 - Applied AI
@@ -30,12 +30,12 @@ interests:
 
 education:
   courses:
-  - course: Title course 1
-    institution: Name of Institution
-    year: 2012
-  - course: Title course 1
-    institution: Name of Institution
-    year: 2012
+  - course: Phd in Computer Science
+    institution: University of Burgundy
+    year: 2016
+  - course: MSc and BEng in Computer Science
+    institution: University of Technology of Compiegne - France and University of Pernambuco - Brazil 
+    year: 2013
 
 # Social/Academic Networking
 # For available icons, see: https://wowchemy.com/docs/page-builder/#icons
