@@ -310,6 +310,18 @@ The variance of the distribution is $\sigma^{2}$.
     </item>
     
     <item>
+      <title>First DBGI-KM meeting !</title>
+      <link>https://www.dbgi.org/post/2022-02-22-first-dbgi-meeting/</link>
+      <pubDate>Tue, 22 Feb 2022 00:00:00 +0000</pubDate>
+      <guid>https://www.dbgi.org/post/2022-02-22-first-dbgi-meeting/</guid>
+      <description>&lt;p&gt;We had our first official DBGI-KM meeting this Wednesday 22nd February 2023 !&lt;/p&gt;
+&lt;p&gt;We had our first official DBGI-KM meeting this Wednesday 22nd February 2023.
+No group picture &amp;hellip; but trust us we where there !
+The occasion to get the ball rolling and start thinking of the next steps.
+Resume of the meeting can be found at &lt;a href=&#34;https://www.dbgi.org/dendron-dbgi/notes/bjbdnlx9t9rmqt5uw39flf2/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.dbgi.org/dendron-dbgi/notes/bjbdnlx9t9rmqt5uw39flf2/&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>Jian Yang and Monica Hall Win the Best Paper Award at Wowchemy 2020</title>
       <link>https://www.dbgi.org/post/20-12-02-icml-best-paper/</link>
       <pubDate>Wed, 02 Dec 2020 00:00:00 +0000</pubDate>
@@ -349,7 +361,7 @@ The variance of the distribution is $\sigma^{2}$.
 &lt;p&gt;dfgdfgdfjhg&lt;/p&gt;
 &lt;p&gt;And check this data  
 
-&lt;div id=&#34;chart-829473156&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;chart-584197236&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
 &lt;script&gt;
   (function() {
     let a = setInterval( function() {
@@ -359,14 +371,14 @@ The variance of the distribution is $\sigma^{2}$.
       clearInterval( a );
 
       Plotly.d3.json(&#34;./inat.json&#34;, function(chart) {
-        Plotly.plot(&#39;chart-829473156&#39;, chart.data, chart.layout, {responsive: true});
+        Plotly.plot(&#39;chart-584197236&#39;, chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
 &lt;/script&gt;
 And check this data  
 
-&lt;div id=&#34;chart-925743618&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;chart-541638792&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
 &lt;script&gt;
   (function() {
     let a = setInterval( function() {
@@ -376,7 +388,7 @@ And check this data
       clearInterval( a );
 
       Plotly.d3.json(&#34;./DBGI_tree.json&#34;, function(chart) {
-        Plotly.plot(&#39;chart-925743618&#39;, chart.data, chart.layout, {responsive: true});
+        Plotly.plot(&#39;chart-541638792&#39;, chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
