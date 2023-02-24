@@ -14,7 +14,7 @@ role: DBGI-KM Contributor
 
 # Organizations/Affiliations
 organizations:
-- name: 
+- name: ETH Zurich
   url: ""
 
 # Short bio (displayed in user profile at end of posts)
@@ -22,17 +22,19 @@ bio:
 
 # List each interest with a dash
 interests:
-- Interest 1
-- Interest 2
+- Research Data Management
+- FAIR data
+- Open data
+- Open science
 
 education:
   courses:
-  - course: Title course 1
-    institution: Name of Institution
-    year: 2012
-  - course: Title course 1
-    institution: Name of Institution
-    year: 2012
+  - course: PhD in Computational Chemistry
+    institution: University of Southampton, UK
+    year: 2006
+  - course: Degree in Chemistry and Pharmaceutical Technology
+    institution: Universita' degli Studi di Milano, Italy
+    year: 2001
 
 # Social/Academic Networking
 # For available icons, see: https://wowchemy.com/docs/page-builder/#icons
