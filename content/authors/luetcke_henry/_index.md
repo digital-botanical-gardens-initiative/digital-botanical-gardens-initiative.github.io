@@ -14,7 +14,7 @@ role: DBGI-KM Contributor
 
 # Organizations/Affiliations
 organizations:
-- name: 
+- name: ETH Zurich
   url: ""
 
 # Short bio (displayed in user profile at end of posts)
@@ -22,17 +22,18 @@ bio:
 
 # List each interest with a dash
 interests:
-- Interest 1
-- Interest 2
+- Research Data Management
+- Open Research Data
+- FAIR data principles
 
 education:
   courses:
-  - course: Title course 1
-    institution: Name of Institution
-    year: 2012
-  - course: Title course 1
-    institution: Name of Institution
-    year: 2012
+  - course: PhD in Neuroscience
+    institution: University of Göttingen
+    year: 2007
+  - course: BSc in Biological Sciences
+    institution: The University of Edinburgh
+    year: 2003
 
 # Social/Academic Networking
 # For available icons, see: https://wowchemy.com/docs/page-builder/#icons
@@ -48,7 +49,7 @@ social:
   link: https://scholar.google.com/citations?user=PERSON-ID
 - icon: github
   icon_pack: fab
-  link: https://github.com/USERNAME
+  link: https://github.com/hluetck
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
 # - icon: cv
