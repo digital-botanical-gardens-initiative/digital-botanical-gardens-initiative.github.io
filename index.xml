@@ -310,6 +310,18 @@ The variance of the distribution is $\sigma^{2}$.
     </item>
     
     <item>
+      <title>Seminar in the Botanical Garden of Zurich.</title>
+      <link>https://www.dbgi.org/post/2023-03-04-seminar-zurich/</link>
+      <pubDate>Fri, 04 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>https://www.dbgi.org/post/2023-03-04-seminar-zurich/</guid>
+      <description>&lt;p&gt;We will present both the DBGI and EMI at the Department of Systematic and Evolutionary Botany in Zurich (16:00 Monday 06 March 2023)&lt;/p&gt;
+&lt;p&gt;Thanks Rodrigo (&lt;a href=&#34;https://www.rcamaraleret.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.rcamaraleret.com/&lt;/a&gt;) for the kind invitation !
+This will be the opportunity to discuss and exchange on the possible synergies between Rodrigo&amp;rsquo;s exciting INDIGENOMICS (&lt;a href=&#34;https://twitter.com/R_CamaraLeret/status/1590995795800920064%29&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://twitter.com/R_CamaraLeret/status/1590995795800920064)&lt;/a&gt;, the DBGI and the EMI.&lt;/p&gt;
+&lt;p&gt;Screenshot from (&lt;a href=&#34;https://twitter.com/R_CamaraLeret/status/1630200265180692480&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://twitter.com/R_CamaraLeret/status/1630200265180692480&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;Details at &lt;a href=&#34;https://www.systbot.uzh.ch/en/Seminar.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.systbot.uzh.ch/en/Seminar.html&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>First DBGI-KM meeting !</title>
       <link>https://www.dbgi.org/post/2022-02-22-first-dbgi-meeting/</link>
       <pubDate>Tue, 22 Feb 2022 00:00:00 +0000</pubDate>
@@ -319,18 +331,6 @@ The variance of the distribution is $\sigma^{2}$.
 The occasion to get the ball rolling and start thinking of the next steps.
 Resume of the meeting can be found at &lt;a href=&#34;https://www.dbgi.org/dendron-dbgi/notes/bjbdnlx9t9rmqt5uw39flf2/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.dbgi.org/dendron-dbgi/notes/bjbdnlx9t9rmqt5uw39flf2/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;More on the DBGI-KM project soon &amp;hellip;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>First DBGI-KM meeting !</title>
-      <link>https://www.dbgi.org/post/2023-03-04-seminar-zurich/</link>
-      <pubDate>Tue, 22 Feb 2022 00:00:00 +0000</pubDate>
-      <guid>https://www.dbgi.org/post/2023-03-04-seminar-zurich/</guid>
-      <description>&lt;p&gt;We will present both the DBGI and EMI at the Department of Systematic and Evolutionary Botany in Zurich&lt;/p&gt;
-&lt;p&gt;Thanks Rodrigo (&lt;a href=&#34;https://www.rcamaraleret.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.rcamaraleret.com/&lt;/a&gt;) for the kind invitation !
-This will be the opportunity to discuss and exchange on the possible synergies between Rodrigo&amp;rsquo;s exciting INDIGENOMICS (&lt;a href=&#34;https://twitter.com/R_CamaraLeret/status/1590995795800920064%29&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://twitter.com/R_CamaraLeret/status/1590995795800920064)&lt;/a&gt;, the DBGI and the EMI.&lt;/p&gt;
-&lt;p&gt;Screenshot from (&lt;a href=&#34;https://twitter.com/R_CamaraLeret/status/1630200265180692480&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://twitter.com/R_CamaraLeret/status/1630200265180692480&lt;/a&gt;)&lt;/p&gt;
-&lt;p&gt;Details at &lt;a href=&#34;https://www.systbot.uzh.ch/en/Seminar.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.systbot.uzh.ch/en/Seminar.html&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -351,7 +351,7 @@ This will be the opportunity to discuss and exchange on the possible synergies b
 &lt;p&gt;dfgdfgdfjhg&lt;/p&gt;
 &lt;p&gt;And check this data  
 
-&lt;div id=&#34;chart-614825739&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;chart-579218436&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
 &lt;script&gt;
   (function() {
     let a = setInterval( function() {
@@ -361,14 +361,14 @@ This will be the opportunity to discuss and exchange on the possible synergies b
       clearInterval( a );
 
       Plotly.d3.json(&#34;./inat.json&#34;, function(chart) {
-        Plotly.plot(&#39;chart-614825739&#39;, chart.data, chart.layout, {responsive: true});
+        Plotly.plot(&#39;chart-579218436&#39;, chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
 &lt;/script&gt;
 And check this data  
 
-&lt;div id=&#34;chart-423195876&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;chart-936147582&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
 &lt;script&gt;
   (function() {
     let a = setInterval( function() {
@@ -378,7 +378,7 @@ And check this data
       clearInterval( a );
 
       Plotly.d3.json(&#34;./DBGI_tree.json&#34;, function(chart) {
-        Plotly.plot(&#39;chart-423195876&#39;, chart.data, chart.layout, {responsive: true});
+        Plotly.plot(&#39;chart-936147582&#39;, chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
