@@ -1,9 +1,9 @@
 ---
-title: First DBGI-KM meeting !
-date: 2022-02-22
+title: Seminar in the Botanical Garden of Zurich.
+date: 2022-03-04
 ---
 
-We will present both the DBGI and EMI at the Department of Systematic and Evolutionary Botany in Zurich
+We will present both the DBGI and EMI at the Department of Systematic and Evolutionary Botany in Zurich (16:00 Monday 06 March 2023)
 
 <!--more-->
 
