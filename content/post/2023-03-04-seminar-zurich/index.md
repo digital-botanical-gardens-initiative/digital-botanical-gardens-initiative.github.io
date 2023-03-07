@@ -13,3 +13,6 @@ This will be the opportunity to discuss and exchange on the possible synergies b
 Screenshot from (https://twitter.com/R_CamaraLeret/status/1630200265180692480)
 
 Details at https://www.systbot.uzh.ch/en/Seminar.html
+
+
+Slides available at <a href="https://doi.org/10.5281/zenodo.7701070"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.7701070.svg" alt="DOI"></a>
