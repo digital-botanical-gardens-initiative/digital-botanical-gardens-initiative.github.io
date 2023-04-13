@@ -5,22 +5,12 @@
     <link>https://www.dbgi.org/post/</link>
       <atom:link href="https://www.dbgi.org/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Latest News</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 11 Apr 2022 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Fri, 04 Mar 2022 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://www.dbgi.org/media/icon_hu2fb6469703408137963092c86773317f_33056_512x512_fill_lanczos_center_3.png</url>
       <title>Latest News</title>
       <link>https://www.dbgi.org/post/</link>
     </image>
-    
-    <item>
-      <title>swissuniversities Open Research Data grant awarded for the Swiss DBGI-KM</title>
-      <link>https://www.dbgi.org/post/swissuniversities_grant/</link>
-      <pubDate>Mon, 11 Apr 2022 00:00:00 +0000</pubDate>
-      <guid>https://www.dbgi.org/post/swissuniversities_grant/</guid>
-      <description>&lt;p&gt;We are thrilled that our proposal (Knowledge Management in the Swiss Digital Botanical Gardens Initiative (Swiss DBGI-KM)) will be supported by a swissuniversities Open Research Data grant obtained for the Track B &amp;ldquo;Establish projects&amp;rdquo; call.&lt;/p&gt;
-&lt;p&gt;The project involves four partners: the COMMONS Lab at the University of Fribourg, the Computational Ecology group at the University of Neuchatel, the OpenBIS team at the Scientific IT Services at ETHZ and the Swiss Bioinformatics Institute. With the &amp;ldquo;Knowledge Management in the Swiss Digital Botanical Gardens Initiative&amp;rdquo; proposal, we are setting up a team of complementary expertises that aim at harmonizing and automating the many steps of the data life cycle in the DBGI. This initiative will be a place to establish and share with the community optimized workflows for the digitization of the chemical information of large biodiverse ensembles.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.swissuniversities.ch/en/topics/digitalisation/open-research-data/swiss-open-research-data-grants&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.swissuniversities.ch/en/topics/digitalisation/open-research-data/swiss-open-research-data-grants&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
     
     <item>
       <title>Seminar in the Botanical Garden of Zurich.</title>
@@ -45,6 +35,16 @@ This will be the opportunity to discuss and exchange on the possible synergies b
 The occasion to get the ball rolling and start thinking of the next steps.
 Resume of the meeting can be found at &lt;a href=&#34;https://www.dbgi.org/dendron-dbgi/notes/bjbdnlx9t9rmqt5uw39flf2/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.dbgi.org/dendron-dbgi/notes/bjbdnlx9t9rmqt5uw39flf2/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;More on the DBGI-KM project soon &amp;hellip;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>swissuniversities Open Research Data grant awarded for the Swiss DBGI-KM</title>
+      <link>https://www.dbgi.org/post/swissuniversities_grant/</link>
+      <pubDate>Tue, 11 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>https://www.dbgi.org/post/swissuniversities_grant/</guid>
+      <description>&lt;p&gt;We are thrilled that our proposal (Knowledge Management in the Swiss Digital Botanical Gardens Initiative (Swiss DBGI-KM)) will be supported by a swissuniversities Open Research Data grant obtained for the Track B &amp;ldquo;Establish projects&amp;rdquo; call.&lt;/p&gt;
+&lt;p&gt;The project involves four partners: the COMMONS Lab at the University of Fribourg, the Computational Ecology group at the University of Neuchatel, the OpenBIS team at the Scientific IT Services at ETHZ and the Swiss Bioinformatics Institute. With the &amp;ldquo;Knowledge Management in the Swiss Digital Botanical Gardens Initiative&amp;rdquo; proposal, we are setting up a team of complementary expertises that aim at harmonizing and automating the many steps of the data life cycle in the DBGI. This initiative will be a place to establish and share with the community optimized workflows for the digitization of the chemical information of large biodiverse ensembles.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.swissuniversities.ch/en/topics/digitalisation/open-research-data/swiss-open-research-data-grants&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.swissuniversities.ch/en/topics/digitalisation/open-research-data/swiss-open-research-data-grants&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>
