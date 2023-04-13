@@ -3,7 +3,7 @@ title: swissuniversities Open Research Data grant awarded for the Swiss DBGI-KM
 date: 2022-01-11
 ---
 
-We are thrilled that our proposal (Knowledge Management in the Swiss Digital Botanical Gardens Initiative (Swiss DBGI-KM)) will be supported by a swissuniversities Open Research Data grant obtained for the Track B "Establish projects" call.
+We are thrilled that our proposal "_Knowledge Management in the Swiss Digital Botanical Gardens Initiative (**Swiss DBGI-KM**)_" will be supported by a swissuniversities Open Research Data grant obtained for the Track B "Establish projects" call.
 
 <!--more-->
 
