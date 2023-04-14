@@ -4,13 +4,10 @@ date: 2022-04-14
 authors: [allard_pierre-marie]
 ---
 
-A postdoctoral researcher position is available at the COMMONS Lab in the Department of Biology at the University of Fribourg, Switzerland. The candidate will develop and implement computational solutions to establish and manage a Knowledge Graph documenting the chemodiversity of living systems using both untargeted metabolomics data and semantic web technologies.
+A postdoctoral researcher position is available at the [COMMONS Lab](https://www.unifr.ch/bio/en/groups/allard/) in the Department of Biology at the [University of Fribourg](https://www.unifr.ch/home/en/), Switzerland. The candidate will develop and implement computational solutions to establish and manage a Knowledge Graph documenting the chemodiversity of living systems using both untargeted metabolomics data and semantic web technologies.
+
 
 <!--more-->
-
-# Postdoctoral researcher position: Knowledge Management in the Digital Botanical Gardens Initiative
-
-A postdoctoral researcher position is available at the [COMMONS Lab](https://www.unifr.ch/bio/en/groups/allard/) in the Department of Biology at the [University of Fribourg](https://www.unifr.ch/home/en/), Switzerland. The candidate will develop and implement computational solutions to establish and manage a Knowledge Graph documenting the chemodiversity of living systems using both untargeted metabolomics data and semantic web technologies.
 
 ## Project Background
 
