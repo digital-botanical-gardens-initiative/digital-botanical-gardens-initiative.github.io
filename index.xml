@@ -350,7 +350,8 @@ The variance of the distribution is $\sigma^{2}$.
 &lt;li&gt;SIB: &lt;a href=&#34;https://www.sib.swiss/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.sib.swiss/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;DBGI : &lt;a href=&#34;https://www.dbgi.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.dbgi.org/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;EMI : &lt;a href=&#34;https://www.earthmetabolome.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.earthmetabolome.org/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description>
+&lt;/ul&gt;
+&lt;p&gt;📂 this offer as pdf here : &lt;a href=&#34;https://www.dbgi.org/files/postdoctoral_researcher_position_DBGI_UniFr.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.dbgi.org/files/postdoctoral_researcher_position_DBGI_UniFr.pdf&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -415,7 +416,7 @@ Resume of the meeting can be found at &lt;a href=&#34;https://www.dbgi.org/dendr
 &lt;p&gt;dfgdfgdfjhg&lt;/p&gt;
 &lt;p&gt;And check this data  
 
-&lt;div id=&#34;chart-536428791&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;chart-839641725&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
 &lt;script&gt;
   (function() {
     let a = setInterval( function() {
@@ -425,14 +426,14 @@ Resume of the meeting can be found at &lt;a href=&#34;https://www.dbgi.org/dendr
       clearInterval( a );
 
       Plotly.d3.json(&#34;./inat.json&#34;, function(chart) {
-        Plotly.plot(&#39;chart-536428791&#39;, chart.data, chart.layout, {responsive: true});
+        Plotly.plot(&#39;chart-839641725&#39;, chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
 &lt;/script&gt;
 And check this data  
 
-&lt;div id=&#34;chart-476395821&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;chart-527486931&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
 &lt;script&gt;
   (function() {
     let a = setInterval( function() {
@@ -442,7 +443,7 @@ And check this data
       clearInterval( a );
 
       Plotly.d3.json(&#34;./DBGI_tree.json&#34;, function(chart) {
-        Plotly.plot(&#39;chart-476395821&#39;, chart.data, chart.layout, {responsive: true});
+        Plotly.plot(&#39;chart-527486931&#39;, chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
