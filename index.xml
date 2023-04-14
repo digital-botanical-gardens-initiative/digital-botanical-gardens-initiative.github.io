@@ -314,9 +314,7 @@ The variance of the distribution is $\sigma^{2}$.
       <link>https://www.dbgi.org/post/postdoc_offer/</link>
       <pubDate>Thu, 14 Apr 2022 00:00:00 +0000</pubDate>
       <guid>https://www.dbgi.org/post/postdoc_offer/</guid>
-      <description>&lt;p&gt;A postdoctoral researcher position is available at the COMMONS Lab in the Department of Biology at the University of Fribourg, Switzerland. The candidate will develop and implement computational solutions to establish and manage a Knowledge Graph documenting the chemodiversity of living systems using both untargeted metabolomics data and semantic web technologies.&lt;/p&gt;
-&lt;h1 id=&#34;postdoctoral-researcher-position-knowledge-management-in-the-digital-botanical-gardens-initiative&#34;&gt;Postdoctoral researcher position: Knowledge Management in the Digital Botanical Gardens Initiative&lt;/h1&gt;
-&lt;p&gt;A postdoctoral researcher position is available at the &lt;a href=&#34;https://www.unifr.ch/bio/en/groups/allard/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;COMMONS Lab&lt;/a&gt; in the Department of Biology at the &lt;a href=&#34;https://www.unifr.ch/home/en/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;University of Fribourg&lt;/a&gt;, Switzerland. The candidate will develop and implement computational solutions to establish and manage a Knowledge Graph documenting the chemodiversity of living systems using both untargeted metabolomics data and semantic web technologies.&lt;/p&gt;
+      <description>&lt;p&gt;A postdoctoral researcher position is available at the &lt;a href=&#34;https://www.unifr.ch/bio/en/groups/allard/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;COMMONS Lab&lt;/a&gt; in the Department of Biology at the &lt;a href=&#34;https://www.unifr.ch/home/en/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;University of Fribourg&lt;/a&gt;, Switzerland. The candidate will develop and implement computational solutions to establish and manage a Knowledge Graph documenting the chemodiversity of living systems using both untargeted metabolomics data and semantic web technologies.&lt;/p&gt;
 &lt;h2 id=&#34;project-background&#34;&gt;Project Background&lt;/h2&gt;
 &lt;p&gt;In the &lt;a href=&#34;https://www.dbgi.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Digital Botanical Gardens Initiative&lt;/a&gt; (DBGI), we leverage the outstanding living plant collections of Swiss botanical gardens as artificial yet accessible biodiversity hotspots. The long term objective of this Open Science initiative is to establish robust and scalable workflows designed to characterize and document the chemodiversity of the biosphere at a global scale (see &lt;a href=&#34;http://www.earthmetabolome.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Earth Metabolome Initiative&lt;/a&gt;). To achieve this, we exploit the unrivaled sensitivity and structural determination potential of mass spectrometry and the power of semantic web technologies to build a large-scale digital library capturing the wealth of chemo- and bio-diversity knowledge. This open resource will be designed to i) advance the field of life science, ii) benefit human society (e.g. drug discovery from Nature and sustainable agriculture solutions) and iii) support biodiversity conservation projects.&lt;/p&gt;
 &lt;h2 id=&#34;job-description&#34;&gt;Job Description&lt;/h2&gt;
@@ -417,7 +415,7 @@ Resume of the meeting can be found at &lt;a href=&#34;https://www.dbgi.org/dendr
 &lt;p&gt;dfgdfgdfjhg&lt;/p&gt;
 &lt;p&gt;And check this data  
 
-&lt;div id=&#34;chart-763849125&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;chart-536428791&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
 &lt;script&gt;
   (function() {
     let a = setInterval( function() {
@@ -427,14 +425,14 @@ Resume of the meeting can be found at &lt;a href=&#34;https://www.dbgi.org/dendr
       clearInterval( a );
 
       Plotly.d3.json(&#34;./inat.json&#34;, function(chart) {
-        Plotly.plot(&#39;chart-763849125&#39;, chart.data, chart.layout, {responsive: true});
+        Plotly.plot(&#39;chart-536428791&#39;, chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
 &lt;/script&gt;
 And check this data  
 
-&lt;div id=&#34;chart-146738295&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;chart-476395821&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
 &lt;script&gt;
   (function() {
     let a = setInterval( function() {
@@ -444,7 +442,7 @@ And check this data
       clearInterval( a );
 
       Plotly.d3.json(&#34;./DBGI_tree.json&#34;, function(chart) {
-        Plotly.plot(&#39;chart-146738295&#39;, chart.data, chart.layout, {responsive: true});
+        Plotly.plot(&#39;chart-476395821&#39;, chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
