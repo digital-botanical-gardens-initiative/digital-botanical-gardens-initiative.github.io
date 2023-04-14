@@ -51,3 +51,5 @@ Please send the following information to **pierre-marie.allard(at)unifr.ch**
 - SIB: https://www.sib.swiss/
 - DBGI : https://www.dbgi.org/
 - EMI : https://www.earthmetabolome.org/
+
+:open_file_folder: this offer as pdf here : https://www.dbgi.org/files/postdoctoral_researcher_position_DBGI_UniFr.pdf
