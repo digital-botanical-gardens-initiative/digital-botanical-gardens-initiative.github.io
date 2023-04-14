@@ -5,12 +5,58 @@
     <link>https://www.dbgi.org/author/pierre-marie-allard/</link>
       <atom:link href="https://www.dbgi.org/author/pierre-marie-allard/index.xml" rel="self" type="application/rss+xml" />
     <description>Pierre-Marie Allard</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 14 Apr 2022 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://www.dbgi.org/author/pierre-marie-allard/avatar_hub4076432a9bd62034697fb6bf5e4d30a_492391_270x270_fill_q75_lanczos_center.jpg</url>
       <title>Pierre-Marie Allard</title>
       <link>https://www.dbgi.org/author/pierre-marie-allard/</link>
     </image>
+    
+    <item>
+      <title>Postdoctoral researcher position: Knowledge Management in the Digital Botanical Gardens Initiative</title>
+      <link>https://www.dbgi.org/post/postdoc_offer/</link>
+      <pubDate>Thu, 14 Apr 2022 00:00:00 +0000</pubDate>
+      <guid>https://www.dbgi.org/post/postdoc_offer/</guid>
+      <description>&lt;p&gt;A postdoctoral researcher position is available at the COMMONS Lab in the Department of Biology at the University of Fribourg, Switzerland. The candidate will develop and implement computational solutions to establish and manage a Knowledge Graph documenting the chemodiversity of living systems using both untargeted metabolomics data and semantic web technologies.&lt;/p&gt;
+&lt;h1 id=&#34;postdoctoral-researcher-position-knowledge-management-in-the-digital-botanical-gardens-initiative&#34;&gt;Postdoctoral researcher position: Knowledge Management in the Digital Botanical Gardens Initiative&lt;/h1&gt;
+&lt;p&gt;A postdoctoral researcher position is available at the &lt;a href=&#34;https://www.unifr.ch/bio/en/groups/allard/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;COMMONS Lab&lt;/a&gt; in the Department of Biology at the &lt;a href=&#34;https://www.unifr.ch/home/en/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;University of Fribourg&lt;/a&gt;, Switzerland. The candidate will develop and implement computational solutions to establish and manage a Knowledge Graph documenting the chemodiversity of living systems using both untargeted metabolomics data and semantic web technologies.&lt;/p&gt;
+&lt;h2 id=&#34;project-background&#34;&gt;Project Background&lt;/h2&gt;
+&lt;p&gt;In the &lt;a href=&#34;https://www.dbgi.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Digital Botanical Gardens Initiative&lt;/a&gt; (DBGI), we leverage the outstanding living plant collections of Swiss botanical gardens as artificial yet accessible biodiversity hotspots. The long term objective of this Open Science initiative is to establish robust and scalable workflows designed to characterize and document the chemodiversity of the biosphere at a global scale (see &lt;a href=&#34;http://www.earthmetabolome.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Earth Metabolome Initiative&lt;/a&gt;). To achieve this, we exploit the unrivaled sensitivity and structural determination potential of mass spectrometry and the power of semantic web technologies to build a large-scale digital library capturing the wealth of chemo- and bio-diversity knowledge. This open resource will be designed to i) advance the field of life science, ii) benefit human society (e.g. drug discovery from Nature and sustainable agriculture solutions) and iii) support biodiversity conservation projects.&lt;/p&gt;
+&lt;h2 id=&#34;job-description&#34;&gt;Job Description&lt;/h2&gt;
+&lt;p&gt;The objective of the candidate will be to develop and implement computational solutions for the establishment of a domain-specific knowledge graph gathering a large amount of unstructured and semi-structured data. This knowledge graph will be designed to organize chemodiversity-related data obtained during untargeted mass-spectrometry based metabolomics experiments but also a wide range of heterogeneous information related to the profiled samples (e.g., experimental metadata, phylogeny, geolocalizations, ecological traits). Special attention will be given to efficiently map and identify objects using resources such as the &lt;a href=&#34;https://bioregistry.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bioregistry&lt;/a&gt;. The resulting graph will then be interfaced with relevant data and knowledge bases (e.g. &lt;a href=&#34;https://www.ebi.ac.uk/chembl/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ChEMBL&lt;/a&gt;, &lt;a href=&#34;https://www.wikidata.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Wikidata&lt;/a&gt;, &lt;a href=&#34;https://pubchem.ncbi.nlm.nih.gov/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Pubchem&lt;/a&gt;). The candidate will work in close collaboration with data scientists from the Swiss Bioinformatics Institute for ontology engineering and the establishment of natural language processing-based interfaces to facilitate access to the data by scientists worldwide. The candidate will craft innovative interfaces to visualize and query the established knowledge base. Finally, the interest of alternative solution to the classical publication system (e.g. &lt;a href=&#34;https://nanopub.net/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Nanopublications&lt;/a&gt;) will be explored for the input/output of information to/from the graph and for the overall dissemination of knowledge acquired in the frame of the DBGI.&lt;/p&gt;
+&lt;h2 id=&#34;your-profile&#34;&gt;Your Profile&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;You are highly motivated to contribute to a project focused on describing and conserving biodiversity.&lt;/li&gt;
+&lt;li&gt;You hold a PhD in data / computer science with a strong track record of relevant experience.&lt;/li&gt;
+&lt;li&gt;You have experience with data modeling, semantic technologies, and Linked (Open) Data handling.&lt;/li&gt;
+&lt;li&gt;You are interested in data visualization.&lt;/li&gt;
+&lt;li&gt;You are familiar with open software projects and Open Research Data.&lt;/li&gt;
+&lt;li&gt;You are enthusiastic about learning and expanding your skill set in order to contribute towards the success of the project.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;we-offer&#34;&gt;We Offer:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;A stimulating, friendly and supportive research environment.&lt;/li&gt;
+&lt;li&gt;Access to state-of-the-art facilities and equipment.&lt;/li&gt;
+&lt;li&gt;Opportunities for professional development and training.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;starting-date&#34;&gt;Starting Date:&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;June-July 2023&lt;/strong&gt; for &lt;strong&gt;1.5 years&lt;/strong&gt;. This is a &lt;strong&gt;100% postdoc position&lt;/strong&gt;, fully funded by &lt;a href=&#34;https://www.swissuniversities.ch/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;swissuniversities&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;how-to-apply&#34;&gt;How to Apply?&lt;/h2&gt;
+&lt;p&gt;Please send the following information to &lt;strong&gt;pierre-marie.allard(at)unifr.ch&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A cover letter outlining your research experience and interests, and why you are interested in this position. (2 pages max)&lt;/li&gt;
+&lt;li&gt;Curriculum vitae, including a list of publications.&lt;/li&gt;
+&lt;li&gt;PhD diploma or equivalent.&lt;/li&gt;
+&lt;li&gt;Names and contact information for three references.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;some-links&#34;&gt;Some links:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;UniFr: &lt;a href=&#34;https://www.unifr.ch/uni/en/portrait/about-us.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.unifr.ch/uni/en/portrait/about-us.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;SIB: &lt;a href=&#34;https://www.sib.swiss/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.sib.swiss/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;DBGI : &lt;a href=&#34;https://www.dbgi.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.dbgi.org/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;EMI : &lt;a href=&#34;https://www.earthmetabolome.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.earthmetabolome.org/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
     
   </channel>
 </rss>
