@@ -1,6 +1,6 @@
 ---
 title: 'Postdoctoral researcher position: Knowledge Management in the Digital Botanical Gardens Initiative'
-date: 2022-04-14
+date: 2023-04-14
 authors: [allard_pierre-marie]
 ---
 
