@@ -1,6 +1,6 @@
 ---
 title: Seminar in the Botanical Garden of Zurich.
-date: 2022-03-04
+date: 2023-03-04
 ---
 
 We will present both the DBGI and EMI at the Department of Systematic and Evolutionary Botany in Zurich (16:00 Monday 06 March 2023)
