@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Luca Cappelletti | The Digital Botanical Gardens Initiative</title>
+    <link>https://www.dbgi.org/author/luca-cappelletti/</link>
+      <atom:link href="https://www.dbgi.org/author/luca-cappelletti/index.xml" rel="self" type="application/rss+xml" />
+    <description>Luca Cappelletti</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language>
+    <image>
+      <url>https://www.dbgi.org/author/luca-cappelletti/avatar_hu02e447659fa6494dadfc0ec4f9fd13ca_10642_270x270_fill_q75_lanczos_center.jpeg</url>
+      <title>Luca Cappelletti</title>
+      <link>https://www.dbgi.org/author/luca-cappelletti/</link>
+    </image>
+    
+  </channel>
+</rss>
