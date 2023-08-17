@@ -5,12 +5,57 @@
     <link>https://www.dbgi.org/post/</link>
       <atom:link href="https://www.dbgi.org/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Latest News</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Fri, 14 Apr 2023 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 17 Aug 2023 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://www.dbgi.org/media/icon_hu2fb6469703408137963092c86773317f_33056_512x512_fill_lanczos_center_3.png</url>
       <title>Latest News</title>
       <link>https://www.dbgi.org/post/</link>
     </image>
+    
+    <item>
+      <title>Postdoctoral researcher position - computational ecology, metabolomics and knowledge management for biodiversity research.</title>
+      <link>https://www.dbgi.org/post/swiss_dbgi_km_postdoc_offer_two/</link>
+      <pubDate>Thu, 17 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>https://www.dbgi.org/post/swiss_dbgi_km_postdoc_offer_two/</guid>
+      <description>&lt;p&gt;The Computational Ecology Group at the University of Neuchâtel, Switzerland, is offering a postdoctoral research position ! This postdoctoral project will be carried out in close collaboration with the &lt;a href=&#34;https://www.unifr.ch/bio/en/groups/allard/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;COMMONS Lab&lt;/a&gt; in the Department of Biology at the University of Fribourg, Switzerland. This project is framed within the &lt;a href=&#34;https://www.dbgi.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Digital Botanical Gardens Initiative&lt;/a&gt; (DBGI) and the wider &lt;a href=&#34;http://www.earthmetabolome.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Earth Metabolome Initiative&lt;/a&gt; (EMI), which aim to document the chemical diversity of living systems using untargeted metabolomic data and semantic web technologies.  The candidate will integrate ecological data into this framework and explore the potential of this approach to characterize biodiversity in the landscape.&lt;/p&gt;
+&lt;h2 id=&#34;project-background&#34;&gt;Project Background&lt;/h2&gt;
+&lt;p&gt;In the &lt;a href=&#34;https://www.dbgi.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Digital Botanical Gardens Initiative&lt;/a&gt; (DBGI), we leverage the outstanding living plant collections of Swiss botanical gardens as artificial yet accessible biodiversity hotspots. The long term objective of this Open Science initiative is to establish robust and scalable workflows designed to characterize and document the chemodiversity of the biosphere at a global scale (see &lt;a href=&#34;http://www.earthmetabolome.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Earth Metabolome Initiative&lt;/a&gt;). To achieve this, we exploit the unrivaled sensitivity and structural determination potential of mass spectrometry and the power of semantic web technologies to build a large-scale digital library capturing the wealth of chemo- and bio-diversity knowledge. This open resource will be designed to i) advance the field of life science, ii) benefit human society (e.g. drug discovery from Nature and sustainable agriculture solutions) and iii) support biodiversity conservation projects.&lt;/p&gt;
+&lt;h2 id=&#34;job-description&#34;&gt;Job Description&lt;/h2&gt;
+&lt;p&gt;The candidate&amp;rsquo;s objective will be to identify available ecological datasets and electronic resources, in particular on plant traits and biotic interactions, as well as environmental datasets such as soils characteristics that could be linked to chemical diversity data (from raw dataset, to formatted repositories or satellite image sets). She/he will work on the establishment of appropriate data formats and structure as well as the curation and linking to relevant ontologies. This work will be carried out in close collaboration with data scientists from the Swiss Bioinformatics Institute and DBGI project developers to facilitate their integration into the current DBGI Knowledge Base. Finally, she/he will explore approaches to leverage the topology of this knowledge graph in order to highlight and elucidate ecological functions of the metabolome and ultimately develop novel functional biodiversity indices.&lt;/p&gt;
+&lt;h2 id=&#34;your-profile&#34;&gt;Your Profile&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;You are highly motivated to contribute to a project focused on describing and conserving biodiversity.&lt;/li&gt;
+&lt;li&gt;You hold a PhD in ecology/bioinformatics with a strong track record of relevant experience.&lt;/li&gt;
+&lt;li&gt;You have experience with data modeling.&lt;/li&gt;
+&lt;li&gt;You are interested in data visualization and you are familiar with open software projects and Open Research Data.&lt;/li&gt;
+&lt;li&gt;You are enthusiastic about learning and expanding your skill set in order to contribute towards the success of the project.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;we-offer&#34;&gt;We Offer:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;A stimulating, friendly and supportive research environment.&lt;/li&gt;
+&lt;li&gt;Access to state-of-the-art facilities and equipment.&lt;/li&gt;
+&lt;li&gt;Opportunities for professional development and training.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;starting-date&#34;&gt;Starting Date:&lt;/h2&gt;
+&lt;p&gt;Between &lt;strong&gt;October and December 2023.&lt;/strong&gt; This &lt;strong&gt;1-year position&lt;/strong&gt; is fully funded by &lt;a href=&#34;https://www.swissuniversities.ch/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;swissuniversities&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;how-to-apply&#34;&gt;How to Apply?&lt;/h2&gt;
+&lt;p&gt;Please send the following information to &lt;strong&gt;emmanuel.defossez(at)unine.ch&lt;/strong&gt; and &lt;strong&gt;pierre-marie.allard(at)unifr.ch&lt;/strong&gt;. We are happy to answer any of your questions regarding the project !&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A cover letter outlining your research experience and interests, and why you are interested in this position. (2 pages max)&lt;/li&gt;
+&lt;li&gt;Curriculum vitae, including a list of publications.&lt;/li&gt;
+&lt;li&gt;PhD diploma or equivalent.&lt;/li&gt;
+&lt;li&gt;Names and contact information for three references.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;some-links&#34;&gt;Some links:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;UniNe: &lt;a href=&#34;https://www.unine.ch/biologie/en/home.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.unine.ch/biologie/en/home.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;UniFr: &lt;a href=&#34;https://www.unifr.ch/uni/en/portrait/about-us.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.unifr.ch/uni/en/portrait/about-us.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;SIB: &lt;a href=&#34;https://www.sib.swiss/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.sib.swiss/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;DBGI : &lt;a href=&#34;https://www.dbgi.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.dbgi.org/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;EMI : &lt;a href=&#34;https://www.earthmetabolome.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.earthmetabolome.org/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;📂 this offer as pdf here : &lt;a href=&#34;https://www.dbgi.org/files/postdoc_offer_DBGI.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.dbgi.org/files/postdoc_offer_DBGI.pdf&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Postdoctoral researcher position: Knowledge Management in the Digital Botanical Gardens Initiative</title>
