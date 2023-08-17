@@ -1,10 +1,6 @@
 ---
 # Display name
-title: "Tarcisio Mendes de Farias"
-
-# Username (this should match the folder name and the name on publications)
-authors:
-- "tarcisio-mendes"
+title: Luca Cappelletti
 
 # Is this the primary user of the site?
 superuser: false
@@ -14,11 +10,11 @@ role: DBGI-KM Contributor
 
 # Organizations/Affiliations
 organizations:
-- name: SIB Swiss Institute of Bioinformatics
-  url: "https://www.sib.swiss"
+- name: 
+  url: ""
 
 # Short bio (displayed in user profile at end of posts)
-bio: Dr. Tarcisio Mendes de Farias is a computer scientist specialized in data and knowledge management, working as a computational biologist at the SIB Swiss Institute of Bioinformatics. He is also the IT chair of the International Society for Biocuration. A full list of his scientific publications is available at https://purl.org/tarcisio/scholar.
+bio: 
 
 # List each interest with a dash
 interests:
@@ -30,12 +26,12 @@ interests:
 
 education:
   courses:
-  - course: Phd in Computer Science
-    institution: University of Burgundy
-    year: 2016
-  - course: MSc and BEng in Computer Science
-    institution: University of Technology of Compiegne - France and University of Pernambuco - Brazil 
-    year: 2013
+  - course: 
+    institution:
+    year: 
+  - course: 
+    institution: 
+    year: 
 
 # Social/Academic Networking
 # For available icons, see: https://wowchemy.com/docs/page-builder/#icons
@@ -44,14 +40,14 @@ education:
 social:
 - icon: envelope
   icon_pack: fas
-  link: '#contact'  # For a direct email link, use "mailto:tarcisio.mendes@sib.swiss".
+  link: '#contact'  # For a direct email link, use "mailto:".
 
 - icon: google-scholar
   icon_pack: ai
-  link: https://scholar.google.com/citations?user=sB87J-cAAAAJ
+  link: https://scholar.google.com/citations?user=DxyzGvUAAAAJ&hl
 - icon: github
   icon_pack: fab
-  link: https://github.com/tarcisiotmf
+  link: https://github.com/LucaCappelletti94
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
 # - icon: cv
@@ -70,6 +66,6 @@ user_groups:
 - EMI Contributors
 - DBGI-KM Contributors
 - DBGI Contributors
----
 
-Dr. Tarcisio Mendes de Farias is a computer scientist specialized in data and knowledge management, working as a computational biologist at the SIB Swiss Institute of Bioinformatics. He is also the IT chair of the International Society for Biocuration. A full list of his scientific publications is available at https://purl.org/tarcisio/scholar.
+### You can add abrief resume below the three dashes
+---
