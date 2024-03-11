@@ -1,10 +1,10 @@
 ---
 # Display name
-title: "Edouard Brüelhart"
+title: "Marco Visani"
 
 # Username (this should match the folder name and the name on publications)
 authors:
-- "bruelhart_edouard"
+- "Marco Visani"
 
 # Is this the primary user of the site?
 superuser: false
@@ -48,7 +48,7 @@ social:
   link: https://scholar.google.com/citations?user=PERSON-ID
 - icon: github
   icon_pack: fab
-  link: https://github.com/edouardbruelhart
+  link: https://github.com/mvisani
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
 # - icon: cv
@@ -65,4 +65,3 @@ highlight_name: false
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
 - DBGI Contributors
----
