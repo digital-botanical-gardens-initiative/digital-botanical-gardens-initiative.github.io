@@ -488,7 +488,7 @@ Resume of the meeting can be found at &lt;a href=&#34;https://www.dbgi.org/dendr
 &lt;p&gt;dfgdfgdfjhg&lt;/p&gt;
 &lt;p&gt;And check this data  
 
-&lt;div id=&#34;chart-571498362&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;chart-741368295&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
 &lt;script&gt;
   (function() {
     let a = setInterval( function() {
@@ -498,14 +498,14 @@ Resume of the meeting can be found at &lt;a href=&#34;https://www.dbgi.org/dendr
       clearInterval( a );
 
       Plotly.d3.json(&#34;./inat.json&#34;, function(chart) {
-        Plotly.plot(&#39;chart-571498362&#39;, chart.data, chart.layout, {responsive: true});
+        Plotly.plot(&#39;chart-741368295&#39;, chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
 &lt;/script&gt;
 And check this data  
 
-&lt;div id=&#34;chart-193258476&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;chart-591862437&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
 &lt;script&gt;
   (function() {
     let a = setInterval( function() {
@@ -515,7 +515,7 @@ And check this data
       clearInterval( a );
 
       Plotly.d3.json(&#34;./DBGI_tree.json&#34;, function(chart) {
-        Plotly.plot(&#39;chart-193258476&#39;, chart.data, chart.layout, {responsive: true});
+        Plotly.plot(&#39;chart-591862437&#39;, chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
