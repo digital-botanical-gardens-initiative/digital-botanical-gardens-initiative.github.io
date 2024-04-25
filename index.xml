@@ -488,7 +488,7 @@ Resume of the meeting can be found at &lt;a href=&#34;https://www.dbgi.org/dendr
 &lt;p&gt;dfgdfgdfjhg&lt;/p&gt;
 &lt;p&gt;And check this data  
 
-&lt;div id=&#34;chart-741368295&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;chart-346981752&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
 &lt;script&gt;
   (function() {
     let a = setInterval( function() {
@@ -498,14 +498,14 @@ Resume of the meeting can be found at &lt;a href=&#34;https://www.dbgi.org/dendr
       clearInterval( a );
 
       Plotly.d3.json(&#34;./inat.json&#34;, function(chart) {
-        Plotly.plot(&#39;chart-741368295&#39;, chart.data, chart.layout, {responsive: true});
+        Plotly.plot(&#39;chart-346981752&#39;, chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
 &lt;/script&gt;
 And check this data  
 
-&lt;div id=&#34;chart-591862437&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;chart-278465193&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
 &lt;script&gt;
   (function() {
     let a = setInterval( function() {
@@ -515,7 +515,7 @@ And check this data
       clearInterval( a );
 
       Plotly.d3.json(&#34;./DBGI_tree.json&#34;, function(chart) {
-        Plotly.plot(&#39;chart-591862437&#39;, chart.data, chart.layout, {responsive: true});
+        Plotly.plot(&#39;chart-278465193&#39;, chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -528,12 +528,15 @@ And check this data
       <link>https://www.dbgi.org/work-in-progress/</link>
       <pubDate>Thu, 28 Jun 2018 00:00:00 +0000</pubDate>
       <guid>https://www.dbgi.org/work-in-progress/</guid>
-      <description>&lt;p&gt;In the frame of the DBGI we &amp;ldquo;work with the garage door up&amp;rdquo; as describes Andy Matuschak &lt;a href=&#34;https://notes.andymatuschak.org/z21cgR9K3UcQ5a7yPsj2RUim3oM2TzdBByZu&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. When applying this idea to a scientific research endeavor we understand it as respecting the core concepts of Open Science. These are also the principles of &lt;a href=&#34;https://en.wikipedia.org/wiki/Open-notebook_science&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open Notebook Science&lt;/a&gt;&lt;/p&gt;
+      <description>&lt;h2 id=&#34;our-main-goal&#34;&gt;Our main goal&lt;/h2&gt;
+&lt;p&gt;The DBGI has been established to craft the sample collection, sample tracking and data analysis workflows which will be required for the wider &lt;a href=&#34;https://www.earthmetabolome.org&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Earth Metabolome Initiative&lt;/a&gt;, and Open Science project aiming at characterizing and understanding the chemical diversity of the Earth&amp;rsquo;s biosphere.&lt;/p&gt;
+&lt;h2 id=&#34;how-do-we-work-&#34;&gt;How do we work ?&lt;/h2&gt;
+&lt;p&gt;In the frame of the DBGI we &amp;ldquo;work with the garage door up&amp;rdquo; as describes Andy Matuschak &lt;a href=&#34;https://notes.andymatuschak.org/z21cgR9K3UcQ5a7yPsj2RUim3oM2TzdBByZu&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. When applying this idea to a scientific research endeavor we understand it as respecting the core concepts of Open Science. These are also the principles of &lt;a href=&#34;https://en.wikipedia.org/wiki/Open-notebook_science&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open Notebook Science&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;For the projects of the DBGI we will follow such approach in order to share early ideas and results but also the less shiny parts of the research projects. We share our early research outputs in several places.&lt;/p&gt;
-&lt;h2 id=&#34;ideas-notes-and-lab-notebook&#34;&gt;Ideas, notes and lab notebook&lt;/h2&gt;
+&lt;h3 id=&#34;ideas-notes-and-lab-notebook&#34;&gt;Ideas, notes and lab notebook&lt;/h3&gt;
 &lt;p&gt;To gather these we use the &lt;a href=&#34;https://www.dendron.so/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Dendron&lt;/a&gt; note managing system. The DBGI Dendron is reachable at &lt;a href=&#34;https://www.dbgi.org/dendron-dbgi/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.dbgi.org/dendron-dbgi/&lt;/a&gt;
 Expect to find strange ideas, badly formulated text and poorly written code. However if you have time and interest you should be able to observe and participate at each step of the process. When we take notes these are meant for others but also for us, in the future. Hopefully this will lead to enhanced collaboration and participation. Maybe yes, maybe not. We are making it a methodological experiment !&lt;/p&gt;
-&lt;h2 id=&#34;code&#34;&gt;Code&lt;/h2&gt;
+&lt;h3 id=&#34;code&#34;&gt;Code&lt;/h3&gt;
 &lt;p&gt;The code written in the frame of the DBGI is versioned and centralized under the following Github organization &lt;a href=&#34;https://github.com/digital-botanical-gardens-initiative&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://github.com/digital-botanical-gardens-initiative&lt;/a&gt;.
 Feel free to raise an issue on the corresponding repositories if you have any question, comment or suggestion on the code. We see this github organization as a place for everybody to learn ! We are looking forward for your inputs.&lt;/p&gt;
 </description>
