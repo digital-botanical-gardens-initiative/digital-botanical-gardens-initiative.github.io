@@ -230,17 +230,24 @@
 .dbgi-garden-counts {
   display: flex;
   flex-wrap: wrap;
-  gap: .45rem;
+  gap: .5rem .7rem;
   margin-top: .65rem;
 }
 
 .dbgi-garden-counts span {
-  padding: .2rem .45rem;
-  border-radius: .35rem;
-  background: rgba(38, 73, 13, .08);
+  display: inline-flex;
+  align-items: center;
+  gap: .32rem;
   color: #26490d;
   font-size: .82rem;
-  font-weight: 700;
+  font-weight: 650;
+}
+
+.dbgi-garden-count-icon {
+  width: .95em;
+  height: .95em;
+  color: #5f6e56;
+  flex: 0 0 auto;
 }
 
 .card,
