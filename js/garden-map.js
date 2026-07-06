@@ -38,6 +38,13 @@
       place.textContent = garden.city + ", " + garden.country;
       popup.appendChild(place);
 
+      if (garden.samples || garden.species) {
+        var stats = document.createElement("span");
+        stats.textContent = garden.samples.toLocaleString() + " samples / "
+          + garden.species.toLocaleString() + " species";
+        popup.appendChild(stats);
+      }
+
       if (garden.url) {
         var link = document.createElement("a");
         link.href = garden.url;
