@@ -1,24 +1,35 @@
 ---
 title: Egon Willighagen
 role: DBGI-KM External Advisor - Open Science
-organizations: []
-bio: ''
+organizations:
+- name: Maastricht University
+  url: https://egonw.github.io/
+bio: Assistant professor in bioinformatics working on cheminformatics, metabolomics, semantic technologies, open source software, and open science.
 interests:
-- Interest 1
-- Interest 2
+- Open Science
+- Cheminformatics
+- Metabolomics
+- Semantic technologies
+- Molecular representation
+- Wikidata
 user_groups:
-- DBGI-KM External Advisors
-- DBGI Contributors
+- Contributors
 social:
-- icon: google-scholar
+- icon: globe
+  icon_pack: fas
+  link: https://egonw.github.io/
+- icon: orcid
   icon_pack: ai
-  link: https://scholar.google.com/citations?user=PERSON-ID
+  link: https://orcid.org/0000-0001-7542-0286
 - icon: github
   icon_pack: fab
-  link: https://github.com/USERNAME
+  link: https://github.com/egonw
+- icon: mastodon
+  icon_pack: fab
+  link: https://social.edu.nl/@egonw
 aliases:
 - /author/willighagen-egon/
 - /authors/willighagen_egon/
 ---
 
-
+Egon Willighagen is an assistant professor in bioinformatics at Maastricht University. His work connects cheminformatics, chemometrics, metabolomics, drug discovery, toxicology, semantic web technologies, open source software, and open science.

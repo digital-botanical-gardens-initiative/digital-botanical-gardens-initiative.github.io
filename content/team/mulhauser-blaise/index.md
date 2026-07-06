@@ -1,25 +1,25 @@
 ---
 title: Blaise Mulhauser
 role: DBGI Contributor - Botanical Garden Director
-organizations: []
-bio: ''
+organizations:
+- name: Botanical Garden of the City of Neuchatel
+  url: https://www.jbneuchatel.ch/
+bio: Botanical garden director contributing expertise in living collections, public botanical gardens, conservation, and botanical sampling.
 interests:
-- Interest 1
-- Interest 2
+- Living collections
+- Botanical gardens
+- Plant conservation
+- Public biodiversity knowledge
+- Sampling workflows
 user_groups:
-- EMI Contributors
-- DBGI Consortium
-- DBGI Contributors
+- Botanical Gardens
 social:
-- icon: google-scholar
-  icon_pack: ai
-  link: https://scholar.google.com/citations?user=PERSON-ID
-- icon: github
-  icon_pack: fab
-  link: https://github.com/USERNAME
+- icon: globe
+  icon_pack: fas
+  link: https://www.jbneuchatel.ch/
 aliases:
 - /author/mulhauser-blaise/
 - /authors/mulhauser_blaise/
 ---
 
-
+Blaise Mulhauser contributes botanical garden expertise from the Botanical Garden of the City of Neuchatel, with a focus on living collections, conservation, public biodiversity knowledge, and sampling workflows.

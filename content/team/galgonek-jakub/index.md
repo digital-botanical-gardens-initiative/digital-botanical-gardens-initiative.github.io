@@ -1,24 +1,22 @@
 ---
 title: Jakub Galgonek
 role: DBGI External Advisor - Knowledge Graphs & Semantic Web
-organizations: []
-bio: ''
+organizations:
+- name: Semantic Web and knowledge-graph community
+  url: ''
+bio: Knowledge-graph and semantic-web advisor contributing expertise in linked scientific data and interoperable data structures.
 interests:
-- Interest 1
-- Interest 2
+- Knowledge graphs
+- Semantic Web
+- Linked open data
+- Data interoperability
+- Bioinformatics
 user_groups:
-- DBGI-KM External Advisors
-- DBGI Contributors
-social:
-- icon: google-scholar
-  icon_pack: ai
-  link: https://scholar.google.com/citations?user=PERSON-ID
-- icon: github
-  icon_pack: fab
-  link: https://github.com/USERNAME
+- Contributors
+social: []
 aliases:
 - /author/galgonek-jakub/
 - /authors/galgonek_jakub/
 ---
 
-
+Jakub Galgonek contributes expertise in knowledge graphs, semantic web technologies, linked scientific data, and interoperable data structures.

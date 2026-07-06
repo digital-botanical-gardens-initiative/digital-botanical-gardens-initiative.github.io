@@ -2,21 +2,18 @@
 title: Henry Lütcke
 role: DBGI-KM Contributor
 organizations:
-- name: ETH Zurich
-  url: ''
-bio: ''
+- name: ETH Zurich Scientific IT Services
+  url: https://sis.id.ethz.ch/
+bio: Scientific IT and research-data contributor at ETH Zurich, working with openBIS, FAIR data, and open research data workflows.
 interests:
 - Research Data Management
 - Open Research Data
 - FAIR data principles
+- openBIS
+- Scientific IT
 user_groups:
-- EMI Contributors
-- DBGI-KM Contributors
-- DBGI Contributors
+- Contributors
 social:
-- icon: google-scholar
-  icon_pack: ai
-  link: https://scholar.google.com/citations?user=PERSON-ID
 - icon: github
   icon_pack: fab
   link: https://github.com/hluetck
@@ -25,4 +22,4 @@ aliases:
 - /authors/luetcke_henry/
 ---
 
-
+Henry Lütcke contributes expertise in scientific IT, research data management, FAIR data principles, and openBIS-based workflows.

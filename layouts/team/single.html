@@ -17,7 +17,21 @@
         {{ with .Params.social }}
           <div class="d-flex flex-wrap gap-2 justify-content-center mt-3">
             {{ range . }}
-              <a class="btn btn-outline-primary btn-sm" href="{{ .link }}" rel="me noopener">{{ .icon }}</a>
+              {{ $pack := .icon_pack | default "fas" }}
+              {{ $icon := .icon }}
+              {{ if eq $pack "ai" }}
+                {{ $pack = "fas" }}
+                {{ if eq $icon "google-scholar" }}
+                  {{ $icon = "graduation-cap" }}
+                {{ else if eq $icon "orcid" }}
+                  {{ $icon = "id-card" }}
+                {{ else if eq $icon "cv" }}
+                  {{ $icon = "file-lines" }}
+                {{ end }}
+              {{ end }}
+              <a class="btn btn-outline-primary btn-sm" href="{{ .link }}" rel="me noopener" aria-label="{{ $icon }}">
+                {{ partial "assets/icon.html" (dict "icon" (printf "%s %s" $pack $icon) "class" "fa-fw" "spacing" false) }}
+              </a>
             {{ end }}
           </div>
         {{ end }}

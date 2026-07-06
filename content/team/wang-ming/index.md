@@ -4,16 +4,18 @@ role: DBGI-KM External Advisor - Computational MS
 organizations:
 - name: UC Riverside
   url: https://www.cs.ucr.edu/~mingxunw/
-bio: ''
+bio: Computational mass spectrometry researcher and developer of large-scale tools and infrastructure for metabolomics, natural products, and proteomics data.
 interests:
 - Mass Spectrometry
 - Metabolomics
 - Proteomics
 - Big Data
 user_groups:
-- DBGI-KM External Advisors
-- DBGI Contributors
+- Contributors
 social:
+- icon: globe
+  icon_pack: fas
+  link: https://www.mingxunwang.com/
 - icon: google-scholar
   icon_pack: ai
   link: https://scholar.google.com/citations?user=jMvg4eMAAAAJ&hl=en

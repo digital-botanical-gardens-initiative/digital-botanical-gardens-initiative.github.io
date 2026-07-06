@@ -1,24 +1,29 @@
 ---
 title: Daniel Mietchen
 role: DBGI-KM External Advisor - Open Science
-organizations: []
-bio: ''
+organizations:
+- name: Open Science and Wikimedia communities
+  url: https://orcid.org/0000-0001-9488-1870
+bio: Open-science contributor working on open research workflows, computational reproducibility, biomedical knowledge resources, and Wikimedia-linked scientific knowledge.
 interests:
-- Interest 1
-- Interest 2
+- Open Science
+- Computational reproducibility
+- Wikimedia
+- Biomedical knowledge resources
+- Research software
+- FAIR data
 user_groups:
-- DBGI-KM External Advisors
-- DBGI Contributors
+- Contributors
 social:
-- icon: google-scholar
+- icon: orcid
   icon_pack: ai
-  link: https://scholar.google.com/citations?user=PERSON-ID
+  link: https://orcid.org/0000-0001-9488-1870
 - icon: github
   icon_pack: fab
-  link: https://github.com/USERNAME
+  link: https://github.com/dmietchen
 aliases:
 - /author/mietchen-daniel/
 - /authors/mietchen_daniel/
 ---
 
-
+Daniel Mietchen contributes open-science expertise around computational reproducibility, open biomedical knowledge resources, research software, and Wikimedia-linked scientific knowledge.

@@ -5,15 +5,24 @@ aliases:
 - /people/
 - /authors/
 groups:
-- DBGI Governance
-- DBGI Core team
-- DBGI Contributors
-- DBGI Consortium
-- DBGI Initiators
-- EMI Initiators
-- Researchers
-- DBGI-KM Contributors
-- DBGI-KM External Advisors
+- Core team
+- Botanical Gardens
+- Contributors
+sections:
+- title: Core team
+  members:
+  - allard-pierre-marie
+  - cappelletti-luca
+  - tito-damiani
+  - defossez-emmanuel
+  - kucerova-katerina
+  - laboureau-mazzarine
+  - tomas-pluskal
+  - visani-marco
+- title: Botanical Gardens
+  members:
+  - kozlowski-gregor
+  - mulhauser-blaise
+- title: Contributors
+  rest: true
 ---
-
-

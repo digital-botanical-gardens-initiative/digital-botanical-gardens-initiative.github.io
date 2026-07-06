@@ -1,24 +1,35 @@
 ---
 title: Sergio Rasmann
-role: DBGI Contributor
-organizations: []
-bio: ''
+role: DBGI Contributor - Chemical Ecology
+organizations:
+- name: Laboratory of Functional Ecology, University of Neuchatel
+  url: https://www.unine.ch/lef/en/sergio-rasmann/
+bio: Professor at the Laboratory of Functional Ecology, University of Neuchatel, working on trophic interactions, plant defense, chemical ecology, and community evolution.
 interests:
-- Interest 1
-- Interest 2
+- Chemical ecology
+- Plant defense
+- Trophic interactions
+- Community ecology
+- Metabolomics
+- Biodiversity
 user_groups:
-- EMI Contributors
-- DBGI Contributors
+- Contributors
 social:
+- icon: envelope
+  icon_pack: fas
+  link: mailto:sergio.rasmann@unine.ch
+- icon: globe
+  icon_pack: fas
+  link: https://www.unine.ch/lef/en/sergio-rasmann/
+- icon: globe
+  icon_pack: fas
+  link: http://www.naturethinking.com/index.html
 - icon: google-scholar
   icon_pack: ai
-  link: https://scholar.google.com/citations?user=PERSON-ID
-- icon: github
-  icon_pack: fab
-  link: https://github.com/USERNAME
+  link: http://scholar.google.com/citations?user=s3xmGckAAAAJ&hl=en
 aliases:
 - /author/rasmann-sergio/
 - /authors/rasmann_sergio/
 ---
 
-
+Sergio Rasmann is professor at the [Laboratory of Functional Ecology](https://www.unine.ch/lef/en/sergio-rasmann/) at the University of Neuchatel. His group studies plant, herbivore, predator, and decomposer interactions, with a strong focus on plant defense theory, chemical ecology, community phylogenetics, and metabolomic approaches.
