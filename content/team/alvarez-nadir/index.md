@@ -1,24 +1,22 @@
 ---
 title: Nadir Alvarez
 role: DBGI-KM External Advisor - Biodiversity digitization
-organizations: []
-bio: ''
+organizations:
+- name: Natural History Museum of Geneva
+  url: https://www.museum-geneve.ch/
+bio: Biodiversity and museum-science advisor with expertise in natural history collections, biodiversity data, and digitization.
 interests:
-- Interest 1
-- Interest 2
+- Biodiversity digitization
+- Natural history collections
+- Museum data
+- Evolutionary biology
+- Biodiversity science
 user_groups:
-- DBGI-KM External Advisors
-- DBGI Contributors
-social:
-- icon: google-scholar
-  icon_pack: ai
-  link: https://scholar.google.com/citations?user=PERSON-ID
-- icon: github
-  icon_pack: fab
-  link: https://github.com/USERNAME
+- Contributors
+social: []
 aliases:
 - /author/alvarez-nadir/
 - /authors/alvarez_nadir/
 ---
 
-
+Nadir Alvarez contributes expertise in biodiversity science, natural history collections, museum data, and biodiversity digitization.

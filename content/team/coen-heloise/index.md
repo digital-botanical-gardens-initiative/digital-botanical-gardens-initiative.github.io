@@ -1,17 +1,18 @@
 ---
 title: Héloïse Coen
 role: DBGI Contributor
-organizations: []
-bio: ''
+organizations:
+- name: University of Fribourg
+  url: https://www.unifr.ch/bio/en/groups/allard/
+bio: Contributor to DBGI sampling and data workflows at the interface of botanical collections and metabolomics.
 interests:
-- Interest 1
-- Interest 2
+- Botanical collections
+- Sampling workflows
+- Metabolomics
+- Research data
 user_groups:
-- DBGI Contributors
+- Contributors
 social:
-- icon: google-scholar
-  icon_pack: ai
-  link: https://scholar.google.com/citations?user=PERSON-ID
 - icon: github
   icon_pack: fab
   link: https://github.com/HeloiseCoen
@@ -20,4 +21,4 @@ aliases:
 - /authors/coen_heloise/
 ---
 
-
+Héloïse Coen contributes to DBGI work connecting botanical collections, sampling workflows, and metabolomics-oriented research data.

@@ -1,25 +1,22 @@
 ---
 title: Bernd Rinn
 role: DBGI-KM Contributor
-organizations: []
-bio: ''
+organizations:
+- name: ETH Zurich Scientific IT Services
+  url: https://sis.id.ethz.ch/
+bio: Scientific IT contributor associated with openBIS and research data infrastructure at ETH Zurich.
 interests:
-- Interest 1
-- Interest 2
+- openBIS
+- Research data infrastructure
+- Scientific IT
+- FAIR data
+- Open research data
 user_groups:
-- EMI Contributors
-- DBGI-KM Contributors
-- DBGI Contributors
-social:
-- icon: google-scholar
-  icon_pack: ai
-  link: https://scholar.google.com/citations?user=PERSON-ID
-- icon: github
-  icon_pack: fab
-  link: https://github.com/USERNAME
+- Contributors
+social: []
 aliases:
 - /author/rinn-bernd/
 - /authors/rinn_bernd/
 ---
 
-
+Bernd Rinn contributes scientific IT and research-data infrastructure expertise, including openBIS-oriented workflows for organizing and sharing research data.

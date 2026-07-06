@@ -108,6 +108,7 @@ function renderYaml(stats) {
     lines.push(`  ${garden.key}:`);
     lines.push(`    samples: ${gardenStats.samples}`);
     lines.push(`    species: ${gardenStats.species}`);
+    lines.push(`    profiled_samples: ${gardenStats.profiledSamples}`);
     lines.push("    projects:");
     for (const project of garden.projects) {
       lines.push(`      - ${project}`);
@@ -170,6 +171,7 @@ print(json.dumps({"species": summary.collected_count}))
         {
           samples: sumProjects(samplesByProject, garden.projects),
           species: sumProjects(speciesByProject, garden.projects),
+          profiledSamples: sumProjects(profiledByProject, garden.projects),
         },
       ]),
     ),

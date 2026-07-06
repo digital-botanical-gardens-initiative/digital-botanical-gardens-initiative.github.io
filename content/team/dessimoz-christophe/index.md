@@ -1,25 +1,26 @@
 ---
 title: Christophe Dessimoz
 role: DBGI-KM Contributor
-organizations: []
-bio: ''
+organizations:
+- name: University of Lausanne and SIB Swiss Institute of Bioinformatics
+  url: https://lab.dessimoz.org/
+bio: Computational biologist working on bioinformatics, genomics, phylogenetics, evolution, orthology, and biological data integration.
 interests:
-- Interest 1
-- Interest 2
+- Bioinformatics
+- Comparative genomics
+- Orthology
+- Phylogenetics
+- Evolution
+- Biological data integration
 user_groups:
-- EMI Contributors
-- DBGI-KM Contributors
-- DBGI Contributors
+- Contributors
 social:
-- icon: google-scholar
-  icon_pack: ai
-  link: https://scholar.google.com/citations?user=PERSON-ID
-- icon: github
-  icon_pack: fab
-  link: https://github.com/USERNAME
+- icon: globe
+  icon_pack: fas
+  link: https://lab.dessimoz.org/
 aliases:
 - /author/dessimoz-christophe/
 - /authors/dessimoz_christophe/
 ---
 
-
+Christophe Dessimoz is a computational biologist whose work spans comparative genomics, orthology, phylogenetics, evolution, and biological data integration.

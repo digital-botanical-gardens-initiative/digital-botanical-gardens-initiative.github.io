@@ -1,24 +1,30 @@
 ---
 title: Disha Tandon
-role: DBGI-KM Contributor
-organizations: []
-bio: ''
+role: DBGI Contributor
+organizations:
+- name: University of Neuchatel
+  url: https://mdrishti.github.io/
+bio: Contributor working on computational and botanical data workflows for DBGI.
 interests:
-- Interest 1
-- Interest 2
+- Computational workflows
+- Botanical data
+- Research software
+- Open science
 user_groups:
-- DBGI Contributors
+- Contributors
 social:
-- icon: google-scholar
-  icon_pack: ai
-  link: https://scholar.google.com/citations?user=PERSON-ID
+- icon: envelope
+  icon_pack: fas
+  link: mailto:disha.tandon@unine.ch
+- icon: globe
+  icon_pack: fas
+  link: https://mdrishti.github.io/
 - icon: github
   icon_pack: fab
   link: https://github.com/mdrishti
 aliases:
 - /author/tandon-disha/
 - /authors/tandon_disha/
-email: disha.tandon@unine.ch
 ---
 
-
+Disha Tandon contributes to DBGI computational and botanical-data workflows.

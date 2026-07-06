@@ -1,9 +1,9 @@
 ---
 title: Pierre-Marie Allard
-role: DBGI Initiator
+role: DBGI Initiator - Head of COMMONS Lab
 organizations:
-- name: University of Fribourg
-  url: ''
+- name: COMMONS Lab, University of Fribourg
+  url: https://www.unifr.ch/bio/en/groups/allard/
 bio: Let's connect dots in Life's chemistry !
 interests:
 - Natural Products Chemistry
@@ -11,11 +11,7 @@ interests:
 - Linked Open Data
 - Open Science
 user_groups:
-- Researchers
-- DBGI Contributors
-- DBGI Consortium
-- DBGI Initiators
-- EMI Initiators
+- Core team
 social:
 - icon: envelope
   icon_pack: fas

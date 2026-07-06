@@ -12,9 +12,7 @@ interests:
 - Applied AI
 - Data integration and interoperability among biological data sources
 user_groups:
-- EMI Contributors
-- DBGI-KM Contributors
-- DBGI Contributors
+- Contributors
 social:
 - icon: google-scholar
   icon_pack: ai

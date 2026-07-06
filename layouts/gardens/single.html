@@ -20,7 +20,7 @@
         <div class="col-lg-4">
           <div class="dbgi-gardens-stat">
             <strong>{{ len $gardens }}</strong>
-            <span>botanical gardens across Europe</span>
+            <span>sampled botanical gardens</span>
           </div>
         </div>
       </div>
@@ -42,8 +42,20 @@
             <p class="dbgi-garden-place mb-1">{{ .city }}, {{ .country }}</p>
             <h2 class="h5 mb-0">{{ .name }}</h2>
             <p class="dbgi-garden-counts mb-0">
-              <span>{{ lang.FormatNumber 0 ($gardenStats.samples | default 0) }} samples</span>
-              <span>{{ lang.FormatNumber 0 ($gardenStats.species | default 0) }} species</span>
+              <span>
+                {{ partial "assets/icon.html" (dict "icon" "fas vial" "class" "dbgi-garden-count-icon" "spacing" false) }}
+                {{ lang.FormatNumber 0 ($gardenStats.samples | default 0) }} samples
+              </span>
+              <span>
+                {{ partial "assets/icon.html" (dict "icon" "fas leaf" "class" "dbgi-garden-count-icon" "spacing" false) }}
+                {{ lang.FormatNumber 0 ($gardenStats.species | default 0) }} species
+              </span>
+              {{ with $gardenStats.profiled_samples }}
+                <span>
+                  {{ partial "assets/icon.html" (dict "icon" "fas microscope" "class" "dbgi-garden-count-icon" "spacing" false) }}
+                  {{ lang.FormatNumber 0 . }} profiled
+                </span>
+              {{ end }}
             </p>
           </div>
           {{ with .url }}
