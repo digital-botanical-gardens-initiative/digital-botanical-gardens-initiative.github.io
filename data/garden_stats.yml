@@ -1,0 +1,34 @@
+generated_at: "2026-07-06T19:10:20.126Z"
+source: Directus Field_Data via directus-explorer
+totals:
+  samples: 7549
+  species: 3545
+  profiled_samples: 1246
+gardens:
+  fribourg:
+    samples: 2540
+    species: 1763
+    projects:
+      - jbuf
+  neuchatel:
+    samples: 1444
+    species: 912
+    projects:
+      - jbn
+      - jbn-new
+  champex:
+    samples: 2076
+    species: 881
+    projects:
+      - jbc
+  prague:
+    samples: 854
+    species: 280
+    projects:
+      - jbp
+      - jbp-new
+  kew:
+    samples: 635
+    species: 459
+    projects:
+      - kew-botanical-gardens

@@ -40,6 +40,92 @@
   object-fit: cover;
 }
 
+.dbgi-home-stats {
+  padding: clamp(1.25rem, 3vw, 2.15rem) 0;
+  border-bottom: 1px solid var(--bs-border-color);
+  background:
+    linear-gradient(180deg, #ffffff 0%, #f5f8f2 100%);
+}
+
+.dbgi-home-stats-kicker {
+  margin-bottom: .45rem;
+  color: #5f6e56;
+  font-size: .76rem;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.dbgi-home-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1.25rem, 5vw, 4rem);
+  align-items: end;
+}
+
+.dbgi-home-stat {
+  position: relative;
+  min-width: 0;
+  padding-top: .65rem;
+  border-top: 1px solid rgba(38, 73, 13, .28);
+}
+
+.dbgi-home-stat + .dbgi-home-stat::before {
+  position: absolute;
+  top: .95rem;
+  bottom: .15rem;
+  left: calc(clamp(1.25rem, 5vw, 4rem) / -2);
+  width: 1px;
+  background: rgba(38, 73, 13, .16);
+  content: "";
+}
+
+.dbgi-home-stat-label {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .42rem;
+  margin-top: .65rem;
+  color: #5f6e56;
+  font-size: clamp(.82rem, 1.2vw, .95rem);
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.dbgi-home-stat-icon {
+  width: 1em;
+  height: 1em;
+  color: #26490d;
+  opacity: .86;
+}
+
+.dbgi-counter {
+  display: block;
+  color: #26490d;
+  font-family: "JetBrains Mono", "SF Mono", "Cascadia Code", "Roboto Mono", "IBM Plex Mono", "Fira Code", ui-monospace, monospace;
+  font-size: clamp(2.45rem, 6.8vw, 5.6rem);
+  font-weight: 560;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0;
+  line-height: 1;
+  transform-origin: center bottom;
+}
+
+.dbgi-counter.is-ticking {
+  animation: dbgi-counter-tick .42s ease-out infinite alternate;
+}
+
+@keyframes dbgi-counter-tick {
+  from {
+    transform: translateY(.08em);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
 .dbgi-kicker {
   letter-spacing: .08em;
   text-transform: uppercase;
@@ -141,6 +227,22 @@
   text-transform: uppercase;
 }
 
+.dbgi-garden-counts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .45rem;
+  margin-top: .65rem;
+}
+
+.dbgi-garden-counts span {
+  padding: .2rem .45rem;
+  border-radius: .35rem;
+  background: rgba(38, 73, 13, .08);
+  color: #26490d;
+  font-size: .82rem;
+  font-weight: 700;
+}
+
 .card,
 .rounded-3 {
   border-radius: .5rem !important;
@@ -160,5 +262,18 @@
     align-items: flex-start;
     flex-direction: column;
     min-height: auto;
+  }
+
+  .dbgi-home-stats-grid {
+    grid-template-columns: 1fr;
+    gap: 1.35rem;
+  }
+
+  .dbgi-home-stat {
+    padding-top: .7rem;
+  }
+
+  .dbgi-home-stat + .dbgi-home-stat::before {
+    display: none;
   }
 }

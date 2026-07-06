@@ -8,6 +8,11 @@ on:
   pull_request:
     branches:
       - main
+  repository_dispatch:
+    types:
+      - directus-updated
+  schedule:
+    - cron: "17 3 * * *"
   workflow_dispatch:
 
 permissions:
@@ -39,6 +44,9 @@ jobs:
         with:
           go-version: stable
 
+      - name: Setup uv
+        uses: astral-sh/setup-uv@v5
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
@@ -46,14 +54,30 @@ jobs:
           cache: npm
           cache-dependency-path: package-lock.json
 
+      - name: Checkout Directus explorer
+        uses: actions/checkout@v4
+        with:
+          repository: digital-botanical-gardens-initiative/directus-explorer
+          path: directus-explorer
+          token: ${{ secrets.DIRECTUS_EXPLORER_TOKEN || github.token }}
+
       - name: Install Dart Sass
         run: sudo snap install dart-sass
+
+      - name: Install gnverifier
+        run: go install github.com/gnames/gnverifier@latest
 
       - name: Install dependencies
         run: npm ci
 
       - name: Build
         run: npm run build
+        env:
+          DBGI_REQUIRE_DIRECTUS_STATS: true
+          DIRECTUS_EXPLORER_DIR: directus-explorer
+          DIRECTUS_INSTANCE: ${{ secrets.DIRECTUS_INSTANCE }}
+          DIRECTUS_USERNAME: ${{ secrets.DIRECTUS_USERNAME }}
+          DIRECTUS_PASSWORD: ${{ secrets.DIRECTUS_PASSWORD }}
 
       - name: Upload public artifact
         uses: actions/upload-artifact@v4
@@ -65,7 +89,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     needs: build
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
     steps:
       - name: Download public artifact
         uses: actions/download-artifact@v4
