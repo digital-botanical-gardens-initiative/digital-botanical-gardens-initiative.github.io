@@ -1,5 +1,10 @@
 {{- $id := .Get "id" | default (printf "garden-map-%d" .Ordinal) -}}
-{{- $gardens := hugo.Data.gardens.gardens | default slice -}}
+{{- $stats := hugo.Data.garden_stats.gardens | default dict -}}
+{{- $gardens := slice -}}
+{{- range hugo.Data.gardens.gardens | default slice -}}
+  {{- $gardenStats := index $stats .key | default dict -}}
+  {{- $gardens = $gardens | append (merge . (dict "samples" ($gardenStats.samples | default 0) "species" ($gardenStats.species | default 0))) -}}
+{{- end -}}
 
 <link rel="stylesheet" href="/vendor/leaflet/leaflet.css">
 <div id="{{ $id }}" class="dbgi-garden-map" data-gardens='{{ $gardens | jsonify }}'></div>

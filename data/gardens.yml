@@ -1,5 +1,6 @@
 gardens:
   - name: Botanical Garden of the University of Fribourg
+    key: fribourg
     city: Fribourg
     country: Switzerland
     latitude: 46.792597
@@ -7,6 +8,7 @@ gardens:
     url: https://www.unifr.ch/jardin-botanique/en/
 
   - name: Botanical Garden of the City of Neuchâtel
+    key: neuchatel
     city: Neuchâtel
     country: Switzerland
     latitude: 47.000178
@@ -14,6 +16,7 @@ gardens:
     url: https://www.jbneuchatel.ch/
 
   - name: Flore-Alpe Garden of Champex
+    key: champex
     city: Champex-Lac
     country: Switzerland
     latitude: 46.01474
@@ -21,6 +24,7 @@ gardens:
     url: https://www.flore-alpe.ch/
 
   - name: Prague Botanical Garden
+    key: prague
     city: Prague
     country: Czech Republic
     latitude: 50.118694
@@ -28,6 +32,7 @@ gardens:
     url: https://www.botanicka.cz/en/
 
   - name: Royal Botanic Gardens, Kew
+    key: kew
     city: London
     country: United Kingdom
     latitude: 51.4787

@@ -1,5 +1,13 @@
 {{ define "main" }}
 {{- $gardens := hugo.Data.gardens.gardens | default slice -}}
+{{- $stats := hugo.Data.garden_stats.gardens | default dict -}}
+{{- $totalSamples := 0 -}}
+{{- $totalSpecies := 0 -}}
+{{- range $gardens -}}
+  {{- $gardenStats := index $stats .key | default dict -}}
+  {{- $totalSamples = add $totalSamples ($gardenStats.samples | default 0) -}}
+  {{- $totalSpecies = add $totalSpecies ($gardenStats.species | default 0) -}}
+{{- end -}}
 <div class="dbgi-gardens-page">
   <section class="dbgi-gardens-hero">
     <div class="container">
@@ -28,10 +36,15 @@
 
     <div class="dbgi-gardens-list" aria-label="Sampled botanical gardens">
       {{ range $gardens }}
+        {{- $gardenStats := index $stats .key | default dict -}}
         <article class="dbgi-garden-card">
           <div>
             <p class="dbgi-garden-place mb-1">{{ .city }}, {{ .country }}</p>
             <h2 class="h5 mb-0">{{ .name }}</h2>
+            <p class="dbgi-garden-counts mb-0">
+              <span>{{ lang.FormatNumber 0 ($gardenStats.samples | default 0) }} samples</span>
+              <span>{{ lang.FormatNumber 0 ($gardenStats.species | default 0) }} species</span>
+            </p>
           </div>
           {{ with .url }}
             <a class="btn btn-sm btn-outline-primary" href="{{ . }}" target="_blank" rel="noopener">Visit</a>

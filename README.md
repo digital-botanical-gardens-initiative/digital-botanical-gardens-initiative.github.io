@@ -38,6 +38,28 @@ npm run build
 
 Netlify also uses `npm run build`.
 
+## Directus-powered garden stats
+
+Garden sample/species stats are generated from Directus via the sibling
+[`directus-explorer`](https://github.com/digital-botanical-gardens-initiative/directus-explorer)
+project:
+
+```bash
+DIRECTUS_EXPLORER_DIR=/Users/pma/git_repos/DBGI/directus-explorer npm run data:gardens
+```
+
+The command writes `data/garden_stats.yml`, which Hugo uses on `/gardens/`.
+Locally it can use the `.env` file from `directus-explorer`. In CI, configure
+these repository secrets:
+
+- `DIRECTUS_INSTANCE`
+- `DIRECTUS_USERNAME`
+- `DIRECTUS_PASSWORD`
+- `DIRECTUS_EXPLORER_TOKEN` if the `directus-explorer` repository is private
+
+The deployment workflow refreshes the stats on pushes, on a daily schedule, and
+when triggered by a `repository_dispatch` event of type `directus-updated`.
+
 ## Content
 
 Main public sections:
