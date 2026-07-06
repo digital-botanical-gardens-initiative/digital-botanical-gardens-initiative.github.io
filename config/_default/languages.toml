@@ -1,0 +1,11 @@
+[en]
+    languageName = "English"
+    contentDir = "content"
+    weight = 1
+    [en.params.head]
+        tagline = "Open Science for botanical chemo- and biodiversity"
+    [en.params.social]
+        title = "Follow DBGI"
+        caption = "Open notes, code, and updates from the Digital Botanical Gardens Initiative."
+    [en.params.footer]
+        license = "Built with <a href='https://gethinode.com' class='link-secondary' target='_blank' rel='noopener noreferrer'>Hinode</a>. Content and code are maintained in the open."

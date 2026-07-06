@@ -1,0 +1,50 @@
+{{ define "main" }}
+<main class="container py-5">
+  <header class="mb-4 border-bottom pb-4">
+    <p class="text-primary fw-semibold text-uppercase small mb-2">People</p>
+    <h1 class="display-5 fw-semibold">{{ .Title }}</h1>
+    {{ with .Description }}<p class="lead text-secondary">{{ . }}</p>{{ end }}
+  </header>
+  {{ $pages := .Pages.ByTitle }}
+  <div class="row g-3">
+    {{ range $pages }}
+      {{ $avatar := .Resources.GetMatch "avatar.*" }}
+      {{ $person := . }}
+      <div class="col-md-6 col-xl-4">
+        <article class="border rounded-3 h-100 p-3">
+          <div class="d-flex gap-3 align-items-start">
+            {{ with $avatar }}
+              {{ $img := .Fill "160x160 Center" }}
+              <img class="rounded-circle flex-shrink-0" src="{{ $img.RelPermalink }}" alt="{{ $person.Title }}" width="72" height="72">
+            {{ end }}
+            <div class="min-w-0">
+              <h2 class="h5 mb-1"><a class="text-decoration-none" href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+              {{ with .Params.role }}<p class="small text-secondary mb-2">{{ . }}</p>{{ end }}
+              {{ with .Params.user_groups }}
+                <div class="d-flex flex-wrap gap-1">
+                  {{ range first 3 . }}<span class="badge text-bg-light border fw-normal">{{ . }}</span>{{ end }}
+                </div>
+              {{ end }}
+            </div>
+          </div>
+        </article>
+      </div>
+    {{ end }}
+  </div>
+
+  <section class="mt-5 pt-4 border-top">
+    <h2 class="h4 mb-3">Groups</h2>
+    <div class="d-flex flex-wrap gap-2">
+      {{ range .Params.groups }}
+        {{ $group := . }}
+        {{ $count := len (where $pages "Params.user_groups" "intersect" (slice $group)) }}
+        {{ if gt $count 0 }}
+          <span class="badge rounded-pill text-bg-light border text-secondary fw-normal">
+            {{ $group }} · {{ $count }}
+          </span>
+        {{ end }}
+      {{ end }}
+    </div>
+  </section>
+</main>
+{{ end }}

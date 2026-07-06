@@ -1,0 +1,44 @@
+{{ define "main" }}
+{{- $gardens := hugo.Data.gardens.gardens | default slice -}}
+<div class="dbgi-gardens-page">
+  <section class="dbgi-gardens-hero">
+    <div class="container">
+      <p class="dbgi-kicker text-primary mb-3">Sampled Gardens</p>
+      <div class="row g-4 align-items-end">
+        <div class="col-lg-8">
+          <h1 class="display-5 fw-semibold mb-3">{{ .Title }}</h1>
+          <p class="lead text-secondary mb-0">{{ .Description }}</p>
+        </div>
+        <div class="col-lg-4">
+          <div class="dbgi-gardens-stat">
+            <strong>{{ len $gardens }}</strong>
+            <span>botanical gardens across Europe</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container py-5">
+    <div class="dbgi-gardens-map-panel">
+      <div class="dbgi-gardens-intro">
+        {{ .Content }}
+      </div>
+    </div>
+
+    <div class="dbgi-gardens-list" aria-label="Sampled botanical gardens">
+      {{ range $gardens }}
+        <article class="dbgi-garden-card">
+          <div>
+            <p class="dbgi-garden-place mb-1">{{ .city }}, {{ .country }}</p>
+            <h2 class="h5 mb-0">{{ .name }}</h2>
+          </div>
+          {{ with .url }}
+            <a class="btn btn-sm btn-outline-primary" href="{{ . }}" target="_blank" rel="noopener">Visit</a>
+          {{ end }}
+        </article>
+      {{ end }}
+    </div>
+  </section>
+</div>
+{{ end }}

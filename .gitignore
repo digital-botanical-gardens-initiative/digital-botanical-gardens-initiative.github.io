@@ -1,2 +1,7 @@
 .DS_Store
 resources
+public
+node_modules
+_vendor
+.hugo_build.lock
+prebuild-headers-*
