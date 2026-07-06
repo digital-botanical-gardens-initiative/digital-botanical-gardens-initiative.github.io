@@ -1,0 +1,73 @@
+{
+  "name": "dbgi-website",
+  "version": "2.0.0",
+  "description": "The Digital Botanical Gardens Initiative website, built with Hugo and Hinode.",
+  "main": "index.js",
+  "scripts": {
+    "prestart": "npm run -s mod:vendor",
+    "start": "hugo server --bind=0.0.0.0 --disableFastRender --printI18nWarnings",
+    "start:prod": "npm run -s prestart  && hugo server --bind=0.0.0.0 --disableFastRender --printI18nWarnings -e production",
+    "prebuild": "npm run clean:public && npm run -s mod:vendor",
+    "build": "hugo --gc --minify",
+    "build:cache": "npm run -s prebuild && hugo config | grep cachedir && hugo --gc --minify -e ci",
+    "build:debug": "hugo -e debug --debug",
+    "build:headers": "npm run build:headers:dev && npm run build:headers:prod",
+    "build:headers:dev": "hugo --renderSegments headers -d prebuild-headers-dev -e development && cpy prebuild-headers-dev/server.toml config/_default/ --flat",
+    "build:headers:prod": "hugo --renderSegments headers -d prebuild-headers-prod -e production && cpy prebuild-headers-prod/netlify.toml ./ --flat",
+    "build:preview": "npm run build -D -F",
+    "clean:public": "rimraf public",
+    "clean:install": "rimraf package-lock.json node_modules",
+    "lint": "npm-run-all lint:**",
+    "lint:scripts": "eslint assets/js --no-error-on-unmatched-pattern",
+    "lint:styles": "stylelint \"assets/scss/**/*.{css,sass,scss,sss,less}\" --allow-empty-input",
+    "lint:markdown": "markdownlint-cli2 \"*.md\" \"content/**/*.md\"",
+    "mod:clean": "hugo mod clean",
+    "mod:update": "rimraf _vendor && hugo mod get -u ./... && hugo mod get -u && npm run -s mod:vendor && npm run -s mod:tidy",
+    "mod:tidy": "hugo mod tidy",
+    "mod:vendor": "rimraf _vendor && hugo mod vendor",
+    "test": "npm run -s lint",
+    "env": "hugo env",
+    "precheck": "npm version",
+    "check": "hugo version",
+    "upgrade": "npx npm-check-updates -u && npm run -s mod:update"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/digital-botanical-gardens-initiative/digital-botanical-gardens-initiative.github.io.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/digital-botanical-gardens-initiative/digital-botanical-gardens-initiative.github.io/issues"
+  },
+  "homepage": "https://www.dbgi.org",
+  "dependencies": {
+    "@fullhuman/postcss-purgecss": "^8.0.0",
+    "autoprefixer": "^10.4.27",
+    "cssnano": "^7.1.9",
+    "cssnano-preset-advanced": "^7.0.16",
+    "hugo-extended": "^0.160.1",
+    "postcss-cli": "^11.0.1",
+    "rimraf": "^6.1.3"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^20.5.0",
+    "@commitlint/config-conventional": "^20.5.0",
+    "@eslint/js": "^10.0.1",
+    "@stylistic/eslint-plugin": "^5.10.0",
+    "cpy-cli": "^7.0.0",
+    "eslint": "^10.3.0",
+    "globals": "^17.5.0",
+    "husky": "^9.1.7",
+    "markdownlint-cli2": "^0.22.1",
+    "netlify-plugin-hugo-cache-resources": "^0.2.1",
+    "npm-run-all": "^4.1.5",
+    "replace-in-files-cli": "^4.0.0",
+    "shx": "^0.4.0",
+    "stylelint": "^17.8.0",
+    "stylelint-config-standard-scss": "^17.0.0"
+  },
+  "optionalDependencies": {
+    "fsevents": "*"
+  }
+}

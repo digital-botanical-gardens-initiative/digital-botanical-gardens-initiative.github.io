@@ -1,33 +1,4 @@
 # Auto-generated file - do not modify
-[build]
-  command = 'npm run build'
-  publish = 'public'
-
-  [build.environment]
-    DART_SASS_VERSION = '1.98.0'
-    HUGO_ENABLEGITINFO = 'true'
-    HUGO_ENV = 'production'
-    HUGO_VERSION = '0.160.1'
-    NODE_VERSION = '24.12.0'
-    NPM_VERSION = '11.6.2'
-
-[context]
-  [context.branch-deploy]
-    command = 'npm run build -- -b $DEPLOY_PRIME_URL'
-
-  [context.deploy-preview]
-    command = 'npm run build -- -b $DEPLOY_PRIME_URL'
-
-[dev]
-  autoLaunch = false
-  command = 'npm run start'
-  framework = '#custom'
-  port = 8888
-  publish = 'public'
-  targetPort = 1313
-
-[[plugins]]
-  package = 'netlify-plugin-hugo-cache-resources'
 
 [[headers]]
   for = '/**'
@@ -40,7 +11,7 @@
         default-src 'none'; \
         font-src 'self' fonts.gstatic.com data:; \
         form-action 'self'; \
-        frame-ancestors 'self'; \
+        frame-ancestors 'self' http://localhost:1313 gethinode.com; \
         frame-src *.googletagmanager.com player.cloudinary.com www.youtube-nocookie.com www.youtube.com player.vimeo.com; \
         img-src 'self' *.google-analytics.com *.googletagmanager.com googletagmanager.com ssl.gstatic.com www.gstatic.com data: *.imgix.net *.imagekit.io *.cloudinary.com i.ytimg.com tile.openstreetmap.org *.tile.openstreetmap.org i.vimeocdn.com; \
         manifest-src 'self'; \

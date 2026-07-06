@@ -1,0 +1,143 @@
+[main]
+    separator = "-"
+    description = "An Open Science initiative for digitizing chemo- and biodiversity."
+    enableLanguageSelectionStorage = false
+    canonifyAssetsURLs = false
+    endorse = true
+    footerBelowFold = false
+    loading = "lazy"
+    breakpoint = "md"
+    [main.colorMode]
+        enabled = true
+        modes = ["light", "dark"]
+        toggle = false
+    [main.internalLinks]
+        validate = false
+        pretty = false
+    [main.externalLinks]
+        cue = false
+        tab = false
+    [main.build]
+        transpiler = "dartsass"
+
+[debugging]
+    showJS = false
+    showSCSS = false
+    purgeHTMLComments = false
+
+[docs]
+    github = "https://github.com/gethinode/hinode"
+    release = "https://github.com/gethinode/hinode/releases/tag/"
+    checkVersion = false
+
+[navigation]
+    anchor = true
+    logo = "/img/dbgi-logo-green.png"
+    logo-height = 36
+    color = "body"
+    fixed = true
+    offset = "5.5rem"
+    breadcrumb = true
+    toc = true
+    sidebar = true
+    size = "md"
+    [navigation.search]
+        enabled = true
+        modal = false
+
+[messages]
+    placement = "bottom-right"
+
+[sharing]
+    enabled = true
+    sort = "weight"
+    reverse = false
+    webshare = true
+
+[[sharing.providers]]
+    name = "LinkedIn"
+    url = "https://www.linkedin.com/sharing/share-offsite/?url={url}"
+    icon = "fab linkedin"
+    weight = 10
+
+[[sharing.providers]]
+    name = "Twitter"
+    url = "https://twitter.com/home?status={url}"
+    icon = "fab x-twitter"
+    weight = 20
+
+[[sharing.providers]]
+    name = "Facebook"
+    url = "https://www.facebook.com/sharer.php?u={url}"
+    icon = "fab facebook"
+    weight = 30
+
+[[sharing.providers]]
+    name = "WhatsApp"
+    url = "whatsapp://send?text={title}%20{url}"
+    icon = "fab whatsapp"
+    weight = 40
+
+[[sharing.providers]]
+    name = "email"
+    url = "{url}"
+    icon = "fas link"
+    weight = 50
+    clipboard = true
+
+[favicon]
+    logo = "img/favicon.png"
+    sizes = [16, 32, 48]
+
+[style]
+    primary = "#26490d"
+    secondary = "#66705c"
+    success = "#3f6f22"
+    info = "#4d7a3b"
+    warning = "#b6852d"
+    danger = "#9f463c"
+    light = "#f5f8f2"
+    dark = "#17230f"
+    themeOpacity = "10"
+    darkModeShade = "20%"
+    darkModeTint = "40%"
+    themeFont = "Inter"
+    # themeFontPath = "https://fonts.googleapis.com/css2?family=Inter:wght@200;300;600&display=swap" # external path
+    themeFontPath = "/fonts" # local path
+    fontSizeBase = "1rem"
+    purge = true
+
+[schema]
+    type = "Organization"
+    name = "The Digital Botanical Gardens Initiative"
+    locale = "en-US"
+    twitter = ""
+    linkedin = ""
+    github = "https://github.com/digital-botanical-gardens-initiative"
+    section = "news"
+    [schema.author]
+        name = "The Digital Botanical Gardens Initiative"
+        # twitter = "https://twitter.com/markdumay"
+        github = "https://github.com/digital-botanical-gardens-initiative"
+    [schema.logo]
+        url = "img/dbgi-logo-green.png"
+        width = 450
+        height = 450
+    [schema.image]
+        url = "img/dbgi-og.png"
+        width = 1280
+        height = 640
+
+[opengraph]
+    images = ["dbgi-og.png"]
+    locale = "en_US"
+
+[links]
+    github = "https://github.com/digital-botanical-gardens-initiative"
+    dendron = "https://www.dbgi.org/dendron-dbgi/"
+
+[modules.leaflet.csp]
+    img-src = [
+        "tile.openstreetmap.org",
+        "*.tile.openstreetmap.org"
+    ]

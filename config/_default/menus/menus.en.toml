@@ -1,0 +1,47 @@
+[[main]]
+  name = "Home"
+  pageRef = "/"
+  weight = 10
+
+[[main]]
+  name = "News"
+  pageRef = "/news/"
+  weight = 20
+
+[[main]]
+  name = "Team"
+  pageRef = "/team/"
+  weight = 30
+
+[[main]]
+  name = "Gardens"
+  pageRef = "/gardens/"
+  weight = 35
+
+[[main]]
+  name = "Work"
+  pageRef = "/work/"
+  weight = 40
+
+[[main]]
+  name = "Contact"
+  pageRef = "/contact/"
+  weight = 50
+
+[[social]]
+  name = "GitHub"
+  pre = "fab fa-github"
+  url = "https://github.com/digital-botanical-gardens-initiative"
+  weight = 10
+
+[[social]]
+  name = "Email"
+  pre = "fas envelope"
+  url = "mailto:dbgi@protonmail.ch"
+  weight = 20
+
+[[social]]
+  name = "Open notes"
+  pre = "fas book-open"
+  url = "https://www.dbgi.org/dendron-dbgi/"
+  weight = 30

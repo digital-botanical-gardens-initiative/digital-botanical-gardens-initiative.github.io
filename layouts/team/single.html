@@ -1,0 +1,42 @@
+{{ define "main" }}
+{{ $avatar := .Resources.GetMatch "avatar.*" }}
+<main class="container py-5">
+  <article class="mx-auto" style="max-width: 980px;">
+    <div class="row g-5 align-items-start">
+      <aside class="col-md-3">
+        {{ with $avatar }}
+          {{ $img := .Fill "280x280 Center" }}
+          <img class="rounded-circle img-fluid mb-3" src="{{ $img.RelPermalink }}" alt="{{ $.Title }}">
+        {{ end }}
+        {{ with .Params.role }}<p class="fw-semibold mb-2 small">{{ . }}</p>{{ end }}
+        {{ with .Params.organizations }}
+          {{ range . }}
+            {{ if .url }}<p class="mb-1"><a href="{{ .url }}">{{ .name }}</a></p>{{ else }}<p class="mb-1">{{ .name }}</p>{{ end }}
+          {{ end }}
+        {{ end }}
+        {{ with .Params.social }}
+          <div class="d-flex flex-wrap gap-2 justify-content-center mt-3">
+            {{ range . }}
+              <a class="btn btn-outline-primary btn-sm" href="{{ .link }}" rel="me noopener">{{ .icon }}</a>
+            {{ end }}
+          </div>
+        {{ end }}
+      </aside>
+      <div class="col-md-9">
+        <a class="text-decoration-none small" href="/team/">Team</a>
+        <h1 class="display-6 fw-semibold mt-2">{{ .Title }}</h1>
+        {{ with .Params.bio }}<p class="lead text-secondary">{{ . }}</p>{{ end }}
+        <div class="content">
+          {{ .Content }}
+        </div>
+        {{ with .Params.interests }}
+          <h2 class="h4 mt-4">Interests</h2>
+          <div class="d-flex flex-wrap gap-2">
+            {{ range . }}<span class="badge text-bg-light border text-secondary fw-normal">{{ . }}</span>{{ end }}
+          </div>
+        {{ end }}
+      </div>
+    </div>
+  </article>
+</main>
+{{ end }}

@@ -1,0 +1,13 @@
+{{ define "main" }}
+<main class="container py-5">
+  <article class="mx-auto" style="max-width: 860px;">
+    <header class="mb-4 border-bottom pb-4">
+      <h1 class="display-6 fw-semibold">{{ .Title }}</h1>
+      {{ with .Description }}<p class="lead text-secondary">{{ . }}</p>{{ end }}
+    </header>
+    <div class="content fs-6 lh-lg">
+      {{ .Content }}
+    </div>
+  </article>
+</main>
+{{ end }}

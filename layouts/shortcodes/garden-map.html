@@ -1,0 +1,7 @@
+{{- $id := .Get "id" | default (printf "garden-map-%d" .Ordinal) -}}
+{{- $gardens := hugo.Data.gardens.gardens | default slice -}}
+
+<link rel="stylesheet" href="/vendor/leaflet/leaflet.css">
+<div id="{{ $id }}" class="dbgi-garden-map" data-gardens='{{ $gardens | jsonify }}'></div>
+<script src="/vendor/leaflet/leaflet.js"></script>
+<script src="/js/garden-map.js"></script>
