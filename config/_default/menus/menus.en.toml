@@ -34,6 +34,11 @@
   weight = 37
 
 [[main]]
+  name = "Funding"
+  pageRef = "/funding/"
+  weight = 38
+
+[[main]]
   name = "Work"
   pageRef = "/work/"
   weight = 40

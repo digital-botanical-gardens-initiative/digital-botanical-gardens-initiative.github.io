@@ -1,0 +1,69 @@
+funders:
+  - key: snsf
+    name: Swiss National Science Foundation
+    short_name: SNSF
+    logo: /img/funders/snsf.svg
+    url: https://www.snf.ch/en
+    grants:
+      - title: "MetaDiv: Ecological and Evolutionary drivers of phytochemical diversity"
+        grant_number: "215724"
+        scheme: Project funding
+        period: 2023-07-01 - 2027-06-30
+        amount: 381'293 CHF
+        status: ongoing
+        url: https://data.snf.ch/grants/grant/215724
+        summary: Ecological and evolutionary drivers of phytochemical diversity across botanical garden collections.
+      - title: Anticipating the Chemistry of Life
+        grant_number: "10000895"
+        scheme: Project funding
+        period: 2024-10-01 - 2028-09-30
+        amount: 397'854 CHF
+        status: ongoing
+        url: https://data.snf.ch/grants/grant/10000895
+        summary: Computational metabolomics, chemodiversity, natural products, and linked open knowledge.
+      - title: Biological complexity addressed by mass spectrometry
+        grant_number: "229588"
+        scheme: R'EQUIP
+        period: 2024-12-01 - 2025-11-30
+        amount: 700'000 CHF
+        status: completed
+        url: https://data.snf.ch/grants/grant/229588
+        summary: Mass spectrometry infrastructure supporting metabolomics and proteomics at the University of Fribourg.
+      - title: MetaboLinkAI
+        grant_number: "10002786"
+        scheme: Weave/Lead Agency
+        period: 2025-04-01 - 2029-03-31
+        amount: 3'254'428 CHF
+        status: ongoing
+        url: https://data.snf.ch/grants/grant/10002786
+        summary: Knowledge graphs and AI for querying, interpreting, and reusing metabolomics data.
+
+  - key: swissuniversities
+    name: swissuniversities
+    short_name: swissuniversities
+    logo: /img/funders/swissuniversities.svg
+    url: https://www.swissuniversities.ch/
+    grants:
+      - title: Knowledge Management in the Swiss Digital Botanical Gardens Initiative
+        short_title: Swiss DBGI-KM
+        scheme: Swiss Open Research Data Grants, Track B
+        period: 2023-2024
+        amount: 689'079 CHF requested
+        status: approved
+        url: https://www.swissuniversities.ch/fileadmin/swissuniversities/Dokumente/Hochschulpolitik/ORD/Calls/Approved_Projects_Track_B.pdf
+        summary: Open research data workflows for harmonizing, automating, and reusing DBGI data life cycles.
+
+  - key: gacr
+    name: Czech Science Foundation
+    short_name: GA ČR
+    logo: /img/funders/gacr.svg
+    url: https://gacr.cz/en/
+    grants:
+      - title: Czech Science Foundation Standard Project 26-21882S
+        grant_number: 26-21882S
+        scheme: Standard Project
+        period: 2026-01-01 - 2028-12-31
+        amount: approx. 300'000 EUR
+        status: ongoing
+        url: https://gacr.cz/en/
+        summary: Three-year GA ČR Standard Project supporting Tito Damiani's research programme.

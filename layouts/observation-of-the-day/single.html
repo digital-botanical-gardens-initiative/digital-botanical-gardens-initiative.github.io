@@ -23,14 +23,6 @@
 
   <section class="container py-5">
     <article class="dbgi-observation-card">
-      <div class="dbgi-observation-media">
-        {{ with $photo.large_url }}
-          <img src="{{ . }}" alt="{{ $observation.taxon_name }}" loading="eager">
-        {{ else }}
-          <div class="dbgi-observation-placeholder">No image available</div>
-        {{ end }}
-      </div>
-
       <div class="dbgi-observation-body">
         <p class="dbgi-kicker text-primary mb-2">Featured today</p>
         <h2 class="display-6 fw-semibold mb-2">
@@ -100,6 +92,14 @@
         </p>
         {{ with $photo.attribution }}
           <p class="small text-secondary mt-1 mb-0">Photo attribution: {{ . }}</p>
+        {{ end }}
+      </div>
+
+      <div class="dbgi-observation-media">
+        {{ with $photo.large_url }}
+          <img src="{{ . }}" alt="{{ $observation.taxon_name }}" loading="eager">
+        {{ else }}
+          <div class="dbgi-observation-placeholder">No image available</div>
         {{ end }}
       </div>
     </article>

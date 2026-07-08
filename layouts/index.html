@@ -64,7 +64,7 @@
 
   <section class="dbgi-home-stats" aria-label="DBGI collection statistics">
     <div class="container">
-      <p class="dbgi-home-stats-kicker">Directus live summary</p>
+      <p class="dbgi-home-stats-kicker">Status of the DBGI</p>
       <div class="dbgi-home-stats-grid">
         <div class="dbgi-home-stat">
           <strong class="dbgi-counter" data-count="{{ $totals.samples | default 0 }}">0</strong>
@@ -117,22 +117,15 @@
     </div>
   </section>
 
-  <section class="bg-body-tertiary py-5">
-    <div class="container">
-      <div class="row g-4 align-items-center">
-        <div class="col-lg-8">
-          <p class="dbgi-eyebrow text-primary mb-2">Open process</p>
-          <h2 class="h1 mb-3">Work with the garage door up.</h2>
-          <p class="lead text-secondary mb-0">Early ideas, research notes, and software are shared as the work develops, inviting reuse and discussion across biodiversity, metabolomics, and knowledge-management communities.</p>
-        </div>
-        <div class="col-lg-4">
-          <div class="d-grid gap-2">
-            <a class="btn btn-primary" href="/work/">Explore current work</a>
-            <a class="btn btn-outline-primary" href="/contact/">Contact DBGI</a>
-          </div>
-        </div>
+  <section class="container pb-5">
+    <div class="d-flex align-items-end justify-content-between gap-3 border-bottom pb-2 mb-3">
+      <div>
+        <p class="dbgi-eyebrow text-primary mb-2">Funding</p>
+        <h2 class="h1 mb-0">Supported by competitive research grants.</h2>
       </div>
+      <a class="btn btn-outline-primary" href="/funding/">View funding</a>
     </div>
+    {{ partial "funding/cards.html" . }}
   </section>
 </div>
 <script src="/js/counters.js"></script>
