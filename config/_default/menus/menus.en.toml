@@ -9,14 +9,29 @@
   weight = 20
 
 [[main]]
-  name = "Team"
+  name = "Contributors"
   pageRef = "/team/"
   weight = 30
+
+[[main]]
+  name = "Governance"
+  pageRef = "/governance/"
+  weight = 32
+
+[[main]]
+  name = "Labs"
+  pageRef = "/labs/"
+  weight = 33
 
 [[main]]
   name = "Gardens"
   pageRef = "/gardens/"
   weight = 35
+
+[[main]]
+  name = "Observation"
+  pageRef = "/observation-of-the-day/"
+  weight = 37
 
 [[main]]
   name = "Work"

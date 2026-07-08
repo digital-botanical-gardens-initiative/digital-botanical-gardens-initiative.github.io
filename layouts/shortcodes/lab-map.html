@@ -1,0 +1,7 @@
+{{- $id := .Get "id" | default (printf "lab-map-%d" .Ordinal) -}}
+{{- $labs := hugo.Data.labs.labs | default slice -}}
+
+<link rel="stylesheet" href="/vendor/leaflet/leaflet.css">
+<div id="{{ $id }}" class="dbgi-garden-map dbgi-lab-map" data-labs='{{ $labs | jsonify }}'></div>
+<script src="/vendor/leaflet/leaflet.js"></script>
+<script src="/js/lab-map.js"></script>

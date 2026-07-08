@@ -1,0 +1,34 @@
+{{- $person := . -}}
+{{- $slug := $person.File.ContentBaseName -}}
+{{- $items := slice -}}
+
+{{- if in (hugo.Data.governance.members | default slice) $slug -}}
+  {{- $items = $items | append (dict "label" "Governance" "url" "/governance/" "kind" "governance") -}}
+{{- end -}}
+
+{{- range hugo.Data.labs.labs | default slice -}}
+  {{- $members := slice -}}
+  {{- $members = $members | append (.head | default slice) -}}
+  {{- $members = $members | append (.members | default slice) -}}
+  {{- if in $members $slug -}}
+    {{- $items = $items | append (dict "label" (.short_name | default .name) "url" (printf "/labs/%s/" .key) "kind" "lab") -}}
+  {{- end -}}
+{{- end -}}
+
+{{- range hugo.Data.gardens.gardens | default slice -}}
+  {{- $members := slice -}}
+  {{- $members = $members | append (.head | default slice) -}}
+  {{- $members = $members | append (.contacts | default slice) -}}
+  {{- $members = $members | append (.members | default slice) -}}
+  {{- if in $members $slug -}}
+    {{- $items = $items | append (dict "label" .name "url" (printf "/gardens/%s/" .key) "kind" "garden") -}}
+  {{- end -}}
+{{- end -}}
+
+{{- with $items -}}
+  <div class="dbgi-person-affiliations">
+    {{- range . -}}
+      <a class="dbgi-affiliation dbgi-affiliation-{{ .kind }}" href="{{ .url }}">{{ .label }}</a>
+    {{- end -}}
+  </div>
+{{- end -}}

@@ -1,6 +1,6 @@
 (function () {
   function initGardenMap(container) {
-    if (!container || !window.L || container.dataset.ready === "true") return;
+    if (!container || !window.L || container.dataset.ready === "true" || !container.dataset.gardens) return;
 
     var gardens = JSON.parse(container.dataset.gardens || "[]").filter(function (garden) {
       return Number.isFinite(Number(garden.latitude)) && Number.isFinite(Number(garden.longitude));
@@ -46,9 +46,14 @@
       }
 
       if (garden.url) {
+        var page = document.createElement("a");
+        page.href = "/gardens/" + garden.key + "/";
+        page.textContent = "View garden";
+        popup.appendChild(page);
+
         var link = document.createElement("a");
         link.href = garden.url;
-        link.textContent = "Visit garden";
+        link.textContent = "Visit website";
         link.rel = "noopener";
         link.target = "_blank";
         popup.appendChild(link);
@@ -67,5 +72,5 @@
     }
   }
 
-  document.querySelectorAll(".dbgi-garden-map").forEach(initGardenMap);
+  document.querySelectorAll(".dbgi-garden-map[data-gardens]").forEach(initGardenMap);
 })();

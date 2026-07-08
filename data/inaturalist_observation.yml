@@ -1,0 +1,37 @@
+generated_at: "2026-07-08T11:09:46.545Z"
+source: "iNaturalist observations by DBGI"
+api_url: "https://api.inaturalist.org/v1/observations?user_id=dbgi&per_page=1&page=1488&order=asc&order_by=created_at"
+user: "dbgi"
+total_observations: 3831
+daily_index: 1488
+observation:
+  id: 310285579
+  uri: "https://www.inaturalist.org/observations/310285579"
+  taxon_name: "Saxifraga juniperifolia"
+  taxon_url: "https://www.inaturalist.org/taxa/509880"
+  common_name: "Juniper Saxifrage"
+  rank: "species"
+  observed_on: "2025-05-26"
+  observed_on_string: "2025-05-26 18:18:11+02:00"
+  place_guess: "Entremont, CH-VS, CH"
+  description: ""
+  quality_grade: "casual"
+  license_code: "cc0"
+  captive: true
+  collector: "Émilie Lab"
+  collector_inat: ""
+  collector_orcid: ""
+  external_id: "dbgi_008792"
+  original_taxon: ""
+  photo:
+    square_url: "https://inaturalist-open-data.s3.amazonaws.com/photos/559988489/square.jpg"
+    medium_url: "https://inaturalist-open-data.s3.amazonaws.com/photos/559988489/medium.jpg"
+    large_url: "https://inaturalist-open-data.s3.amazonaws.com/photos/559988489/large.jpg"
+    attribution: "no rights reserved"
+    license_code: "cc0"
+    width: 1080
+    height: 1920
+  tags:
+    - "emi_external_id:dbgi_008792"
+    - "emi_project:dbgi_jbc"
+    - "emi_collector:Émilie Lab"

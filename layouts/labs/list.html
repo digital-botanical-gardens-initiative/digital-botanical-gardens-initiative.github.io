@@ -1,0 +1,53 @@
+{{ define "main" }}
+{{- $labs := hugo.Data.labs.labs | default slice -}}
+<div class="dbgi-gardens-page dbgi-labs-page">
+  <section class="dbgi-gardens-hero">
+    <div class="container">
+      <p class="dbgi-kicker text-primary mb-3">Core Labs</p>
+      <div class="row g-4 align-items-end">
+        <div class="col-lg-8">
+          <h1 class="display-5 fw-semibold mb-3">{{ .Title }}</h1>
+          <p class="lead text-secondary mb-0">{{ .Description }}</p>
+        </div>
+        <div class="col-lg-4">
+          <div class="dbgi-gardens-stat">
+            <strong>{{ len $labs }}</strong>
+            <span>core DBGI labs</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container py-5">
+    <div class="dbgi-gardens-map-panel">
+      <div class="dbgi-gardens-intro">
+        {{ .Content }}
+      </div>
+    </div>
+
+    <div class="dbgi-gardens-list dbgi-labs-list" aria-label="Core DBGI labs">
+      {{ range $labs }}
+        {{- $labPage := site.GetPage (printf "/labs/%s" .key) -}}
+        <article class="dbgi-garden-card dbgi-lab-card">
+          <div>
+            <p class="dbgi-garden-place mb-1">{{ .city }}, {{ .country }}</p>
+            <h2 class="h5 mb-2">
+              <a class="text-decoration-none" href="{{ $labPage.RelPermalink | default (printf "/labs/%s/" .key) }}">
+                {{ .short_name | default .name }}
+              </a>
+            </h2>
+            <p class="text-secondary mb-3">{{ .summary }}</p>
+            {{ with .focus }}
+              <div class="d-flex flex-wrap gap-1">
+                {{ range first 4 . }}<span class="badge text-bg-light border fw-normal">{{ . }}</span>{{ end }}
+              </div>
+            {{ end }}
+          </div>
+          <a class="btn btn-sm btn-outline-primary" href="{{ $labPage.RelPermalink | default (printf "/labs/%s/" .key) }}">View</a>
+        </article>
+      {{ end }}
+    </div>
+  </section>
+</div>
+{{ end }}

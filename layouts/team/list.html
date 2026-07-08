@@ -5,74 +5,31 @@
     <h1 class="display-5 fw-semibold">{{ .Title }}</h1>
     {{ with .Description }}<p class="lead text-secondary">{{ . }}</p>{{ end }}
   </header>
-  {{ $pages := .Pages.ByTitle }}
   {{ $pagesByLastName := sort .Pages "File.ContentBaseName" }}
-  {{ $seen := slice }}
-  {{ range .Params.sections }}
-    {{ $section := . }}
-    {{ $sectionPages := slice }}
-    {{ if .rest }}
+  <section>
+    <div class="d-flex align-items-end justify-content-between gap-3 border-bottom pb-2 mb-3">
+      <h2 class="h3 mb-0">All contributors</h2>
+      <span class="small text-secondary">{{ len $pagesByLastName }} people</span>
+    </div>
+    <div class="row g-3">
       {{ range $pagesByLastName }}
-        {{ if not (in $seen .File.ContentBaseName) }}
-          {{ $sectionPages = $sectionPages | append . }}
-        {{ end }}
-      {{ end }}
-    {{ else }}
-      {{ range .members }}
-        {{ $slug := . }}
-        {{ with where $pages "File.ContentBaseName" $slug }}
-          {{ $sectionPages = $sectionPages | append (index . 0) }}
-          {{ $seen = $seen | append $slug }}
-        {{ end }}
-      {{ end }}
-    {{ end }}
-
-    {{ if gt (len $sectionPages) 0 }}
-      <section class="mb-5">
-        <div class="d-flex align-items-end justify-content-between gap-3 border-bottom pb-2 mb-3">
-          <h2 class="h3 mb-0">{{ $section.title }}</h2>
-          <span class="small text-secondary">{{ len $sectionPages }} people</span>
-        </div>
-        <div class="row g-3">
-          {{ range $sectionPages }}
-            {{ $avatar := .Resources.GetMatch "avatar.*" }}
-            {{ $person := . }}
-            <div class="col-md-6 col-xl-4">
-              <article class="border rounded-3 h-100 p-3">
-                <div class="d-flex gap-3 align-items-start">
-                  {{ with $avatar }}
-                    {{ $img := .Fill "160x160 Center" }}
-                    <img class="rounded-circle flex-shrink-0" src="{{ $img.RelPermalink }}" alt="{{ $person.Title }}" width="72" height="72">
-                  {{ end }}
-                  <div class="min-w-0">
-                    <h3 class="h5 mb-1"><a class="text-decoration-none" href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-                    {{ with .Params.role }}<p class="small text-secondary mb-2">{{ . }}</p>{{ end }}
-                    {{ with .Params.interests }}
-                      <div class="d-flex flex-wrap gap-1">
-                        {{ range first 3 . }}<span class="badge text-bg-light border fw-normal">{{ . }}</span>{{ end }}
-                      </div>
-                    {{ end }}
-                  </div>
-                </div>
-              </article>
+        {{ $avatar := .Resources.GetMatch "avatar.*" }}
+        {{ $person := . }}
+        <div class="col-md-6 col-xl-4">
+          <article class="border rounded-3 h-100 p-3">
+            <div class="d-flex gap-3 align-items-start">
+              {{ with $avatar }}
+                {{ $img := .Fill "160x160 Center" }}
+                <img class="rounded-circle flex-shrink-0" src="{{ $img.RelPermalink }}" alt="{{ $person.Title }}" width="72" height="72">
+              {{ end }}
+              <div class="min-w-0">
+                <h3 class="h5 mb-1"><a class="text-decoration-none" href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+                {{ with .Params.role }}<p class="small text-secondary mb-2">{{ . }}</p>{{ end }}
+                {{ partial "team/affiliations.html" . }}
+              </div>
             </div>
-          {{ end }}
+          </article>
         </div>
-      </section>
-    {{ end }}
-  {{ end }}
-
-  <section class="mt-5 pt-4 border-top">
-    <h2 class="h4 mb-3">Groups</h2>
-    <div class="d-flex flex-wrap gap-2">
-      {{ range .Params.groups }}
-        {{ $group := . }}
-        {{ $count := len (where $pages "Params.user_groups" "intersect" (slice $group)) }}
-        {{ if gt $count 0 }}
-          <span class="badge rounded-pill text-bg-light border text-secondary fw-normal">
-            {{ $group }} · {{ $count }}
-          </span>
-        {{ end }}
       {{ end }}
     </div>
   </section>
