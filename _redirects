@@ -8,6 +8,8 @@
 /work-in-progress /work/
 /author/muller-alain /team/muller-alain/
 /authors/muller_alain /team/muller-alain/
+/author/blood-alexander /team/blood-alexander/
+/authors/blood_alexander /team/blood-alexander/
 /author/kadlecova-alzbeta /team/kadlecova-alzbeta/
 /authors/kadlecova_alzbeta /team/kadlecova-alzbeta/
 /author/sima-ana-claudia /team/sima-ana-claudia/
@@ -32,6 +34,10 @@
 /authors/randin_christophe /team/randin-christophe/
 /author/volet-colin /team/volet-colin/
 /authors/volet_colin /team/volet-colin/
+/contributors /team/
+/people /team/
+/authors /team/
+/core-labs /labs/
 /author/mietchen-daniel /team/mietchen-daniel/
 /authors/mietchen_daniel /team/mietchen-daniel/
 /author/rovelli-davide /team/rovelli-davide/
@@ -95,6 +101,8 @@
 /post /news/
 /author/ruch-nicolas /team/ruch-nicolas/
 /authors/ruch_nicolas /team/ruch-nicolas/
+/observation /observation-of-the-day/
+/inat /observation-of-the-day/
 /author/cudre-mauroux-philippe /team/cudre-mauroux-philippe/
 /authors/cudre-mauroux_philippe /team/cudre-mauroux-philippe/
 /author/allard-pierre-marie /team/allard-pierre-marie/
@@ -107,8 +115,6 @@
 /authors/tamdem_guetchueng_stephanie /team/tamdem-guetchueng-stephanie/
 /author/mendes-tarcisio /team/mendes-tarcisio/
 /authors/mendes_tarcisio /team/mendes-tarcisio/
-/people /team/
-/authors /team/
 /author/freeth-thomas /team/freeth-thomas/
 /authors/freeth_thomas /team/freeth-thomas/
 /author/tito-damiani /team/tito-damiani/
