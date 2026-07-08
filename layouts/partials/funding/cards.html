@@ -1,0 +1,30 @@
+{{- $funders := hugo.Data.funding.funders | default slice -}}
+<div class="dbgi-funding-grid">
+  {{ range $funders }}
+    <article class="dbgi-funder-card">
+      <header class="dbgi-funder-header">
+        <a class="dbgi-funder-logo dbgi-funder-logo-{{ .key }}" href="{{ .url }}" target="_blank" rel="noopener" aria-label="{{ .name }}">
+          <img src="{{ .logo }}" alt="{{ .name }} logo">
+        </a>
+        <div>
+          <p class="dbgi-garden-place mb-1">Funder</p>
+          <h3 class="h5 mb-0">{{ .name }}</h3>
+        </div>
+      </header>
+      <div class="dbgi-grant-list">
+        {{ range .grants }}
+          <a class="dbgi-grant-card" href="{{ .url }}" target="_blank" rel="noopener">
+            <div>
+              <p class="dbgi-grant-meta mb-1">
+                {{ with .grant_number }}Grant {{ . }} · {{ end }}{{ .scheme }}
+              </p>
+              <h4 class="h6 mb-2">{{ .short_title | default .title }}</h4>
+              <p class="text-secondary mb-2">{{ .summary }}</p>
+              <p class="dbgi-grant-meta mb-0">{{ .period }} · {{ .amount }} · {{ .status }}</p>
+            </div>
+          </a>
+        {{ end }}
+      </div>
+    </article>
+  {{ end }}
+</div>

@@ -1,0 +1,15 @@
+{{ define "main" }}
+<main class="container py-5">
+  <header class="mb-4 border-bottom pb-4">
+    <p class="text-primary fw-semibold text-uppercase small mb-2">Support</p>
+    <h1 class="display-5 fw-semibold">{{ .Title }}</h1>
+    {{ with .Description }}<p class="lead text-secondary">{{ . }}</p>{{ end }}
+  </header>
+
+  <div class="content mb-4">
+    {{ .Content }}
+  </div>
+
+  {{ partial "funding/cards.html" . }}
+</main>
+{{ end }}
