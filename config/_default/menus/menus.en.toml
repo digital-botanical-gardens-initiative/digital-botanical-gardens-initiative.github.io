@@ -9,23 +9,38 @@
   weight = 20
 
 [[main]]
+  name = "About"
+  identifier = "about"
+  weight = 30
+
+[[main]]
+  name = "Vision & Goals"
+  pageRef = "/about/vision-goals/"
+  parent = "about"
+  weight = 30
+
+[[main]]
   name = "Contributors"
   pageRef = "/team/"
-  weight = 30
+  parent = "about"
+  weight = 31
 
 [[main]]
   name = "Governance"
   pageRef = "/governance/"
+  parent = "about"
   weight = 32
 
 [[main]]
   name = "Labs"
   pageRef = "/labs/"
+  parent = "about"
   weight = 33
 
 [[main]]
   name = "Gardens"
   pageRef = "/gardens/"
+  parent = "about"
   weight = 35
 
 [[main]]

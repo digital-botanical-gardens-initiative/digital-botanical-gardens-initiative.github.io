@@ -62,17 +62,11 @@ gardens:
     latitude: 50.118694
     longitude: 14.415417
     url: https://www.botanicka.cz/en/
-    summary: Prague Botanical Garden collections are connected to DBGI through the Prague metabolomics and plant-specialized-metabolite team.
+    summary: Prague Botanical Garden contributes living collections and botanical sampling capacity to DBGI in the Czech Republic.
     focus:
       - Living collections
-      - Plant specialized metabolites
       - Botanical sampling
-      - Metabolomics
-    contact_label: DBGI sampling contact
-    contacts:
-      - tomas-pluskal
-    members:
-      - kucerova-katerina
+      - Collection workflows
 
   - name: Royal Botanic Gardens, Kew
     key: kew

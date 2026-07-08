@@ -33,7 +33,8 @@
     {{- end -}}
     {{ partial "head/seo.html" . }}
     {{ partialCached "head/favicon.html" . -}}
-    <link rel="stylesheet" href="/css/dbgi.css">
+    {{- $dbgiCSSVersion := substr (sha256 (readFile "static/css/dbgi.css")) 0 12 -}}
+    <link rel="stylesheet" href="/css/dbgi.css?v={{ $dbgiCSSVersion }}">
     {{ if gt (len .Site.Languages) 1}}
     <meta name="lang" content="{{ .Site.Language }}">
     {{ end }}
