@@ -1,0 +1,12 @@
+{{- $avatar := .Resources.GetMatch "avatar.*" -}}
+<article class="dbgi-lab-person">
+  {{ with $avatar }}
+    {{ $img := .Fill "120x120 Center" }}
+    <img class="rounded-circle flex-shrink-0" src="{{ $img.RelPermalink }}" alt="{{ $.Title }}" width="56" height="56">
+  {{ end }}
+  <div class="min-w-0">
+    <h3 class="h6 mb-1"><a class="text-decoration-none" href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+    {{ with .Params.role }}<p class="small text-secondary mb-0">{{ . }}</p>{{ end }}
+    {{ partial "team/affiliations.html" . }}
+  </div>
+</article>

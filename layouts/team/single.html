@@ -37,18 +37,13 @@
         {{ end }}
       </aside>
       <div class="col-md-9">
-        <a class="text-decoration-none small" href="/team/">Team</a>
+        <a class="text-decoration-none small" href="/team/">Contributors</a>
         <h1 class="display-6 fw-semibold mt-2">{{ .Title }}</h1>
         {{ with .Params.bio }}<p class="lead text-secondary">{{ . }}</p>{{ end }}
+        {{ partial "team/affiliations.html" . }}
         <div class="content">
           {{ .Content }}
         </div>
-        {{ with .Params.interests }}
-          <h2 class="h4 mt-4">Interests</h2>
-          <div class="d-flex flex-wrap gap-2">
-            {{ range . }}<span class="badge text-bg-light border text-secondary fw-normal">{{ . }}</span>{{ end }}
-          </div>
-        {{ end }}
       </div>
     </div>
   </article>

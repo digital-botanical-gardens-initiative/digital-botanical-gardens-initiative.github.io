@@ -6,6 +6,17 @@ gardens:
     latitude: 46.792597
     longitude: 7.1561444
     url: https://www.unifr.ch/jardin-botanique/en/
+    summary: Living collections from the University of Fribourg botanical garden support DBGI sampling, metadata capture, and plant chemodiversity workflows.
+    focus:
+      - Living collections
+      - Botanical sampling
+      - Plant conservation
+      - Collection workflows
+    head:
+      - kozlowski-gregor
+    contact_label: DBGI garden contact
+    contacts:
+      - muller-alain
 
   - name: Botanical Garden of the City of Neuchâtel
     key: neuchatel
@@ -14,6 +25,18 @@ gardens:
     latitude: 47.000178
     longitude: 6.934638
     url: https://www.jbneuchatel.ch/
+    summary: The Botanical Garden of Neuchâtel contributes living collections, ethnobotanical expertise, and sampling workflows to DBGI.
+    focus:
+      - Living collections
+      - Ethnobotany
+      - Botanical sampling
+      - Public biodiversity knowledge
+    head:
+      - mulhauser-blaise
+    members:
+      - gaille-elodie
+      - maire-anne-laure
+      - ruch-nicolas
 
   - name: Flore-Alpe Garden of Champex
     key: champex
@@ -22,6 +45,15 @@ gardens:
     latitude: 46.01474
     longitude: 7.06424
     url: https://www.flore-alpe.ch/
+    summary: Flore-Alpe contributes alpine living collections and mountain-plant sampling expertise to DBGI.
+    focus:
+      - Alpine botanical collections
+      - Mountain plants
+      - Living collections
+      - Botanical sampling
+    contact_label: DBGI garden contact
+    contacts:
+      - randin-christophe
 
   - name: Prague Botanical Garden
     key: prague
@@ -30,6 +62,17 @@ gardens:
     latitude: 50.118694
     longitude: 14.415417
     url: https://www.botanicka.cz/en/
+    summary: Prague Botanical Garden collections are connected to DBGI through the Prague metabolomics and plant-specialized-metabolite team.
+    focus:
+      - Living collections
+      - Plant specialized metabolites
+      - Botanical sampling
+      - Metabolomics
+    contact_label: DBGI sampling contact
+    contacts:
+      - tomas-pluskal
+    members:
+      - kucerova-katerina
 
   - name: Royal Botanic Gardens, Kew
     key: kew
@@ -38,3 +81,19 @@ gardens:
     latitude: 51.4787
     longitude: -0.2956
     url: https://www.kew.org/
+    summary: Royal Botanic Gardens, Kew contributes botanical collections, phytochemistry, living-collection knowledge, and science-policy expertise to DBGI.
+    focus:
+      - Botanical collections
+      - Phytochemistry
+      - Living collections
+      - Science policy
+    contact_label: DBGI garden contact
+    contacts:
+      - freeth-thomas
+    members:
+      - felix-juri
+      - howes-melanie-jayne
+      - jan-smith-eliot
+      - kite-geoffrey
+      - martel-carlos
+      - williams-china

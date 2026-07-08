@@ -141,3 +141,9 @@
         "tile.openstreetmap.org",
         "*.tile.openstreetmap.org"
     ]
+
+[modules.inaturalist.csp]
+    img-src = [
+        "inaturalist-open-data.s3.amazonaws.com",
+        "static.inaturalist.org"
+    ]
