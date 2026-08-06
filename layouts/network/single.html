@@ -1,0 +1,146 @@
+{{ define "main" }}
+{{- $gardens := hugo.Data.gardens.gardens | default slice -}}
+{{- $labs := hugo.Data.labs.labs | default slice -}}
+{{- $govMembers := hugo.Data.governance.members | default slice -}}
+{{- $allPeople := where site.RegularPages "Section" "team" -}}
+{{- $allPeople = sort $allPeople "File.ContentBaseName" -}}
+{{- $excludedSlugs := $govMembers -}}
+{{- range $gardens }}
+  {{- $rep := "" -}}
+  {{- with .head }}{{ $rep = index . 0 }}{{ end -}}
+  {{- if not $rep }}{{ with .contacts }}{{ $rep = index . 0 }}{{ end }}{{ end -}}
+  {{- if not $rep }}{{ with .members }}{{ $rep = index . 0 }}{{ end }}{{ end -}}
+  {{- with $rep }}{{ $excludedSlugs = $excludedSlugs | append . }}{{ end -}}
+{{- end -}}
+{{- $contributors := where $allPeople "File.ContentBaseName" "not in" $excludedSlugs -}}
+<div>
+  <section class="container dbgi-network-hero">
+    <h1>{{ .Title }}</h1>
+  </section>
+
+  <section class="container" style="max-width: 1200px; padding-bottom: clamp(20px, 3vw, 32px);">
+    <div class="dbgi-network-map-panel">
+      {{ partial "utilities/network-map.html" (dict "id" "dbgi-map-network") }}
+      <div class="dbgi-network-map-legend">
+        <div class="dbgi-network-map-legend-item"><span class="dbgi-network-map-legend-dot" aria-hidden="true"></span>Botanical garden</div>
+        <div class="dbgi-network-map-legend-item"><span class="dbgi-network-map-legend-dot dbgi-network-map-legend-dot-lab" aria-hidden="true"></span>Research laboratory</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container dbgi-network-index" style="max-width: 1200px; padding-bottom: clamp(36px, 4.5vw, 52px);">
+    <div>
+      <a class="dbgi-network-index-heading" href="/gardens/"><span>Botanical gardens</span></a>
+      <div class="dbgi-network-index-list">
+        {{- range $i, $g := $gardens }}
+        {{- $gardenPage := site.GetPage (printf "/gardens/%s" $g.key) -}}
+        <div class="dbgi-network-index-row">
+          <span class="dbgi-network-index-pin" aria-hidden="true">{{ add $i 1 }}</span>
+          <a class="dbgi-network-index-name" href="{{ $gardenPage.RelPermalink | default (printf "/gardens/%s/" $g.key) }}">{{ $g.name }}</a>
+          <span class="dbgi-network-index-city">{{ $g.city }}</span>
+        </div>
+        {{- end }}
+      </div>
+    </div>
+    <div>
+      <a class="dbgi-network-index-heading" href="/labs/"><span>Research laboratories</span></a>
+      <div class="dbgi-network-index-list">
+        {{- range $i, $l := $labs }}
+        {{- $labPage := site.GetPage (printf "/labs/%s" $l.key) -}}
+        <div class="dbgi-network-index-row">
+          <span class="dbgi-network-index-pin dbgi-network-index-pin-lab" aria-hidden="true">{{ add $i 1 }}</span>
+          <a class="dbgi-network-index-name" href="{{ $labPage.RelPermalink | default (printf "/labs/%s/" $l.key) }}">{{ $l.short_name | default $l.name }}</a>
+          <span class="dbgi-network-index-city">{{ $l.city }}</span>
+        </div>
+        {{- end }}
+      </div>
+    </div>
+  </section>
+
+  <section id="governance" class="container" style="max-width: 1200px; padding-bottom: clamp(44px, 5.5vw, 68px);">
+    <div class="dbgi-network-section-header">
+      <h2>Governance</h2>
+      <span>People steering and coordinating the Initiative</span>
+    </div>
+    <div class="dbgi-people-grid">
+      {{- range $govMembers }}
+      {{- with site.GetPage (printf "/team/%s" .) }}
+      {{- $avatar := .Resources.GetMatch "avatar.*" }}
+      {{- $org := "" }}
+      {{- with .Params.organizations }}{{ $org = (index . 0).name }}{{ end }}
+      <a class="dbgi-people-card" href="{{ .RelPermalink }}">
+        <div class="dbgi-people-card-photo">
+          {{- with $avatar }}
+          {{- $img := .Fill "380x380 Center" }}
+          <img src="{{ $img.RelPermalink }}" alt="{{ $.Title }}" width="190" height="190">
+          {{- end }}
+        </div>
+        <div class="dbgi-people-card-body">
+          <div class="dbgi-people-card-name">{{ .Title }}</div>
+          {{- with .Params.role }}<div class="dbgi-people-card-role">{{ . }}</div>{{ end }}
+          {{- with $org }}<div class="dbgi-people-card-org">{{ . }}</div>{{ end }}
+        </div>
+      </a>
+      {{- end }}
+      {{- end }}
+    </div>
+  </section>
+
+  <section class="container" style="max-width: 1200px; padding-bottom: clamp(56px, 7vw, 88px);">
+    <div class="dbgi-network-section-header">
+      <h2>Garden Living Collections</h2>
+      <span>One representative per partner garden</span>
+    </div>
+    <div class="dbgi-people-grid">
+      {{- range $gardens }}
+      {{- $garden := . -}}
+      {{- $rep := "" -}}
+      {{- with .head }}{{ $rep = index . 0 }}{{ end -}}
+      {{- if not $rep }}{{ with .contacts }}{{ $rep = index . 0 }}{{ end }}{{ end -}}
+      {{- if not $rep }}{{ with .members }}{{ $rep = index . 0 }}{{ end }}{{ end -}}
+      {{- with $rep }}
+      {{- with site.GetPage (printf "/team/%s" .) }}
+      {{- $avatar := .Resources.GetMatch "avatar.*" }}
+      {{- $gardenPage := site.GetPage (printf "/gardens/%s" $garden.key) }}
+      <a class="dbgi-people-card" href="{{ .RelPermalink }}">
+        <div class="dbgi-people-card-photo">
+          {{- with $avatar }}
+          {{- $img := .Fill "380x380 Center" }}
+          <img src="{{ $img.RelPermalink }}" alt="{{ $.Title }}" width="190" height="190">
+          {{- end }}
+        </div>
+        <div class="dbgi-people-card-body">
+          <div class="dbgi-people-card-name">{{ .Title }}</div>
+          <div class="dbgi-people-card-role"><a href="{{ $gardenPage.RelPermalink | default (printf "/gardens/%s/" $garden.key) }}" style="color: inherit; text-decoration: none;">{{ $garden.name }}</a></div>
+        </div>
+      </a>
+      {{- end }}
+      {{- end }}
+      {{- end }}
+    </div>
+  </section>
+
+  <section id="contributors" class="container" style="max-width: 1200px; padding-bottom: clamp(72px, 9vw, 112px);">
+    <details class="dbgi-contributors-details">
+      <summary class="dbgi-contributors-toggle">
+        <h2>Contributors</h2>
+        <span class="dbgi-contributors-count">({{ len $contributors }})</span>
+        <span class="dbgi-contributors-chev" aria-hidden="true">⌄</span>
+      </summary>
+      <div class="dbgi-contributors-panel">
+        <p>Everyone contributing to DBGI, listed alphabetically by surname.</p>
+        <div class="dbgi-contributors-grid">
+          {{- range $contributors }}
+          {{- $affil := "" }}
+          {{- with .Params.organizations }}{{ $affil = (index . 0).name }}{{ end }}
+          <a class="dbgi-contributor-pill" href="{{ .RelPermalink }}">
+            <span class="dbgi-contributor-pill-name">{{ .Title }}</span>
+            {{- with $affil }}<span class="dbgi-contributor-pill-affil">{{ . }}</span>{{ end }}
+          </a>
+          {{- end }}
+        </div>
+      </div>
+    </details>
+  </section>
+</div>
+{{ end }}

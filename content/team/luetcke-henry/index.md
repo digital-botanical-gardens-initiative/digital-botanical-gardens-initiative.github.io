@@ -1,5 +1,6 @@
 ---
 title: Henry Lütcke
+featured: false
 role: DBGI-KM Contributor
 organizations:
 - name: ETH Zurich Scientific IT Services

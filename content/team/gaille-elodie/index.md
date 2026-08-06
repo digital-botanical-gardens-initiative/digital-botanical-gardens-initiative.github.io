@@ -1,5 +1,6 @@
 ---
 title: Elodie Gaille
+featured: false
 role: DBGI Contributor - Ethnobotany and Botanical Garden Workflows
 organizations:
 - name: Botanical Garden of the City of Neuchatel

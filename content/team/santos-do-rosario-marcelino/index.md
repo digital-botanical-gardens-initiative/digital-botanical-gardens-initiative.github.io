@@ -1,5 +1,6 @@
 ---
 title: Marcelino Santos do Rosário
+featured: false
 role: DBGI Contributor - Natural Products Chemistry
 organizations:
 - name: São Paulo State University

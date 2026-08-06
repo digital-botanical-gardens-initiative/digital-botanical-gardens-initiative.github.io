@@ -1,5 +1,6 @@
 ---
 title: Gregor Kozlowski
+featured: false
 role: DBGI Contributor - Botanical Garden Director
 organizations:
 - name: Botanical Garden of the University of Fribourg

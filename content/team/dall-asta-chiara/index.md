@@ -1,5 +1,6 @@
 ---
 title: Chiara Dall'Asta
+featured: false
 role: DBGI Contributor - Food and Natural Product Chemistry
 organizations:
 - name: University of Parma

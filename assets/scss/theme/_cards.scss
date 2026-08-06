@@ -1,0 +1,30 @@
+// Card geometry.
+//
+// Deliberately NOT routed through Hinode's $theme-border-radius: despite its name it is a
+// global radius, also consumed by kbd, code blocks, toasts, the sidebar, nav pills, carousels
+// and timelines. An 18px value there would round all of those too. Hinode's components/_card.scss
+// sets --bs-card-border-radius from that variable and is imported before this file, so
+// Bootstrap's $card-border-radius would be overwritten anyway — the CSS vars are the reliable
+// hook, and theme.scss is imported after every Hinode component.
+//
+// --bs-card-spacer-* is likewise set here rather than via $card-spacer-y/$card-spacer-x:
+// Bootstrap derives $card-cap-padding-y from $card-spacer-y with Sass arithmetic, which a
+// clamp() value cannot survive.
+.card {
+  --bs-card-border-radius: 18px;
+  --bs-card-inner-border-radius: 17px; // outer radius less the 1px border
+  --bs-card-border-color: rgb(38 73 13 / 14%);
+  --bs-card-spacer-y: clamp(24px, 2.8vw, 32px);
+  --bs-card-spacer-x: clamp(24px, 2.8vw, 32px);
+  --bs-card-bg: #fff; // Hinode forces transparent
+
+  transition:
+    border-color 0.18s ease,
+    box-shadow 0.18s ease,
+    transform 0.18s ease;
+}
+
+// Media cards let the image run to the edge, so the wrapper has to clip to the same radius.
+.card .card-img-wrap {
+  border-radius: var(--bs-card-inner-border-radius);
+}

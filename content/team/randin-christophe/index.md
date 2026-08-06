@@ -1,5 +1,6 @@
 ---
 title: Christophe Randin
+featured: false
 role: DBGI Contributor - Alpine Botanical Collections
 organizations:
 - name: Flore-Alpe Alpine Botanical Garden

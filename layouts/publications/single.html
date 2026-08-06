@@ -1,0 +1,35 @@
+{{ define "main" }}
+{{- $papers := slice
+  (dict "doi" "10.7554/eLife.70780" "year" "2022" "journal" "eLife" "title" "The LOTUS initiative for open knowledge management in natural products research" "authors" "Rutz, A., Sorokina, M., Galgonek, J., Mietchen, D., Willighagen, E., Gaudry, A., <em>et al.</em> (2022). <em>eLife, 11</em>, e70780.")
+  (dict "doi" "10.1093/gigascience/giac124" "year" "2023" "journal" "GigaScience" "title" "Open and reusable annotated mass spectrometry dataset of a chemodiverse collection of 1,600 plant extracts" "authors" "Allard, PM., Gaudry, A., Quiros-Guerrero, L.-M., Rutz, A., Dounoue-Kubo, M., Walker, T. W. N., <em>et al.</em> (2023). <em>GigaScience, 12</em>, giac124.")
+  (dict "doi" "10.1021/acscentsci.3c00800" "year" "2024" "journal" "ACS Central Science" "title" "A sample-centric and knowledge-driven computational framework for natural products drug discovery" "authors" "Gaudry, A., Pagni, M., Mehl, F., Moretti, S., Quiros-Guerrero, L.-M., Allard, PM., <em>et al.</em> (2024). <em>ACS Central Science, 10</em>(4), 494–510.")
+  (dict "doi" "10.1093/gigascience/giag051" "year" "2026" "journal" "GigaScience" "title" "METRIN-KG: a knowledge graph integrating plant metabolites, traits, and biotic interactions" "authors" "Tandon, D., De Farias, T. M., Allard, PM., &amp; Defossez, E. (2026). <em>GigaScience</em>.")
+-}}
+<div>
+  <section class="container dbgi-static-hero" style="max-width: 900px;">
+    <a class="dbgi-back-link" href="/"><span aria-hidden="true">←</span> Home</a>
+    <h1 class="dbgi-h1-page" style="margin-top: 26px;">{{ .Title }}</h1>
+    <p class="dbgi-static-tagline">{{ .Description }}</p>
+  </section>
+
+  <section class="dbgi-pub-list">
+    <div class="dbgi-pub-inprep">
+      <span class="dbgi-pub-badge">IN PREPARATION</span>
+      <div class="dbgi-pub-inprep-title">The Digital Botanical Gardens Initiative</div>
+      <p class="dbgi-pub-inprep-body">A global, open-science framework for digitising plant chemodiversity in living botanical collections, drawing on more than 7,500 samples collected across five botanical gardens.</p>
+    </div>
+
+    {{- range $papers }}
+    <a class="dbgi-pub-card" href="https://doi.org/{{ .doi }}" target="_blank" rel="noopener">
+      <span class="dbgi-pub-doi">{{ .doi }}</span>
+      <div class="dbgi-pub-meta">
+        <strong>{{ .year }}</strong>
+        <span>{{ .journal }}</span>
+      </div>
+      <div class="dbgi-pub-title">{{ .title }}</div>
+      <div class="dbgi-pub-authors">{{ .authors | safeHTML }}</div>
+    </a>
+    {{- end }}
+  </section>
+</div>
+{{ end }}

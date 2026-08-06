@@ -1,5 +1,6 @@
 ---
 title: Emilie Lab
+featured: true
 role: DBGI Contributor - Plant Metabolome
 organizations:
 - name: Laboratory of Functional Ecology, University of Neuchatel

@@ -1,5 +1,6 @@
 ---
 title: Melanie-Jayne R. Howes
+featured: false
 role: DBGI Contributor - Plant and Fungal Chemistry
 organizations:
 - name: Royal Botanic Gardens, Kew

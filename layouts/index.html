@@ -1,126 +1,15 @@
 {{ define "main" }}
-{{- $totals := hugo.Data.garden_stats.totals | default dict -}}
-<style>
-  .dbgi-page {
-    --dbgi-muted: #5f6e56;
-  }
-  .dbgi-kicker,
-  .dbgi-eyebrow {
-    letter-spacing: .08em;
-    text-transform: uppercase;
-    font-size: .78rem;
-    font-weight: 700;
-  }
-  .dbgi-hero {
-    padding: clamp(2.1rem, 5.5vw, 4.2rem) 0 clamp(1.8rem, 3vw, 2.4rem);
-    border-bottom: 1px solid var(--bs-border-color);
-    background: linear-gradient(180deg, rgba(38, 73, 13, .08), rgba(255, 255, 255, 0));
-  }
-  .dbgi-hero h1 {
-    max-width: 920px;
-    font-size: clamp(2.05rem, 5vw, 4rem);
-    line-height: 1;
-  }
-  .dbgi-hero-copy {
-    max-width: 760px;
-    color: var(--dbgi-muted);
-    font-size: clamp(1rem, 1.55vw, 1.16rem);
-  }
-  .dbgi-feature {
-    display: block;
-    padding: 1.35rem 0;
-    border-top: 1px solid var(--bs-border-color);
-    color: inherit;
-    text-decoration: none;
-  }
-  .dbgi-feature:first-child {
-    border-top: 0;
-  }
-  .dbgi-feature:hover h3 {
-    color: var(--bs-primary);
-  }
-  .dbgi-feature p {
-    max-width: 720px;
-  }
-  .dbgi-feature-link {
-    color: var(--bs-primary);
-    font-weight: 600;
-  }
-</style>
-
 <div class="dbgi-page">
-  <section class="dbgi-hero">
-    <div class="container">
-      <p class="dbgi-kicker text-primary mb-3">Digital Botanical Gardens Initiative</p>
-      <h1 class="fw-semibold mb-4">Open workflows for botanical chemo- and biodiversity.</h1>
-      <div class="dbgi-hero-copy mb-4">{{ .Content }}</div>
-      <div class="d-flex flex-wrap gap-2">
-        <a class="btn btn-primary" href="/work/">Current work</a>
-        <a class="btn btn-outline-primary" href="/team/">Contributors</a>
-        <a class="btn btn-outline-primary" href="/news/">News</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="dbgi-home-canopy" aria-label="Botanical garden canopy">
-    <img src="/img/dbgi-og_slim.jpeg" alt="Botanical garden canopy">
-  </section>
-
-  <section class="dbgi-home-stats" aria-label="DBGI collection statistics">
-    <div class="container">
-      <p class="dbgi-home-stats-kicker">Status of the DBGI</p>
-      <div class="dbgi-home-stats-grid">
-        <div class="dbgi-home-stat">
-          <strong class="dbgi-counter" data-count="{{ $totals.samples | default 0 }}">0</strong>
-          <span class="dbgi-home-stat-label">
-            {{ partial "assets/icon.html" (dict "icon" "fas vial" "class" "dbgi-home-stat-icon" "spacing" false) }}
-            Collected samples
-          </span>
-        </div>
-        <div class="dbgi-home-stat">
-          <strong class="dbgi-counter" data-count="{{ $totals.species | default 0 }}">0</strong>
-          <span class="dbgi-home-stat-label">
-            {{ partial "assets/icon.html" (dict "icon" "fas leaf" "class" "dbgi-home-stat-icon" "spacing" false) }}
-            Resolved species
-          </span>
-        </div>
-        <div class="dbgi-home-stat">
-          <strong class="dbgi-counter" data-count="{{ $totals.profiled_samples | default 0 }}">0</strong>
-          <span class="dbgi-home-stat-label">
-            {{ partial "assets/icon.html" (dict "icon" "fas microscope" "class" "dbgi-home-stat-icon" "spacing" false) }}
-            Profiled samples
-          </span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="container py-5">
-    <div class="row g-5">
-      <div class="col-lg-4">
-        <p class="dbgi-eyebrow text-primary mb-2">Focus</p>
-        <h2 class="h1">From living collections to reusable knowledge.</h2>
-      </div>
-      <div class="col-lg-8">
-        <a class="dbgi-feature" href="/gardens/">
-          <h3 class="h4">Botanical collections as living infrastructure</h3>
-          <p class="text-secondary mb-2">DBGI connects botanical garden collections, field sampling, biodiversity metadata, and open research practices.</p>
-          <span class="dbgi-feature-link">View sampled gardens</span>
-        </a>
-        <a class="dbgi-feature" href="/work/">
-          <h3 class="h4">Chemodiversity workflows</h3>
-          <p class="text-secondary mb-2">The initiative develops sample collection, tracking, metabolomics, and analysis workflows for documenting chemical diversity.</p>
-          <span class="dbgi-feature-link">See current work</span>
-        </a>
-        <a class="dbgi-feature" href="/news/">
-          <h3 class="h4">Linked open knowledge</h3>
-          <p class="text-secondary mb-2">Outputs are organized as reusable knowledge resources, combining open notebooks, public code, and semantic web technologies.</p>
-          <span class="dbgi-feature-link">Read updates</span>
-        </a>
-      </div>
-    </div>
-  </section>
-
+  {{ partial "home/hero.html" . }}
+  {{ partial "home/status-band.html" . }}
+  {{ partial "home/focus.html" . }}
+  {{ partial "home/coverage-gauge.html" . }}
+  {{ partial "home/network-teaser.html" . }}
+  {{ partial "home/observation-teaser.html" . }}
+  {{ partial "home/collectors-strip.html" . }}
+  {{ partial "home/news-teaser.html" . }}
 </div>
 <script src="/js/counters.js"></script>
+<script src="/js/coverage-bars.js"></script>
+<script src="/js/workflow-reveal.js"></script>
 {{ end }}

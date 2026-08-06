@@ -1,5 +1,6 @@
 ---
 title: Renato Bruni
+featured: false
 role: DBGI Contributor - Botany and Plant Secondary Metabolites
 organizations:
 - name: University of Parma

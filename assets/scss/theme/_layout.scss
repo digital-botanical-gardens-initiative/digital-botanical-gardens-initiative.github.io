@@ -1,0 +1,17 @@
+// Page gutter.
+//
+// The design uses clamp(20px, 5vw, 64px) on every section, at every width. Bootstrap's
+// $grid-gutter-width can't express it: it's a single value that also drives row/column gutters,
+// and Bootstrap does Sass arithmetic on it (`* .5`), which a clamp() cannot survive. Setting
+// --bs-gutter-x on .container would leak into nested .row elements. So the padding goes on the
+// container itself and --bs-gutter-x is left at its default for rows.
+//
+// Container max-widths are set in theme/_variables.scss.
+.container,
+.container-xxl {
+  padding-left: clamp(20px, 5vw, 64px);
+  padding-right: clamp(20px, 5vw, 64px);
+}
+
+// Sections that opt out deliberately (full-bleed media, edge-to-edge rails) still use .p-0,
+// which is a Bootstrap utility and outranks this.

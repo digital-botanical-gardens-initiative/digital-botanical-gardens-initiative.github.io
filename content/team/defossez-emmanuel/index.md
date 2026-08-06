@@ -1,5 +1,6 @@
 ---
 title: Emmanuel Defossez
+featured: true
 role: DBGI Initiator - Head of PEMG
 organizations:
 - name: PEMG, University of Neuchatel

@@ -1,5 +1,6 @@
 ---
 title: Kateřina Kučerová
+featured: true
 role: DBGI Contributor - Plant Specialized Metabolites
 organizations:
 - name: Pluskal Lab, IOCB Prague

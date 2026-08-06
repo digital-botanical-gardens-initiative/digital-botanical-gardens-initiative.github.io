@@ -1,6 +1,8 @@
 ---
 title: swissuniversities Open Research Data grant awarded for the Swiss DBGI-KM
 date: 2023-01-11
+tag: Grant
+image_alt: A researcher working with field equipment on a rooftop at sunset, overlaid with the text "Swiss Open Research Data Grants".
 aliases:
 - /post/swissuniversities_grant/
 ---
@@ -9,7 +11,7 @@ We are thrilled that our proposal "_Knowledge Management in the Swiss Digital Bo
 
 <!--more-->
 
-The project involves four partners: the COMMONS Lab at the University of Fribourg, the Computational Ecology group at the University of Neuchatel, the OpenBIS team at the Scientific IT Services at ETHZ and the Swiss Bioinformatics Institute. With the "Knowledge Management in the Swiss Digital Botanical Gardens Initiative" proposal, we are setting up a team of complementary expertises that aim at harmonizing and automating the many steps of the data life cycle in the DBGI. This initiative will be a place to establish and share with the community optimized workflows for the digitization of the chemical information of large biodiverse ensembles.
+The project involves four partners: the <a href="/labs/commons-lab/">COMMONS Lab</a> at the University of Fribourg, the Computational Ecology group at the University of Neuchatel, the OpenBIS team at the Scientific IT Services at ETHZ and the Swiss Bioinformatics Institute. With the "Knowledge Management in the Swiss Digital Botanical Gardens Initiative" proposal, we are setting up a team of complementary expertises that aim at harmonizing and automating the many steps of the data life cycle in the DBGI. This initiative will be a place to establish and share with the community optimized workflows for the digitization of the chemical information of large biodiverse ensembles.
 
 We will publish this research proposal in the next months.
 

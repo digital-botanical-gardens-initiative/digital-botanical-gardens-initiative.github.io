@@ -1,67 +1,68 @@
 {{ define "main" }}
 {{- $labs := hugo.Data.labs.labs | default slice -}}
-  {{- $slug := .File.ContentBaseName -}}
-  {{- $lab := dict -}}
-  {{- range $labs -}}
-    {{- if eq .key $slug -}}{{- $lab = . -}}{{- end -}}
-  {{- end -}}
-  {{- $headLabel := $lab.head_label | default "Head" -}}
-  <main class="container py-5 dbgi-lab-detail">
-    <a class="text-decoration-none small" href="/labs/">Core Labs</a>
-    <header class="row g-4 align-items-end border-bottom pb-4 mt-1 mb-4">
-      <div class="col-lg-8">
-        <p class="dbgi-kicker text-primary mb-3">{{ $lab.city }}, {{ $lab.country }}</p>
-        <h1 class="display-5 fw-semibold mb-3">{{ $lab.name }}</h1>
-        {{ with $lab.institution }}<p class="lead text-secondary mb-0">{{ . }}</p>{{ end }}
+{{- $slug := .File.ContentBaseName -}}
+{{- $lab := dict -}}
+{{- range $labs -}}
+  {{- if eq .key $slug -}}{{- $lab = . -}}{{- end -}}
+{{- end -}}
+{{- /* The design shows one "Contributors" grid rather than separate Head/Members blocks;
+       the head leads the list. */ -}}
+{{- $people := slice -}}
+{{- range $lab.head }}{{ $people = $people | append . }}{{ end -}}
+{{- range $lab.members }}{{ $people = $people | append . }}{{ end -}}
+{{- $people = uniq $people -}}
+
+<div class="dbgi-lab-detail">
+  <section class="dbgi-lab-detail-head">
+    <a class="dbgi-back-link" href="/labs/"><span aria-hidden="true">←</span> Research laboratories</a>
+    <div class="dbgi-lab-detail-title-row">
+      <div>
+        <h1 class="dbgi-h1-page">{{ $lab.name }}</h1>
+        {{ with $lab.institution }}<p class="dbgi-lab-detail-institution">{{ . }}</p>{{ end }}
+        <p class="dbgi-lab-detail-place">{{ $lab.city }}, {{ $lab.country }}</p>
       </div>
-      <div class="col-lg-4">
-        {{ with $lab.url }}
-          <a class="btn btn-outline-primary w-100" href="{{ . }}" target="_blank" rel="noopener">Visit lab website</a>
-        {{ end }}
-      </div>
-    </header>
-
-    <div class="row g-5">
-      <article class="col-lg-7">
-        {{ with $lab.summary }}<p class="lead text-secondary">{{ . }}</p>{{ end }}
-        <div class="content">
-          {{ .Content }}
-        </div>
-        {{ with $lab.focus }}
-          <h2 class="h4 mt-4">Focus</h2>
-          <div class="d-flex flex-wrap gap-2">
-            {{ range . }}<span class="badge text-bg-light border text-secondary fw-normal">{{ . }}</span>{{ end }}
-          </div>
-        {{ end }}
-      </article>
-
-      <aside class="col-lg-5">
-        {{ with $lab.head }}
-          <section class="mb-4">
-            <h2 class="h4 mb-3">{{ $headLabel }}</h2>
-            <div class="dbgi-lab-people">
-              {{ range . }}
-                {{ with site.GetPage (printf "/team/%s" .) }}
-                  {{ partial "team/person-card-compact.html" . }}
-                {{ end }}
-              {{ end }}
-            </div>
-          </section>
-        {{ end }}
-
-        {{ with $lab.members }}
-          <section>
-            <h2 class="h4 mb-3">Members</h2>
-            <div class="dbgi-lab-people">
-              {{ range . }}
-                {{ with site.GetPage (printf "/team/%s" .) }}
-                  {{ partial "team/person-card-compact.html" . }}
-                {{ end }}
-              {{ end }}
-            </div>
-          </section>
-        {{ end }}
-      </aside>
+      {{ with $lab.url }}
+      <a class="dbgi-lab-detail-cta" href="{{ . }}" target="_blank" rel="noopener">
+        Visit lab website
+        {{ partial "utilities/dbgi-icon.html" (dict "icon" "arrow-up-right" "size" 15) }}
+      </a>
+      {{ end }}
     </div>
-  </main>
+  </section>
+
+  <section class="dbgi-lab-detail-body">
+    {{ .Content }}
+  </section>
+
+  {{ with $lab.focus }}
+  <section class="dbgi-lab-detail-focus">
+    <p class="dbgi-eyebrow dbgi-lab-detail-label">Focus</p>
+    <div class="dbgi-lab-detail-chips">
+      {{ range . }}<span class="dbgi-lab-detail-chip">{{ . }}</span>{{ end }}
+    </div>
+  </section>
+  {{ end }}
+
+  {{ with $people }}
+  <section class="dbgi-lab-detail-people">
+    <p class="dbgi-eyebrow dbgi-lab-detail-label">Contributors ({{ len . }})</p>
+    <div class="dbgi-lab-contributors">
+      {{ range . }}
+        {{ with site.GetPage (printf "/team/%s" .) }}
+          {{- $avatar := .Resources.GetMatch "avatar.*" -}}
+          <a class="dbgi-lab-contributor" href="{{ .RelPermalink }}">
+            <span class="dbgi-lab-contributor-photo">
+              {{ with $avatar }}{{ $img := .Fill "264x264 Center" }}
+              <img src="{{ $img.RelPermalink }}" alt="{{ $.Title }}" loading="lazy" width="132" height="132">
+              {{ end }}
+            </span>
+            <span class="dbgi-lab-contributor-name">{{ .Title }}</span>
+            {{ with .Params.role }}<span class="dbgi-lab-contributor-role">{{ . }}</span>{{ end }}
+          </a>
+        {{ end }}
+      {{ end }}
+    </div>
+  </section>
+  {{ end }}
+</div>
 {{ end }}

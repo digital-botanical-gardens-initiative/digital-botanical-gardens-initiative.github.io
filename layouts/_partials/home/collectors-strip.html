@@ -1,0 +1,50 @@
+{{- /* Top collectors, ranked by real Directus sample counts (data/collector_name_map.yml).
+       Scoped to collectors that have a content/team/ page: the strip's cards are avatar +
+       profile link, and the `unmatched_directus_names` block in that file lists collectors
+       with no page, who would render as blank, unclickable cards. */ -}}
+{{- $limit := 7 -}}
+{{- $team := site.GetPage "/team" -}}
+{{- $collectorMap := hugo.Data.collector_name_map.people | default slice -}}
+{{- $ranked := slice -}}
+{{- range $collectorMap }}
+  {{- $entry := . -}}
+  {{- $count := $entry.collected_samples | default 0 -}}
+  {{- if gt $count 0 -}}
+    {{- range $team.Pages -}}
+      {{- if eq .File.ContentBaseName $entry.team_slug -}}
+        {{- $ranked = $ranked | append (dict "page" . "count" $count) -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- $ranked = first $limit (sort $ranked "count" "desc") -}}
+{{- with $ranked }}
+<section class="container dbgi-collectors-strip" aria-label="Top collectors">
+  <div class="dbgi-section-header">
+    <h2 class="dbgi-h2-section mb-0">Our top collectors</h2>
+    <a class="dbgi-section-link" href="/network/#contributors">All contributors →</a>
+  </div>
+  <div class="dbgi-collectors-scroller">
+    {{- range . }}
+    {{- $person := .page -}}
+    {{- $count := .count -}}
+    {{- $avatar := $person.Resources.GetMatch "avatar.*" -}}
+    {{- $affiliation := "" -}}
+    {{- with $person.Params.organizations }}{{ $affiliation = (index . 0).name }}{{ end -}}
+    <a class="dbgi-collector-card" href="{{ $person.RelPermalink }}">
+      {{- with $avatar }}
+      {{- $img := .Fill "164x164 Center" }}
+      <img class="dbgi-collector-card-avatar" src="{{ $img.RelPermalink }}" alt="{{ $person.Title }}" width="82" height="82">
+      {{- end }}
+      <p class="dbgi-collector-card-name">{{ $person.Title }}</p>
+      {{- with $affiliation }}
+      <p class="dbgi-collector-card-affiliation">{{ . }}</p>
+      {{- end }}
+      {{- if gt $count 0 }}
+      <p class="dbgi-collector-card-samples">{{ lang.FormatNumber 0 $count }} samples</p>
+      {{- end }}
+    </a>
+    {{- end }}
+  </div>
+</section>
+{{- end }}

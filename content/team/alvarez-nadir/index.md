@@ -1,5 +1,6 @@
 ---
 title: Nadir Alvarez
+featured: false
 role: DBGI-KM External Advisor - Biodiversity digitization
 organizations:
 - name: Natural History Museum of Geneva

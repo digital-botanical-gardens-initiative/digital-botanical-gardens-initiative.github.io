@@ -3,7 +3,7 @@
 {{- $items := slice -}}
 
 {{- if in (hugo.Data.governance.members | default slice) $slug -}}
-  {{- $items = $items | append (dict "label" "Governance" "url" "/governance/" "kind" "governance") -}}
+  {{- $items = $items | append (dict "label" "Governance" "url" "/network/#governance" "kind" "governance") -}}
 {{- end -}}
 
 {{- range hugo.Data.labs.labs | default slice -}}

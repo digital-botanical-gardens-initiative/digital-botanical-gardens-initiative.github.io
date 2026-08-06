@@ -1,5 +1,6 @@
 ---
 title: Tito Damiani
+featured: false
 role: DBGI Contributor - Computational Metabolomics
 organizations:
 - name: Pluskal Lab, IOCB Prague

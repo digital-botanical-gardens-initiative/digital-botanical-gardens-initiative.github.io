@@ -1,68 +1,127 @@
 {{ define "main" }}
-<main class="container py-5">
-  <header class="mb-4 border-bottom pb-4">
-    <p class="text-primary fw-semibold text-uppercase small mb-2">About</p>
-    <h1 class="display-5 fw-semibold">{{ .Title }}</h1>
-    {{ with .Description }}<p class="lead text-secondary">{{ . }}</p>{{ end }}
-  </header>
-
-  <section class="dbgi-vision-panel mb-4">
-    <p class="dbgi-eyebrow text-primary mb-2">Vision</p>
-    <h2 class="h1">Botanical gardens as connected, open research infrastructure.</h2>
-    <p class="lead text-secondary mb-0">
-      DBGI envisions botanical gardens as a connected, open, and reusable research infrastructure for observing plant chemo- and biodiversity.
-    </p>
+<div>
+  <section class="container dbgi-static-hero">
+    <h1 class="dbgi-h1-page">{{ .Title }}</h1>
+    <p class="dbgi-static-tagline">{{ .Description }}</p>
   </section>
 
-  <div class="row g-4 mb-4">
-    <div class="col-lg-5">
-      <section class="dbgi-compact-panel h-100">
-        <p class="dbgi-eyebrow text-primary mb-2">Mission</p>
-        <div class="content mb-0">{{ .Content }}</div>
-      </section>
+  <section class="container" data-gap-stat style="max-width: 1160px;">
+    <div class="dbgi-section-block" style="border-top: none; margin-top: 0; padding-top: 0;">
+      <h2>Most plant chemistry remains undocumented</h2>
+      <div class="dbgi-gap-row">
+        <div class="dbgi-gap-text">
+          <p>Plants produce an extraordinary diversity of molecules. There are around 400,000 known vascular plant species worldwide<sup><a href="#dbgi-references">1</a></sup>, yet we have documented the chemistry of only <span data-gap-pct>6.9%</span> of them<sup><a href="#dbgi-references">2</a></sup>.</p>
+        </div>
+        <div class="dbgi-gap-figure">
+          <div class="dbgi-gap-figure-total">
+            <strong>≈400,000</strong>
+            <span>Plant species</span>
+          </div>
+          <div class="dbgi-gap-donut-row">
+            <div class="dbgi-gap-donut" data-gap-donut style="background: conic-gradient(#26490d 0 6.88%, #e4eadd 6.88% 100%);"></div>
+            <div class="dbgi-gap-legend">
+              <div class="dbgi-gap-legend-item">
+                <span class="dbgi-gap-legend-dot" aria-hidden="true"></span>
+                <span><strong data-gap-pct>6.9%</strong> — species linked to at least one reported molecule</span>
+              </div>
+              <div class="dbgi-gap-legend-item dbgi-gap-legend-item-rest">
+                <span class="dbgi-gap-legend-dot dbgi-gap-legend-dot-rest" aria-hidden="true"></span>
+                <span><strong data-gap-rest-pct>93.1%</strong> — species with no reported chemistry</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="col-lg-7">
-      <section class="dbgi-compact-panel h-100">
-        <p class="dbgi-eyebrow text-primary mb-2">Approach</p>
-        <p class="mb-0">
-          The initiative links living collections, sampling workflows, metabolomics, biodiversity data, and open knowledge systems so botanical gardens are easier to sample, compare, document, and reuse for science.
-        </p>
-      </section>
-    </div>
-  </div>
 
-  <section>
-    <div class="border-bottom pb-2 mb-3">
-      <p class="dbgi-eyebrow text-primary mb-2">Goals</p>
-      <h2 class="h3 mb-0">What DBGI is building toward</h2>
+    <div class="dbgi-section-block">
+      <h2>What DBGI does</h2>
+      <p>We collect documented plant material and specimen information from botanical garden collections, then use mass spectrometry-based metabolomics to digitise their chemistry. We process and release the resulting data as an open, shared resource for researchers and the public.</p>
+      <figure class="dbgi-what-we-do-figure">
+        <img src="/img/dbgi-what-we-do.png" alt="DBGI data flow: physical objects from botanical gardens become digital objects through sampling, LC-MS analysis and spectral processing, are integrated into the DBGI knowledge graph with connected resources, and are queried by curators, chemists, ecologists and the public.">
+        <figcaption class="dbgi-what-we-do-steps">
+          <div class="dbgi-what-we-do-step">
+            <span class="dbgi-what-we-do-step-num" style="background: #2f6f2a;" aria-hidden="true">1</span>
+            <div>
+              <div class="dbgi-what-we-do-step-title">Physical objects</div>
+              <div class="dbgi-what-we-do-step-body">Garden specimens, dried sample material, plant extracts</div>
+            </div>
+          </div>
+          <div class="dbgi-what-we-do-step">
+            <span class="dbgi-what-we-do-step-num" style="background: #1f6fb2;" aria-hidden="true">2</span>
+            <div>
+              <div class="dbgi-what-we-do-step-title">Digital objects</div>
+              <div class="dbgi-what-we-do-step-body">Sample information, mass spectrometry profiles, molecular annotations</div>
+            </div>
+          </div>
+          <div class="dbgi-what-we-do-step">
+            <span class="dbgi-what-we-do-step-num" style="background: #6b3fa0;" aria-hidden="true">3</span>
+            <div>
+              <div class="dbgi-what-we-do-step-title">Integration</div>
+              <div class="dbgi-what-we-do-step-body">A knowledge graph structure linking taxon information, molecules, and related data.</div>
+            </div>
+          </div>
+          <div class="dbgi-what-we-do-step">
+            <span class="dbgi-what-we-do-step-num" style="background: #ad6024;" aria-hidden="true">4</span>
+            <div>
+              <div class="dbgi-what-we-do-step-title">Connected resources</div>
+              <div class="dbgi-what-we-do-step-body">Open databases of molecules, traits, and biodiversity observations</div>
+            </div>
+          </div>
+          <div class="dbgi-what-we-do-step">
+            <span class="dbgi-what-we-do-step-num" style="background: #8b1e3f;" aria-hidden="true">5</span>
+            <div>
+              <div class="dbgi-what-we-do-step-title">Users</div>
+              <div class="dbgi-what-we-do-step-body">Anyone interested in interrogating the DBGI knowledge base</div>
+            </div>
+          </div>
+        </figcaption>
+      </figure>
     </div>
-    <div class="dbgi-goals-grid">
-      <article class="dbgi-goal-card">
-        <span class="dbgi-goal-number">01</span>
-        <h3 class="h5">Connect living collections to molecular observations</h3>
-        <p>Establish reproducible workflows for sampling, tracking, profiling, and documenting plant material from botanical gardens.</p>
-      </article>
-      <article class="dbgi-goal-card">
-        <span class="dbgi-goal-number">02</span>
-        <h3 class="h5">Make botanical garden data reusable</h3>
-        <p>Structure samples, taxa, locations, protocols, spectra, and derived knowledge using open standards and linked data practices.</p>
-      </article>
-      <article class="dbgi-goal-card">
-        <span class="dbgi-goal-number">03</span>
-        <h3 class="h5">Support collaborative chemodiversity research</h3>
-        <p>Enable gardens, laboratories, and data communities to jointly study plant chemical diversity across collections and geographies.</p>
-      </article>
-      <article class="dbgi-goal-card">
-        <span class="dbgi-goal-number">04</span>
-        <h3 class="h5">Build open scientific infrastructure</h3>
-        <p>Share code, data, protocols, notebooks, and knowledge resources as openly as possible for inspection, reuse, and extension.</p>
-      </article>
-      <article class="dbgi-goal-card">
-        <span class="dbgi-goal-number">05</span>
-        <h3 class="h5">Grow a distributed community</h3>
-        <p>Bring together botanical gardens, researchers, developers, and knowledge-management specialists around practical shared workflows.</p>
-      </article>
+
+    <div class="dbgi-section-block">
+      <div class="dbgi-why-gardens">
+        <div class="dbgi-why-gardens-text">
+          <h2>Why botanical gardens</h2>
+          <p>Botanical gardens are ideal hubs for large-scale, coordinated sampling. They bring together thousands of taxonomically curated species in one place, where material can be readily accessed, documented and sampled. Gardens can also provide samples from species that are rare or even extinct in the wild<sup><a href="#dbgi-references">3</a></sup>.</p>
+        </div>
+        <figure class="dbgi-why-gardens-figure">
+          <img src="/img/dbgi-garden-shelves.jpg" alt="Tiered greenhouse shelves densely packed with labelled potted succulents in a botanical garden">
+        </figure>
+      </div>
     </div>
   </section>
-</main>
+
+  <section class="dbgi-dark-band">
+    <div class="dbgi-dark-band-inner">
+      <div class="dbgi-dark-band-heading-row">
+        <h2>Why it matters</h2>
+        <span class="dbgi-dark-band-rule" aria-hidden="true"></span>
+      </div>
+      <div class="dbgi-dark-band-body">
+        <div class="dbgi-dark-band-text">
+          <span class="dbgi-dark-band-text-rule" aria-hidden="true"></span>
+          <p>As biodiversity loss accelerates, many plant species will disappear before their chemistry has ever been recorded<sup><a href="#dbgi-references" style="color: #d3e6c6;">5</a></sup>. Losing a species means losing not only a potential source of molecules for medicine. It means losing part of the chemical language through which living organisms communicate, survive and interact with their environments, which we are still far from understanding. DBGI is building an open resource for plant chemistry to support research across fields, make the chemical dimension of plants more visible to the public, and help turn the chemical knowledge it generates into new arguments for plant biodiversity conservation.</p>
+        </div>
+        <div class="dbgi-dark-band-stat">
+          <strong>45%</strong>
+          <p>of known flowering plant species are potentially threatened with extinction<sup><a href="#dbgi-references" style="color: #d3e6c6;">6</a></sup>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="dbgi-references" class="dbgi-references">
+    <h2>References</h2>
+    <ol>
+      <li id="ref-1">Christenhusz, M. J. M., &amp; Byng, J. W. (2016). The number of known plants species in the world and its annual increase. <em>Phytotaxa, 261</em>(3), 201–217. <a href="https://doi.org/10.11646/phytotaxa.261.3.1" target="_blank" rel="noopener">https://doi.org/10.11646/phytotaxa.261.3.1</a></li>
+      <li id="ref-2">Wikidata. (<span data-gap-updated-year>2026</span>). <em>Plant species linked to at least one reported chemical compound</em> [SPARQL query]. Retrieved <span data-gap-updated>6 July 2026</span>, from <a href="https://qlever.dev/wikidata/eUC1FD11" target="_blank" rel="noopener">https://qlever.dev/wikidata/eUC1FD11</a></li>
+      <li id="ref-3">Mounce, R., Smith, P., &amp; Brockington, S. (2017). Ex situ conservation of plant diversity in the world's botanic gardens. <em>Nature Plants, 3</em>(10), 795–802. <a href="https://doi.org/10.1038/s41477-017-0019-3" target="_blank" rel="noopener">doi.org/10.1038/s41477-017-0019-3</a></li>
+      <li id="ref-4">Kang, K. B., Ernst, M., van der Hooft, J. J. J., da Silva, R. R., Park, J., Medema, M. H., Sung, S. H., &amp; Dorrestein, P. C. (2019). Comprehensive mass spectrometry-guided phenotyping of plant specialized metabolites reveals metabolic diversity in the cosmopolitan plant family Rhamnaceae. <em>The Plant Journal, 98</em>(6), 1134–1144. <a href="https://doi.org/10.1111/tpj.14292" target="_blank" rel="noopener">doi.org/10.1111/tpj.14292</a></li>
+      <li id="ref-5">Ceballos, G., &amp; Ehrlich, P. R. (2018). The misunderstood sixth mass extinction. <em>Science, 360</em>(6393), 1080–1081. <a href="https://doi.org/10.1126/science.aau0191" target="_blank" rel="noopener">doi.org/10.1126/science.aau0191</a></li>
+      <li id="ref-6">Royal Botanic Gardens, Kew. (2023). <em>State of the World's Plants and Fungi 2023.</em> <a href="https://doi.org/10.34885/wnwn-6s63" target="_blank" rel="noopener">doi.org/10.34885/wnwn-6s63</a></li>
+    </ol>
+  </section>
+</div>
+<script src="/js/gap-stat.js"></script>
 {{ end }}

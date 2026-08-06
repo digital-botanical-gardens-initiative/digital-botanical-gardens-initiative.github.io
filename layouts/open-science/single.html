@@ -1,0 +1,99 @@
+{{ define "main" }}
+{{- $principles := slice
+  (dict "title" "Open by default" "body" "All data, code and processing outputs are released publicly under open licences." "bordered" false)
+  (dict "title" "FAIR" "body" "Every dataset remains linked to persistent identifiers and metadata so it stays findable and reusable." "bordered" false)
+  (dict "title" "Traceable" "body" "Every chemical profile stays linked to a documented garden accession and collection record." "bordered" true)
+  (dict "title" "Built to scale" "body" "Robust workflows designed to grow garden by garden." "bordered" true)
+-}}
+{{- $datasets := slice
+  (dict "id" "MSV000090953" "title" "Neuchâtel botanical garden, pilot batch" "d" "300 plant species from the Botanical Garden of Neuchâtel, submitted by the Defossez lab (PEMG).")
+  (dict "id" "MSV000091029" "title" "Neuchâtel botanical garden, extended profiling" "d" "80 further plant species from the Botanical Garden of Neuchâtel, submitted by the Defossez lab (PEMG).")
+  (dict "id" "MSV000102437" "title" "Prague botanical garden, batch 004" "d" "Plant samples from the Troja Botanical Garden, Prague, analysed by the Pluskal lab.")
+  (dict "id" "MSV000102438" "title" "Prague botanical garden, batch 006" "d" "Plant samples from the Troja Botanical Garden, Prague, analysed by the Pluskal lab.")
+  (dict "id" "MSV000102439" "title" "Prague botanical garden, batch 005" "d" "Plant samples from the Troja Botanical Garden, Prague, analysed by the Pluskal lab.")
+-}}
+<div>
+  <section class="container dbgi-static-hero" style="max-width: 820px;">
+    <a class="dbgi-back-link" href="/"><span aria-hidden="true">←</span> Home</a>
+    <h1 class="dbgi-h1-page" style="margin-top: 26px;">{{ .Title }}</h1>
+    <p class="dbgi-static-tagline">{{ .Description }}</p>
+  </section>
+
+  <div class="dbgi-os-intro">
+    <p>Most research is shared only once it is finished and polished. We try to work the other way round: with the <a href="https://notes.andymatuschak.org/About_these_notes?stackedNotes=zCMhncA1iSE74MKKYQS5PBZ" target="_blank" rel="noopener">workshop doors open</a>. We try to publish ideas, half-working code and preliminary results as we go. It makes for a messier record, but it also means anyone can follow, reuse, and point out mistakes while there is still time to fix it.</p>
+  </div>
+
+  <section class="container" style="max-width: 1160px;">
+    <div class="dbgi-os-row" style="border-top: none;">
+      <div class="dbgi-os-row-label">
+        <h2>How we work</h2>
+      </div>
+      <div class="dbgi-principles-grid">
+        {{- range $principles }}
+        <div class="dbgi-principle{{ if .bordered }} is-bordered{{ end }}">
+          <div class="dbgi-principle-title">{{ .title }}</div>
+          <div class="dbgi-principle-body">{{ .body }}</div>
+        </div>
+        {{- end }}
+      </div>
+    </div>
+
+    <div class="dbgi-os-row">
+      <div class="dbgi-os-row-body">
+        <h3 style="margin: 0; color: #17230f; font-size: clamp(26px, 2.8vw, 34px); font-weight: 800; letter-spacing: -.02em;">Where the work lives</h3>
+        <p>All code and processing scripts are on our <a href="https://github.com/digital-botanical-gardens-initiative" target="_blank" rel="noopener">GitHub repository</a>. We publish our methods, meeting notes and unfinished thinking into this <a href="https://www.dbgi.org/dendron-dbgi/" target="_blank" rel="noopener">Dendron notebook</a>. Expect a lot of strange ideas and half-working code.</p>
+      </div>
+      <div class="dbgi-os-links">
+        <a class="dbgi-os-link-card" href="https://www.dbgi.org/dendron-dbgi/" target="_blank" rel="noopener">
+          <span class="dbgi-os-link-card-label">Dendron</span>
+          <span class="dbgi-os-link-card-arrow">{{ partial "utilities/dbgi-icon.html" (dict "icon" "arrow-up-right" "size" 15) }}</span>
+        </a>
+        <a class="dbgi-os-link-card" href="https://github.com/digital-botanical-gardens-initiative" target="_blank" rel="noopener">
+          <span class="dbgi-os-link-card-label">GitHub</span>
+          <span class="dbgi-os-link-card-arrow">{{ partial "utilities/dbgi-icon.html" (dict "icon" "arrow-up-right" "size" 15) }}</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="container" style="max-width: 1160px; padding-top: clamp(20px, 2.6vw, 32px); padding-bottom: clamp(36px, 4.5vw, 56px);">
+    <div class="dbgi-os-row" style="border-top: none;">
+      <div style="width: 100%;">
+        <h2 style="margin: 0; color: #17230f; font-size: clamp(26px, 2.8vw, 34px); font-weight: 800; letter-spacing: -.02em;">Public datasets</h2>
+        <p style="max-width: 780px; margin: 10px 0 0; color: #5f6e56; font-size: 15px; line-height: 1.65;">While we are working on the new <a href="https://github.com/earth-metabolome-initiative/emi-monorepo" target="_blank" rel="noopener" style="color: var(--dbgi-primary); font-weight: 600;">data portal</a>, we deposit all mass spectrometry data in the public <a href="https://massive.ucsd.edu/ProteoSAFe/" target="_blank" rel="noopener" style="color: var(--dbgi-primary); font-weight: 600;">GNPS/MassIVE repository</a>.</p>
+
+        <div class="dbgi-datasets-panel">
+          <div class="dbgi-datasets-scroll">
+            <div class="dbgi-datasets-head">
+              <span>Accession</span>
+              <span>Title &amp; description</span>
+              <span>Repository</span>
+            </div>
+            {{- range $datasets }}
+            <div class="dbgi-dataset-row">
+              <span>
+                <span class="dbgi-dataset-row-label">Accession</span>
+                <span class="dbgi-dataset-id">{{ .id }}</span>
+              </span>
+              <span>
+                <span class="dbgi-dataset-row-label">Title</span>
+                <span class="dbgi-dataset-title">{{ .title }}</span>
+                <span class="dbgi-dataset-desc">{{ .d }}</span>
+              </span>
+              <span>
+                <span class="dbgi-dataset-row-label">Repository</span>
+                <span class="dbgi-dataset-platform">GNPS/MassIVE</span>
+              </span>
+              <a class="dbgi-dataset-link" href="https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession={{ .id }}" target="_blank" rel="noopener">
+                View dataset
+                <svg width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 12L12 4M12 4H5.5M12 4V10.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+              </a>
+            </div>
+            {{- end }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+{{ end }}

@@ -1,0 +1,25 @@
+{{- $page := . -}}
+<section class="dbgi-hero-banner" aria-label="Introduction">
+  <img class="dbgi-hero-banner-media" src="/img/dbgi-metasequoia.jpeg" alt="" loading="eager">
+  <div class="dbgi-hero-banner-overlay" aria-hidden="true"></div>
+  <div class="dbgi-hero-banner-inner">
+    <div class="dbgi-hero-banner-copy">
+      {{- /* The design fixes the title to two lines, with the first kept on one line.
+             `hero_title_lines` in front matter encodes that; falls back to the plain title. */ -}}
+      <h1 class="dbgi-h1-hero">
+        {{- with $page.Params.hero_title_lines -}}
+          {{- range $i, $line := . -}}
+            <span{{ if eq $i 0 }} class="dbgi-hero-title-nowrap"{{ end }}>{{ $line }}</span>
+          {{- end -}}
+        {{- else -}}
+          {{ $page.Title }}
+        {{- end -}}
+      </h1>
+      <div class="dbgi-hero-banner-lead">{{ $page.Content }}</div>
+      <div class="dbgi-hero-actions">
+        <a class="btn btn-primary btn-lg rounded-pill" href="/about/vision-goals/">Explore the initiative</a>
+        <a class="btn btn-outline-primary btn-lg rounded-pill" href="/network/">See the network</a>
+      </div>
+    </div>
+  </div>
+</section>

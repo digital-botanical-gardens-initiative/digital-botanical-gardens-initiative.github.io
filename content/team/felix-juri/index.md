@@ -1,5 +1,6 @@
 ---
 title: Juri Felix
+featured: false
 role: DBGI Contributor - Phytochemistry and Chemical Ecology
 organizations:
 - name: Royal Botanic Gardens, Kew

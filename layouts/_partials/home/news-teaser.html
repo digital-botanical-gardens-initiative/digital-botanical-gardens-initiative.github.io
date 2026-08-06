@@ -1,0 +1,32 @@
+{{- $news := where site.RegularPages "Section" "news" -}}
+{{- $latest := first 4 $news.ByDate.Reverse -}}
+{{- with $latest }}
+<section class="dbgi-news-teaser" aria-label="Latest news">
+  <div class="container">
+    <div class="dbgi-section-header">
+      <h2 class="dbgi-h2-section mb-0">Latest from the Initiative</h2>
+      <a class="dbgi-section-link" href="/news/">All news →</a>
+    </div>
+    <div class="dbgi-news-teaser-scroller">
+      {{- range . }}
+      {{- $article := . -}}
+      {{- $featured := $article.Resources.GetMatch "featured.*" -}}
+      <a class="dbgi-news-teaser-card" href="{{ $article.RelPermalink }}">
+        <div class="dbgi-news-teaser-card-media">
+          {{- with $featured }}
+          <img src="{{ .RelPermalink }}" alt="{{ $article.Params.image_alt | default $article.Title }}" loading="lazy">
+          {{- end }}
+        </div>
+        <div class="dbgi-news-teaser-card-body">
+          <p class="dbgi-eyebrow dbgi-news-teaser-card-meta">
+            {{- with $article.Params.tag }}{{ . }} · {{ end -}}
+            {{ $article.Date.Format "2 January 2006" }}
+          </p>
+          <p class="dbgi-news-teaser-card-title">{{ $article.Title }}</p>
+        </div>
+      </a>
+      {{- end }}
+    </div>
+  </div>
+</section>
+{{- end }}

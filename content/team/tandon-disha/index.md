@@ -1,5 +1,6 @@
 ---
 title: Disha Tandon
+featured: false
 role: DBGI Contributor
 organizations:
 - name: University of Neuchatel

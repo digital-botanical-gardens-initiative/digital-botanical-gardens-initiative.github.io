@@ -1,0 +1,20 @@
+# Manually maintained (no live source). Illustrative numbers from the design handoff,
+# approximating known extant counts vs. what DBGI has collected so far. Update by hand.
+generated_at: "2026-08-05"
+rows:
+  - label: Orders
+    covered: 62
+    total: 85
+    color: "#1e3d03"
+  - label: Families
+    covered: 216
+    total: 527
+    color: "#2f5510"
+  - label: Genera
+    covered: 1193
+    total: 15530
+    color: "#487026"
+  - label: Species
+    covered: 2755
+    total: 410781
+    color: "#5f8b39"

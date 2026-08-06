@@ -1,5 +1,6 @@
 ---
 title: Audrey Le Cabec
+featured: false
 role: DBGI Contributor - Seed Biology and Plant Metabolism
 organizations:
 - name: IJPB, INRAE Centre IdF Versailles-Saclay

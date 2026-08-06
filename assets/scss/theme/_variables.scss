@@ -1,0 +1,109 @@
+// Placeholder to quickly add your own theme variable overrides
+// The file is included at the beginning of the build pipeline
+
+// Shadows the Hinode placeholder of the same name (project assets/ mounts over the theme's).
+// app-dart.scss imports this after common/variables-dart.scss and BEFORE bootstrap-dart.scss,
+// which is the only window where Bootstrap's `!default` variables can still be changed.
+//
+// Use plain assignment, never `!default`: common/variables-dart.scss has already claimed
+// several of these (e.g. $font-size-base, $font-weight-normal), so a `!default` here is a no-op.
+//
+// Values come from the design handoff, "DBGI Landing Page Animation/DBGI Website v4.dc.html".
+// Rules that no variable can express live in theme/theme.scss and its partials.
+
+// stylelint-disable annotation-no-unknown
+
+// ─── Typography ──────────────────────────────────────────────────────────────
+// Body copy in the prototype is Inter 400 / 15.5px / 1.65. Hinode defaults the normal weight
+// to 300, which is why the live site reads noticeably thinner than the design.
+// $font-size-base (0.96875rem = 15.5px) is set via [style] fontSizeBase in params.toml.
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+$line-height-base: 1.65;
+
+// Every h1/h2 in the prototype is weight 800; h3 and below are 700.
+$headings-font-weight: 800;
+$headings-line-height: 1.15;
+
+// Fluid scale lifted verbatim from the prototype's inline styles. These replace Bootstrap's
+// RFS-generated `calc()` sizes — h3 in particular was rendering ~29px against a 20px design.
+$h1-font-size: clamp(28px, 4vw, 48px);
+$h2-font-size: clamp(26px, 3.4vw, 44px);
+
+// h3–h6 are all in the design's 14.5–24px sub-heading band and all weight 700. The site marks
+// list-card titles as `.h5` and compact card titles as `.h6` (e.g. layouts/labs/list.html,
+// layouts/partials/team/person-card-compact.html), so those two have to stay inside the
+// design's card-title range (17–20px) rather than following Bootstrap's much smaller defaults.
+$h3-font-size: clamp(19px, 2vw, 24px);
+$h4-font-size: clamp(18px, 1.9vw, 21px);
+$h5-font-size: clamp(17px, 1.8vw, 20px);
+$h6-font-size: clamp(14.5px, 1.4vw, 16px);
+
+// Intro paragraphs: clamp(17px,1.7vw,21px), weight 500 (Bootstrap ships 1.25rem / 300).
+$lead-font-size: clamp(17px, 1.7vw, 21px);
+$lead-font-weight: 500;
+
+// ─── Buttons ─────────────────────────────────────────────────────────────────
+// Every button in the prototype is a pill: 44px tall by default, 50px for hero CTAs,
+// 34px for the compact variant, all weight 700.
+//
+// Deliberately NOT routed through Hinode's $theme-border-radius: components/_card.scss
+// reads that same variable, so a 999px value there would turn every card into a pill.
+// $btn-border-radius emits a literal --bs-btn-border-radius, which also takes precedence
+// over Hinode's `.btn { --bs-border-radius: … }` indirection.
+$btn-border-radius: 999px;
+$btn-border-radius-lg: 999px;
+$btn-border-radius-sm: 999px;
+
+$btn-font-weight: 700;
+$btn-line-height: 1.5;
+
+// Padding is chosen so padding-y*2 + font-size*line-height lands on the design's box heights;
+// min-height in theme/_buttons.scss pins them exactly.
+$btn-font-size: 14px;
+$btn-padding-y: 10px;
+$btn-padding-x: 20px;
+
+$btn-font-size-lg: 15.5px;
+$btn-padding-y-lg: 11px;
+$btn-padding-x-lg: 28px;
+
+$btn-font-size-sm: 13.5px;
+$btn-padding-y-sm: 6px;
+$btn-padding-x-sm: 16px;
+
+// ─── Badges / tags ───────────────────────────────────────────────────────────
+// Tag chips in the prototype are pills: 11.5px / 600 / 5px 11px.
+// Bootstrap's default font-size is the relative `.75em`; the design is absolute.
+$badge-border-radius: 999px;
+$badge-font-size: 11.5px;
+$badge-font-weight: 600;
+$badge-padding-y: 5px;
+$badge-padding-x: 11px;
+
+// ─── Layout ──────────────────────────────────────────────────────────────────
+// The design caps content at 1200px; Bootstrap runs to 1140px at xl and 1320px at xxl.
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1200px,
+  xxl: 1200px,
+);
+
+// ─── Nav ─────────────────────────────────────────────────────────────────────
+$nav-link-font-size: 17px;
+$nav-link-font-weight: 600;
+
+// Dropdown panels: 300px wide, 14px radius, 8px padding, 48px rows.
+$dropdown-min-width: 300px;
+$dropdown-border-radius: 14px;
+$dropdown-border-color: rgb(38 73 13 / 16%);
+$dropdown-padding-y: 8px;
+$dropdown-padding-x: 8px;
+$dropdown-item-padding-y: 8px;
+$dropdown-item-padding-x: 12px;
+$dropdown-link-hover-bg: #f2f7ec;
+$dropdown-link-active-bg: #e6efdc;
+$dropdown-link-active-color: #17230f;
+$dropdown-box-shadow: 0 22px 48px rgb(23 35 15 / 16%);

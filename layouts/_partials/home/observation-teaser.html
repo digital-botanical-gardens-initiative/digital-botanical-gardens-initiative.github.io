@@ -1,0 +1,35 @@
+{{- $data := hugo.Data.inaturalist_observation | default dict -}}
+{{- $observation := $data.observation | default dict -}}
+{{- $photo := $observation.photo | default dict -}}
+<section class="container dbgi-observation-teaser" aria-label="Observation of the day">
+  <div class="dbgi-section-header dbgi-section-header-stacked">
+    <h2 class="dbgi-h2-section mb-0">Observation of the day</h2>
+    <p class="dbgi-observation-teaser-lead">Straight from the collections, via <a class="dbgi-link" href="https://www.inaturalist.org/" target="_blank" rel="noopener">iNaturalist</a>.</p>
+  </div>
+  <a class="dbgi-observation-teaser-card" href="/observation-of-the-day/">
+    <div class="dbgi-observation-teaser-media">
+      {{- with $photo.large_url }}
+      <img src="{{ . }}" alt="{{ $observation.taxon_name }}" loading="lazy">
+      {{- end }}
+      <span class="dbgi-observation-teaser-badge"><span class="dbgi-observation-teaser-badge-dot" aria-hidden="true"></span>iNaturalist</span>
+    </div>
+    <div class="dbgi-observation-teaser-body">
+      <p class="dbgi-observation-teaser-taxon">{{ $observation.taxon_name | default "Unidentified observation" }}</p>
+      {{- with $observation.common_name }}
+      <p class="dbgi-observation-teaser-common">{{ . }}</p>
+      {{- end }}
+      <dl class="dbgi-observation-teaser-meta">
+        {{- with $observation.collector }}
+        <div><dt>Collector</dt><dd>{{ . }}</dd></div>
+        {{- end }}
+        {{- with $observation.place_guess }}
+        <div><dt>Location</dt><dd>{{ . }}</dd></div>
+        {{- end }}
+        {{- with $observation.observed_on }}
+        <div><dt>Date</dt><dd>{{ time.Format "2 January 2006" . }}</dd></div>
+        {{- end }}
+      </dl>
+      <span class="dbgi-section-link">See today's observation →</span>
+    </div>
+  </a>
+</section>

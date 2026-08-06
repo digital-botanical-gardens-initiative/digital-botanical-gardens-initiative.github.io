@@ -1,37 +1,33 @@
 {{ define "main" }}
-<main class="container py-5">
-  <header class="mb-4 border-bottom pb-4">
-    <p class="text-primary fw-semibold text-uppercase small mb-2">People</p>
-    <h1 class="display-5 fw-semibold">{{ .Title }}</h1>
-    {{ with .Description }}<p class="lead text-secondary">{{ . }}</p>{{ end }}
-  </header>
+<div>
+  <section class="container dbgi-list-header">
+    <p class="dbgi-eyebrow text-primary mb-0">People</p>
+    <h1 class="dbgi-h1-page">{{ .Title }}</h1>
+    {{ with .Description }}<p class="lead mb-0">{{ . }}</p>{{ end }}
+  </section>
+
   {{ $pagesByLastName := sort .Pages "File.ContentBaseName" }}
-  <section>
-    <div class="d-flex align-items-end justify-content-between gap-3 border-bottom pb-2 mb-3">
+  <section class="container dbgi-team-list">
+    <div class="dbgi-section-header">
       <h2 class="h3 mb-0">All contributors</h2>
       <span class="small text-secondary">{{ len $pagesByLastName }} people</span>
     </div>
-    <div class="row g-3">
+    <div class="dbgi-team-grid">
       {{ range $pagesByLastName }}
-        {{ $avatar := .Resources.GetMatch "avatar.*" }}
         {{ $person := . }}
-        <div class="col-md-6 col-xl-4">
-          <article class="border rounded-3 h-100 p-3">
-            <div class="d-flex gap-3 align-items-start">
-              {{ with $avatar }}
-                {{ $img := .Fill "160x160 Center" }}
-                <img class="rounded-circle flex-shrink-0" src="{{ $img.RelPermalink }}" alt="{{ $person.Title }}" width="72" height="72">
-              {{ end }}
-              <div class="min-w-0">
-                <h3 class="h5 mb-1"><a class="text-decoration-none" href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-                {{ with .Params.role }}<p class="small text-secondary mb-2">{{ . }}</p>{{ end }}
-                {{ partial "team/affiliations.html" . }}
-              </div>
-            </div>
-          </article>
-        </div>
+        {{ $avatar := $person.Resources.GetMatch "avatar.*" }}
+        {{ $affiliation := "" }}
+        {{ with $person.Params.organizations }}{{ $affiliation = (index . 0).name }}{{ end }}
+        <a class="dbgi-collector-card" href="{{ $person.RelPermalink }}">
+          {{ with $avatar }}
+            {{ $img := .Fill "164x164 Center" }}
+            <img class="dbgi-collector-card-avatar" src="{{ $img.RelPermalink }}" alt="{{ $person.Title }}" width="82" height="82">
+          {{ end }}
+          <p class="dbgi-collector-card-name">{{ $person.Title }}</p>
+          {{ with $affiliation }}<p class="dbgi-collector-card-affiliation">{{ . }}</p>{{ end }}
+        </a>
       {{ end }}
     </div>
   </section>
-</main>
+</div>
 {{ end }}

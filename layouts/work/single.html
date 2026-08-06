@@ -1,0 +1,122 @@
+{{ define "main" }}
+{{- $timeline := slice
+  (dict "label" "Established" "state" "" "title" "Sample collection and analytical workflows" "body" "We have established high-throughput, coordinated workflows that enable teams to collect plant material from hundreds of specimens per day, capture key specimen information in the field, and maintain complete sample traceability from collection through analysis.")
+  (dict "label" "In progress" "state" "is-active" "title" "Chemical profiling" "body" "We are currently profiling all collected samples by liquid chromatography–mass spectrometry and processing the resulting data into chemical fingerprints using popular metabolomics software (e.g., <a href=\"https://mzmine.github.io/mzmine_documentation/index.html\" target=\"_blank\" rel=\"noopener\">mzmine</a>, <a href=\"https://boecker-lab.github.io/docs.sirius.github.io/\" target=\"_blank\" rel=\"noopener\">SIRIUS</a>).")
+  (dict "label" "Next step" "state" "is-next" "title" "Strengthen the informatics infrastructure" "body" "DBGI is strengthening its informatics infrastructure to bring coordinated sampling, data submission and validation to a global scale. A more robust and scalable <a href=\"https://github.com/earth-metabolome-initiative/emi-monorepo\" target=\"_blank\" rel=\"noopener\">data submission portal</a> is being developed as part of the <a href=\"https://www.earthmetabolome.org/\" target=\"_blank\" rel=\"noopener\">Earth Metabolome Initiative</a>.")
+  (dict "label" "Beyond gardens" "state" "is-beyond" "title" "Out into the wild: the Earth Metabolome Initiative" "body" "Through the Earth Metabolome Initiative, we will adapt DBGI's sampling and metadata collection workflows to field sampling and extend the plant chemistry documentation to wild populations and ecosystems. Learn more about the <a href=\"https://www.earthmetabolome.org/\" target=\"_blank\" rel=\"noopener\">Earth Metabolome Initiative</a>.")
+-}}
+<div>
+  <section class="container" style="max-width: 1160px; padding-top: clamp(48px, 7vw, 88px); padding-bottom: clamp(40px, 5vw, 56px);">
+    <a class="dbgi-back-link" href="/"><span aria-hidden="true">←</span> Home</a>
+    <h1 class="dbgi-h1-page" style="margin: 26px 0 0; color: var(--dbgi-dark); font-weight: 800; letter-spacing: -.03em; line-height: 1.06;">{{ .Title }}</h1>
+    <p style="max-width: 860px; margin: 18px 0 0; color: #5f6e56; font-size: 16px; line-height: 1.68;">Initiated in 2022 as a pilot project for the <a href="https://www.earthmetabolome.org/" target="_blank" rel="noopener" style="color: var(--dbgi-primary); font-weight: 600;">Earth Metabolome Initiative</a> mission, DBGI has since developed into an independent, community-coordinated framework for documenting plant chemistry in botanical collections.</p>
+
+    <h2 class="dbgi-visually-hidden">Our approach</h2>
+    <div class="dbgi-timeline">
+      {{- range $timeline }}
+      <div class="dbgi-timeline-row {{ .state }}">
+        <div class="dbgi-timeline-label">{{ .label }}</div>
+        <div class="dbgi-timeline-content">
+          <h3>{{ .title }}</h3>
+          <p>{{ .body | safeHTML }}</p>
+        </div>
+      </div>
+      {{- end }}
+    </div>
+  </section>
+
+  <section class="dbgi-limits-band">
+    <div class="dbgi-limits-inner">
+      <h2>What gardens can't reach, and why going further</h2>
+
+      <div class="dbgi-limits-block">
+        <h3>Garden collections are unevenly distributed</h3>
+        <p>Botanical gardens collections are unevenly distributed across the globe. Most sit in Europe and North America, while the biodiversity-rich regions (e.g., Africa and South America) remain far less covered.</p>
+      </div>
+
+      <figure class="dbgi-map-figure">
+        <div class="dbgi-map-figure-card">
+          <img src="/img/dbgi-coverage-map.svg" alt="World map shading each country by the number of plant species it hosts, overlaid with dots marking botanical gardens; dots are dense across Europe, North America and East Asia and sparse across Africa and South America.">
+          <div class="dbgi-map-legend">
+            <div class="dbgi-map-legend-scale">
+              <span class="dbgi-map-legend-scale-label">Plant species hosted</span>
+              <span class="dbgi-map-legend-swatches" aria-hidden="true">
+                <span style="background: #d3e5bf;"></span><span style="background: #b5d19b;"></span><span style="background: #94ba7c;"></span><span style="background: #6f9a55;"></span><span style="background: #456f33;"></span><span style="background: #1c350f;"></span>
+              </span>
+              <span class="dbgi-map-legend-ticks"><span>0</span><span>10k</span><span>20k</span><span>30k+</span></span>
+            </div>
+            <div class="dbgi-map-legend-item"><span class="dbgi-map-legend-dot" aria-hidden="true"></span>No species records</div>
+            <div class="dbgi-map-legend-item"><span class="dbgi-map-legend-dot dbgi-map-legend-dot-garden" aria-hidden="true"></span>Botanical garden</div>
+          </div>
+        </div>
+        <figcaption class="dbgi-map-figcaption">Share of plant species sampled by DBGI, represented in botanical gardens worldwide, or neither (data from <a href="https://www.bgci.org/" target="_blank" rel="noopener">BGCI</a>).</figcaption>
+      </figure>
+
+      <div class="dbgi-taxa-row">
+        <figure class="dbgi-taxa-chart">
+          {{- $bars := slice
+            (dict "label" "Order" "dbgi" 72.9 "world" 27.1 "rest" 0)
+            (dict "label" "Family" "dbgi" 41.0 "world" 48.9 "rest" 10.1)
+            (dict "label" "Genus" "dbgi" 7.7 "world" 58.7 "rest" 33.6)
+            (dict "label" "Species" "dbgi" 0.7 "world" 27.3 "rest" 72.0)
+          -}}
+          {{- range $bars }}
+          <div class="dbgi-taxa-bar">
+            <div class="dbgi-taxa-bar-label">{{ .label }}</div>
+            <div class="dbgi-taxa-bar-figures">
+              <span style="left: {{ div .dbgi 2.0 }}%; transform: translateX(-50%); color: var(--dbgi-primary);">{{ .dbgi }}%</span>
+              <span style="left: {{ add .dbgi (div .world 2.0) }}%; transform: translateX(-50%); color: var(--dbgi-gold-2);">{{ .world }}%</span>
+              {{- if gt .rest 0.0 }}<span style="right: 0; color: #6b7563;">{{ .rest }}%</span>{{ end }}
+            </div>
+            <div class="dbgi-taxa-bar-track">
+              <div class="dbgi-taxa-bar-fill-row">
+                <div style="width: {{ .dbgi }}%; min-width: 3px; background: var(--dbgi-primary);"></div>
+                <div style="width: {{ .world }}%; background: var(--dbgi-gold-1);"></div>
+              </div>
+            </div>
+          </div>
+          {{- end }}
+          <div class="dbgi-taxa-legend">
+            <span class="dbgi-taxa-legend-item"><span class="dbgi-taxa-legend-dot" style="background: var(--dbgi-primary);" aria-hidden="true"></span>Sampled by DBGI</span>
+            <span class="dbgi-taxa-legend-item"><span class="dbgi-taxa-legend-dot" style="background: var(--dbgi-gold-1);" aria-hidden="true"></span>In gardens worldwide</span>
+            <span class="dbgi-taxa-legend-item"><span class="dbgi-taxa-legend-dot" style="background: rgba(38,73,13,.14);" aria-hidden="true"></span>Not covered</span>
+          </div>
+        </figure>
+        <div class="dbgi-taxa-text">
+          <h3>Most species are still in the wild</h3>
+          <p>Even taking into account all 1,100 living collections worldwide, more than 70% of plant diversity remains beyond the reach of botanical gardens.</p>
+          <figcaption>Share of plant families, genera and species sampled by DBGI, represented in botanical gardens worldwide, or neither (data from <a href="https://www.bgci.org/" target="_blank" rel="noopener">BGCI</a>).</figcaption>
+        </div>
+      </div>
+
+      <div class="dbgi-preference-row">
+        <div class="dbgi-preference-text">
+          <h3>Human preference shapes garden collections</h3>
+          <p>It is known that humans are drawn to colourful, showy flowering plants<sup><a href="#dbgi-references-approach" style="color: var(--dbgi-primary); font-weight: 700; text-decoration: none;">7</a></sup>. Botanical gardens likewise tend to cultivate ornamental and traditionally used species. These choices can bias sampling towards particular regions and collection histories.</p>
+        </div>
+        <figure class="dbgi-preference-figure">
+          <img src="/img/dbgi-ornamental-flowers.jpg" alt="Close-up of a showy ornamental flowering plant" loading="lazy" width="2400" height="1600">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="dbgi-emi-callout">
+    <div class="dbgi-emi-callout-inner">
+      <p>Botanical gardens are a starting point. Sampling wild populations and ecosystems is the goal of the <a class="dbgi-emi-inline-link" href="https://www.earthmetabolome.org/" target="_blank" rel="noopener">Earth Metabolome Initiative</a>.</p>
+      <div class="dbgi-emi-callout-cta">
+        <a href="https://www.earthmetabolome.org/" target="_blank" rel="noopener">Visit the website
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="dbgi-references-approach" class="dbgi-references">
+    <h2>References</h2>
+    <ol start="7">
+      <li id="ref-7">Adamo, M., Chialva, M., Calevo, J., Bertoni, F., Dixon, K., &amp; Mammola, S. (2021). Plant scientists' research attention is skewed towards colourful, conspicuous and broadly distributed flowers. <em>Nature Plants, 7</em>(5), 574–578. <a href="https://doi.org/10.1038/s41477-021-00912-2" target="_blank" rel="noopener">doi.org/10.1038/s41477-021-00912-2</a></li>
+    </ol>
+  </section>
+</div>
+{{ end }}

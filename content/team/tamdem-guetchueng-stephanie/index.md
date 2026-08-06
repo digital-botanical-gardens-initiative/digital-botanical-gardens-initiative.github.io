@@ -1,5 +1,6 @@
 ---
 title: Stephanie Tamdem Guetchueng
+featured: false
 role: DBGI Contributor - Medicinal Plant Chemistry
 organizations:
 - name: University of Fribourg

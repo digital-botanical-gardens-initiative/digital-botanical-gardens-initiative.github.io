@@ -1,5 +1,6 @@
 ---
 title: Mingxun (Ming) Wang
+featured: false
 role: DBGI-KM External Advisor - Computational MS
 organizations:
 - name: UC Riverside

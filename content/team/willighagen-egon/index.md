@@ -1,5 +1,6 @@
 ---
 title: Egon Willighagen
+featured: false
 role: DBGI-KM External Advisor - Open Science
 organizations:
 - name: Maastricht University

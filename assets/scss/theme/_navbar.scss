@@ -1,0 +1,120 @@
+// Nav chrome. Dropdown geometry and nav-link type are set in theme/_variables.scss.
+
+// The bar is a fixed 68px in the design. Hinode renders `<nav class="navbar px-4 py-4 …">`,
+// and .py-4 is a Bootstrap utility (!important) emitted after this file — so equal specificity
+// loses. `nav.navbar` is (0,1,1) and outranks it without needing !important of its own on
+// everything, but padding still has to match .py-4's !important to win.
+nav.navbar {
+  --bs-navbar-color: #4c5a43;
+  --bs-navbar-hover-color: #17230f;
+  --bs-navbar-active-color: #17230f;
+
+  align-items: center;
+  min-height: 68px;
+
+  // Zeroed on all four sides: .py-4 would make the bar taller than 68px, and .px-4 would
+  // stack on top of the inner container's gutter below, pushing the logo 24px right.
+  padding: 0 !important;
+
+  // Translucent, blurred bar over scrolling content. Hinode's [navigation] color token only
+  // selects a solid Bootstrap background utility, so there is no token for this.
+  backdrop-filter: blur(14px);
+  background: rgb(255 255 255 / 96%) !important;
+  border-bottom: 1px solid rgb(38 73 13 / 12%);
+}
+
+// The design's bar is full-bleed with its own gutter — the logo sits clamp(16px,5vw,64px)
+// from the viewport edge, not inset by a centred container. Hinode wraps the bar contents in
+// `.container-xxl.p-0`, which at >=1400px caps it at 1200px and pushes the mark ~56px right.
+nav.navbar > .container-xxl {
+  max-width: none;
+  padding-left: clamp(16px, 5vw, 64px) !important;
+  padding-right: clamp(16px, 5vw, 64px) !important;
+}
+
+// Hinode centres the brand on narrow screens (.mx-auto); the design keeps it hard left at
+// every width, with the menu button on the right.
+.navbar-brand,
+.navbar-brand.mx-auto {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-bottom: 0;
+  padding-top: 0;
+}
+
+.navbar .width-100.d-flex {
+  justify-content: flex-start;
+}
+
+// Hinode renders a 30px `invisible` toggler on the left purely to keep the brand optically
+// centred on narrow screens. With the brand left-aligned it is just a spacer, so collapse it.
+.navbar .navbar-toggler.invisible {
+  display: none;
+}
+
+// Nav items sit further apart in the design than Bootstrap's default.
+.navbar-nav {
+  gap: clamp(8px, 3.2vw, 42px);
+}
+
+.navbar-brand img {
+  border-radius: 10px;
+  height: 44px;
+  max-height: 44px;
+  max-width: 44px;
+  width: 44px;
+}
+
+// Hinode ships a 13.5px nav font via .navbar-fs-6; the design is 17px / 600.
+.navbar-nav {
+  --bs-nav-link-font-size: 17px;
+  --bs-nav-link-font-weight: 600;
+}
+
+// Active section is marked by weight and a 2px rule, never by colour alone.
+.navbar-nav .nav-link {
+  align-items: center;
+  border-bottom: 2px solid transparent;
+  display: inline-flex;
+  min-height: 44px;
+  padding-bottom: 4px;
+}
+
+.navbar-nav .nav-link.active {
+  border-bottom-color: #26490d;
+  font-weight: 700;
+}
+
+// Hinode's components/_navbar.scss sets `.navbar .btn { border-radius: $theme-border-radius }`
+// as a direct property at (0,2,0), which outranks .btn's --bs-btn-border-radius. The Contact
+// CTA is a pill in the design, so it has to be restated at the same specificity — this file is
+// imported after that component, so it wins.
+.navbar .btn {
+  border-radius: 999px;
+  font-size: 15px;
+  min-height: 44px;
+  padding: 0 22px;
+}
+
+// Search field is a pill in the design, matching the Contact CTA's height.
+.navbar .search-input.form-control {
+  background-color: #f5f8f2;
+  border: 1px solid rgb(38 73 13 / 18%);
+  border-radius: 999px;
+  font-size: 15px;
+  height: 44px;
+  padding-left: 14px;
+}
+
+.navbar .search-input.form-control:focus {
+  background-color: #fff;
+  border-color: #26490d;
+}
+
+// Dropdown rows are 48px tall with a 9px hover pill.
+.dropdown-menu .dropdown-item {
+  align-items: center;
+  border-radius: 9px;
+  display: flex;
+  min-height: 48px;
+}

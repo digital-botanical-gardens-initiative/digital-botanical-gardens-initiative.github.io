@@ -1,5 +1,6 @@
 ---
 title: Jakub Galgonek
+featured: false
 role: DBGI External Advisor - Knowledge Graphs & Semantic Web
 organizations:
 - name: Semantic Web and knowledge-graph community

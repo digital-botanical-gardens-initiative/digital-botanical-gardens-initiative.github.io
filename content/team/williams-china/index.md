@@ -1,5 +1,6 @@
 ---
 title: China Williams
+featured: false
 role: DBGI Contributor - Science Policy and Botanical Collections
 organizations:
 - name: Royal Botanic Gardens, Kew

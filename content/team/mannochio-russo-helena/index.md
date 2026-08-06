@@ -1,5 +1,6 @@
 ---
 title: Helena Mannochio-Russo
+featured: false
 role: DBGI Contributor - Natural Products Metabolomics
 organizations:
 - name: University of California San Diego

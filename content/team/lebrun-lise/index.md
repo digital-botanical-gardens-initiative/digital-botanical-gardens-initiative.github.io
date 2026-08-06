@@ -1,5 +1,6 @@
 ---
 title: Lise Lebrun
+featured: false
 role: DBGI Contributor - Plant Metabolome
 organizations:
 - name: University of Neuchatel

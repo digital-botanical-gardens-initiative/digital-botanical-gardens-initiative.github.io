@@ -1,0 +1,112 @@
+# Maps Directus's free-text Field_Data.collector_fullname values (from
+# data/collector_stats.yml, produced by scripts/update-collector-stats.mjs) to
+# content/team/<slug>/ people. Directus has no ORCID/relation link for collectors,
+# so the same person can appear under multiple spellings; this file is the manual
+# reconciliation. Regenerate the featured-team ranking by hand whenever
+# collector_stats.yml is refreshed with materially different counts.
+#
+# collected_samples below is the sum across all directus_names variants, as of
+# the 2026-08-05 collector_stats.yml snapshot.
+people:
+  - team_slug: laboureau-mazzarine
+    directus_names:
+      - "Mazzarine laboureau"
+      - "Mazzarine Laboureau"
+    collected_samples: 2749
+  - team_slug: lab-emilie
+    directus_names:
+      - "Emilie Lab"
+      - "Émilie Lab"
+      - "Lab Emilie"
+    collected_samples: 830
+  - team_slug: kucerova-katerina
+    directus_names:
+      - "Kateřina Kučerová"
+    collected_samples: 722
+  - team_slug: defossez-emmanuel
+    directus_names:
+      - "Emmanuel Defossez"
+    collected_samples: 722
+  - team_slug: brigante-federico
+    directus_names:
+      - "Federico Brigante"
+    collected_samples: 299
+  - team_slug: coen-heloise
+    directus_names:
+      - "Héloïse Coen"
+    collected_samples: 225
+  - team_slug: rovelli-davide
+    directus_names:
+      - "Davide Rovelli"
+    collected_samples: 184
+  - team_slug: bruelhart-edouard
+    directus_names:
+      - "Edouard Brülhart"
+    collected_samples: 44
+    note: >
+      Team page title is "Edouard Brüelhart" (note the extra e); Directus has
+      "Edouard Brülhart". Treated as the same person on first-name + close
+      surname match, not confirmed against a second source. Flag for
+      confirmation if precision matters here.
+  - team_slug: allard-pierre-marie
+    directus_names:
+      - "Pierre-Marie Allard"
+    collected_samples: 41
+  - team_slug: wannier-maelle
+    directus_names:
+      - "Maëlle Wannier"
+    collected_samples: 30
+  - team_slug: agosti-donat
+    directus_names:
+      - "Donat Agosti"
+    collected_samples: 21
+  - team_slug: tandon-disha
+    directus_names:
+      - "Disha Tandon"
+    collected_samples: 19
+  - team_slug: lebrun-lise
+    directus_names:
+      - "Lise Lebrun"
+    collected_samples: 18
+  - team_slug: visani-marco
+    directus_names:
+      - "Marco Andreas Stanley Visani"
+    collected_samples: 17
+  - team_slug: sima-ana-claudia
+    directus_names:
+      - "Ana Claudia Sima"
+    collected_samples: 14
+  - team_slug: kadlecova-alzbeta
+    directus_names:
+      - "Alžběta Kadlecová"
+    collected_samples: 5
+  - team_slug: tito-damiani
+    directus_names:
+      - "Tito Damiani"
+    collected_samples: 5
+
+# Directus collector names with no matching content/team/ page (external
+# collaborators, students, etc.) - omitted from the homepage strip per the
+# "flag unmatched names rather than silently dropping them" rule; keep this
+# list so a future contributor doesn't have to re-derive it from scratch.
+unmatched_directus_names:
+  - name: "Alicia Requena"
+    collected_samples: 110
+  - name: "Anna Maliukova"
+    collected_samples: 186
+  - name: "Simon Rérat"
+    collected_samples: 308
+  - name: "Lysandre Journiac"
+    collected_samples: 267
+  - name: "Loic Chalmandrier"
+    collected_samples: 220
+  - name: "Jade Dandois"
+    collected_samples: 94
+  - name: "Tomáš Iliaš"
+    collected_samples: 50
+  - name: "Chloé Blanc"
+    collected_samples: 10
+  - name: "James Smith"
+    collected_samples: 15
+  - name: "Alexandra Slotte"
+    collected_samples: 4

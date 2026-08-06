@@ -1,0 +1,33 @@
+{{- $stats := hugo.Data.garden_stats | default dict -}}
+{{- $totals := $stats.totals | default dict -}}
+<section class="dbgi-status-band" aria-label="Current status of the initiative">
+  <div class="container">
+    <p class="dbgi-eyebrow dbgi-status-eyebrow mb-4">Current status of the initiative</p>
+    <div class="dbgi-status-grid">
+      <div class="dbgi-status-item">
+        <strong class="dbgi-counter" data-count="{{ $totals.samples | default 0 }}">0</strong>
+        <span class="dbgi-status-item-label">
+          {{ partial "utilities/dbgi-icon.html" (dict "icon" "sprout" "class" "dbgi-status-item-icon") }}
+          Collected samples
+        </span>
+      </div>
+      <div class="dbgi-status-item">
+        <strong class="dbgi-counter" data-count="{{ $totals.species | default 0 }}">0</strong>
+        <span class="dbgi-status-item-label">
+          {{ partial "utilities/dbgi-icon.html" (dict "icon" "branch" "class" "dbgi-status-item-icon") }}
+          Covered species
+        </span>
+      </div>
+      <div class="dbgi-status-item">
+        <strong class="dbgi-counter" data-count="{{ $totals.profiled_samples | default 0 }}">0</strong>
+        <span class="dbgi-status-item-label">
+          {{ partial "utilities/dbgi-icon.html" (dict "icon" "chart" "class" "dbgi-status-item-icon") }}
+          Analysed samples
+        </span>
+      </div>
+    </div>
+    {{- with $stats.generated_at }}
+    <p class="dbgi-status-updated">Last updated <span>{{ time.Format "2 January 2006" . }}</span></p>
+    {{- end }}
+  </div>
+</section>

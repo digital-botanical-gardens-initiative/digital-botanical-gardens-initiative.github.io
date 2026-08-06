@@ -1,6 +1,6 @@
 ---
-title: Core Labs
-description: Laboratories and knowledge-technology teams shaping the Digital Botanical Gardens Initiative.
+title: Research laboratories
+description: The research groups running the analytical, computational and data infrastructure behind the initiative.
 aliases:
 - /core-labs/
 ---

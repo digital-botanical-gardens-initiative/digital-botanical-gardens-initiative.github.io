@@ -1,7 +1,5 @@
 ---
-title: Vision & Goals
-description: A concise statement of DBGI's vision, mission, and goals.
+title: What is the DBGI?
+description: Documenting plant chemistry in botanical garden collections.
 layout: vision-goals
 ---
-
-DBGI develops open workflows, data models, software, and community practices that help botanical gardens transform living collections into interoperable scientific knowledge.

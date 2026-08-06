@@ -1,5 +1,6 @@
 ---
 title: Alexander Blood
+featured: false
 role: DBGI Contributor - COMMONS Lab
 organizations:
 - name: COMMONS Lab, University of Fribourg

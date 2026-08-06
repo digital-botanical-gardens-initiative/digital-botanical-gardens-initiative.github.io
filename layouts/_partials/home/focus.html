@@ -1,0 +1,26 @@
+{{- $steps := slice
+  (dict "title" "Collect" "icon" "collect" "color" "var(--dbgi-primary)" "body" "We use high-throughput workflows to sample botanical garden collections at scale and ensure each sampling record is accompanied by key specimen information and photographic records.")
+  (dict "title" "Analyse" "icon" "analyse" "color" "var(--dbgi-green-mid-1)" "body" "Liquid chromatography–mass spectrometry acts as a digital scanner for plant chemistry. We profile each sample and process the resulting data into “chemical fingerprints”.")
+  (dict "title" "Connect" "icon" "connect" "color" "var(--dbgi-green-mid-2)" "body" "Chemical fingerprints and relevant specimen information are organised into a searchable atlas of plant chemistry for researchers, curators and the public.")
+-}}
+<section class="container dbgi-focus" aria-label="How DBGI works">
+  <p class="dbgi-focus-intro">Botanical gardens maintain an extraordinary diversity of living plants. We use mass spectrometry to profile their chemistry and integrate all data into an open, searchable <span class="dbgi-focus-intro-highlight">atlas of plant chemodiversity</span>.</p>
+  <div class="dbgi-focus-grid">
+    <h2 class="dbgi-h2-section dbgi-focus-heading">From living collections to reusable knowledge</h2>
+    <div class="dbgi-workflow">
+      <ol class="dbgi-workflow-list">
+        {{- range $steps }}
+        <li class="dbgi-workflow-step">
+          <span class="dbgi-workflow-step-icon" style="border-color: {{ .color }}; color: {{ .color }};">
+            {{ partial "utilities/dbgi-icon.html" (dict "icon" .icon "size" 36) }}
+          </span>
+          <div>
+            <p class="dbgi-workflow-step-title">{{ .title }}</p>
+            <p class="dbgi-workflow-step-body">{{ .body }}</p>
+          </div>
+        </li>
+        {{- end }}
+      </ol>
+    </div>
+  </div>
+</section>

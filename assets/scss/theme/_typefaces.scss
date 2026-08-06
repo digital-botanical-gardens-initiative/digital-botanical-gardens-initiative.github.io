@@ -1,0 +1,40 @@
+/*!
+ * Copyright (c) 2016-2020 The Inter Project Authors.
+ * "Inter" is trademark of Rasmus Andersson.
+ * https://github.com/rsms/inter
+ *
+ * This Font Software is licensed under the SIL Open Font License, Version 1.1.
+ * http://scripts.sil.org/OFL
+ */
+
+/* Hinode's theme/fonts.scss ships Inter 200/300/400/600 only. The design handoff also uses
+   500, 700 and 800 — without these faces those weights are synthesised (faux bold).
+   Files are the same Inter v12 latin subset Hinode uses (verified: fontsource 4.5.15's
+   600 face is byte-identical to Hinode's inter-v12-latin-600.woff2), so metrics match. */
+
+/* inter-500 - latin */
+@font-face {
+  font-display: block;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/inter-v12-latin-500.woff2") format("woff2");
+}
+
+/* inter-700 - latin */
+@font-face {
+  font-display: block;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/inter-v12-latin-700.woff2") format("woff2");
+}
+
+/* inter-800 - latin */
+@font-face {
+  font-display: block;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 800;
+  src: url("../fonts/inter-v12-latin-800.woff2") format("woff2");
+}

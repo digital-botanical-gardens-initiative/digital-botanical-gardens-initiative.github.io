@@ -1,5 +1,6 @@
 ---
 title: Héloïse Coen
+featured: true
 role: DBGI Contributor
 organizations:
 - name: University of Fribourg

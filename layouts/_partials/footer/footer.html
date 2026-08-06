@@ -1,0 +1,16 @@
+{{- partial "footer/funding-strip.html" . -}}
+{{- $githubEntry := index (where site.Menus.social "Name" "GitHub") 0 -}}
+<footer class="dbgi-footer-bottom">
+  <div class="container-xxl dbgi-footer-bottom-inner">
+    <span>&copy; {{ now.Year }} Digital Botanical Gardens Initiative</span>
+    <span class="dbgi-footer-sep" aria-hidden="true">&middot;</span>
+    <span>Website content <a class="dbgi-footer-license-link" href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a></span>
+    <span class="dbgi-footer-sep" aria-hidden="true">&middot;</span>
+    {{- partial "utilities/obfuscated-mail.html" (dict "user" "dbgi" "domain" "protonmail.ch") }}
+    {{- with $githubEntry }}
+    <span class="dbgi-footer-sep" aria-hidden="true">&middot;</span>
+    <a href="{{ .URL }}" target="_blank" rel="noopener">{{ .Name }}</a>
+    {{- end }}
+  </div>
+</footer>
+<script src="/js/obfuscate-email.js"></script>

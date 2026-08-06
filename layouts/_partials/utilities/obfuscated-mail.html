@@ -1,0 +1,7 @@
+{{- $user := .user -}}
+{{- $domain := .domain -}}
+{{- $class := .class -}}
+{{- $label := .label -}}
+{{- $spelledDomain := strings.Replace $domain "." " [dot] " -}}
+<a href="#" class="dbgi-obfuscated-email{{ with $class }} {{ . }}{{ end }}" data-obfuscate-email data-user="{{ $user }}" data-domain="{{ $domain }}"{{ with $label }} data-label="{{ . }}"{{ end }}>{{ with $label }}{{ . }}{{ else }}<noscript>{{ $user }} [at] {{ $spelledDomain }}</noscript>{{ end }}</a>
+{{- with $label }}<noscript>{{ $user }} [at] {{ $spelledDomain }}</noscript>{{ end -}}

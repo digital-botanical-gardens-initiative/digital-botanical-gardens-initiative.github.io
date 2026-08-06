@@ -4,76 +4,76 @@
   weight = 10
 
 [[main]]
-  name = "News"
-  pageRef = "/news/"
-  weight = 20
-
-[[main]]
   name = "About"
   identifier = "about"
-  weight = 30
+  pageRef = "/about/vision-goals/"
+  weight = 20
 
 [[main]]
   name = "Vision & Goals"
   pageRef = "/about/vision-goals/"
   parent = "about"
+  weight = 20
+
+[[main]]
+  name = "Current work"
+  pageRef = "/work/"
+  parent = "about"
+  weight = 21
+
+[[main]]
+  name = "Open science"
+  pageRef = "/open-science/"
+  parent = "about"
+  weight = 22
+
+[[main]]
+  name = "Publications"
+  pageRef = "/publications/"
+  parent = "about"
+  weight = 23
+
+[[main]]
+  name = "Network"
+  identifier = "network"
+  pageRef = "/network/"
   weight = 30
 
 [[main]]
-  name = "Contributors"
-  pageRef = "/team/"
-  parent = "about"
-  weight = 31
-
-[[main]]
-  name = "Governance"
-  pageRef = "/governance/"
-  parent = "about"
-  weight = 32
-
-[[main]]
-  name = "Labs"
-  pageRef = "/labs/"
-  parent = "about"
-  weight = 33
+  name = "Overview"
+  pageRef = "/network/"
+  parent = "network"
+  weight = 30
 
 [[main]]
   name = "Gardens"
   pageRef = "/gardens/"
-  parent = "about"
-  weight = 35
+  parent = "network"
+  weight = 31
 
 [[main]]
-  name = "Observation"
-  pageRef = "/observation-of-the-day/"
-  weight = 37
+  name = "Research Laboratories"
+  pageRef = "/labs/"
+  parent = "network"
+  weight = 32
 
 [[main]]
-  name = "Funding"
-  pageRef = "/funding/"
-  weight = 38
-
-[[main]]
-  name = "Work"
-  pageRef = "/work/"
+  name = "News"
+  pageRef = "/news/"
   weight = 40
 
 [[main]]
   name = "Contact"
   pageRef = "/contact/"
   weight = 50
+  [main.params]
+    button = true
 
 [[social]]
   name = "GitHub"
   pre = "fab fa-github"
   url = "https://github.com/digital-botanical-gardens-initiative"
   weight = 10
-
-[[social]]
-  name = "Email"
-  pre = "fas envelope"
-  url = "mailto:dbgi@protonmail.ch"
-  weight = 20
 
 [[social]]
   name = "Open notes"

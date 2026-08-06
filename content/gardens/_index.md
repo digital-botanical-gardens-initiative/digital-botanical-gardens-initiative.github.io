@@ -1,6 +1,6 @@
 ---
-title: Sampled Botanical Gardens
-description: A map of botanical gardens sampled through the Digital Botanical Gardens Initiative.
+title: Botanical gardens
+description: Living collections that opened their plants to systematic chemical sampling.
 ---
 
 {{< garden-map >}}

@@ -1,6 +1,9 @@
 ---
 title: 'PhD position in eco-metabolomics: Investigating the ecological and evolutionary drivers of phytochemical diversity'
 date: 2023-04-01
+tag: Job Position
+position_closed: true
+image_alt: Greenhouses and garden beds at the Botanical Garden of the City of Neuchâtel on a sunny day.
 authors:
 - defossez-emmanuel
 aliases:
@@ -37,6 +40,6 @@ There is some flexibility, but the anticipated starting date will be July 1st 20
 ## Application:
 The application should contain the following: 1) a cover letter describing yourself and your match to the above-mentioned project; 2) a CV describing your education, publications, and relevant work experience, 3) names and contact information for at least two references.
 
-The deadline for applications is May 15, 2023. Please, send all information to Emmanuel Defossez (emmanuel.defossez@unine.ch).
+The deadline for applications is May 15, 2023. Please, send all information to <a href="/team/defossez-emmanuel/">Emmanuel Defossez</a> (emmanuel.defossez@unine.ch).
 
 :open_file_folder: this offer as pdf here : https://www.unine.ch/files/live/sites/biologie/files/Annonces%20de%20postes/PhD_position_ecometabolomics_DBGI_EMI.pdf

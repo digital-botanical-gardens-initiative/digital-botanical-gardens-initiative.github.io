@@ -1,5 +1,6 @@
 ---
 title: Pierre-Marie Allard
+featured: false
 role: DBGI Initiator - Head of COMMONS Lab
 organizations:
 - name: COMMONS Lab, University of Fribourg

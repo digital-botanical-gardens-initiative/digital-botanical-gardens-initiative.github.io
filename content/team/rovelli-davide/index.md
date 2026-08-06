@@ -1,5 +1,6 @@
 ---
 title: Davide Rovelli
+featured: false
 role: DBGI Contributor - Analytical Chemistry
 organizations:
 - name: University of Parma

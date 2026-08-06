@@ -1,5 +1,6 @@
 ---
 title: Mazzarine Laboureau
+featured: true
 role: DBGI Contributor - Plant Metabolome
 organizations:
 - name: PEMG, University of Neuchatel

@@ -1,5 +1,6 @@
 ---
 title: Philippe Cudre-Mauroux
+featured: false
 role: DBGI-KM External Advisor - Knowledge Graphs & Semantic Web
 organizations:
 - name: University of Fribourg

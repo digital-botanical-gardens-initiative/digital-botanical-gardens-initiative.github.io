@@ -7,12 +7,12 @@
   {{- if eq .key $slug -}}{{- $garden = . -}}{{- end -}}
 {{- end -}}
 {{- $gardenStats := index $stats $slug | default dict -}}
-<main class="container py-5 dbgi-garden-detail">
-  <a class="text-decoration-none small" href="/gardens/">Sampled Gardens</a>
+<div class="container py-5 dbgi-garden-detail">
+  <a class="dbgi-back-link" href="/gardens/"><span aria-hidden="true">←</span> Botanical gardens</a>
   <header class="row g-4 align-items-end border-bottom pb-4 mt-1 mb-4">
     <div class="col-lg-8">
       <p class="dbgi-kicker text-primary mb-3">{{ $garden.city }}, {{ $garden.country }}</p>
-      <h1 class="display-5 fw-semibold mb-3">{{ $garden.name }}</h1>
+      <h1 class="dbgi-h1-page mb-3" style="color: var(--dbgi-dark); font-weight: 800; letter-spacing: -.025em;">{{ $garden.name }}</h1>
       {{ with $garden.summary }}<p class="lead text-secondary mb-0">{{ . }}</p>{{ end }}
     </div>
     <div class="col-lg-4">
@@ -22,7 +22,7 @@
     </div>
   </header>
 
-  <div class="row g-5">
+  <div class="row g-4">
     <article class="col-lg-7">
       <div class="dbgi-garden-detail-stats mb-4">
         <div>
@@ -50,7 +50,7 @@
       {{ with $garden.focus }}
         <h2 class="h4 mt-4">Focus</h2>
         <div class="d-flex flex-wrap gap-2">
-          {{ range . }}<span class="badge text-bg-light border text-secondary fw-normal">{{ . }}</span>{{ end }}
+          {{ range . }}<span class="badge text-bg-light border text-secondary">{{ . }}</span>{{ end }}
         </div>
       {{ end }}
     </article>
@@ -96,5 +96,5 @@
       {{ end }}
     </aside>
   </div>
-</main>
+</div>
 {{ end }}

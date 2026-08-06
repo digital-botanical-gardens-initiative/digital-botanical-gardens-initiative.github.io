@@ -1,5 +1,6 @@
 ---
 title: Geoffrey Kite
+featured: false
 role: DBGI Contributor - Phytochemistry
 organizations:
 - name: Royal Botanic Gardens, Kew

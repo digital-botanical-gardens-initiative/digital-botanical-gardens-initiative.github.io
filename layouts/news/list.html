@@ -1,33 +1,35 @@
 {{ define "main" }}
-<main class="container py-5">
-  <header class="mb-4 border-bottom pb-4">
-    <p class="text-primary fw-semibold text-uppercase small mb-2">Updates</p>
-    <h1 class="display-5 fw-semibold">{{ .Title }}</h1>
-    {{ with .Description }}<p class="lead text-secondary">{{ . }}</p>{{ end }}
-  </header>
-  <div class="vstack gap-0 border-top">
+<div>
+  <section class="container dbgi-list-header">
+    <p class="dbgi-eyebrow text-primary mb-0">Updates</p>
+    <h1 class="dbgi-h1-page">{{ .Title }}</h1>
+    {{ with .Description }}<p class="lead mb-0">{{ . }}</p>{{ end }}
+  </section>
+
+  <section class="container dbgi-news-list">
     {{ range .Pages.ByDate.Reverse }}
-      {{ $page := . }}
+      {{ $article := . }}
       {{ $featured := .Resources.GetMatch "featured.*" }}
-      <article class="py-4 border-bottom">
-        <div class="row g-3">
-          <div class="col-md-2">
-            <time class="small text-secondary" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}</time>
-          </div>
-          <div class="col-md-3 col-lg-2">
+      <a class="dbgi-news-row" href="{{ .RelPermalink }}">
+        <time class="dbgi-news-row-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 Jan 2006" }}</time>
+        <div class="dbgi-news-row-inner">
+          <div class="dbgi-news-row-media">
             {{ with $featured }}
-              <a href="{{ $page.RelPermalink }}" aria-label="{{ $page.Title }}">
-                <img class="img-fluid rounded-3 news-thumb" src="{{ .RelPermalink }}" alt="{{ $page.Title }}">
-              </a>
+              {{ $img := .Fill "400x264 Center" }}
+              <img src="{{ $img.RelPermalink }}" alt="{{ $article.Params.image_alt | default $article.Title }}" loading="lazy" width="200" height="132">
             {{ end }}
           </div>
-          <div class="col-md-7 col-lg-8">
-            <h2 class="h4 mb-2"><a class="text-decoration-none" href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-            <p class="text-secondary mb-0">{{ .Summary | plainify | truncate 220 }}</p>
+          <div>
+            {{ with $article.Params.tag }}<p class="dbgi-eyebrow dbgi-news-row-tag mb-0">{{ . }}</p>{{ end }}
+            <h2 class="dbgi-news-row-title">{{ $article.Title }}</h2>
+            <p class="dbgi-news-row-excerpt mb-0">{{ $article.Summary | plainify | truncate 200 }}</p>
+            {{ if $article.Params.position_closed }}
+              <p class="dbgi-news-closed-note mb-0">This position is closed.</p>
+            {{ end }}
           </div>
         </div>
-      </article>
+      </a>
     {{ end }}
-  </div>
-</main>
+  </section>
+</div>
 {{ end }}

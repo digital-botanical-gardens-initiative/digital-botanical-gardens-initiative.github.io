@@ -1,5 +1,6 @@
 ---
 title: Luca Cappelletti
+featured: false
 role: DBGI Contributor - Graph Machine Learning
 organizations:
 - name: COMMONS Lab, University of Fribourg

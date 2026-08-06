@@ -1,5 +1,6 @@
 ---
 title: Federico Ivan Brigante
+featured: true
 role: DBGI Contributor - Plant Alkaloid Metabolomics
 organizations:
 - name: Pluskal Lab, IOCB Prague

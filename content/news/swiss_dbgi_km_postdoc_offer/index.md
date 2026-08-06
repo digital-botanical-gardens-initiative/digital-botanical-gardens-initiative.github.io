@@ -1,6 +1,9 @@
 ---
 title: 'Postdoctoral researcher position: Knowledge Management in the Digital Botanical Gardens Initiative'
 date: 2023-04-14
+tag: Job Position
+position_closed: true
+image_alt: Snow-covered greenhouses and a wooden footbridge at the Botanical Garden of the City of Neuchâtel in winter.
 authors:
 - allard-pierre-marie
 aliases:

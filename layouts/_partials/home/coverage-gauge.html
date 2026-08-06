@@ -1,0 +1,31 @@
+{{- $coverage := hugo.Data.taxonomic_coverage | default dict -}}
+{{- $rows := $coverage.rows | default slice -}}
+<section class="dbgi-coverage-gauge" aria-label="Taxonomic coverage">
+  <div class="container dbgi-coverage-gauge-inner">
+    <div class="dbgi-coverage-gauge-intro">
+      <h2 class="dbgi-h2-section">The Initiative's taxonomic coverage</h2>
+      <p class="dbgi-coverage-gauge-lead">What DBGI has collected across the plant tree of life so far</p>
+      {{- with $coverage.generated_at }}
+      <p class="dbgi-status-updated dbgi-coverage-gauge-updated">Last updated <span>{{ time.Format "2 January 2006" . }}</span></p>
+      {{- end }}
+    </div>
+    <div class="dbgi-coverage-bars">
+      {{- range $rows }}
+      {{- $pct := 0.0 -}}
+      {{- if gt (float .total) 0.0 }}{{ $pct = mul (div (float .covered) (float .total)) 100 }}{{ end -}}
+      <div class="dbgi-coverage-bar">
+        <div class="dbgi-coverage-bar-head">
+          <span class="dbgi-coverage-bar-label">{{ .label }}</span>
+          <span class="dbgi-coverage-bar-figures">
+            <span class="dbgi-coverage-bar-pct" style="color: {{ .color }};">{{ printf "%.1f%%" $pct }}</span>
+            <span class="dbgi-coverage-bar-count">{{ lang.FormatNumber 0 .covered }} / {{ lang.FormatNumber 0 .total }} covered</span>
+          </span>
+        </div>
+        <div class="dbgi-coverage-bar-track">
+          <div class="dbgi-coverage-bar-fill" data-width="{{ printf "%.2f%%" $pct }}" style="background: {{ .color }};"></div>
+        </div>
+      </div>
+      {{- end }}
+    </div>
+  </div>
+</section>

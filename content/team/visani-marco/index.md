@@ -1,5 +1,6 @@
 ---
 title: Marco Visani
+featured: false
 role: DBGI-KM Contributor
 organizations:
 - name: COMMONS Lab, University of Fribourg

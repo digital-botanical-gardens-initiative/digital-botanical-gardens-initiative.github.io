@@ -1,0 +1,14 @@
+{{- $id := .id -}}
+{{- $class := .class -}}
+{{- $stats := hugo.Data.garden_stats.gardens | default dict -}}
+{{- $gardens := slice -}}
+{{- range hugo.Data.gardens.gardens | default slice -}}
+  {{- $gardenStats := index $stats .key | default dict -}}
+  {{- $gardens = $gardens | append (merge . (dict "samples" ($gardenStats.samples | default 0) "species" ($gardenStats.species | default 0))) -}}
+{{- end -}}
+{{- $labs := hugo.Data.labs.labs | default slice -}}
+
+<link rel="stylesheet" href="/vendor/leaflet/leaflet.css">
+<div id="{{ $id }}" class="dbgi-garden-map dbgi-network-map{{ with $class }} {{ . }}{{ end }}" data-gardens='{{ $gardens | jsonify }}' data-labs='{{ $labs | jsonify }}'></div>
+<script src="/vendor/leaflet/leaflet.js"></script>
+<script src="/js/network-map.js"></script>

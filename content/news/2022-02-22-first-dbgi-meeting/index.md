@@ -1,6 +1,8 @@
 ---
 title: First DBGI-KM meeting !
 date: 2023-02-22
+tag: Milestone
+image_alt: A meeting room with tables arranged in a U-shape and a projector screen showing a slide titled "Swiss DBGI-KM team" with team members and work packages.
 aliases:
 - /post/2022-02-22-first-dbgi-meeting/
 ---

@@ -2,7 +2,7 @@
 {{- $data := hugo.Data.inaturalist_observation | default dict -}}
 {{- $observation := $data.observation | default dict -}}
 {{- $photo := $observation.photo | default dict -}}
-<main class="dbgi-observation-page">
+<div class="dbgi-observation-page">
   <section class="dbgi-gardens-hero">
     <div class="container">
       <p class="dbgi-kicker text-primary mb-3">iNaturalist</p>
@@ -108,5 +108,5 @@
       {{ .Content }}
     </div>
   </section>
-</main>
+</div>
 {{ end }}

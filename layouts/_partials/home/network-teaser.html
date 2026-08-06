@@ -1,0 +1,15 @@
+<section class="container dbgi-network-teaser" aria-label="Network of gardens and labs">
+  <div class="dbgi-section-header">
+    <h2 class="dbgi-h2-section mb-0">A growing network of gardens and labs</h2>
+    <a class="dbgi-section-link" href="/network/">Meet the network →</a>
+  </div>
+  <div class="dbgi-network-teaser-frame">
+    {{- /* Same partial as /network/ so both pages show gardens *and* labs with identical
+           popups — the legend below promises a lab marker, and garden-map.html has none. */ -}}
+    {{- partial "utilities/network-map.html" (dict "id" "dbgi-map-home" "class" "dbgi-network-teaser-map") }}
+    <div class="dbgi-network-teaser-legend">
+      <span class="dbgi-network-teaser-legend-item"><span class="dbgi-network-teaser-legend-dot dbgi-network-teaser-legend-dot-garden"></span>Botanical garden</span>
+      <span class="dbgi-network-teaser-legend-item"><span class="dbgi-network-teaser-legend-dot dbgi-network-teaser-legend-dot-lab"></span>Research laboratory</span>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,13 @@
+// Tag-chip colours. Radius, size, weight and padding are set in theme/_variables.scss.
+//
+// The three call sites render `.badge.text-bg-light.border`. Bootstrap's `text-bg-*` helper
+// emits colour and background with !important, so matching !important is the only way to reach
+// the design's palette — `--bs-light` is the page background (#faf9f4) and is deliberately
+// left alone. The border, by contrast, reads var(--bs-border-color), so setting the custom
+// property is enough there.
+.badge.text-bg-light {
+  --bs-border-color: rgb(38 73 13 / 14%);
+
+  background-color: #f5f8f2 !important;
+  color: #2c3a24 !important;
+}

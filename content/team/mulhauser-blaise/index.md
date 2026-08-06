@@ -1,5 +1,6 @@
 ---
 title: Blaise Mulhauser
+featured: false
 role: DBGI Contributor - Botanical Garden Director
 organizations:
 - name: Botanical Garden of the City of Neuchatel

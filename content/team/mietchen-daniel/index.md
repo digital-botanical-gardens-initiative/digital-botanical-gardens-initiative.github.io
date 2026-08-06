@@ -1,5 +1,6 @@
 ---
 title: Daniel Mietchen
+featured: false
 role: DBGI-KM External Advisor - Open Science
 organizations:
 - name: Open Science and Wikimedia communities

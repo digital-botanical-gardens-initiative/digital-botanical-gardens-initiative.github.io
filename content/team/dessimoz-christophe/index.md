@@ -1,5 +1,6 @@
 ---
 title: Christophe Dessimoz
+featured: false
 role: DBGI-KM Contributor
 organizations:
 - name: University of Lausanne and SIB Swiss Institute of Bioinformatics

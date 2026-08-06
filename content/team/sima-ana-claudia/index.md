@@ -1,5 +1,6 @@
 ---
 title: Ana Claudia Sima
+featured: false
 role: DBGI-KM Contributor
 organizations:
 - name: SIB Swiss Institute of Bioinformatics

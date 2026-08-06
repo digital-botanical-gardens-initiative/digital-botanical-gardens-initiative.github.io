@@ -1,31 +1,38 @@
 {{ define "main" }}
 {{ $featured := .Resources.GetMatch "featured.*" }}
-<main class="container py-5">
-  <article class="mx-auto" style="max-width: 860px;">
-    <header class="mb-4 border-bottom pb-4">
-      <a class="text-decoration-none small" href="/news/">News</a>
-      <h1 class="display-6 fw-semibold mt-2">{{ .Title }}</h1>
-      <div class="text-secondary">
-        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}</time>
-        {{ with .Params.authors }}
-          <span aria-hidden="true"> · </span>
-          {{ range $i, $author := . }}
-            {{- if $i }}, {{ end -}}
-            {{- with site.GetPage (printf "/team/%s" $author) -}}
-              <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-            {{- else -}}
-              {{ $author }}
-            {{- end -}}
-          {{ end }}
-        {{ end }}
-      </div>
-    </header>
-    {{ with $featured }}
-      <img class="img-fluid rounded-3 mb-4 news-featured" src="{{ .RelPermalink }}" alt="{{ $.Title }}">
+<div class="container">
+  <article class="dbgi-post mx-auto">
+    <a class="dbgi-back-link" href="/news/"><span aria-hidden="true">←</span> All news</a>
+    <div class="dbgi-post-meta-row">
+      {{ with .Params.tag }}<p class="dbgi-eyebrow dbgi-post-tag mb-0">{{ . }}</p>{{ end }}
+      <time class="dbgi-post-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}</time>
+    </div>
+    <h1 class="dbgi-post-title">{{ .Title }}</h1>
+    {{ if .Params.position_closed }}
+      <p class="dbgi-post-closed">This position is closed.</p>
     {{ end }}
-    <div class="content fs-6 lh-lg">
+    {{ with $featured }}
+      <div class="dbgi-post-media">
+        <img src="{{ .RelPermalink }}" alt="{{ $.Params.image_alt | default $.Title }}">
+      </div>
+    {{ end }}
+    <div class="content dbgi-post-content">
       {{ .Content }}
     </div>
+    {{ with .Params.authors }}
+      <div class="dbgi-post-footer">
+        Published by
+        {{ range $i, $author := . }}
+          {{- if $i }}, {{ end -}}
+          {{- with site.GetPage (printf "/team/%s" $author) -}}
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+          {{- else -}}
+            {{ $author }}
+          {{- end -}}
+        {{ end }}
+        · {{ $.Date.Format "2 January 2006" }}
+      </div>
+    {{ end }}
   </article>
-</main>
+</div>
 {{ end }}

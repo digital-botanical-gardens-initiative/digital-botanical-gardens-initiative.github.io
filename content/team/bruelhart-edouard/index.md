@@ -1,5 +1,6 @@
 ---
 title: Edouard Brüelhart
+featured: false
 role: DBGI Contributor
 organizations:
 - name: COMMONS Lab, University of Fribourg

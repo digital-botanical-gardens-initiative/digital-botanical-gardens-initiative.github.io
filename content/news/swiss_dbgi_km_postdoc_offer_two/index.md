@@ -1,6 +1,9 @@
 ---
 title: Postdoctoral researcher position - computational ecology, metabolomics and knowledge management for biodiversity research.
 date: 2023-08-17
+tag: Job Position
+position_closed: true
+image_alt: Close-up of a green leaf showing its network of veins.
 authors:
 - allard-pierre-marie
 aliases:

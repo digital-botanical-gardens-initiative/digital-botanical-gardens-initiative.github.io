@@ -43,6 +43,21 @@ labs:
     members:
       - laboureau-mazzarine
 
+  - name: Laboratory of Functional Ecology
+    key: rasmann
+    institution: University of Neuchatel
+    city: Neuchatel
+    country: Switzerland
+    latitude: 46.9993
+    longitude: 6.9401
+    url: https://www.unine.ch/lef/en/sergio-rasmann/
+    summary: Investigating how plant chemical defences shape ecological interactions and evolution.
+    focus:
+      - Chemical ecology
+      - Evolutionary ecology
+    head:
+      - rasmann-sergio
+
   - name: Pluskal Lab
     key: pluskal-lab
     institution: IOCB Prague

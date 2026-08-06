@@ -1,0 +1,35 @@
+// Button geometry Bootstrap's variables can't express.
+// Radius, weight, font sizes and padding are set in theme/_variables.scss.
+
+// Bootstrap derives button height from padding + line-height, which doesn't land exactly on
+// the design's 44 / 50 / 34px boxes. Pin them, and centre the label so the extra height from
+// min-height distributes evenly instead of pushing text to the top.
+.btn {
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  min-height: 44px;
+}
+
+.btn-lg {
+  min-height: 50px;
+}
+
+.btn-sm {
+  min-height: 34px;
+}
+
+// $btn-border-width is global, so the design's 1.5px outline has to be scoped to the variant.
+.btn-outline-primary {
+  --bs-btn-border-width: 1.5px;
+  --bs-btn-border-color: rgb(38 73 13 / 30%);
+  --bs-btn-color: #17230f;
+  --bs-btn-hover-border-color: #26490d;
+}
+
+// Hinode's components/_button.scss adds `margin: $spacer * .25` to anchor buttons. The design
+// has no such margin, and it visibly disagrees with the `gap-2` button rows on the homepage.
+a.btn {
+  margin-bottom: 0;
+  margin-top: 0;
+}

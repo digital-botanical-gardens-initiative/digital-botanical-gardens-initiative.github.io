@@ -1,5 +1,6 @@
 ---
 title: Nicolas Ruch
+featured: false
 role: DBGI Contributor - Botanical Garden Workflows
 organizations:
 - name: Botanical Garden of the City of Neuchatel

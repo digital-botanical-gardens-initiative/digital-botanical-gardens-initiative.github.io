@@ -1,0 +1,13 @@
+{{- $funders := site.Data.funding.funders | default slice -}}
+{{- if $funders -}}
+<div class="container-xxl dbgi-footer-funders">
+  <span class="dbgi-eyebrow">Supported by</span>
+  <div class="dbgi-footer-funder-logos">
+    {{- range $funders }}
+    <a href="{{ .url }}" target="_blank" rel="noopener" aria-label="{{ .name }}">
+      <img src="{{ .logo }}" alt="{{ .name }}">
+    </a>
+    {{- end }}
+  </div>
+</div>
+{{- end -}}

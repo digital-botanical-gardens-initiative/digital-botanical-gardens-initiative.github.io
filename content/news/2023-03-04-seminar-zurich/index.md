@@ -1,6 +1,8 @@
 ---
 title: Seminar in the Botanical Garden of Zurich.
 date: 2023-03-04
+tag: Seminar
+image_alt: Seminar announcement flyer for Dr. Pierre-Marie Allard's talk on the Digital Botanical Gardens and Earth Metabolome Initiatives, with a photo of the Zurich Botanical Garden's greenhouses.
 aliases:
 - /post/2023-03-04-seminar-zurich/
 ---

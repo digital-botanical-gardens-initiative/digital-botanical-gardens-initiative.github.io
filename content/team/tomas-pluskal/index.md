@@ -1,5 +1,6 @@
 ---
 title: Tomáš Pluskal
+featured: false
 role: DBGI Contributor - Plant Specialized Metabolites
 organizations:
 - name: Pluskal Lab, IOCB Prague

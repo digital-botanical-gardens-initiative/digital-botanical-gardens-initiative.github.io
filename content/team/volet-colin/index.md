@@ -1,5 +1,6 @@
 ---
 title: Colin Volet
+featured: false
 role: DBGI Contributor - Plant Metabolome
 organizations:
 - name: University of Fribourg

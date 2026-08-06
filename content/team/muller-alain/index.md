@@ -1,5 +1,6 @@
 ---
 title: Alain Müller
+featured: false
 role: DBGI Contributor - Technical Head of the Botanical Garden
 organizations:
 - name: Botanical Garden of the University of Fribourg

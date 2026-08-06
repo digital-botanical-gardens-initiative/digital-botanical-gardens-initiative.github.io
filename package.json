@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "data:gardens": "node scripts/update-garden-stats.mjs",
+    "data:collectors": "node scripts/update-collector-stats.mjs",
     "data:inaturalist": "node scripts/update-inaturalist-observation.mjs",
     "prestart": "npm run -s mod:vendor",
     "start": "hugo server --bind=0.0.0.0 --disableFastRender --printI18nWarnings",

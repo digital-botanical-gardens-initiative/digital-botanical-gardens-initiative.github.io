@@ -1,51 +1,60 @@
 {{ define "main" }}
 {{ $avatar := .Resources.GetMatch "avatar.*" }}
-<main class="container py-5">
-  <article class="mx-auto" style="max-width: 980px;">
-    <div class="row g-5 align-items-start">
-      <aside class="col-md-3">
-        {{ with $avatar }}
-          {{ $img := .Fill "280x280 Center" }}
-          <img class="rounded-circle img-fluid mb-3" src="{{ $img.RelPermalink }}" alt="{{ $.Title }}">
-        {{ end }}
-        {{ with .Params.role }}<p class="fw-semibold mb-2 small">{{ . }}</p>{{ end }}
-        {{ with .Params.organizations }}
-          {{ range . }}
-            {{ if .url }}<p class="mb-1"><a href="{{ .url }}">{{ .name }}</a></p>{{ else }}<p class="mb-1">{{ .name }}</p>{{ end }}
-          {{ end }}
-        {{ end }}
-        {{ with .Params.social }}
-          <div class="d-flex flex-wrap gap-2 justify-content-center mt-3">
-            {{ range . }}
-              {{ $pack := .icon_pack | default "fas" }}
-              {{ $icon := .icon }}
-              {{ if eq $pack "ai" }}
-                {{ $pack = "fas" }}
-                {{ if eq $icon "google-scholar" }}
-                  {{ $icon = "graduation-cap" }}
-                {{ else if eq $icon "orcid" }}
-                  {{ $icon = "id-card" }}
-                {{ else if eq $icon "cv" }}
-                  {{ $icon = "file-lines" }}
-                {{ end }}
-              {{ end }}
-              <a class="btn btn-outline-primary btn-sm" href="{{ .link }}" rel="me noopener" aria-label="{{ $icon }}">
-                {{ partial "assets/icon.html" (dict "icon" (printf "%s %s" $pack $icon) "class" "fa-fw" "spacing" false) }}
-              </a>
-            {{ end }}
-          </div>
-        {{ end }}
-      </aside>
-      <div class="col-md-9">
-        <a class="text-decoration-none small" href="/team/">Contributors</a>
-        <h1 class="display-6 fw-semibold mt-2">{{ .Title }}</h1>
-        {{ with .Params.bio }}<p class="lead text-secondary">{{ . }}</p>{{ end }}
-        {{ partial "team/affiliations.html" . }}
-        <div class="content">
-          {{ .Content }}
-        </div>
-      </div>
+{{ $social := .Params.social | default slice }}
+{{ $orcid := "" }}
+{{ range $social }}{{ if eq .icon "orcid" }}{{ $orcid = .link }}{{ end }}{{ end }}
+{{ $otherSocial := where $social "icon" "ne" "orcid" }}
+<div class="container dbgi-person-page">
+  <a class="dbgi-back-link" href="/team/"><span aria-hidden="true">←</span> Contributors</a>
+  <div class="dbgi-person-hero">
+    <div class="dbgi-person-photo">
+      {{ with $avatar }}
+        {{ $img := .Fill "440x440 Center" }}
+        <img src="{{ $img.RelPermalink }}" width="220" height="220" alt="{{ .Title }}">
+      {{ end }}
     </div>
-  </article>
-</main>
+    <div>
+      <h1 class="dbgi-person-name">{{ .Title }}</h1>
+      {{ with .Params.role }}<p class="dbgi-person-role">{{ . }}</p>{{ end }}
+      {{ with .Params.organizations }}
+        <div class="dbgi-person-orgs">
+          {{ range . }}
+            {{ if .url }}<a href="{{ .url }}">{{ .name }}</a>{{ else }}<span>{{ .name }}</span>{{ end }}
+          {{ end }}
+        </div>
+      {{ end }}
+      {{ with $orcid }}
+        <a class="dbgi-person-orcid" href="{{ . }}" target="_blank" rel="me noopener">
+          <span class="dbgi-orcid-badge" aria-hidden="true">iD</span>
+          {{ replace . "https://orcid.org/" "" }}
+        </a>
+      {{ end }}
+      {{ partial "team/affiliations.html" . }}
+      {{ with $otherSocial }}
+        <div class="dbgi-person-links">
+          {{ range . }}
+            {{ $pack := .icon_pack | default "fas" }}
+            {{ $icon := .icon }}
+            {{ if eq $pack "ai" }}
+              {{ $pack = "fas" }}
+              {{ if eq $icon "google-scholar" }}
+                {{ $icon = "graduation-cap" }}
+              {{ else if eq $icon "cv" }}
+                {{ $icon = "file-lines" }}
+              {{ end }}
+            {{ end }}
+            <a class="btn btn-outline-primary btn-sm" href="{{ .link }}" rel="me noopener" aria-label="{{ $icon }}">
+              {{ partial "assets/icon.html" (dict "icon" (printf "%s %s" $pack $icon) "class" "fa-fw" "spacing" false) }}
+            </a>
+          {{ end }}
+        </div>
+      {{ end }}
+    </div>
+  </div>
+
+  {{ with .Params.bio }}<p class="lead dbgi-person-bio">{{ . }}</p>{{ end }}
+  <div class="content">
+    {{ .Content }}
+  </div>
+</div>
 {{ end }}

@@ -67,6 +67,8 @@ gardens:
       - Living collections
       - Botanical sampling
       - Collection workflows
+    contacts:
+      - rybka-vlastimil
 
   - name: Royal Botanic Gardens, Kew
     key: kew

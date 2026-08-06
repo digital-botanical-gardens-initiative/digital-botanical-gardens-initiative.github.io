@@ -1,5 +1,6 @@
 ---
 title: Alžběta Kadlecová
+featured: false
 role: DBGI Contributor - Plant Metabolomics
 organizations:
 - name: Pluskal Lab, IOCB Prague

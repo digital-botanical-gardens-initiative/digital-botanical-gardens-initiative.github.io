@@ -1,0 +1,55 @@
+// Typography details Bootstrap has no variable for.
+// Sizes and weights are set in theme/_variables.scss; this file covers the rest.
+
+// Bootstrap has no $headings-letter-spacing, and $headings-line-height is a single value —
+// the prototype tightens both progressively as headings get larger.
+h1,
+.h1 {
+  letter-spacing: -0.025em;
+  line-height: 1.05;
+}
+
+h2,
+.h2 {
+  letter-spacing: -0.02em;
+  line-height: 1.08;
+}
+
+h3,
+.h3 {
+  font-weight: 700;
+  letter-spacing: -0.012em;
+  line-height: 1.3;
+}
+
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.35;
+}
+
+// Hinode's common/_variables-dart.scss hardcodes `strong { font-weight: 600 !important }`
+// with no variable behind it, so !important is the only way to reach the design's 700.
+strong,
+b {
+  font-weight: 700 !important;
+}
+
+.lead {
+  letter-spacing: -0.01em;
+  line-height: 1.45;
+}
+
+// Small-caps section label used across the design (was duplicated in static/css/dbgi.css).
+.dbgi-eyebrow {
+  display: inline-block;
+  font-size: clamp(10.5px, 1vw, 13px);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}

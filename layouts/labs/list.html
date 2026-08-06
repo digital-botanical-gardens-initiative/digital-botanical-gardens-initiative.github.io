@@ -3,10 +3,10 @@
 <div class="dbgi-gardens-page dbgi-labs-page">
   <section class="dbgi-gardens-hero">
     <div class="container">
-      <p class="dbgi-kicker text-primary mb-3">Core Labs</p>
-      <div class="row g-4 align-items-end">
+      <a class="dbgi-back-link" href="/network/"><span aria-hidden="true">←</span> Network</a>
+      <div class="row g-4 align-items-end mt-2">
         <div class="col-lg-8">
-          <h1 class="display-5 fw-semibold mb-3">{{ .Title }}</h1>
+          <h1 class="dbgi-h1-page mb-3" style="color: var(--dbgi-dark); font-weight: 800; letter-spacing: -.025em;">{{ .Title }}</h1>
           <p class="lead text-secondary mb-0">{{ .Description }}</p>
         </div>
         <div class="col-lg-4">
@@ -40,7 +40,7 @@
             <p class="text-secondary mb-3">{{ .summary }}</p>
             {{ with .focus }}
               <div class="d-flex flex-wrap gap-1">
-                {{ range first 4 . }}<span class="badge text-bg-light border fw-normal">{{ . }}</span>{{ end }}
+                {{ range first 4 . }}<span class="badge text-bg-light border">{{ . }}</span>{{ end }}
               </div>
             {{ end }}
           </div>

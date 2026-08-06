@@ -1,5 +1,6 @@
 ---
 title: Gaëtan Glauser
+featured: false
 role: DBGI Contributor - Metabolomics
 organizations:
 - name: University of Neuchatel

@@ -1,21 +1,31 @@
 {{ define "main" }}
 {{- $gardens := hugo.Data.gardens.gardens | default slice -}}
 {{- $stats := hugo.Data.garden_stats.gardens | default dict -}}
+{{- $countries := slice -}}
+{{- range $gardens }}{{ $countries = $countries | append .country }}{{ end -}}
+{{- $countries = $countries | uniq | sort -}}
 <div class="dbgi-gardens-page">
   <section class="dbgi-gardens-hero">
     <div class="container">
-      <p class="dbgi-kicker text-primary mb-3">Sampled Gardens</p>
-      <div class="row g-4 align-items-end">
+      <a class="dbgi-back-link" href="/network/"><span aria-hidden="true">←</span> Network</a>
+      <div class="row g-4 align-items-end mt-2">
         <div class="col-lg-8">
-          <h1 class="display-5 fw-semibold mb-3">{{ .Title }}</h1>
+          <h1 class="dbgi-h1-page mb-3" style="color: var(--dbgi-dark); font-weight: 800; letter-spacing: -.025em;">{{ .Title }}</h1>
           <p class="lead text-secondary mb-0">{{ .Description }}</p>
         </div>
-        <div class="col-lg-4">
-          <div class="dbgi-gardens-stat">
-            <strong>{{ len $gardens }}</strong>
-            <span>sampled botanical gardens</span>
-          </div>
-        </div>
+      </div>
+      <div class="dbgi-garden-chips" role="group" aria-label="Filter gardens by country">
+        <button type="button" class="dbgi-garden-chip is-active" data-country="All">
+          All<span class="dbgi-garden-chip-count">{{ len $gardens }}</span>
+        </button>
+        {{- range $countries }}
+        {{- $c := . -}}
+        {{- $count := 0 -}}
+        {{- range $gardens }}{{ if eq .country $c }}{{ $count = add $count 1 }}{{ end }}{{ end -}}
+        <button type="button" class="dbgi-garden-chip" data-country="{{ $c }}">
+          {{ $c }}<span class="dbgi-garden-chip-count">{{ $count }}</span>
+        </button>
+        {{- end }}
       </div>
     </div>
   </section>
@@ -31,34 +41,42 @@
       {{ range $gardens }}
         {{- $gardenStats := index $stats .key | default dict -}}
         {{- $gardenPage := site.GetPage (printf "/gardens/%s" .key) -}}
-        <article class="dbgi-garden-card">
-          <div>
-            <p class="dbgi-garden-place mb-1">{{ .city }}, {{ .country }}</p>
-            <h2 class="h5 mb-2">
-              <a class="text-decoration-none" href="{{ $gardenPage.RelPermalink | default (printf "/gardens/%s/" .key) }}">{{ .name }}</a>
-            </h2>
-            {{ with .summary }}<p class="text-secondary mb-3">{{ . }}</p>{{ end }}
-            <p class="dbgi-garden-counts mb-0">
-              <span>
-                {{ partial "assets/icon.html" (dict "icon" "fas vial" "class" "dbgi-garden-count-icon" "spacing" false) }}
-                {{ lang.FormatNumber 0 ($gardenStats.samples | default 0) }} samples
-              </span>
-              <span>
-                {{ partial "assets/icon.html" (dict "icon" "fas leaf" "class" "dbgi-garden-count-icon" "spacing" false) }}
-                {{ lang.FormatNumber 0 ($gardenStats.species | default 0) }} species
-              </span>
-              {{ with $gardenStats.profiled_samples }}
-                <span>
-                  {{ partial "assets/icon.html" (dict "icon" "fas microscope" "class" "dbgi-garden-count-icon" "spacing" false) }}
-                  {{ lang.FormatNumber 0 . }} profiled
+        {{- $href := $gardenPage.RelPermalink | default (printf "/gardens/%s/" .key) -}}
+        {{- $samples := $gardenStats.samples | default 0 -}}
+        {{- $species := $gardenStats.species | default 0 -}}
+        {{- $profiled := $gardenStats.profiled_samples | default 0 -}}
+        {{- $pct := 0 -}}
+        {{- if gt $samples 0 }}{{ $pct = math.Round (div (mul $profiled 100.0) $samples) }}{{ end -}}
+        {{- /* The design leads each card with a photo; it reuses the matching
+               "<garden> joins the network" story image, so do the same here. */ -}}
+        {{- $newsPage := site.GetPage (printf "/news/%s-joins-network" .key) -}}
+        {{- $cover := "" -}}
+        {{- $isPhoto := false -}}
+        {{- with $newsPage }}{{ with .Resources.GetMatch "featured.*" }}{{ $cover = (.Fit "640x400").RelPermalink }}{{ end }}{{ end -}}
+        {{- if not $cover }}{{ $cover = "/img/dbgi-garden-shelves.jpg" }}{{ $isPhoto = true }}{{ end -}}
+        <a class="dbgi-garden-card" href="{{ $href }}" data-country="{{ .country }}">
+          <span class="dbgi-garden-card-media{{ if $isPhoto }} is-photo{{ end }}">
+            <img src="{{ $cover }}" alt="" loading="lazy" width="320" height="200">
+          </span>
+          <span class="dbgi-garden-card-body">
+            <span class="dbgi-garden-card-name">{{ .name }}</span>
+            <span class="dbgi-garden-card-place">{{ .city }}, {{ .country }}</span>
+            <span class="dbgi-garden-card-stats">
+              <span class="dbgi-garden-card-stat-head">
+                <span class="dbgi-garden-card-stat-label">Samples analysed</span>
+                <span class="dbgi-garden-card-stat-figures">
+                  <span class="dbgi-garden-card-stat-pct">{{ $pct }}%</span>
+                  <span class="dbgi-garden-card-stat-ratio">{{ lang.FormatNumber 0 $profiled }} / {{ lang.FormatNumber 0 $samples }}</span>
                 </span>
-              {{ end }}
-            </p>
-          </div>
-          <a class="btn btn-sm btn-outline-primary" href="{{ $gardenPage.RelPermalink | default (printf "/gardens/%s/" .key) }}">View</a>
-        </article>
+              </span>
+              <span class="dbgi-garden-card-bar"><span class="dbgi-garden-card-bar-fill" style="width: {{ $pct }}%;"></span></span>
+              <span class="dbgi-garden-card-species">{{ lang.FormatNumber 0 $species }} species</span>
+            </span>
+          </span>
+        </a>
       {{ end }}
     </div>
   </section>
 </div>
+<script src="/js/garden-filter.js"></script>
 {{ end }}

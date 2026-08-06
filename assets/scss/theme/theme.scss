@@ -1,0 +1,22 @@
+// Placeholder to quickly add your own styles
+// The file is included last in the build pipeline
+
+// Shadows the Hinode placeholder of the same name (project assets/ mounts over the theme's).
+// Imported last in app-dart.scss — after Bootstrap and every Hinode component — so these rules
+// win over both. The one exception is Bootstrap's utilities API (`.py-5`, `.fw-normal`, …),
+// which is imported *after* this file and carries !important.
+//
+// Bootstrap *variable* overrides do not belong here; they must run before Bootstrap is
+// imported, so they live in theme/_variables.scss.
+
+// NOTE: this partial must NOT be named _fonts.scss — Hinode's app-dart.scss does
+// `meta.load-css(theme/fonts)`, which Sass resolves to `theme/_fonts.scss` in preference to
+// Hinode's own `theme/fonts.scss`. Naming it that silently replaces Hinode's four Inter faces
+// (200/300/400/600) with ours instead of adding to them.
+@import "typefaces";
+@import "type";
+@import "buttons";
+@import "cards";
+@import "badges";
+@import "layout";
+@import "navbar";

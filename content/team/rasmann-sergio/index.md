@@ -1,5 +1,6 @@
 ---
 title: Sergio Rasmann
+featured: false
 role: DBGI Contributor - Chemical Ecology
 organizations:
 - name: Laboratory of Functional Ecology, University of Neuchatel

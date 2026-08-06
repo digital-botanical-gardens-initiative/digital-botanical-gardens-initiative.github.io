@@ -8,9 +8,7 @@
     loading = "lazy"
     breakpoint = "md"
     [main.colorMode]
-        enabled = true
-        modes = ["light", "dark"]
-        toggle = false
+        enabled = false
     [main.internalLinks]
         validate = false
         pretty = false
@@ -33,10 +31,10 @@
 [navigation]
     anchor = true
     logo = "/img/dbgi-logo-green.png"
-    logo-height = 36
+    logo-height = 44
     color = "body"
     fixed = true
-    offset = "5.5rem"
+    offset = "68px" # must match the real navbar height (assets/scss/theme/_navbar.scss)
     breadcrumb = true
     toc = true
     sidebar = true
@@ -96,7 +94,7 @@
     info = "#4d7a3b"
     warning = "#b6852d"
     danger = "#9f463c"
-    light = "#f5f8f2"
+    light = "#faf9f4"
     dark = "#17230f"
     themeOpacity = "10"
     darkModeShade = "20%"
@@ -104,7 +102,7 @@
     themeFont = "Inter"
     # themeFontPath = "https://fonts.googleapis.com/css2?family=Inter:wght@200;300;600&display=swap" # external path
     themeFontPath = "/fonts" # local path
-    fontSizeBase = "1rem"
+    fontSizeBase = "0.96875rem" # 15.5px — body copy size in the design handoff
     purge = true
 
 [schema]
@@ -146,4 +144,10 @@
     img-src = [
         "inaturalist-open-data.s3.amazonaws.com",
         "static.inaturalist.org"
+    ]
+
+[modules.wikidata.csp]
+    connect-src = [
+        "qlever.cs.uni-freiburg.de",
+        "qlever.dev"
     ]
