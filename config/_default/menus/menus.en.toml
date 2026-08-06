@@ -10,7 +10,7 @@
   weight = 20
 
 [[main]]
-  name = "Vision & Goals"
+  name = "Vision & goals"
   pageRef = "/about/vision-goals/"
   parent = "about"
   weight = 20

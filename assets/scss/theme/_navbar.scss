@@ -80,8 +80,9 @@ nav.navbar > .container-xxl {
   padding-bottom: 4px;
 }
 
+// Prototype marks the active section by weight alone (navStyle(), no underline rule) — the
+// base .nav-link's reserved 2px transparent border-bottom just keeps the row height stable.
 .navbar-nav .nav-link.active {
-  border-bottom-color: #26490d;
   font-weight: 700;
 }
 

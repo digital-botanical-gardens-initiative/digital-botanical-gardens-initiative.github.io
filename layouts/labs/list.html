@@ -13,7 +13,7 @@
     </div>
   </section>
 
-  <section class="container py-5">
+  <section class="container dbgi-labs-grid-section">
     <div class="dbgi-labs-list" aria-label="Core DBGI labs">
       {{ range $labs }}
         {{- $labPage := site.GetPage (printf "/labs/%s" .key) -}}

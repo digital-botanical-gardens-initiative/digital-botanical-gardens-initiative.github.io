@@ -2,7 +2,7 @@
        Scoped to collectors that have a content/team/ page: the strip's cards are avatar +
        profile link, and the `unmatched_directus_names` block in that file lists collectors
        with no page, who would render as blank, unclickable cards. */ -}}
-{{- $limit := 7 -}}
+{{- $limit := 8 -}}
 {{- $team := site.GetPage "/team" -}}
 {{- $collectorMap := hugo.Data.collector_name_map.people | default slice -}}
 {{- $ranked := slice -}}
@@ -29,8 +29,27 @@
     {{- $person := .page -}}
     {{- $count := .count -}}
     {{- $avatar := $person.Resources.GetMatch "avatar.*" -}}
+    {{- /* Prototype format is "labName · city" for lab members (L2606); fall back to the
+           free-text organization for people not in any data/labs.yml list. */ -}}
+    {{- $slug := $person.File.ContentBaseName -}}
+    {{- $labName := "" -}}
+    {{- $labCity := "" -}}
+    {{- range hugo.Data.labs.labs | default slice -}}
+      {{- $members := slice -}}
+      {{- $members = $members | append (.head | default slice) -}}
+      {{- $members = $members | append (.members | default slice) -}}
+      {{- if in $members $slug -}}
+        {{- $labName = .short_name | default .name -}}
+        {{- $labCity = .city -}}
+      {{- end -}}
+    {{- end -}}
     {{- $affiliation := "" -}}
-    {{- with $person.Params.organizations }}{{ $affiliation = (index . 0).name }}{{ end -}}
+    {{- if $labName -}}
+      {{- $affiliation = $labName -}}
+      {{- with $labCity }}{{ $affiliation = printf "%s · %s" $labName . }}{{ end -}}
+    {{- else -}}
+      {{- with $person.Params.organizations }}{{ $affiliation = (index . 0).name }}{{ end -}}
+    {{- end -}}
     <a class="dbgi-collector-card" href="{{ $person.RelPermalink }}">
       {{- with $avatar }}
       {{- $img := .Fill "164x164 Center" }}

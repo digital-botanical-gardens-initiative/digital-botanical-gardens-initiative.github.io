@@ -1,6 +1,25 @@
 {{ define "main" }}
 {{ $featured := .Resources.GetMatch "featured.*" }}
-<div class="container">
+{{- /* Subject chips: the prototype hand-curates a list of related garden/lab/people links per
+       article. We don't have that front matter, but every article body already links its
+       related garden/lab/team pages inline (added during the redesign) — reuse those instead
+       of introducing new content fields. */ -}}
+{{ $subjectHrefs := findRE `/(?:gardens|labs|team)/[a-z0-9-]+/` .Content 30 }}
+{{ $subjectHrefs = $subjectHrefs | uniq }}
+{{- /* Standfirst: the prototype has a distinct hand-written excerpt sentence per article
+       (data we don't have). Rather than fabricate 17 new sentences, promote the article's own
+       opening paragraph into the standfirst slot and drop it from the body below, so nothing
+       repeats. */ -}}
+{{ $bodyContent := .Content }}
+{{ $standfirst := "" }}
+{{ $firstPara := findRE `(?s)<p>.*?</p>` $bodyContent 1 }}
+{{ with $firstPara }}
+  {{ $standfirst = index . 0 }}
+  {{ $standfirst = strings.TrimPrefix "<p>" $standfirst }}
+  {{ $standfirst = strings.TrimSuffix "</p>" $standfirst }}
+  {{ $bodyContent = replaceRE `(?s)<p>.*?</p>` "" $bodyContent 1 }}
+{{ end }}
+<div>
   <article class="dbgi-post mx-auto">
     <a class="dbgi-back-link" href="/news/"><span aria-hidden="true">←</span> All news</a>
     <div class="dbgi-post-meta-row">
@@ -8,6 +27,14 @@
       <time class="dbgi-post-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 Jan 2006" }}</time>
     </div>
     <h1 class="dbgi-post-title">{{ .Title }}</h1>
+    {{ with $subjectHrefs }}
+      <div class="dbgi-post-subjects">
+        {{ range . }}
+          {{ with site.GetPage . }}<a class="dbgi-post-subject" href="{{ .RelPermalink }}">{{ .Title }}</a>{{ end }}
+        {{ end }}
+      </div>
+    {{ end }}
+    {{ with $standfirst }}<p class="dbgi-post-standfirst">{{ . | safeHTML }}</p>{{ end }}
     {{ if .Params.position_closed }}
       <p class="dbgi-post-closed">This position is closed.</p>
     {{ end }}
@@ -17,7 +44,7 @@
       </div>
     {{ end }}
     <div class="content dbgi-post-content">
-      {{ .Content }}
+      {{ $bodyContent | safeHTML }}
     </div>
     {{ with .Params.authors }}
       <div class="dbgi-post-footer">

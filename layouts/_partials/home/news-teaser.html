@@ -1,5 +1,5 @@
 {{- $news := where site.RegularPages "Section" "news" -}}
-{{- $latest := first 4 $news.ByDate.Reverse -}}
+{{- $latest := first 8 $news.ByDate.Reverse -}}
 {{- with $latest }}
 <section class="dbgi-news-teaser" aria-label="Latest news">
   <div class="container">
