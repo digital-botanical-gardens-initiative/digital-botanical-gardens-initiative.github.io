@@ -1,33 +1,33 @@
-generated_at: "2026-07-06T20:47:08.286Z"
+generated_at: "2026-08-06T21:54:59.037Z"
 source: Directus Field_Data via directus-explorer
 totals:
-  samples: 7549
-  species: 3545
-  profiled_samples: 1246
+  samples: 7323
+  species: 3938
+  profiled_samples: 2349
 gardens:
   fribourg:
-    samples: 2540
-    species: 1763
-    profiled_samples: 1170
+    samples: 2533
+    species: 1850
+    profiled_samples: 1173
     projects:
       - jbuf
   neuchatel:
     samples: 1444
-    species: 912
-    profiled_samples: 0
+    species: 1095
+    profiled_samples: 855
     projects:
       - jbn
       - jbn-new
   champex:
-    samples: 2076
-    species: 881
-    profiled_samples: 0
+    samples: 1621
+    species: 1063
+    profiled_samples: 123
     projects:
       - jbc
   prague:
-    samples: 854
-    species: 280
-    profiled_samples: 76
+    samples: 1090
+    species: 368
+    profiled_samples: 198
     projects:
       - jbp
       - jbp-new

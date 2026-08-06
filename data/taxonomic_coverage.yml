@@ -1,20 +1,20 @@
-# Manually maintained (no live source). Illustrative numbers from the design handoff,
-# approximating known extant counts vs. what DBGI has collected so far. Update by hand.
-generated_at: "2026-08-05"
+# Generated from the DBGI comment paper coverage summary.
+generated_at: "2026-08-06"
+source: "https://raw.githubusercontent.com/digital-botanical-gardens-initiative/dbgi-comment-paper/refs/heads/main/reports/dbgi_coverage_summary.txt"
 rows:
   - label: Orders
-    covered: 62
-    total: 85
+    covered: 75
+    total: 92
     color: "#1e3d03"
   - label: Families
-    covered: 216
-    total: 527
+    covered: 247
+    total: 541
     color: "#2f5510"
   - label: Genera
-    covered: 1193
-    total: 15530
+    covered: 1422
+    total: 15246
     color: "#487026"
   - label: Species
-    covered: 2755
-    total: 410781
+    covered: 3522
+    total: 380510
     color: "#5f8b39"
