@@ -3,6 +3,7 @@ title: Royal Botanic Gardens, Kew joins the DBGI network
 date: 2025-09-22
 tag: Network
 image_alt: Royal Botanic Gardens, Kew wordmark logo.
+image_fit: contain
 ---
 
 Royal Botanic Gardens, Kew has formally joined the DBGI network, extending the initiative beyond continental Europe and bringing one of the world's leading botanical institutions into the collaboration. The partnership began on 22 September 2025 with a DBGI sampling campaign across Kew's living collections. Read about the <a href="/news/kew-sampling-campaign/">three-week Kew sampling campaign</a>.

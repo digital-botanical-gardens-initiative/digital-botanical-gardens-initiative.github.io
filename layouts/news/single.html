@@ -5,14 +5,14 @@
     <a class="dbgi-back-link" href="/news/"><span aria-hidden="true">←</span> All news</a>
     <div class="dbgi-post-meta-row">
       {{ with .Params.tag }}<p class="dbgi-eyebrow dbgi-post-tag mb-0">{{ . }}</p>{{ end }}
-      <time class="dbgi-post-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}</time>
+      <time class="dbgi-post-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 Jan 2006" }}</time>
     </div>
     <h1 class="dbgi-post-title">{{ .Title }}</h1>
     {{ if .Params.position_closed }}
       <p class="dbgi-post-closed">This position is closed.</p>
     {{ end }}
     {{ with $featured }}
-      <div class="dbgi-post-media">
+      <div class="dbgi-post-media{{ if eq $.Params.image_fit "contain" }} is-contain{{ end }}">
         <img src="{{ .RelPermalink }}" alt="{{ $.Params.image_alt | default $.Title }}">
       </div>
     {{ end }}
@@ -30,7 +30,7 @@
             {{ $author }}
           {{- end -}}
         {{ end }}
-        · {{ $.Date.Format "2 January 2006" }}
+        · {{ $.Date.Format "2 Jan 2006" }}
       </div>
     {{ end }}
   </article>

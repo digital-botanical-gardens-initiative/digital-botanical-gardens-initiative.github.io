@@ -3,6 +3,7 @@ title: SNSF MetaDiv grant supports research on plant chemical diversity
 date: 2023-03-31
 tag: Grant
 image_alt: Swiss National Science Foundation logo.
+image_fit: contain
 authors:
 - defossez-emmanuel
 aliases:

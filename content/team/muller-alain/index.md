@@ -1,20 +1,9 @@
 ---
 title: Alain Müller
-featured: false
-role: DBGI Contributor - Technical Head of the Botanical Garden
+role: Technical Head of the Botanical Garden
 organizations:
 - name: Botanical Garden of the University of Fribourg
   url: https://www.unifr.ch/jardin-botanique/en/
-bio: Technical head of the Botanical Garden of the University of Fribourg, contributing horticultural and living-collection expertise to DBGI sampling workflows.
-interests:
-- Botanical gardens
-- Horticulture
-- Living collections
-- Plant sampling
-- Biodiversity conservation
-- Collection workflows
-user_groups:
-- Botanical Gardens
 social:
 - icon: globe
   icon_pack: fas
@@ -27,4 +16,3 @@ aliases:
 - /authors/muller_alain/
 ---
 
-Alain Müller is technical head of the Botanical Garden of the University of Fribourg. He contributes horticultural, living-collection, and biodiversity-conservation expertise to DBGI's sampling and botanical garden workflows.

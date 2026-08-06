@@ -1,22 +1,48 @@
 {{ define "main" }}
-<div>
+{{- $pages := .Pages.ByDate.Reverse -}}
+{{- $years := slice -}}
+{{- range $pages }}{{ $years = $years | append (int (.Date.Format "2006")) }}{{ end -}}
+{{- $years = $years | uniq | sort -}}
+{{- $minYear := index $years 0 -}}
+{{- $maxYear := index $years (sub (len $years) 1) -}}
+<div class="dbgi-news-page">
   <section class="container dbgi-list-header">
-    <p class="dbgi-eyebrow text-primary mb-0">Updates</p>
-    <h1 class="dbgi-h1-page">{{ .Title }}</h1>
+    <h1 class="dbgi-h1-page">{{ .Params.heading | default .Title }}</h1>
     {{ with .Description }}<p class="lead mb-0">{{ . }}</p>{{ end }}
   </section>
 
-  <section class="container dbgi-news-list">
-    {{ range .Pages.ByDate.Reverse }}
+  <section class="container dbgi-news-filter-bar">
+    <div class="dbgi-news-filter">
+      <label for="dbgi-news-from">From</label>
+      <select id="dbgi-news-from" class="dbgi-news-select" data-role="from">
+        {{ range $years }}<option value="{{ . }}"{{ if eq . $minYear }} selected{{ end }}>{{ . }}</option>{{ end }}
+      </select>
+    </div>
+    <div class="dbgi-news-filter">
+      <label for="dbgi-news-to">To</label>
+      <select id="dbgi-news-to" class="dbgi-news-select" data-role="to">
+        {{ range $years }}<option value="{{ . }}"{{ if eq . $maxYear }} selected{{ end }}>{{ . }}</option>{{ end }}
+      </select>
+    </div>
+    <div class="dbgi-news-count" data-role="count">{{ len $pages }} {{ if eq (len $pages) 1 }}story{{ else }}stories{{ end }}</div>
+  </section>
+
+  <section class="container dbgi-news-list" data-role="list">
+    {{ range $pages }}
       {{ $article := . }}
       {{ $featured := .Resources.GetMatch "featured.*" }}
-      <a class="dbgi-news-row" href="{{ .RelPermalink }}">
+      <a class="dbgi-news-row" href="{{ .RelPermalink }}" data-year="{{ .Date.Format "2006" }}">
         <time class="dbgi-news-row-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 Jan 2006" }}</time>
         <div class="dbgi-news-row-inner">
-          <div class="dbgi-news-row-media">
+          <div class="dbgi-news-row-media{{ if eq $article.Params.image_fit "contain" }} is-contain{{ end }}">
             {{ with $featured }}
-              {{ $img := .Fill "400x264 Center" }}
-              <img src="{{ $img.RelPermalink }}" alt="{{ $article.Params.image_alt | default $article.Title }}" loading="lazy" width="200" height="132">
+              {{ $img := . }}
+              {{ if eq $article.Params.image_fit "contain" }}
+                {{ $img = .Fit "400x264" }}
+              {{ else }}
+                {{ $img = .Fill "400x264 Center" }}
+              {{ end }}
+              <img src="{{ $img.RelPermalink }}" alt="{{ $article.Params.image_alt | default $article.Title }}" loading="lazy" width="{{ $img.Width }}" height="{{ $img.Height }}">
             {{ end }}
           </div>
           <div>
@@ -30,6 +56,12 @@
         </div>
       </a>
     {{ end }}
+    <div class="dbgi-news-empty" data-role="empty" hidden>
+      <p class="dbgi-news-empty-title">No stories in this range</p>
+      <p class="dbgi-news-empty-copy">Widen the year range to see more updates.</p>
+      <button type="button" class="dbgi-news-reset" data-role="reset">Reset years</button>
+    </div>
   </section>
 </div>
+<script src="/js/news-filter.js"></script>
 {{ end }}

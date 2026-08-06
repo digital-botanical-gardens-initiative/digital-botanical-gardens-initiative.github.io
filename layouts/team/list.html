@@ -6,7 +6,17 @@
     {{ with .Description }}<p class="lead mb-0">{{ . }}</p>{{ end }}
   </section>
 
-  {{ $pagesByLastName := sort .Pages "File.ContentBaseName" }}
+  {{- /* Sort by surname (last word of the display name) rather than directory slug — most
+         slugs are surname-firstname, but four legacy ones (tito-damiani, tomas-pluskal,
+         lab-emilie, jan-smith-eliot) are firstname-surname and would otherwise file under
+         the wrong letter. */ -}}
+  {{ $withSurname := slice }}
+  {{ range .Pages }}
+    {{ $words := split .Title " " }}
+    {{ $surname := index $words (sub (len $words) 1) }}
+    {{ $withSurname = $withSurname | append (dict "page" . "surname" $surname) }}
+  {{ end }}
+  {{ $pagesByLastName := sort $withSurname "surname" }}
   <section class="container dbgi-team-list">
     <div class="dbgi-section-header">
       <h2 class="h3 mb-0">All contributors</h2>
@@ -14,7 +24,7 @@
     </div>
     <div class="dbgi-team-grid">
       {{ range $pagesByLastName }}
-        {{ $person := . }}
+        {{ $person := .page }}
         {{ $avatar := $person.Resources.GetMatch "avatar.*" }}
         {{ $affiliation := "" }}
         {{ with $person.Params.organizations }}{{ $affiliation = (index . 0).name }}{{ end }}

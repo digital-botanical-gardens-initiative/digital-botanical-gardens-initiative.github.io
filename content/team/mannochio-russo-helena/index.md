@@ -1,18 +1,9 @@
 ---
 title: Helena Mannochio-Russo
-featured: false
-role: DBGI Contributor - Natural Products Metabolomics
+role: Natural Products Metabolomics
 organizations:
 - name: University of California San Diego
   url: https://pharmacy.ucsd.edu/
-bio: Natural-products and metabolomics researcher contributing expertise from UC San Diego.
-interests:
-- Natural products
-- Metabolomics
-- Mass spectrometry
-- Plant chemistry
-user_groups:
-- Contributors
 social:
 - icon: globe
   icon_pack: fas
@@ -28,4 +19,3 @@ aliases:
 - /authors/mannochio_russo_helena/
 ---
 
-Helena Mannochio-Russo contributes expertise in natural-products metabolomics, mass spectrometry, and plant chemistry from UC San Diego.

@@ -35,6 +35,10 @@ people:
     directus_names:
       - "Héloïse Coen"
     collected_samples: 225
+  - team_slug: maliukova-anna
+    directus_names:
+      - "Anna Maliukova"
+    collected_samples: 186
   - team_slug: rovelli-davide
     directus_names:
       - "Davide Rovelli"
@@ -44,10 +48,9 @@ people:
       - "Edouard Brülhart"
     collected_samples: 44
     note: >
-      Team page title is "Edouard Brüelhart" (note the extra e); Directus has
-      "Edouard Brülhart". Treated as the same person on first-name + close
-      surname match, not confirmed against a second source. Flag for
-      confirmation if precision matters here.
+      Confirmed: "Edouard Brülhart" in Directus and "Edouard Brüelhart" on the
+      team page are the same person; the Directus spelling is a typo. No count
+      change needed — both names have always resolved to this one entry.
   - team_slug: allard-pierre-marie
     directus_names:
       - "Pierre-Marie Allard"
@@ -92,8 +95,6 @@ people:
 unmatched_directus_names:
   - name: "Alicia Requena"
     collected_samples: 110
-  - name: "Anna Maliukova"
-    collected_samples: 186
   - name: "Simon Rérat"
     collected_samples: 308
   - name: "Lysandre Journiac"

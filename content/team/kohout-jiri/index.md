@@ -1,20 +1,11 @@
 ---
 title: Jiří Kohout
-featured: false
-role: DBGI Contributor - Plant Metabolomics
+role: Plant Metabolomics
 organizations:
 - name: Pluskal Lab, IOCB Prague
   url: https://pluskal.group.uochb.cz/en
 - name: Charles University, Faculty of Science
   url: https://www.natur.cuni.cz/eng
-bio: Pluskal Lab contributor at IOCB Prague and Charles University supporting DBGI work on plant metabolomics and specialized metabolites.
-interests:
-- Plant metabolomics
-- Specialized metabolites
-- Natural products
-- Mass spectrometry
-user_groups:
-- Contributors
 social:
 - icon: globe
   icon_pack: fas
@@ -30,4 +21,3 @@ aliases:
 - /authors/kohout_jiri/
 ---
 
-Jiří Kohout contributes Pluskal Lab and Charles University expertise to DBGI workflows for plant metabolomics and specialized-metabolite analysis.

@@ -102,7 +102,7 @@
     themeFont = "Inter"
     # themeFontPath = "https://fonts.googleapis.com/css2?family=Inter:wght@200;300;600&display=swap" # external path
     themeFontPath = "/fonts" # local path
-    fontSizeBase = "0.96875rem" # 15.5px — body copy size in the design handoff
+    fontSizeBase = "1rem" # 16px — matches the design handoff's unstyled html/body base
     purge = true
 
 [schema]

@@ -7,94 +7,73 @@
   {{- if eq .key $slug -}}{{- $garden = . -}}{{- end -}}
 {{- end -}}
 {{- $gardenStats := index $stats $slug | default dict -}}
-<div class="container py-5 dbgi-garden-detail">
-  <a class="dbgi-back-link" href="/gardens/"><span aria-hidden="true">←</span> Botanical gardens</a>
-  <header class="row g-4 align-items-end border-bottom pb-4 mt-1 mb-4">
-    <div class="col-lg-8">
-      <p class="dbgi-kicker text-primary mb-3">{{ $garden.city }}, {{ $garden.country }}</p>
-      <h1 class="dbgi-h1-page mb-3" style="color: var(--dbgi-dark); font-weight: 800; letter-spacing: -.025em;">{{ $garden.name }}</h1>
-      {{ with $garden.summary }}<p class="lead text-secondary mb-0">{{ . }}</p>{{ end }}
-    </div>
-    <div class="col-lg-4">
-      {{ with $garden.url }}
-        <a class="btn btn-outline-primary w-100" href="{{ . }}" target="_blank" rel="noopener">Visit garden website</a>
-      {{ end }}
-    </div>
-  </header>
+{{- $profiled := $gardenStats.profiled_samples | default 0 -}}
+{{- /* One "Contributors" grid rather than separate Head/Contact/Members blocks, mirroring
+       labs/single.html — head leads, then contacts, then members. */ -}}
+{{- $people := slice -}}
+{{- range $garden.head }}{{ $people = $people | append . }}{{ end -}}
+{{- range $garden.contacts }}{{ $people = $people | append . }}{{ end -}}
+{{- range $garden.members }}{{ $people = $people | append . }}{{ end -}}
+{{- $people = uniq $people -}}
 
-  <div class="row g-4">
-    <article class="col-lg-7">
-      <div class="dbgi-garden-detail-stats mb-4">
-        <div>
-          {{ partial "assets/icon.html" (dict "icon" "fas vial" "class" "dbgi-garden-count-icon" "spacing" false) }}
-          <strong>{{ lang.FormatNumber 0 ($gardenStats.samples | default 0) }}</strong>
-          <span>samples</span>
-        </div>
-        <div>
-          {{ partial "assets/icon.html" (dict "icon" "fas leaf" "class" "dbgi-garden-count-icon" "spacing" false) }}
-          <strong>{{ lang.FormatNumber 0 ($gardenStats.species | default 0) }}</strong>
-          <span>species</span>
-        </div>
-        {{ with $gardenStats.profiled_samples }}
-          <div>
-            {{ partial "assets/icon.html" (dict "icon" "fas microscope" "class" "dbgi-garden-count-icon" "spacing" false) }}
-            <strong>{{ lang.FormatNumber 0 . }}</strong>
-            <span>profiled</span>
-          </div>
+<div class="dbgi-garden-detail">
+  <section class="dbgi-garden-detail-head">
+    <a class="dbgi-back-link" href="/gardens/"><span aria-hidden="true">←</span> Botanical gardens</a>
+    <h1 class="dbgi-h1-page">{{ $garden.name }}</h1>
+    <p class="dbgi-garden-detail-place">{{ $garden.city }}, {{ $garden.country }}</p>
+  </section>
+
+  <section class="dbgi-garden-detail-body">
+    {{ with $garden.summary }}<p>{{ . }}</p>{{ end }}
+    {{ .Content }}
+    {{ with $garden.url }}
+    <a class="dbgi-garden-detail-cta" href="{{ . }}" target="_blank" rel="noopener">
+      Visit garden website
+      {{ partial "utilities/dbgi-icon.html" (dict "icon" "arrow-up-right" "size" 15) }}
+    </a>
+    {{ end }}
+  </section>
+
+  <section class="dbgi-garden-detail-stats-section">
+    <div class="dbgi-garden-detail-stats">
+      <div>
+        <strong>{{ lang.FormatNumber 0 ($gardenStats.samples | default 0) }}</strong>
+        <span>Collected samples</span>
+      </div>
+      <div>
+        <strong>{{ lang.FormatNumber 0 ($gardenStats.species | default 0) }}</strong>
+        <span>Covered species</span>
+      </div>
+      <div>
+        <strong>{{ lang.FormatNumber 0 $profiled }}</strong>
+        <span>Analysed samples</span>
+        {{ if eq $profiled 0 }}<p class="dbgi-garden-detail-note">Analysis has not started at this garden yet.</p>{{ end }}
+      </div>
+    </div>
+  </section>
+
+  {{ with $people }}
+  <section class="dbgi-garden-detail-people">
+    <p class="dbgi-eyebrow dbgi-garden-detail-label">Contributors ({{ len . }})</p>
+    <div class="dbgi-garden-contributors">
+      {{ range . }}
+        {{ with site.GetPage (printf "/team/%s" .) }}
+          {{- $avatar := .Resources.GetMatch "avatar.*" -}}
+          {{- $affiliation := "" -}}
+          {{- with .Params.organizations }}{{ $affiliation = (index . 0).name }}{{ end -}}
+          <a class="dbgi-garden-contributor" href="{{ .RelPermalink }}">
+            <span class="dbgi-garden-contributor-photo">
+              {{ with $avatar }}{{ $img := .Fill "264x264 Center" }}
+              <img src="{{ $img.RelPermalink }}" alt="{{ .Title }}" loading="lazy" width="132" height="132">
+              {{ end }}
+            </span>
+            <span class="dbgi-garden-contributor-name">{{ .Title }}</span>
+            {{ with $affiliation }}<span class="dbgi-garden-contributor-role">{{ . }}</span>{{ end }}
+          </a>
         {{ end }}
-      </div>
-
-      <div class="content">
-        {{ .Content }}
-      </div>
-      {{ with $garden.focus }}
-        <h2 class="h4 mt-4">Focus</h2>
-        <div class="d-flex flex-wrap gap-2">
-          {{ range . }}<span class="badge text-bg-light border text-secondary">{{ . }}</span>{{ end }}
-        </div>
       {{ end }}
-    </article>
-
-    <aside class="col-lg-5">
-      {{ with $garden.head }}
-        <section class="mb-4">
-          <h2 class="h4 mb-3">{{ $garden.head_label | default "Head" }}</h2>
-          <div class="dbgi-lab-people">
-            {{ range . }}
-              {{ with site.GetPage (printf "/team/%s" .) }}
-                {{ partial "team/person-card-compact.html" . }}
-              {{ end }}
-            {{ end }}
-          </div>
-        </section>
-      {{ end }}
-
-      {{ with $garden.contacts }}
-        <section class="mb-4">
-          <h2 class="h4 mb-3">{{ $garden.contact_label | default "Contact" }}</h2>
-          <div class="dbgi-lab-people">
-            {{ range . }}
-              {{ with site.GetPage (printf "/team/%s" .) }}
-                {{ partial "team/person-card-compact.html" . }}
-              {{ end }}
-            {{ end }}
-          </div>
-        </section>
-      {{ end }}
-
-      {{ with $garden.members }}
-        <section>
-          <h2 class="h4 mb-3">Members</h2>
-          <div class="dbgi-lab-people">
-            {{ range . }}
-              {{ with site.GetPage (printf "/team/%s" .) }}
-                {{ partial "team/person-card-compact.html" . }}
-              {{ end }}
-            {{ end }}
-          </div>
-        </section>
-      {{ end }}
-    </aside>
-  </div>
+    </div>
+  </section>
+  {{ end }}
 </div>
 {{ end }}

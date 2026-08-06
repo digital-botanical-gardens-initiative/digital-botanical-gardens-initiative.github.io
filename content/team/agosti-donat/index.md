@@ -1,19 +1,9 @@
 ---
 title: Donat Agosti
-featured: false
-role: DBGI-KM External Advisor - Biodiversity digitization
+role: Biodiversity digitization
 organizations:
 - name: Plazi
   url: https://plazi.org/
-bio: Biodiversity informatics and digitization expert, co-founder of Plazi, working on liberating and reusing taxonomic literature and biodiversity data.
-interests:
-- Biodiversity digitization
-- Taxonomic literature
-- Biodiversity informatics
-- Open biodiversity data
-- Scholarly publishing
-user_groups:
-- Contributors
 social:
 - icon: globe
   icon_pack: fas
@@ -26,4 +16,3 @@ aliases:
 - /authors/agosti_donat/
 ---
 
-Donat Agosti contributes expertise in biodiversity digitization, taxonomic literature, biodiversity informatics, and open reuse of biodiversity knowledge.

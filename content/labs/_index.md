@@ -4,5 +4,3 @@ description: The research groups running the analytical, computational and data 
 aliases:
 - /core-labs/
 ---
-
-{{< lab-map >}}

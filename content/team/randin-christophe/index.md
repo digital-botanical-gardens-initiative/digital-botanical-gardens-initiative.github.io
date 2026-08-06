@@ -1,18 +1,9 @@
 ---
 title: Christophe Randin
-featured: false
-role: DBGI Contributor - Alpine Botanical Collections
+role: Alpine Botanical Collections
 organizations:
 - name: Flore-Alpe Alpine Botanical Garden
   url: https://www.flore-alpe.ch/
-bio: Flore-Alpe contributor supporting DBGI work with alpine botanical collections and sampling workflows.
-interests:
-- Alpine botanical collections
-- Botanical gardens
-- Living collections
-- Plant sampling
-user_groups:
-- Botanical Gardens
 social:
 - icon: globe
   icon_pack: fas
@@ -25,4 +16,3 @@ aliases:
 - /authors/randin_christophe/
 ---
 
-Christophe Randin contributes Flore-Alpe expertise to DBGI work with alpine botanical collections, living collections, and sampling workflows.

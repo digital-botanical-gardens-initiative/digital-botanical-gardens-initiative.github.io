@@ -12,7 +12,7 @@
       {{- $article := . -}}
       {{- $featured := $article.Resources.GetMatch "featured.*" -}}
       <a class="dbgi-news-teaser-card" href="{{ $article.RelPermalink }}">
-        <div class="dbgi-news-teaser-card-media">
+        <div class="dbgi-news-teaser-card-media{{ if eq $article.Params.image_fit "contain" }} is-contain{{ end }}">
           {{- with $featured }}
           <img src="{{ .RelPermalink }}" alt="{{ $article.Params.image_alt | default $article.Title }}" loading="lazy">
           {{- end }}
@@ -20,7 +20,7 @@
         <div class="dbgi-news-teaser-card-body">
           <p class="dbgi-eyebrow dbgi-news-teaser-card-meta">
             {{- with $article.Params.tag }}{{ . }} · {{ end -}}
-            {{ $article.Date.Format "2 January 2006" }}
+            {{ $article.Date.Format "2 Jan 2006" }}
           </p>
           <p class="dbgi-news-teaser-card-title">{{ $article.Title }}</p>
         </div>

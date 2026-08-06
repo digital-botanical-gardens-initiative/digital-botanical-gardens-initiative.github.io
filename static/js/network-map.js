@@ -30,33 +30,15 @@
 
       var popup = document.createElement("div");
       popup.className = "dbgi-map-popup";
-      var title = document.createElement("strong");
+
+      var title = document.createElement("a");
+      title.href = "/gardens/" + garden.key + "/";
       title.textContent = garden.name;
       popup.appendChild(title);
+
       var place = document.createElement("span");
       place.textContent = garden.city + ", " + garden.country;
       popup.appendChild(place);
-
-      if (garden.samples || garden.species) {
-        var stats = document.createElement("span");
-        stats.textContent = Number(garden.samples || 0).toLocaleString() + " samples / "
-          + Number(garden.species || 0).toLocaleString() + " species";
-        popup.appendChild(stats);
-      }
-
-      var page = document.createElement("a");
-      page.href = "/gardens/" + garden.key + "/";
-      page.textContent = "View garden";
-      popup.appendChild(page);
-
-      if (garden.url) {
-        var link = document.createElement("a");
-        link.href = garden.url;
-        link.textContent = "Visit website";
-        link.rel = "noopener";
-        link.target = "_blank";
-        popup.appendChild(link);
-      }
 
       marker.bindPopup(popup);
       points.push(marker.getLatLng());
@@ -73,16 +55,16 @@
       var marker = L.marker([Number(lab.latitude), Number(lab.longitude)], { icon: labIcon }).addTo(map);
       var popup = document.createElement("div");
       popup.className = "dbgi-map-popup";
-      var title = document.createElement("strong");
+
+      var title = document.createElement("a");
+      title.href = "/labs/" + lab.key + "/";
       title.textContent = lab.short_name || lab.name;
       popup.appendChild(title);
+
       var place = document.createElement("span");
       place.textContent = lab.city + ", " + lab.country;
       popup.appendChild(place);
-      var page = document.createElement("a");
-      page.href = "/labs/" + lab.key + "/";
-      page.textContent = "View lab";
-      popup.appendChild(page);
+
       marker.bindPopup(popup);
       points.push(marker.getLatLng());
     });

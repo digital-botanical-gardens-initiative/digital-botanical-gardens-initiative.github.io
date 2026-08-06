@@ -1,18 +1,9 @@
 ---
 title: Alžběta Kadlecová
-featured: false
-role: DBGI Contributor - Plant Metabolomics
+role: Plant Metabolomics
 organizations:
 - name: Pluskal Lab, IOCB Prague
   url: https://pluskal.group.uochb.cz/en
-bio: Pluskal Lab contributor at IOCB Prague supporting DBGI work on plant metabolomics and specialized metabolites.
-interests:
-- Plant metabolomics
-- Specialized metabolites
-- Natural products
-- Mass spectrometry
-user_groups:
-- Contributors
 social:
 - icon: globe
   icon_pack: fas
@@ -28,4 +19,3 @@ aliases:
 - /authors/kadlecova_alzbeta/
 ---
 
-Alžběta Kadlecová contributes Pluskal Lab expertise from IOCB Prague to DBGI workflows for plant metabolomics and specialized-metabolite analysis.

@@ -69,9 +69,8 @@ video {
   }
 }
 
-/* Hero-only override: larger than the base h1 scale in assets/scss/theme/_variables.scss.
-   .dbgi-h2-section / .dbgi-h1-page / .dbgi-eyebrow moved there — they now match the base
-   h1/h2 sizes exactly, so restating them here only risked the two drifting apart. */
+/* Hero-only override: larger than .dbgi-h1-page (assets/scss/theme/_type.scss), which
+   carries the base page-header H1 scale. */
 .dbgi-h1-hero {
   font-size: clamp(23px, 5.1vw, 72px);
 }
@@ -95,18 +94,6 @@ video {
 .content img {
   max-width: 100%;
   height: auto;
-}
-
-.news-thumb {
-  width: 100%;
-  aspect-ratio: 16 / 10;
-  object-fit: cover;
-}
-
-.news-featured {
-  width: 100%;
-  max-height: 360px;
-  object-fit: cover;
 }
 
 /* Homepage sections (layouts/_partials/home/*) */
@@ -188,6 +175,7 @@ video {
 }
 
 .dbgi-status-eyebrow {
+  font-size: 16px;
   color: rgba(255, 255, 255, .78);
 }
 
@@ -204,7 +192,6 @@ video {
 
 .dbgi-status-band .dbgi-counter {
   color: #fff;
-  font-size: clamp(2.1rem, 5.6vw, 4.5rem);
 }
 
 .dbgi-status-item-label {
@@ -225,19 +212,24 @@ video {
 }
 
 .dbgi-status-updated {
+  position: relative;
+  top: 22px;
   display: flex;
+  align-items: baseline;
   justify-content: flex-end;
   gap: 6px;
   margin: clamp(24px, 3.2vw, 44px) 0 0;
   color: rgba(255, 255, 255, .78);
-  font-size: .72rem;
+  font-size: .71875rem;
   font-weight: 600;
+  letter-spacing: .02em;
 }
 
 .dbgi-coverage-gauge .dbgi-status-updated,
 .dbgi-coverage-gauge-updated {
   justify-content: flex-start;
   color: #6b7563;
+  font-size: .75rem;
 }
 
 .dbgi-focus {
@@ -372,7 +364,7 @@ video {
 .dbgi-coverage-gauge {
   border-top: 1px solid rgba(38, 73, 13, .1);
   border-bottom: 1px solid rgba(38, 73, 13, .1);
-  background: var(--dbgi-bg);
+  background: #f5f8f2;
 }
 
 .dbgi-coverage-gauge-inner {
@@ -488,7 +480,7 @@ video {
   overflow: hidden;
   border: 1px solid rgba(38, 73, 13, .14);
   border-radius: 20px;
-  background: var(--dbgi-bg);
+  background: #f5f8f2;
 }
 
 .dbgi-network-teaser-map {
@@ -561,7 +553,7 @@ video {
      vertically-centred text far down the panel. */
   min-height: clamp(280px, 34vw, 440px);
   overflow: hidden;
-  background: var(--dbgi-bg);
+  background: #f5f8f2;
 }
 
 .dbgi-observation-teaser-media img {
@@ -696,16 +688,32 @@ video {
   line-height: 1.3;
 }
 
-.dbgi-collector-card-samples {
-  margin: 6px 0 0;
+.dbgi-collector-card-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px 0 0;
+}
+
+.dbgi-collector-card-stat-number {
   color: #26490d;
-  font-size: .78rem;
+  font-size: 27px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.dbgi-collector-card-stat-label {
+  margin-top: 4px;
+  color: #6b7563;
+  font-size: 10.5px;
   font-weight: 700;
+  letter-spacing: .05em;
+  text-transform: uppercase;
 }
 
 .dbgi-news-teaser {
   padding: clamp(32px, 4vw, 52px) 0;
-  background: var(--dbgi-bg);
+  background: #f5f8f2;
 }
 
 .dbgi-news-teaser-card {
@@ -728,6 +736,11 @@ video {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.dbgi-news-teaser-card-media.is-contain img {
+  padding: 10px;
+  object-fit: contain;
 }
 
 .dbgi-news-teaser-card-body {
@@ -761,11 +774,9 @@ video {
 .dbgi-counter {
   display: block;
   color: #26490d;
-  font-family: "JetBrains Mono", "SF Mono", "Cascadia Code", "Roboto Mono", "IBM Plex Mono", "Fira Code", ui-monospace, monospace;
-  font-size: clamp(2.45rem, 6.8vw, 5.6rem);
-  font-weight: 560;
-  font-variant-numeric: tabular-nums;
-  letter-spacing: 0;
+  font-size: clamp(42px, 5.6vw, 72px);
+  font-weight: 800;
+  letter-spacing: -.03em;
   line-height: 1;
   transform-origin: center bottom;
 }
@@ -792,10 +803,18 @@ video {
 }
 
 .dbgi-gardens-hero {
-  padding: clamp(3rem, 7vw, 5.5rem) 0 2.5rem;
-  border-bottom: 1px solid var(--bs-border-color);
-  background:
-    linear-gradient(180deg, rgba(38, 73, 13, .09), rgba(255, 255, 255, 0));
+  padding: clamp(28px, 3.2vw, 44px) 0 0;
+}
+
+/* Shared with the labs index page (.dbgi-labs-page .dbgi-gardens-hero below), whose header
+   correctly ends with bottom padding in the prototype — only the gardens header ends at 0,
+   with the grid section (.dbgi-gardens-grid-section) carrying the padding instead. */
+.dbgi-labs-page .dbgi-gardens-hero {
+  padding-bottom: clamp(24px, 3vw, 34px);
+}
+
+.dbgi-gardens-grid-section {
+  padding: clamp(24px, 3vw, 34px) clamp(20px, 5vw, 64px) clamp(64px, 9vw, 112px);
 }
 
 .dbgi-gardens-stat {
@@ -816,11 +835,20 @@ video {
   font-weight: 600;
 }
 
+.dbgi-gardens-hero .lead {
+  max-width: 660px;
+  color: #5f6e56;
+}
+
+.dbgi-labs-page .dbgi-gardens-hero .lead {
+  max-width: 680px;
+}
+
 .dbgi-garden-chips {
   display: flex;
   flex-wrap: wrap;
   gap: .5rem;
-  margin-top: 1.5rem;
+  margin-top: 30px;
 }
 
 .dbgi-garden-chip {
@@ -832,7 +860,7 @@ video {
   border-radius: 999px;
   background: #f5f8f2;
   color: #2c3a24;
-  font-size: .875rem;
+  font-size: .8125rem;
   font-weight: 600;
   cursor: pointer;
   transition: background-color .15s ease, color .15s ease, border-color .15s ease;
@@ -853,31 +881,6 @@ video {
   opacity: .65;
 }
 
-.dbgi-gardens-map-panel {
-  padding: clamp(1rem, 2vw, 1.5rem);
-  border: 1px solid var(--bs-border-color);
-  border-radius: .5rem;
-  background: var(--bs-body-bg);
-  box-shadow: 0 1rem 3rem rgba(23, 35, 15, .08);
-}
-
-.dbgi-gardens-intro > p {
-  max-width: 78ch;
-  margin-bottom: 1rem;
-  color: var(--bs-secondary-color);
-  font-size: 1.05rem;
-}
-
-.dbgi-garden-map {
-  width: 100%;
-  min-height: clamp(380px, 58vh, 620px);
-  margin: 0;
-  border: 1px solid var(--bs-border-color);
-  border-radius: .5rem;
-  overflow: hidden;
-  background: #eef3ea;
-}
-
 .dbgi-map-popup {
   display: grid;
   gap: .2rem;
@@ -890,13 +893,43 @@ video {
 
 .dbgi-map-popup a {
   color: #26490d;
-  font-weight: 600;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
 .dbgi-gardens-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(min(100%, 268px), 1fr));
   gap: clamp(16px, 1.8vw, 24px);
+}
+
+.dbgi-gardens-footnote {
+  display: flex;
+  gap: 12px;
+  margin: clamp(24px, 3vw, 34px) 0 0;
+  padding: 14px 18px;
+  border-left: 3px solid #26490d;
+  border-radius: 0 10px 10px 0;
+  background: #f5f8f2;
+  color: #3c4a30;
+  font-size: 13.5px;
+  line-height: 1.6;
+}
+
+.dbgi-gardens-footnote > span:first-child {
+  flex-shrink: 0;
+  color: #26490d;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.dbgi-gardens-footnote-label {
+  color: #26490d;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .05em;
+  text-transform: uppercase;
 }
 
 .dbgi-garden-card {
@@ -1016,25 +1049,10 @@ video {
   background: var(--dbgi-primary);
 }
 
-.dbgi-garden-card-species {
-  display: block;
-  margin-top: 9px;
-  color: #6b7563;
-  font-size: 11.5px;
-}
-
 .dbgi-garden-card:hover {
   transform: translateY(-3px);
   border-color: rgba(38, 73, 13, .32);
   box-shadow: 0 14px 32px rgba(23, 35, 15, .13);
-}
-
-.dbgi-garden-place {
-  color: #5f6e56;
-  font-size: .86rem;
-  font-weight: 700;
-  letter-spacing: .04em;
-  text-transform: uppercase;
 }
 
 .dbgi-garden-counts {
@@ -1053,11 +1071,70 @@ video {
   font-weight: 650;
 }
 
-.dbgi-garden-count-icon {
-  width: .95em;
-  height: .95em;
+/* Garden detail page — mirrors labs/single.html's .dbgi-lab-detail-* pattern at 960px
+   instead of 920px (prototype L1310-1364 vs L1259-1306). */
+.dbgi-garden-detail > section {
+  max-width: 960px;
+  margin: 0 auto;
+  padding-left: clamp(20px, 5vw, 64px);
+  padding-right: clamp(20px, 5vw, 64px);
+}
+
+.dbgi-garden-detail-head {
+  padding-top: clamp(56px, 8vw, 96px);
+  padding-bottom: clamp(20px, 3vw, 24px);
+}
+
+.dbgi-garden-detail-head .dbgi-h1-page {
+  margin: 30px 0 0;
+  color: var(--dbgi-dark);
+  font-size: clamp(28px, 4vw, 48px);
+}
+
+.dbgi-garden-detail-place {
+  margin: 4px 0 0;
   color: #5f6e56;
-  flex: 0 0 auto;
+  font-size: 14px;
+}
+
+.dbgi-garden-detail-body {
+  padding-top: clamp(12px, 2vw, 20px);
+  padding-bottom: clamp(24px, 3vw, 32px);
+}
+
+.dbgi-garden-detail-body p {
+  max-width: 720px;
+  margin: 0 0 16px;
+  color: #2c3a24;
+  font-size: clamp(17px, 1.8vw, 21px);
+  line-height: 1.5;
+}
+
+.dbgi-garden-detail-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 8px;
+  height: 46px;
+  padding: 0 22px;
+  border-radius: 999px;
+  background: var(--dbgi-primary);
+  color: #fff;
+  font-size: 14.5px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background .15s ease;
+}
+
+.dbgi-garden-detail-cta:hover,
+.dbgi-garden-detail-cta:focus {
+  background: var(--dbgi-green-deep);
+  color: #fff;
+}
+
+.dbgi-garden-detail-stats-section {
+  padding-top: clamp(8px, 1.5vw, 16px);
+  padding-bottom: clamp(28px, 3.5vw, 40px);
 }
 
 .dbgi-garden-detail-stats {
@@ -1065,100 +1142,154 @@ video {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1px;
   overflow: hidden;
-  border: 1px solid var(--bs-border-color);
-  border-radius: .5rem;
-  background: var(--bs-border-color);
+  border: 1px solid rgba(38, 73, 13, .16);
+  border-radius: 16px;
+  background: rgba(38, 73, 13, .16);
 }
 
 .dbgi-garden-detail-stats > div {
-  display: grid;
-  gap: .2rem;
-  padding: 1rem;
-  background: var(--bs-body-bg);
+  padding: clamp(20px, 2.6vw, 30px);
+  background: #eef3e8;
 }
 
 .dbgi-garden-detail-stats strong {
+  display: block;
   color: #26490d;
-  font-size: clamp(1.5rem, 4vw, 2.25rem);
+  font-size: clamp(30px, 4.4vw, 52px);
+  font-weight: 800;
+  letter-spacing: -.03em;
   line-height: 1;
 }
 
 .dbgi-garden-detail-stats span {
+  display: block;
+  margin-top: 12px;
+  color: #4d7a3b;
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: .03em;
+}
+
+.dbgi-garden-detail-note {
+  margin: 6px 0 0;
   color: #5f6e56;
-  font-size: .86rem;
-  font-weight: 650;
+  font-size: 12px;
+  line-height: 1.45;
 }
 
-.dbgi-labs-list {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+.dbgi-garden-detail-people {
+  padding-top: clamp(12px, 2vw, 20px);
+  padding-bottom: clamp(64px, 9vw, 112px);
 }
 
-.dbgi-lab-card {
-  align-items: flex-start;
-  min-height: 220px;
+.dbgi-garden-detail-label {
+  margin: 0 0 18px;
+  color: #5f6e56;
+  font-size: 12px;
+  letter-spacing: .08em;
 }
 
-.dbgi-lab-card > div {
-  min-width: 0;
-}
-
-.dbgi-lab-card .btn {
-  flex: 0 0 auto;
-}
-
-.dbgi-lab-people {
+.dbgi-garden-contributors {
   display: grid;
-  gap: .75rem;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 132px), 1fr));
+  gap: clamp(12px, 1.4vw, 18px);
 }
 
-.dbgi-lab-person {
-  display: flex;
-  align-items: center;
-  gap: .85rem;
-  padding: .9rem;
-  border: 1px solid var(--bs-border-color);
-  border-radius: .5rem;
-  background: var(--bs-body-bg);
-}
-
-.dbgi-person-affiliations {
-  display: flex;
-  flex-wrap: wrap;
-  gap: .35rem;
-  margin-top: .55rem;
-}
-
-.dbgi-affiliation {
-  display: inline-flex;
-  align-items: center;
-  min-height: 1.65rem;
-  padding: .22rem .5rem;
-  border: 1px solid rgba(38, 73, 13, .22);
-  border-radius: 999px;
-  color: #26490d;
-  background: rgba(38, 73, 13, .06);
-  font-size: .78rem;
-  font-weight: 650;
-  line-height: 1.15;
+.dbgi-garden-contributor {
+  display: block;
+  color: inherit;
   text-decoration: none;
 }
 
-.dbgi-affiliation:hover {
-  border-color: rgba(38, 73, 13, .38);
-  color: #1c3908;
-  background: rgba(38, 73, 13, .1);
+.dbgi-garden-contributor-photo {
+  display: block;
+  overflow: hidden;
+  border-radius: 11px;
+  background: #f5f8f2;
+  aspect-ratio: 1;
 }
 
-.dbgi-affiliation-governance {
-  border-color: rgba(160, 57, 38, .28);
-  color: #8f2d1f;
-  background: rgba(160, 57, 38, .07);
+.dbgi-garden-contributor-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.dbgi-affiliation-garden {
-  border-color: rgba(31, 99, 132, .24);
-  color: #1f6384;
-  background: rgba(31, 99, 132, .07);
+.dbgi-garden-contributor-name {
+  display: block;
+  margin-top: 9px;
+  color: var(--dbgi-dark);
+  font-size: 13.5px;
+  font-weight: 700;
+  letter-spacing: -.005em;
+}
+
+.dbgi-garden-contributor-role {
+  display: block;
+  margin-top: 2px;
+  color: #5f6e56;
+  font-size: 11.5px;
+  line-height: 1.3;
+}
+
+.dbgi-garden-contributor:hover .dbgi-garden-contributor-name {
+  color: var(--dbgi-primary);
+}
+
+.dbgi-labs-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+  gap: clamp(16px, 1.8vw, 24px);
+}
+
+.dbgi-lab-card {
+  display: flex;
+  flex-direction: column;
+  padding: 24px 24px 22px;
+  border: 1px solid rgba(38, 73, 13, .14);
+  border-radius: 16px;
+  background: #fff;
+  color: inherit;
+  text-decoration: none;
+  transition: box-shadow .18s ease, transform .18s ease, border-color .18s ease;
+}
+
+.dbgi-lab-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(182, 133, 45, .45);
+  box-shadow: 0 14px 32px rgba(23, 35, 15, .13);
+}
+
+.dbgi-lab-card-name {
+  color: #17230f;
+  font-size: 19px;
+  font-weight: 800;
+  letter-spacing: -.015em;
+}
+
+.dbgi-lab-card-org {
+  margin-top: 8px;
+  color: #6b7563;
+  font-size: 12.5px;
+}
+
+.dbgi-lab-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(38, 73, 13, .1);
+}
+
+.dbgi-lab-card-tag {
+  padding: 5px 11px;
+  border: 1px solid rgba(38, 73, 13, .14);
+  border-radius: 999px;
+  background: #f5f8f2;
+  color: #2c3a24;
+  font-size: 11.5px;
+  font-weight: 600;
 }
 
 .dbgi-observation-card {
@@ -1244,51 +1375,6 @@ video {
   font-weight: 650;
 }
 
-.dbgi-funding-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem;
-}
-
-.dbgi-funder-card {
-  display: grid;
-  gap: 1rem;
-  align-content: start;
-  padding: 1.25rem;
-  border: 1px solid var(--bs-border-color);
-  border-radius: .5rem;
-  background: var(--bs-body-bg);
-}
-
-.dbgi-funder-header {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  min-width: 0;
-}
-
-.dbgi-funder-logo {
-  display: grid;
-  flex: 0 0 168px;
-  height: 72px;
-  place-items: center;
-  padding: .75rem;
-  border: 1px solid var(--bs-border-color);
-  border-radius: .5rem;
-  background: #fff;
-}
-
-.dbgi-funder-logo-gacr {
-  background: #00324d;
-  border-color: #00324d;
-}
-
-.dbgi-funder-header img {
-  max-width: 100%;
-  max-height: 48px;
-  object-fit: contain;
-}
-
 .dbgi-footer-funders {
   display: flex;
   flex-wrap: wrap;
@@ -1350,36 +1436,6 @@ video {
   color: rgba(250, 249, 244, .34);
 }
 
-.dbgi-grant-list {
-  display: grid;
-  gap: .65rem;
-}
-
-.dbgi-grant-card {
-  display: block;
-  padding: .9rem;
-  border: 1px solid var(--bs-border-color);
-  border-radius: .5rem;
-  color: inherit;
-  text-decoration: none;
-  background: var(--bs-body-bg);
-}
-
-.dbgi-grant-card:hover {
-  border-color: rgba(38, 73, 13, .32);
-  background: rgba(38, 73, 13, .035);
-}
-
-.dbgi-grant-card:hover h4 {
-  color: var(--bs-primary);
-}
-
-.dbgi-grant-meta {
-  color: #5f6e56;
-  font-size: .78rem;
-  font-weight: 700;
-}
-
 .dbgi-vision-panel,
 .dbgi-compact-panel,
 .dbgi-goal-card {
@@ -1434,6 +1490,12 @@ video {
    loaded after main.css and defeated it. `.rounded-3` keeps Bootstrap's own .5rem. */
 
 /* Phase 2/3: Team + News list/detail pages */
+
+/* The news index is narrower than the site's default 1200px .container (960px in the design
+   handoff) — every other section on the page still gets the shared gutter from _layout.scss. */
+.dbgi-news-page .container {
+  max-width: 960px;
+}
 
 .dbgi-list-header {
   padding-top: clamp(48px, 7vw, 88px);
@@ -1503,7 +1565,7 @@ video {
   overflow: hidden;
   border: 1px solid rgba(38, 73, 13, .12);
   border-radius: 18px;
-  background: var(--dbgi-bg);
+  background: #f5f8f2;
 }
 
 .dbgi-person-photo img {
@@ -1590,19 +1652,67 @@ video {
   margin-top: clamp(28px, 3.5vw, 40px);
 }
 
+.dbgi-news-filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 18px 22px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(38, 73, 13, .16);
+}
+
+.dbgi-news-filter {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.dbgi-news-filter label {
+  color: var(--dbgi-gold-3);
+  font-size: .65625rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.dbgi-news-select {
+  height: 44px;
+  padding: 0 42px 0 16px;
+  border: 1px solid rgba(38, 73, 13, .24);
+  border-radius: 10px;
+  appearance: none;
+  background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%2326490d' stroke-width='1.6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat right 16px center;
+  color: var(--dbgi-dark);
+  font-size: .9375rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.dbgi-news-count {
+  margin-left: auto;
+  padding-bottom: 12px;
+  color: #5f6e56;
+  font-size: .84375rem;
+  font-weight: 600;
+}
+
 .dbgi-news-list {
   padding-bottom: clamp(56px, 8vw, 96px);
 }
 
 .dbgi-news-row {
   display: grid;
-  grid-template-columns: minmax(64px, 96px) 1fr;
+  grid-template-columns: minmax(70px, 96px) 1fr;
   align-items: start;
   gap: clamp(12px, 1.6vw, 20px);
   padding: clamp(22px, 3vw, 34px) 0;
   border-bottom: 1px solid rgba(38, 73, 13, .14);
   color: inherit;
   text-decoration: none;
+}
+
+.dbgi-news-row[hidden] {
+  display: none;
 }
 
 .dbgi-news-row:first-child {
@@ -1619,23 +1729,62 @@ video {
 
 .dbgi-news-row-inner {
   display: grid;
-  grid-template-columns: 180px 1fr;
+  grid-template-columns: 200px 1fr;
   align-items: start;
   gap: clamp(16px, 2.4vw, 28px);
 }
 
 .dbgi-news-row-media {
-  height: 120px;
+  height: 132px;
   overflow: hidden;
   border: 1px solid rgba(38, 73, 13, .1);
   border-radius: 12px;
-  background: var(--dbgi-bg);
+  background: #f5f8f2;
 }
 
 .dbgi-news-row-media img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.dbgi-news-row-media.is-contain img {
+  padding: 10px;
+  object-fit: contain;
+}
+
+.dbgi-news-empty {
+  display: none;
+  padding: clamp(26px, 3.2vw, 38px) 0;
+}
+
+.dbgi-news-empty:not([hidden]) {
+  display: block;
+}
+
+.dbgi-news-empty-title {
+  margin: 0;
+  color: var(--dbgi-dark);
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.dbgi-news-empty-copy {
+  margin: 6px 0 16px;
+  color: #5f6e56;
+  font-size: .90625rem;
+}
+
+.dbgi-news-reset {
+  min-height: 44px;
+  padding: 0 22px;
+  border: 1.5px solid rgba(38, 73, 13, .3);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--dbgi-primary);
+  font-size: .875rem;
+  font-weight: 700;
+  cursor: pointer;
 }
 
 .dbgi-news-row-tag {
@@ -1720,10 +1869,27 @@ video {
   object-fit: cover;
 }
 
+.dbgi-post-media.is-contain img {
+  padding: 16px;
+  object-fit: contain;
+  background: #f5f8f2;
+}
+
 .dbgi-post-content {
   font-size: 1.03125rem;
   line-height: 1.68;
   color: #2c3a24;
+}
+
+.dbgi-post-content a {
+  color: var(--dbgi-primary);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(38, 73, 13, .3);
+}
+
+.dbgi-post-content a:hover {
+  border-bottom-color: currentColor;
 }
 
 .dbgi-post-footer {
@@ -2889,6 +3055,16 @@ video {
 
 /* Phase 4: Network overview page */
 
+/* Prototype sections are fluid up to 1200px (max-width + clamp() padding, no stepped
+   Bootstrap breakpoints). Bootstrap's .container steps down to 960px at lg, which left too
+   little room for 5 auto-fill(190px) cards in the Garden Living Collections grid between
+   992-1199px. */
+.dbgi-network-section {
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: clamp(20px, 5vw, 64px);
+}
+
 .dbgi-network-hero {
   padding-top: clamp(56px, 8vw, 96px);
   padding-bottom: clamp(28px, 4vw, 44px);
@@ -3392,15 +3568,6 @@ video {
     grid-template-columns: 1fr;
   }
 
-  .dbgi-funding-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .dbgi-funder-header {
-    align-items: flex-start;
-    flex-direction: column;
-  }
-
   .dbgi-goals-grid {
     grid-template-columns: 1fr;
   }
@@ -3432,7 +3599,11 @@ video {
   }
 
   .dbgi-news-row-inner {
-    grid-template-columns: 96px 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  .dbgi-news-row-media {
+    height: clamp(180px, 48vw, 240px);
   }
 
   .dbgi-os-links {

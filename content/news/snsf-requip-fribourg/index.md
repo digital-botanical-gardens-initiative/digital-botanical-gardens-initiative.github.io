@@ -3,6 +3,7 @@ title: SNSF R'EQUIP grant strengthens mass spectrometry infrastructure in Fribou
 date: 2024-12-01
 tag: Grant
 image_alt: Swiss National Science Foundation logo.
+image_fit: contain
 ---
 
 The Swiss National Science Foundation has awarded the University of Fribourg an R'EQUIP infrastructure grant for "Biological complexity addressed by mass spectrometry" (Grant 229588). Beginning on 1 December 2024, the CHF 700,000 project will run until 30 November 2025.

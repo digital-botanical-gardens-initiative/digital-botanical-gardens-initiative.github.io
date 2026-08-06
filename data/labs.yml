@@ -9,21 +9,23 @@ labs:
     url: https://www.unifr.ch/bio/en/groups/allard/
     summary: Computational metabolomics, natural products chemistry, linked open data, and open-science workflows for reusable chemical knowledge.
     focus:
+      - LC-MS
       - Computational metabolomics
-      - Natural products chemistry
-      - Linked open data
-      - Open science
+      - Semantic web
+      - Natural products
     head:
       - allard-pierre-marie
     members:
       - blood-alexander
       - bruelhart-edouard
       - cappelletti-luca
-      - volet-colin
+      - coen-heloise
+      - tamdem-guetchueng-stephanie
       - visani-marco
+      - volet-colin
       - wannier-maelle
 
-  - name: Plant Ecology and Metabolomics Group
+  - name: Plant Eco-Metabolomics Group
     short_name: PGEM
     key: pgem
     institution: University of Neuchatel
@@ -34,14 +36,40 @@ labs:
     url: https://pemg.ch/
     summary: Plant ecology and metabolomics research connecting chemical diversity, biodiversity, ecological interactions, and digital botanical gardens.
     focus:
-      - Plant ecology
-      - Metabolomics
-      - Chemical diversity
+      - LC-MS
+      - Computational metabolomics
+      - Chemical ecology
       - Biodiversity
     head:
       - defossez-emmanuel
     members:
+      - glauser-gaetan
+      - lab-emilie
       - laboureau-mazzarine
+      - lebrun-lise
+      - tandon-disha
+
+  - name: Pluskal Lab
+    key: pluskal-lab
+    institution: IOCB Prague
+    city: Prague
+    country: Czech Republic
+    latitude: 50.1008
+    longitude: 14.3914
+    url: https://pluskal.group.uochb.cz/en
+    summary: Plant specialized metabolites, mass spectrometry, bioinformatics, and machine-learning approaches for discovering bioactive molecules.
+    focus:
+      - LC-MS
+      - Computational metabolomics
+      - Natural products
+    head:
+      - tomas-pluskal
+    members:
+      - brigante-federico
+      - tito-damiani
+      - kadlecova-alzbeta
+      - kohout-jiri
+      - kucerova-katerina
 
   - name: Laboratory of Functional Ecology
     key: rasmann
@@ -58,30 +86,7 @@ labs:
     head:
       - rasmann-sergio
 
-  - name: Pluskal Lab
-    key: pluskal-lab
-    institution: IOCB Prague
-    city: Prague
-    country: Czech Republic
-    latitude: 50.1008
-    longitude: 14.3914
-    url: https://pluskal.group.uochb.cz/en
-    summary: Plant specialized metabolites, mass spectrometry, bioinformatics, and machine-learning approaches for discovering bioactive molecules.
-    focus:
-      - Plant specialized metabolites
-      - Mass spectrometry
-      - Bioinformatics
-      - Machine learning
-    head:
-      - tomas-pluskal
-    members:
-      - brigante-federico
-      - tito-damiani
-      - kadlecova-alzbeta
-      - kohout-jiri
-      - kucerova-katerina
-
-  - name: Knowledge Technologies Unit
+  - name: Knowledge Representation Unit
     short_name: SIB KTU
     key: sib-ktu
     institution: SIB Swiss Institute of Bioinformatics
@@ -93,9 +98,7 @@ labs:
     summary: Knowledge technologies for FAIR life-science data, semantic web integration, federated knowledge graphs, and AI-assisted scientific data exploration.
     focus:
       - Semantic web
-      - FAIR data
-      - Federated knowledge graphs
-      - AI-assisted data exploration
+      - FAIR research data
     head_label: DBGI lab contact
     head:
       - mendes-tarcisio

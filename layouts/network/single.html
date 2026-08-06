@@ -2,8 +2,17 @@
 {{- $gardens := hugo.Data.gardens.gardens | default slice -}}
 {{- $labs := hugo.Data.labs.labs | default slice -}}
 {{- $govMembers := hugo.Data.governance.members | default slice -}}
-{{- $allPeople := where site.RegularPages "Section" "team" -}}
-{{- $allPeople = sort $allPeople "File.ContentBaseName" -}}
+{{- /* Sort by surname (last word of the display name), not directory slug — see
+       layouts/team/list.html for the same fix and its rationale. */ -}}
+{{- $withSurname := slice -}}
+{{- range where site.RegularPages "Section" "team" }}
+  {{- $words := split .Title " " }}
+  {{- $surname := index $words (sub (len $words) 1) }}
+  {{- $withSurname = $withSurname | append (dict "page" . "surname" $surname) }}
+{{- end }}
+{{- $sortedPeople := sort $withSurname "surname" -}}
+{{- $allPeople := slice -}}
+{{- range $sortedPeople }}{{ $allPeople = $allPeople | append .page }}{{ end -}}
 {{- $excludedSlugs := $govMembers -}}
 {{- range $gardens }}
   {{- $rep := "" -}}
@@ -18,7 +27,7 @@
     <h1>{{ .Title }}</h1>
   </section>
 
-  <section class="container" style="max-width: 1200px; padding-bottom: clamp(20px, 3vw, 32px);">
+  <section class="dbgi-network-section" style="padding-bottom: clamp(20px, 3vw, 32px);">
     <div class="dbgi-network-map-panel">
       {{ partial "utilities/network-map.html" (dict "id" "dbgi-map-network") }}
       <div class="dbgi-network-map-legend">
@@ -28,7 +37,7 @@
     </div>
   </section>
 
-  <section class="container dbgi-network-index" style="max-width: 1200px; padding-bottom: clamp(36px, 4.5vw, 52px);">
+  <section class="dbgi-network-section dbgi-network-index" style="padding-bottom: clamp(36px, 4.5vw, 52px);">
     <div>
       <a class="dbgi-network-index-heading" href="/gardens/"><span>Botanical gardens</span></a>
       <div class="dbgi-network-index-list">
@@ -57,7 +66,7 @@
     </div>
   </section>
 
-  <section id="governance" class="container" style="max-width: 1200px; padding-bottom: clamp(44px, 5.5vw, 68px);">
+  <section id="governance" class="dbgi-network-section" style="padding-bottom: clamp(44px, 5.5vw, 68px);">
     <div class="dbgi-network-section-header">
       <h2>Governance</h2>
       <span>People steering and coordinating the Initiative</span>
@@ -72,7 +81,7 @@
         <div class="dbgi-people-card-photo">
           {{- with $avatar }}
           {{- $img := .Fill "380x380 Center" }}
-          <img src="{{ $img.RelPermalink }}" alt="{{ $.Title }}" width="190" height="190">
+          <img src="{{ $img.RelPermalink }}" alt="{{ .Title }}" width="190" height="190">
           {{- end }}
         </div>
         <div class="dbgi-people-card-body">
@@ -86,13 +95,21 @@
     </div>
   </section>
 
-  <section class="container" style="max-width: 1200px; padding-bottom: clamp(56px, 7vw, 88px);">
+  <section class="dbgi-network-section" style="padding-bottom: clamp(56px, 7vw, 88px);">
     <div class="dbgi-network-section-header">
       <h2>Garden Living Collections</h2>
       <span>One representative per partner garden</span>
     </div>
     <div class="dbgi-people-grid">
-      {{- range $gardens }}
+      {{- /* Card order matches the prototype's hardcoded order (kew, fribourg, neuchatel,
+             champex, prague), not data/gardens.yml's order. */ -}}
+      {{- $gardenOrder := slice "kew" "fribourg" "neuchatel" "champex" "prague" -}}
+      {{- $orderedGardens := slice -}}
+      {{- range $gardenOrder }}
+        {{- $key := . -}}
+        {{- range $gardens }}{{ if eq .key $key }}{{ $orderedGardens = $orderedGardens | append . }}{{ end }}{{ end -}}
+      {{- end -}}
+      {{- range $orderedGardens }}
       {{- $garden := . -}}
       {{- $rep := "" -}}
       {{- with .head }}{{ $rep = index . 0 }}{{ end -}}
@@ -106,7 +123,7 @@
         <div class="dbgi-people-card-photo">
           {{- with $avatar }}
           {{- $img := .Fill "380x380 Center" }}
-          <img src="{{ $img.RelPermalink }}" alt="{{ $.Title }}" width="190" height="190">
+          <img src="{{ $img.RelPermalink }}" alt="{{ .Title }}" width="190" height="190">
           {{- end }}
         </div>
         <div class="dbgi-people-card-body">
@@ -120,7 +137,7 @@
     </div>
   </section>
 
-  <section id="contributors" class="container" style="max-width: 1200px; padding-bottom: clamp(72px, 9vw, 112px);">
+  <section id="contributors" class="dbgi-network-section" style="padding-bottom: clamp(72px, 9vw, 112px);">
     <details class="dbgi-contributors-details">
       <summary class="dbgi-contributors-toggle">
         <h2>Contributors</h2>

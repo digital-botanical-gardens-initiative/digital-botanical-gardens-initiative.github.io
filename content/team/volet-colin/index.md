@@ -1,18 +1,9 @@
 ---
 title: Colin Volet
-featured: false
-role: DBGI Contributor - Plant Metabolome
+role: Plant Metabolome
 organizations:
 - name: University of Fribourg
   url: https://www.unifr.ch/bio/en/
-bio: University of Fribourg contributor supporting DBGI work on plant-metabolome and botanical sampling workflows.
-interests:
-- Plant metabolome
-- Botanical sampling
-- Metabolomics
-- Plant chemistry
-user_groups:
-- Contributors
 social:
 - icon: globe
   icon_pack: fas
@@ -28,4 +19,3 @@ aliases:
 - /authors/volet_colin/
 ---
 
-Colin Volet contributes University of Fribourg expertise to DBGI work on plant-metabolome, plant chemistry, and botanical sampling workflows.

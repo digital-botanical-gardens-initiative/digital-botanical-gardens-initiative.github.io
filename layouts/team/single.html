@@ -15,7 +15,6 @@
     </div>
     <div>
       <h1 class="dbgi-person-name">{{ .Title }}</h1>
-      {{ with .Params.role }}<p class="dbgi-person-role">{{ . }}</p>{{ end }}
       {{ with .Params.organizations }}
         <div class="dbgi-person-orgs">
           {{ range . }}
@@ -29,7 +28,6 @@
           {{ replace . "https://orcid.org/" "" }}
         </a>
       {{ end }}
-      {{ partial "team/affiliations.html" . }}
       {{ with $otherSocial }}
         <div class="dbgi-person-links">
           {{ range . }}

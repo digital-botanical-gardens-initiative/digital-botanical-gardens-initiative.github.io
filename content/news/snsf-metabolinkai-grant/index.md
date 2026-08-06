@@ -3,6 +3,7 @@ title: SNSF Weave grant supports MetaboLinkAI
 date: 2025-04-01
 tag: Grant
 image_alt: Weave programme logo, "Research funding without borders".
+image_fit: contain
 ---
 
 The Swiss National Science Foundation has awarded MetaboLinkAI (Grant 10002786) a Weave/Lead Agency grant. Beginning on 1 April 2025, the project will run until 31 March 2029. The SNSF record lists eleven applicants from institutions in Switzerland and France, with ETH Zurich named as the Swiss research institution.

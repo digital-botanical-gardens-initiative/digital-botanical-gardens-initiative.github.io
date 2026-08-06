@@ -40,8 +40,14 @@
       {{- with $affiliation }}
       <p class="dbgi-collector-card-affiliation">{{ . }}</p>
       {{- end }}
+      {{- /* Prototype shows a stacked samples + species stat block; we only have real
+             per-collector sample counts (no species figure survives the sample → extraction →
+             MS-injection chain), so only the samples half is reproduced. */ -}}
       {{- if gt $count 0 }}
-      <p class="dbgi-collector-card-samples">{{ lang.FormatNumber 0 $count }} samples</p>
+      <p class="dbgi-collector-card-stat">
+        <span class="dbgi-collector-card-stat-number">{{ lang.FormatNumber 0 $count }}</span>
+        <span class="dbgi-collector-card-stat-label">samples</span>
+      </p>
       {{- end }}
     </a>
     {{- end }}

@@ -10,7 +10,7 @@
       <a class="dbgi-back-link" href="/network/"><span aria-hidden="true">←</span> Network</a>
       <div class="row g-4 align-items-end mt-2">
         <div class="col-lg-8">
-          <h1 class="dbgi-h1-page mb-3" style="color: var(--dbgi-dark); font-weight: 800; letter-spacing: -.025em;">{{ .Title }}</h1>
+          <h1 class="dbgi-h1-page mb-3">{{ .Title }}</h1>
           <p class="lead text-secondary mb-0">{{ .Description }}</p>
         </div>
       </div>
@@ -30,20 +30,13 @@
     </div>
   </section>
 
-  <section class="container py-5">
-    <div class="dbgi-gardens-map-panel">
-      <div class="dbgi-gardens-intro">
-        {{ .Content }}
-      </div>
-    </div>
-
+  <section class="container dbgi-gardens-grid-section">
     <div class="dbgi-gardens-list" aria-label="Sampled botanical gardens">
       {{ range $gardens }}
         {{- $gardenStats := index $stats .key | default dict -}}
         {{- $gardenPage := site.GetPage (printf "/gardens/%s" .key) -}}
         {{- $href := $gardenPage.RelPermalink | default (printf "/gardens/%s/" .key) -}}
         {{- $samples := $gardenStats.samples | default 0 -}}
-        {{- $species := $gardenStats.species | default 0 -}}
         {{- $profiled := $gardenStats.profiled_samples | default 0 -}}
         {{- $pct := 0 -}}
         {{- if gt $samples 0 }}{{ $pct = math.Round (div (mul $profiled 100.0) $samples) }}{{ end -}}
@@ -70,12 +63,16 @@
                 </span>
               </span>
               <span class="dbgi-garden-card-bar"><span class="dbgi-garden-card-bar-fill" style="width: {{ $pct }}%;"></span></span>
-              <span class="dbgi-garden-card-species">{{ lang.FormatNumber 0 $species }} species</span>
             </span>
           </span>
         </a>
       {{ end }}
     </div>
+
+    <p class="dbgi-gardens-footnote">
+      <span aria-hidden="true">*</span>
+      <span><span class="dbgi-gardens-footnote-label">Samples analysed</span> is the share of a garden's collected samples that have completed chemical profiling so far.</span>
+    </p>
   </section>
 </div>
 <script src="/js/garden-filter.js"></script>

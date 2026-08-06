@@ -3,6 +3,7 @@ title: Prague Botanical Garden joins the DBGI network
 date: 2025-01-14
 tag: Network
 image_alt: Prague Botanical Garden logo, "Botanická zahrada Praha".
+image_fit: contain
 ---
 
 Prague Botanical Garden has formally joined the DBGI network as its first partner garden in Czechia. Situated across approximately 25 hectares in Prague, the garden maintains around 15,000 cultivated plant species in its outdoor collections and greenhouses, including the Fata Morgana tropical greenhouse.

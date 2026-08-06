@@ -2,6 +2,8 @@
 title: Botanical Garden of the University of Fribourg joins the DBGI network
 date: 2024-01-01
 tag: Network
+image_alt: Logo of the Botanical Garden of the University of Fribourg.
+image_fit: contain
 ---
 
 The <a href="/gardens/fribourg/">Botanical Garden of the University of Fribourg</a> has formally joined the DBGI network, building on its role in the initiative's earliest pilot phase. It provided one of the first living collections in which DBGI's sampling, documentation and traceability workflows could be developed in practice.

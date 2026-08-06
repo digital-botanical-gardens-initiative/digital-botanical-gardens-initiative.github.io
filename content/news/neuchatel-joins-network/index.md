@@ -3,6 +3,7 @@ title: Botanical Garden of Neuchâtel joins the DBGI network
 date: 2023-05-04
 tag: Network
 image_alt: Logo of the Jardin botanique de Neuchâtel (jbn).
+image_fit: contain
 ---
 
 The <a href="/gardens/neuchatel/">Botanical Garden of Neuchâtel</a> has joined the DBGI network, formalising a long-standing collaboration with the <a href="/labs/pgem/">Plant Eco-Metabolomics Group</a> at the University of Neuchâtel.

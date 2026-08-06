@@ -53,3 +53,21 @@ b {
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
+
+// Page-level H1 (news/team/gardens/labs/network index headers, static pages) and the H2 used
+// for homepage section headings. Sized independently from Bootstrap's own $h1/$h2-font-size
+// (the hero uses a larger, separate .dbgi-h1-hero scale) — these were previously undefined
+// classes that only "worked" because every usage happens to sit on a real h1/h2 element.
+.dbgi-h1-page {
+  font-size: clamp(30px, 4.6vw, 54px);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  color: #17230f;
+}
+
+.dbgi-h2-section {
+  font-size: clamp(26px, 3.4vw, 44px);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}

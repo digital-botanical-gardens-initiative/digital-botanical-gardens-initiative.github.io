@@ -96,6 +96,14 @@ nav.navbar > .container-xxl {
   padding: 0 22px;
 }
 
+// The design's search box is a fixed clamp(120px,13vw,180px) pill next to the logo, not a
+// field that stretches across all free space. Hinode wraps it in a `.d-flex.flex-fill` that
+// grows to fill the gap between the brand and the nav links — cap that wrapper's growth so
+// the nav links keep their own `margin-left:auto` positioning.
+.navbar-collapse > .d-flex.flex-fill {
+  flex: 0 1 clamp(120px, 13vw, 180px);
+}
+
 // Search field is a pill in the design, matching the Contact CTA's height.
 .navbar .search-input.form-control {
   background-color: #f5f8f2;

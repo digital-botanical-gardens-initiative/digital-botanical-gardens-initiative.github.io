@@ -5,6 +5,7 @@ tag: Grant
 authors:
 - tito-damiani
 image_alt: Logo of the Czech Science Foundation (Grantová agentura České republiky).
+image_fit: contain
 ---
 
 The Czech Science Foundation (GAČR) has awarded <a href="/team/tito-damiani/">Tito Damiani</a> a Standard Project grant for "Metabolomics-driven discovery of plant chemical novelty and its insecticidal potential" (Project No. 26-21882S). Providing approximately €300,000 from 1 January 2026 to 31 December 2028, the project is based in the <a href="/labs/pluskal-lab/">Pluskal Lab</a> at IOCB Prague.

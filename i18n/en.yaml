@@ -1,0 +1,7 @@
+# Site-level overrides of module translation strings (Hugo layers project i18n
+# over module i18n automatically — this file only needs to list what changes).
+
+# mod-flexsearch default is "Search this site"; the design handoff's nav search
+# pill just reads "Search" (DBGI Website v4.dc.html line 195).
+- id: ui_search
+  translation: "Search"

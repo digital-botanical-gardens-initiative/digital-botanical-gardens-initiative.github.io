@@ -1,21 +1,11 @@
 ---
 title: Stephanie Tamdem Guetchueng
-featured: false
-role: DBGI Contributor - Medicinal Plant Chemistry
+role: Medicinal Plant Chemistry
 organizations:
 - name: University of Fribourg
   url: https://www.unifr.ch/bio/en/
 - name: Institute of Medical Research and Medicinal Plants Studies
   url: https://impm-cm.org/
-bio: Medicinal chemist and Senior Research Officer at the Institute of Medical Research and Medicinal Plants Studies, contributing expertise in phytochemicals and medicinal-plant workflows.
-interests:
-- Medicinal chemistry
-- Medicinal plants
-- Phytochemicals
-- Natural products
-- Anticancer and antimalarial compounds
-user_groups:
-- Contributors
 social:
 - icon: globe
   icon_pack: fas
@@ -31,4 +21,3 @@ aliases:
 - /authors/tamdem_guetchueng_stephanie/
 ---
 
-Stephanie Tamdem Guetchueng contributes to DBGI work on medicinal-plant chemistry, phytochemicals, natural products, and botanical sampling.

@@ -1,19 +1,9 @@
 ---
 title: Tomáš Pluskal
-featured: false
-role: DBGI Contributor - Plant Specialized Metabolites
+role: Plant Specialized Metabolites
 organizations:
 - name: Pluskal Lab, IOCB Prague
   url: https://pluskal.group.uochb.cz/en
-bio: Group leader of the Pluskal Lab at IOCB Prague, focusing on the biochemistry of plant specialized metabolites.
-interests:
-- Plant specialized metabolites
-- Metabolomics
-- Mass spectrometry
-- Bioinformatics
-- Machine learning
-user_groups:
-- Core team
 social:
 - icon: globe
   icon_pack: fas
@@ -35,4 +25,3 @@ aliases:
 - /authors/tomas_pluskal/
 ---
 
-Tomáš Pluskal leads the [Pluskal Lab](https://pluskal.group.uochb.cz/en) at IOCB Prague. The group combines experimental approaches such as mass spectrometry, metabolomics, and RNA-seq with computational approaches including bioinformatics, molecular networking, and machine learning to discover and use bioactive molecules derived from plants.

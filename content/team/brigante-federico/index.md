@@ -1,20 +1,9 @@
 ---
 title: Federico Ivan Brigante
-featured: true
-role: DBGI Contributor - Plant Alkaloid Metabolomics
+role: Plant Alkaloid Metabolomics
 organizations:
 - name: Pluskal Lab, IOCB Prague
   url: https://pluskal.group.uochb.cz/en
-bio: Postdoctoral fellow in the Pluskal Group at IOCB Prague studying plant-specialized metabolism and diterpenoid alkaloid biosynthesis.
-interests:
-- Plant metabolomics
-- Specialized metabolites
-- Diterpenoid alkaloids
-- Biosynthetic pathways
-- Mass spectrometry
-- Transcriptomics
-user_groups:
-- Contributors
 social:
 - icon: globe
   icon_pack: fas
@@ -36,4 +25,3 @@ aliases:
 - /authors/brigante_federico/
 ---
 
-Federico Ivan Brigante is a postdoctoral fellow in the [Pluskal Group](https://pluskal.group.uochb.cz/en) at IOCB Prague. His research focuses on plant-specialized metabolomics and the biosynthesis of diterpenoid alkaloids, combining mass spectrometry, reference genomes, metabolomics, and de novo transcriptomics to identify genes involved in alkaloid structural diversity.

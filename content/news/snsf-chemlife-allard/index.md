@@ -5,6 +5,7 @@ tag: Grant
 authors:
 - allard-pierre-marie
 image_alt: Swiss National Science Foundation logo.
+image_fit: contain
 ---
 
 The Swiss National Science Foundation has awarded "Anticipating the Chemistry of Life" (Grant 10000895) to <a href="/team/allard-pierre-marie/">Pierre-Marie Allard</a> at the University of Fribourg. Beginning on 1 October 2024, the CHF 397,854 project will run until 30 September 2028.

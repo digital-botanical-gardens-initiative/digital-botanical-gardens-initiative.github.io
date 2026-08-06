@@ -1,18 +1,9 @@
 ---
 title: Emilie Lab
-featured: true
-role: DBGI Contributor - Plant Metabolome
+role: Plant Metabolome
 organizations:
 - name: Laboratory of Functional Ecology, University of Neuchatel
   url: https://www.unine.ch/lef/en/
-bio: Laboratory of Functional Ecology contributor at the University of Neuchatel supporting DBGI work on plant-metabolome workflows.
-interests:
-- Plant metabolome
-- Plant sampling
-- Metabolomics
-- Botanical collections
-user_groups:
-- Contributors
 social:
 - icon: globe
   icon_pack: fas
@@ -25,4 +16,3 @@ aliases:
 - /authors/lab_emilie/
 ---
 
-Emilie Lab contributes Laboratory of Functional Ecology expertise from the University of Neuchatel to DBGI work on plant-metabolome and sampling workflows.

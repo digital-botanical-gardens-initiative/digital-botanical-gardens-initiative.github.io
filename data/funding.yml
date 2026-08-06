@@ -56,7 +56,7 @@ funders:
   - key: gacr
     name: Czech Science Foundation
     short_name: GA ČR
-    logo: /img/funders/gacr.svg
+    logo: /img/funders/gacr.jpg
     url: https://gacr.cz/en/
     grants:
       - title: Czech Science Foundation Standard Project 26-21882S

@@ -50,14 +50,16 @@
       {{ range . }}
         {{ with site.GetPage (printf "/team/%s" .) }}
           {{- $avatar := .Resources.GetMatch "avatar.*" -}}
+          {{- $affiliation := "" -}}
+          {{- with .Params.organizations }}{{ $affiliation = (index . 0).name }}{{ end -}}
           <a class="dbgi-lab-contributor" href="{{ .RelPermalink }}">
             <span class="dbgi-lab-contributor-photo">
               {{ with $avatar }}{{ $img := .Fill "264x264 Center" }}
-              <img src="{{ $img.RelPermalink }}" alt="{{ $.Title }}" loading="lazy" width="132" height="132">
+              <img src="{{ $img.RelPermalink }}" alt="{{ .Title }}" loading="lazy" width="132" height="132">
               {{ end }}
             </span>
             <span class="dbgi-lab-contributor-name">{{ .Title }}</span>
-            {{ with .Params.role }}<span class="dbgi-lab-contributor-role">{{ . }}</span>{{ end }}
+            {{ with $affiliation }}<span class="dbgi-lab-contributor-role">{{ . }}</span>{{ end }}
           </a>
         {{ end }}
       {{ end }}

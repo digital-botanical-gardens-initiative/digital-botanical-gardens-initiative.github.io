@@ -1,18 +1,9 @@
 ---
 title: Geoffrey Kite
-featured: false
-role: DBGI Contributor - Phytochemistry
+role: Phytochemistry
 organizations:
 - name: Royal Botanic Gardens, Kew
   url: https://www.kew.org/science
-bio: Royal Botanic Gardens, Kew scientist contributing phytochemistry and botanical-collection expertise.
-interests:
-- Phytochemistry
-- Plant chemistry
-- Botanical collections
-- Natural products
-user_groups:
-- Botanical Gardens
 social:
 - icon: envelope
   icon_pack: fas
@@ -25,4 +16,3 @@ aliases:
 - /authors/kite_geoffrey/
 ---
 
-Geoffrey Kite contributes Royal Botanic Gardens, Kew expertise in phytochemistry, plant chemistry, and botanical collections.

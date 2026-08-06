@@ -1,11 +1,6 @@
 {{- $id := .id -}}
 {{- $class := .class -}}
-{{- $stats := hugo.Data.garden_stats.gardens | default dict -}}
-{{- $gardens := slice -}}
-{{- range hugo.Data.gardens.gardens | default slice -}}
-  {{- $gardenStats := index $stats .key | default dict -}}
-  {{- $gardens = $gardens | append (merge . (dict "samples" ($gardenStats.samples | default 0) "species" ($gardenStats.species | default 0))) -}}
-{{- end -}}
+{{- $gardens := hugo.Data.gardens.gardens | default slice -}}
 {{- $labs := hugo.Data.labs.labs | default slice -}}
 
 <link rel="stylesheet" href="/vendor/leaflet/leaflet.css">
