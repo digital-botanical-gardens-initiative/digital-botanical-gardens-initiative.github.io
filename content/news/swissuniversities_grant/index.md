@@ -2,7 +2,8 @@
 title: swissuniversities Open Research Data grant awarded for the Swiss DBGI-KM
 date: 2023-01-11
 tag: Grant
-image_alt: A researcher working with field equipment on a rooftop at sunset, overlaid with the text "Swiss Open Research Data Grants".
+image_alt: swissuniversities logo.
+image_fit: contain
 aliases:
 - /post/swissuniversities_grant/
 ---

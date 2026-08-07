@@ -36,7 +36,7 @@ Create a production build:
 npm run build
 ```
 
-Netlify also uses `npm run build`.
+Deployment runs on GitHub Pages via the Actions workflow in `.github/workflows/`.
 
 ## Directus-powered garden stats
 

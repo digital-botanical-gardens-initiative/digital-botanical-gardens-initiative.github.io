@@ -288,6 +288,13 @@ try {
     collectors,
   };
 
+  if (existsSync(outputPath)) {
+    const previousTotal = readFileSync(outputPath, "utf8").match(/^total_samples:\s*(\d+)/m);
+    if (previousTotal && stats.totalSamples < Number(previousTotal[1])) {
+      skipOrFail(`total_samples dropped from ${previousTotal[1]} to ${stats.totalSamples}`);
+    }
+  }
+
   writeFileSync(outputPath, renderYaml(stats), "utf8");
   console.log(
     `[collector-stats] Wrote ${outputPath} (${stats.totalSamples} ${projectGroup} samples, ${stats.linkedPeopleSamples} linked People samples, ${stats.distinctNamedCollectors} named collectors)`,

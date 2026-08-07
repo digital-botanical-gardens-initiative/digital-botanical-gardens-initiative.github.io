@@ -19,7 +19,7 @@
       <p class="dbgi-pub-inprep-body">A global, open-science framework for digitising plant chemodiversity in living botanical collections, drawing on more than 7,500 samples collected across five botanical gardens.</p>
     </div>
 
-    {{- range $papers }}
+    {{- range sort $papers "year" "desc" }}
     <a class="dbgi-pub-card" href="https://doi.org/{{ .doi }}" target="_blank" rel="noopener">
       <span class="dbgi-pub-doi">{{ .doi }}</span>
       <div class="dbgi-pub-meta">

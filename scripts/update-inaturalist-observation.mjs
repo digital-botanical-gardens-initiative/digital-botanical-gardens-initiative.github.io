@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import { existsSync, writeFileSync } from "node:fs";
+import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 
 const outputPath = resolve(
@@ -112,6 +112,13 @@ try {
   const total = Number(countPayload.total_results || 0);
   if (!total) {
     skipOrFail(`No iNaturalist observations found for user ${userId}`);
+  }
+
+  if (existsSync(outputPath)) {
+    const previousTotal = readFileSync(outputPath, "utf8").match(/^total_observations:\s*(\d+)/m);
+    if (previousTotal && total < Number(previousTotal[1])) {
+      skipOrFail(`total_observations dropped from ${previousTotal[1]} to ${total}`);
+    }
   }
 
   const dailyIndex = pickDailyPage(total);

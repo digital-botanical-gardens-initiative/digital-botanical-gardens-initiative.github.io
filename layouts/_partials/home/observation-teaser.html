@@ -4,17 +4,17 @@
 <section class="container dbgi-observation-teaser" aria-label="Observation of the day">
   <div class="dbgi-section-header dbgi-section-header-stacked">
     <h2 class="dbgi-h2-section mb-0">Observation of the day</h2>
-    <p class="dbgi-observation-teaser-lead">Straight from the collections, via <a class="dbgi-link" href="https://www.inaturalist.org/" target="_blank" rel="noopener">iNaturalist</a>.</p>
+    <p class="dbgi-observation-teaser-lead">A daily featured DBGI observation from the <a class="dbgi-link" href="https://www.inaturalist.org/projects/digital-botanical-gardens-initiative" target="_blank" rel="noopener">DBGI iNaturalist project</a>.</p>
   </div>
   <div class="dbgi-observation-teaser-card">
-    <a class="dbgi-observation-teaser-media" href="/observation-of-the-day/">
+    <a class="dbgi-observation-teaser-media" href="{{ $observation.uri }}" target="_blank" rel="noopener">
       {{- with $photo.large_url }}
       <img src="{{ . }}" alt="{{ $observation.taxon_name }}" loading="lazy">
       {{- end }}
       <span class="dbgi-observation-teaser-badge"><span class="dbgi-observation-teaser-badge-dot" aria-hidden="true"></span>iNaturalist</span>
     </a>
     <div class="dbgi-observation-teaser-body">
-      <a class="dbgi-observation-teaser-taxon-link" href="/observation-of-the-day/">
+      <a class="dbgi-observation-teaser-taxon-link" href="{{ $observation.uri }}" target="_blank" rel="noopener">
         <p class="dbgi-observation-teaser-taxon">{{ $observation.taxon_name | default "Unidentified observation" }}</p>
         {{- with $observation.common_name }}
         <p class="dbgi-observation-teaser-common">{{ . }}</p>
@@ -30,10 +30,13 @@
         {{- with $observation.observed_on }}
         <div><dt>Date</dt><dd>{{ time.Format "2 January 2006" . }}</dd></div>
         {{- end }}
+        {{- with $observation.external_id }}
+        <div><dt>DBGI ID</dt><dd>{{ . }}</dd></div>
+        {{- end }}
       </dl>
       <div class="dbgi-observation-teaser-ctas">
+        <a class="dbgi-observation-teaser-cta is-white-filled" href="{{ $observation.uri }}" target="_blank" rel="noopener">See today's observation</a>
         <a class="dbgi-observation-teaser-cta is-filled" href="https://www.inaturalist.org/observations/dbgi" target="_blank" rel="noopener">See all observations</a>
-        <a class="dbgi-observation-teaser-cta is-outline" href="https://www.inaturalist.org/projects/digital-botanical-gardens-initiative" target="_blank" rel="noopener">DBGI iNaturalist project</a>
       </div>
     </div>
   </div>

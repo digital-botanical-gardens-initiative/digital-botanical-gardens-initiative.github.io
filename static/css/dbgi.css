@@ -98,27 +98,37 @@ code {
 
 /* Mobile menu toggler: prototype is a bordered 44px pill reading "Menu" / "× Close", not a
    bare icon button. The three bar spans come from Hinode; this just wraps them and appends
-   the label via ::after so the vendored button markup doesn't need overriding. */
-.navbar .main-nav-toggler {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  height: 44px;
-  padding: 0 16px;
-  border: 1px solid rgba(38, 73, 13, .26);
-  border-radius: 12px;
-  background: #fff;
-}
+   the label via ::after so the vendored button markup doesn't need overriding.
+   Scoped below Bootstrap's `md` breakpoint (matches navbar-expand-md, 768px): unscoped, this
+   selector's specificity (0,2,0) ties with `.navbar-expand-md .navbar-toggler{display:none}`
+   and — loading after main.css — wins on source order, permanently canceling that rule and
+   leaving the pill visible at desktop widths too. */
+@media (max-width: 767.98px) {
+  .navbar .main-nav-toggler {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    height: 44px;
+    padding: 0 16px;
+    border: 1px solid rgba(38, 73, 13, .26);
+    border-radius: 12px;
+    background: #fff;
+  }
 
-.navbar .main-nav-toggler::after {
-  content: "Menu";
-  color: #26490d;
-  font-size: 14.5px;
-  font-weight: 700;
-}
+  .navbar .main-nav-toggler::after {
+    content: "Menu";
+    color: #26490d;
+    font-size: 14.5px;
+    font-weight: 700;
+  }
 
-.navbar .main-nav-toggler[aria-expanded="true"]::after {
-  content: "× Close";
+  /* Expanded state: the bars already animate into an X (Hinode's own
+     top-bar/middle-bar/bottom-bar transforms in main.css), so the text label is dropped
+     entirely rather than doubling up with a second "×". `content: none` removes the
+     pseudo-element's box outright, so it doesn't leave a stray gap next to the icon. */
+  .navbar .main-nav-toggler[aria-expanded="true"]::after {
+    content: none;
+  }
 }
 
 .main {
@@ -185,7 +195,7 @@ code {
      which is what pulls the headline further left. */
   max-width: 1280px;
   margin: 0 auto;
-  padding: clamp(28px, 4vw, 56px) clamp(20px, 5vw, 64px);
+  padding: clamp(28px, 4vw, 56px) clamp(20px, 5vw, 64px) clamp(28px, 4vw, 56px) clamp(12px, 3vw, 32px);
 }
 
 .dbgi-hero-banner-copy h1 span {
@@ -720,6 +730,17 @@ code {
   border-color: var(--dbgi-green-deep);
 }
 
+.dbgi-observation-teaser-cta.is-white-filled {
+  border: 1.5px solid rgba(38, 73, 13, .3);
+  background: #fff;
+  color: var(--dbgi-primary);
+}
+
+.dbgi-observation-teaser-cta.is-white-filled:hover {
+  border-color: var(--dbgi-primary);
+  background: rgba(38, 73, 13, .06);
+}
+
 .dbgi-observation-teaser-cta.is-outline {
   border: 1.5px solid rgba(38, 73, 13, .3);
   background: transparent;
@@ -872,6 +893,7 @@ code {
 .dbgi-news-teaser-card-media.is-contain img {
   padding: 10px;
   object-fit: contain;
+  box-sizing: border-box;
 }
 
 .dbgi-news-teaser-card-body {
@@ -1900,6 +1922,7 @@ code {
 .dbgi-news-row-media.is-contain img {
   padding: 10px;
   object-fit: contain;
+  box-sizing: border-box;
 }
 
 .dbgi-news-empty {
@@ -2064,6 +2087,7 @@ code {
   padding: 16px;
   object-fit: contain;
   background: #f5f8f2;
+  box-sizing: border-box;
 }
 
 .dbgi-post-content {

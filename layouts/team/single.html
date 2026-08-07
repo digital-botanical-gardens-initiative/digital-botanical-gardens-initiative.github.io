@@ -5,7 +5,7 @@
 {{ range $social }}{{ if eq .icon "orcid" }}{{ $orcid = .link }}{{ end }}{{ end }}
 {{ $otherSocial := where $social "icon" "ne" "orcid" }}
 <div class="container dbgi-person-page">
-  <a class="dbgi-back-link" href="/team/"><span aria-hidden="true">←</span> Contributors</a>
+  <a class="dbgi-back-link" href="/network/"><span aria-hidden="true">←</span> Network</a>
   <div class="dbgi-person-hero">
     <div class="dbgi-person-photo">
       {{ with $avatar }}
