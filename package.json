@@ -6,11 +6,12 @@
   "scripts": {
     "data:gardens": "node scripts/update-garden-stats.mjs",
     "data:collectors": "node scripts/update-collector-stats.mjs",
+    "data:coverage": "node scripts/update-taxonomic-coverage.mjs",
     "data:inaturalist": "node scripts/update-inaturalist-observation.mjs",
     "prestart": "npm run -s mod:vendor",
     "start": "hugo server --bind=0.0.0.0 --disableFastRender --printI18nWarnings",
     "start:prod": "npm run -s prestart  && hugo server --bind=0.0.0.0 --disableFastRender --printI18nWarnings -e production",
-    "prebuild": "npm run -s data:gardens && npm run -s data:inaturalist && npm run clean:public && npm run -s mod:vendor",
+    "prebuild": "npm run -s data:gardens && npm run -s data:collectors && npm run -s data:coverage && npm run -s data:inaturalist && npm run clean:public && npm run -s mod:vendor",
     "build": "hugo --gc --minify",
     "build:cache": "npm run -s prebuild && hugo config | grep cachedir && hugo --gc --minify -e ci",
     "build:debug": "hugo -e debug --debug",

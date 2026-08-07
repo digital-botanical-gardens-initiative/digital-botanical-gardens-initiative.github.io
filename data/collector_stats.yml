@@ -1,63 +1,235 @@
-generated_at: "2026-08-05T06:32:34.601Z"
-source: Directus Field_Data via directus-explorer
+generated_at: "2026-08-06T22:29:33.580Z"
+source: Directus Field_Data collector_ref via directus-explorer
+project_group: "dbgi"
+total_samples: 7323
+named_samples: 6698
+linked_people_samples: 0
+unlinked_named_samples: 6698
+missing_collector_samples: 625
+distinct_named_collectors: 21
 collectors:
-  "Alexandra Slotte":
-    collected_samples: 4
-  "Alicia Requena":
-    collected_samples: 110
-  "Alžběta Kadlecová":
-    collected_samples: 5
-  "Ana Claudia Sima":
-    collected_samples: 14
-  "Anna Maliukova":
-    collected_samples: 186
-  "Chloé Blanc":
-    collected_samples: 10
-  "Davide Rovelli":
-    collected_samples: 184
-  "Disha Tandon":
-    collected_samples: 19
-  "Donat Agosti":
-    collected_samples: 21
-  "Edouard Brülhart":
-    collected_samples: 44
-  "Emilie Lab":
-    collected_samples: 34
-  "Émilie Lab":
-    collected_samples: 710
-  "Emmanuel Defossez":
+  -
+    full_name: "Mazzarine Laboureau"
+    collected_samples: 2047
+    share: 0.27953
+    source: "field_data"
+    collector_ref_id: ""
+    team_slug: "laboureau-mazzarine"
+    team_title: "Mazzarine Laboureau"
+    team_match_score: 1
+  -
+    full_name: "Edouard Brülhart"
+    collected_samples: 880
+    share: 0.120169
+    source: "field_data"
+    collector_ref_id: ""
+    team_slug: "bruelhart-edouard"
+    team_title: "Edouard Brüelhart"
+    team_match_score: 0.941176
+  -
+    full_name: "Émilie Lab"
+    collected_samples: 744
+    share: 0.101598
+    source: "field_data"
+    collector_ref_id: ""
+    team_slug: "lab-emilie"
+    team_title: "Emilie Lab"
+    team_match_score: 1
+  -
+    full_name: "Kateřina Kučerová"
     collected_samples: 722
-  "Federico Brigante":
-    collected_samples: 299
-  "Héloïse Coen":
-    collected_samples: 225
-  "Jade Dandois":
-    collected_samples: 94
-  "James Smith":
-    collected_samples: 15
-  "Kateřina Kučerová":
-    collected_samples: 722
-  "Lab Emilie":
-    collected_samples: 86
-  "Lise Lebrun":
-    collected_samples: 18
-  "Loic Chalmandrier":
-    collected_samples: 220
-  "Lysandre Journiac":
-    collected_samples: 267
-  "Maëlle Wannier":
-    collected_samples: 30
-  "Marco Andreas Stanley Visani":
-    collected_samples: 17
-  "Mazzarine laboureau":
-    collected_samples: 243
-  "Mazzarine Laboureau":
-    collected_samples: 2506
-  "Pierre-Marie Allard":
-    collected_samples: 41
-  "Simon Rérat":
+    share: 0.098593
+    source: "field_data"
+    collector_ref_id: ""
+    team_slug: "kucerova-katerina"
+    team_title: "Kateřina Kučerová"
+    team_match_score: 1
+  -
+    full_name: "Héloïse Coen"
+    collected_samples: 636
+    share: 0.08685
+    source: "field_data"
+    collector_ref_id: ""
+    team_slug: "coen-heloise"
+    team_title: "Héloïse Coen"
+    team_match_score: 1
+  -
+    full_name: "Lëndita Schwegler"
+    collected_samples: 326
+    share: 0.044517
+    source: "field_data"
+    collector_ref_id: ""
+    team_slug: ""
+    team_title: ""
+    team_match_score: 0
+  -
+    full_name: "Simon Rérat"
     collected_samples: 308
-  "Tito Damiani":
-    collected_samples: 5
-  "Tomáš Iliaš":
+    share: 0.042059
+    source: "field_data"
+    collector_ref_id: ""
+    team_slug: ""
+    team_title: ""
+    team_match_score: 0
+  -
+    full_name: "Federico Brigante"
+    collected_samples: 299
+    share: 0.04083
+    source: "field_data"
+    collector_ref_id: ""
+    team_slug: "brigante-federico"
+    team_title: "Federico Ivan Brigante"
+    team_match_score: 0.92
+  -
+    full_name: "Anna Maliukova"
+    collected_samples: 185
+    share: 0.025263
+    source: "field_data"
+    collector_ref_id: ""
+    team_slug: "maliukova-anna"
+    team_title: "Anna Maliukova"
+    team_match_score: 1
+  -
+    full_name: "Davide Rovelli"
+    collected_samples: 184
+    share: 0.025126
+    source: "field_data"
+    collector_ref_id: ""
+    team_slug: "rovelli-davide"
+    team_title: "Davide Rovelli"
+    team_match_score: 1
+  -
+    full_name: "Alicia Requena"
+    collected_samples: 110
+    share: 0.015021
+    source: "field_data"
+    collector_ref_id: ""
+    team_slug: ""
+    team_title: ""
+    team_match_score: 0
+  -
+    full_name: "Jade Dandois"
+    collected_samples: 94
+    share: 0.012836
+    source: "field_data"
+    collector_ref_id: ""
+    team_slug: ""
+    team_title: ""
+    team_match_score: 0
+  -
+    full_name: "Tomáš Iliaš"
     collected_samples: 50
+    share: 0.006828
+    source: "field_data"
+    collector_ref_id: ""
+    team_slug: ""
+    team_title: ""
+    team_match_score: 0
+  -
+    full_name: "Audrey Le Cabec"
+    collected_samples: 38
+    share: 0.005189
+    source: "field_data"
+    collector_ref_id: ""
+    team_slug: "le-cabec-audrey"
+    team_title: "Audrey Le Cabec"
+    team_match_score: 1
+  -
+    full_name: "Emmanuel Defossez"
+    collected_samples: 26
+    share: 0.00355
+    source: "field_data"
+    collector_ref_id: ""
+    team_slug: "defossez-emmanuel"
+    team_title: "Emmanuel Defossez"
+    team_match_score: 1
+  -
+    full_name: "Clement Duckert"
+    collected_samples: 18
+    share: 0.002458
+    source: "field_data"
+    collector_ref_id: ""
+    team_slug: ""
+    team_title: ""
+    team_match_score: 0
+  -
+    full_name: "Pierre-Marie Allard"
+    collected_samples: 12
+    share: 0.001639
+    source: "field_data"
+    collector_ref_id: ""
+    team_slug: "allard-pierre-marie"
+    team_title: "Pierre-Marie Allard"
+    team_match_score: 1
+  -
+    full_name: "Alžběta Kadlecová"
+    collected_samples: 5
+    share: 0.000683
+    source: "field_data"
+    collector_ref_id: ""
+    team_slug: "kadlecova-alzbeta"
+    team_title: "Alžběta Kadlecová"
+    team_match_score: 1
+  -
+    full_name: "Stephanie Tandem Guetchueng"
+    collected_samples: 5
+    share: 0.000683
+    source: "field_data"
+    collector_ref_id: ""
+    team_slug: "tamdem-guetchueng-stephanie"
+    team_title: "Stephanie Tamdem Guetchueng"
+    team_match_score: 0.962963
+  -
+    full_name: "Tito Damiani"
+    collected_samples: 5
+    share: 0.000683
+    source: "field_data"
+    collector_ref_id: ""
+    team_slug: "tito-damiani"
+    team_title: "Tito Damiani"
+    team_match_score: 1
+  -
+    full_name: "Alexandra Slotte"
+    collected_samples: 4
+    share: 0.000546
+    source: "field_data"
+    collector_ref_id: ""
+    team_slug: ""
+    team_title: ""
+    team_match_score: 0
+unmatched_collectors:
+  -
+    full_name: "Lëndita Schwegler"
+    collected_samples: 326
+    source: "field_data"
+    collector_ref_id: ""
+  -
+    full_name: "Simon Rérat"
+    collected_samples: 308
+    source: "field_data"
+    collector_ref_id: ""
+  -
+    full_name: "Alicia Requena"
+    collected_samples: 110
+    source: "field_data"
+    collector_ref_id: ""
+  -
+    full_name: "Jade Dandois"
+    collected_samples: 94
+    source: "field_data"
+    collector_ref_id: ""
+  -
+    full_name: "Tomáš Iliaš"
+    collected_samples: 50
+    source: "field_data"
+    collector_ref_id: ""
+  -
+    full_name: "Clement Duckert"
+    collected_samples: 18
+    source: "field_data"
+    collector_ref_id: ""
+  -
+    full_name: "Alexandra Slotte"
+    collected_samples: 4
+    source: "field_data"
+    collector_ref_id: ""
