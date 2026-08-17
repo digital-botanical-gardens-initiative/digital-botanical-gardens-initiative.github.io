@@ -74,6 +74,8 @@ jobs:
         run: npm run build
         env:
           DBGI_REQUIRE_DIRECTUS_STATS: true
+          DBGI_REQUIRE_INATURALIST_OBSERVATION: true
+          DBGI_REQUIRE_TAXONOMIC_COVERAGE: true
           DIRECTUS_EXPLORER_DIR: directus-explorer
           DIRECTUS_INSTANCE: ${{ secrets.DIRECTUS_INSTANCE }}
           DIRECTUS_USERNAME: ${{ secrets.DIRECTUS_USERNAME }}

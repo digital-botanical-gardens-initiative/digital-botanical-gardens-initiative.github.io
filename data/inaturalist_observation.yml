@@ -1,18 +1,18 @@
-generated_at: "2026-08-06T22:00:35.668Z"
+generated_at: "2026-08-07T11:22:56.951Z"
 source: "iNaturalist observations by DBGI"
-api_url: "https://api.inaturalist.org/v1/observations?user_id=dbgi&per_page=1&page=1517&order=asc&order_by=created_at"
+api_url: "https://api.inaturalist.org/v1/observations?user_id=dbgi&per_page=1&page=1518&order=asc&order_by=created_at"
 user: "dbgi"
 total_observations: 3831
-daily_index: 1517
+daily_index: 1518
 observation:
-  id: 310291358
-  uri: "https://www.inaturalist.org/observations/310291358"
-  taxon_name: "Rhododendron williamsianum"
-  taxon_url: "https://www.inaturalist.org/taxa/985123"
-  common_name: ""
+  id: 310291587
+  uri: "https://www.inaturalist.org/observations/310291587"
+  taxon_name: "Hylotelephium anacampseros"
+  taxon_url: "https://www.inaturalist.org/taxa/507514"
+  common_name: "Love-restoring Stonecrop"
   rank: "species"
   observed_on: "2025-05-26"
-  observed_on_string: "2025-05-26 18:57:25+02:00"
+  observed_on_string: "2025-05-26 18:59:28+02:00"
   place_guess: "Entremont, CH-VS, CH"
   description: "Original observer: @mazzarinel"
   quality_grade: "casual"
@@ -21,18 +21,18 @@ observation:
   collector: "Mazzarine Laboureau"
   collector_inat: "@mazzarinel"
   collector_orcid: "0009-0006-7011-4195"
-  external_id: "dbgi_006947"
+  external_id: "dbgi_006938"
   original_taxon: ""
   photo:
-    square_url: "https://inaturalist-open-data.s3.amazonaws.com/photos/560000454/square.jpg"
-    medium_url: "https://inaturalist-open-data.s3.amazonaws.com/photos/560000454/medium.jpg"
-    large_url: "https://inaturalist-open-data.s3.amazonaws.com/photos/560000454/large.jpg"
+    square_url: "https://inaturalist-open-data.s3.amazonaws.com/photos/560000801/square.jpg"
+    medium_url: "https://inaturalist-open-data.s3.amazonaws.com/photos/560000801/medium.jpg"
+    large_url: "https://inaturalist-open-data.s3.amazonaws.com/photos/560000801/large.jpg"
     attribution: "no rights reserved"
     license_code: "cc0"
     width: 1080
     height: 1920
   tags:
-    - "emi_external_id:dbgi_006947"
+    - "emi_external_id:dbgi_006938"
     - "emi_project:dbgi_jbc"
     - "emi_collector:Mazzarine Laboureau"
     - "emi_collector_inat:@mazzarinel"

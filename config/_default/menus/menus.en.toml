@@ -10,7 +10,7 @@
   weight = 20
 
 [[main]]
-  name = "Vision & Goals"
+  name = "Vision & goals"
   pageRef = "/about/vision-goals/"
   parent = "about"
   weight = 20
@@ -72,7 +72,7 @@
 [[social]]
   name = "GitHub"
   pre = "fab fa-github"
-  url = "https://github.com/digital-botanical-gardens-initiative"
+  url = "https://github.com/digital-botanical-gardens-initiative/digital-botanical-gardens-initiative.github.io"
   weight = 10
 
 [[social]]

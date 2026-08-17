@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import { spawnSync } from "node:child_process";
-import { existsSync, writeFileSync } from "node:fs";
+import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 
 const directusExplorerDir = resolve(
@@ -92,6 +92,21 @@ function yamlString(value) {
   return JSON.stringify(value);
 }
 
+function extractTotals(text) {
+  const block = text.match(/totals:\n([\s\S]*?)\ngardens:/);
+  if (!block) return null;
+
+  const samples = block[1].match(/samples:\s*(\d+)/);
+  const species = block[1].match(/species:\s*(\d+)/);
+  const profiledSamples = block[1].match(/profiled_samples:\s*(\d+)/);
+
+  return {
+    samples: samples ? Number(samples[1]) : null,
+    species: species ? Number(species[1]) : null,
+    profiledSamples: profiledSamples ? Number(profiledSamples[1]) : null,
+  };
+}
+
 function renderYaml(stats) {
   const lines = [
     `generated_at: ${yamlString(stats.generatedAt)}`,
@@ -176,6 +191,21 @@ print(json.dumps({"species": summary.collected_count}))
       ]),
     ),
   };
+
+  if (existsSync(outputPath)) {
+    const previous = extractTotals(readFileSync(outputPath, "utf8"));
+    if (previous?.samples != null && stats.totals.samples < previous.samples) {
+      skipOrFail(`totals.samples dropped from ${previous.samples} to ${stats.totals.samples}`);
+    }
+    if (previous?.species != null && stats.totals.species < previous.species) {
+      skipOrFail(`totals.species dropped from ${previous.species} to ${stats.totals.species}`);
+    }
+    if (previous?.profiledSamples != null && stats.totals.profiledSamples < previous.profiledSamples) {
+      skipOrFail(
+        `totals.profiled_samples dropped from ${previous.profiledSamples} to ${stats.totals.profiledSamples}`,
+      );
+    }
+  }
 
   writeFileSync(outputPath, renderYaml(stats), "utf8");
   console.log(`[garden-stats] Wrote ${outputPath}`);

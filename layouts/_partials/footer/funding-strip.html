@@ -5,7 +5,7 @@
   <div class="dbgi-footer-funder-logos">
     {{- range $funders }}
     <a href="{{ .url }}" target="_blank" rel="noopener" aria-label="{{ .name }}">
-      <img src="{{ .logo }}" alt="{{ .name }}">
+      <img src="{{ .logo }}" alt="{{ .name }}"{{ with .logo_width }} style="width: {{ . }}px;"{{ end }}>
     </a>
     {{- end }}
   </div>

@@ -3,6 +3,7 @@ funders:
     name: Swiss National Science Foundation
     short_name: SNSF
     logo: /img/funders/snsf.svg
+    logo_width: 118
     url: https://www.snf.ch/en
     grants:
       - title: "MetaDiv: Ecological and Evolutionary drivers of phytochemical diversity"
@@ -42,6 +43,7 @@ funders:
     name: swissuniversities
     short_name: swissuniversities
     logo: /img/funders/swissuniversities.svg
+    logo_width: 150
     url: https://www.swissuniversities.ch/
     grants:
       - title: Knowledge Management in the Swiss Digital Botanical Gardens Initiative
@@ -57,6 +59,7 @@ funders:
     name: Czech Science Foundation
     short_name: GA ČR
     logo: /img/funders/gacr.jpg
+    logo_width: 88
     url: https://gacr.cz/en/
     grants:
       - title: Czech Science Foundation Standard Project 26-21882S

@@ -118,7 +118,6 @@
       {{- with $rep }}
       {{- with site.GetPage (printf "/team/%s" .) }}
       {{- $avatar := .Resources.GetMatch "avatar.*" }}
-      {{- $gardenPage := site.GetPage (printf "/gardens/%s" $garden.key) }}
       <a class="dbgi-people-card" href="{{ .RelPermalink }}">
         <div class="dbgi-people-card-photo">
           {{- with $avatar }}
@@ -128,7 +127,7 @@
         </div>
         <div class="dbgi-people-card-body">
           <div class="dbgi-people-card-name">{{ .Title }}</div>
-          <div class="dbgi-people-card-role"><a href="{{ $gardenPage.RelPermalink | default (printf "/gardens/%s/" $garden.key) }}" style="color: inherit; text-decoration: none;">{{ $garden.name }}</a></div>
+          <div class="dbgi-people-card-role">{{ $garden.name }}</div>
         </div>
       </a>
       {{- end }}

@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import { existsSync, writeFileSync } from "node:fs";
+import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 
 const sourceUrl = process.env.DBGI_TAXONOMIC_COVERAGE_URL
@@ -60,6 +60,19 @@ function parseDate(text) {
   return parsed.toISOString().slice(0, 10);
 }
 
+function parsePreviousRows(text) {
+  const pattern = /-\s+label:\s*(\S+)\s*\n\s*covered:\s*(\d+)\s*\n\s*total:\s*(\d+)/g;
+  const rows = new Map();
+  let match = pattern.exec(text);
+
+  while (match) {
+    rows.set(match[1], { covered: Number(match[2]), total: Number(match[3]) });
+    match = pattern.exec(text);
+  }
+
+  return rows;
+}
+
 function parseRows(text) {
   const rowPattern = /^-\s+Plant\s+(orders|families|genera|species):\s+([\d,]+)\s*\/\s*([\d,]+)\s+\(([\d.]+)%\)/gim;
   const rows = [];
@@ -113,6 +126,18 @@ try {
   const rows = parseRows(text);
   if (rows.length !== 4 || rows.some((row) => !row.covered || !row.total)) {
     skipOrFail(`Could not parse four non-zero coverage rows from ${sourceUrl}`);
+  }
+
+  if (existsSync(outputPath)) {
+    const previousRows = parsePreviousRows(readFileSync(outputPath, "utf8"));
+    for (const row of rows) {
+      const previous = previousRows.get(row.label);
+      if (previous && (row.covered < previous.covered || row.total < previous.total)) {
+        skipOrFail(
+          `${row.label} coverage dropped (covered ${previous.covered}->${row.covered}, total ${previous.total}->${row.total})`,
+        );
+      }
+    }
   }
 
   writeFileSync(
