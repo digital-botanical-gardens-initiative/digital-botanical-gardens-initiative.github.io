@@ -44,7 +44,6 @@ labs:
       - defossez-emmanuel
     members:
       - glauser-gaetan
-      - lab-emilie
       - laboureau-mazzarine
       - lebrun-lise
       - tandon-disha
@@ -85,6 +84,8 @@ labs:
       - Evolutionary ecology
     head:
       - rasmann-sergio
+    members:
+      - lab-emilie
 
   - name: Knowledge Representation Unit
     short_name: SIB KTU
