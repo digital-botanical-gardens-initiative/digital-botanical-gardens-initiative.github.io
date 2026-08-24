@@ -2,7 +2,8 @@
 title: 'Flore-Alpe, Champex-Lac joins the DBGI network'
 date: 2025-05-15
 tag: Network
-image_alt: Alpine footpath through wildflowers at Flore-Alpe, Champex-Lac, with mountains and a lake in the background.
+image_alt: Flore-Alpe, Champex-Lac logo.
+image_fit: contain
 ---
 
 Flore-Alpe, the alpine botanical garden at Champex-Lac, has joined the DBGI network, adding the initiative's first botanical collection dedicated specifically to alpine plants.
