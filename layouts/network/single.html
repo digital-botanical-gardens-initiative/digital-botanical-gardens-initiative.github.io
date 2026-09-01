@@ -69,7 +69,6 @@
   <section id="governance" class="dbgi-network-section" style="padding-bottom: clamp(44px, 5.5vw, 68px);">
     <div class="dbgi-network-section-header">
       <h2>Governance</h2>
-      <span>People steering and coordinating the Initiative</span>
     </div>
     <div class="dbgi-people-grid">
       {{- range $govMembers }}
@@ -86,7 +85,6 @@
         </div>
         <div class="dbgi-people-card-body">
           <div class="dbgi-people-card-name">{{ .Title }}</div>
-          {{- with .Params.role }}<div class="dbgi-people-card-role">{{ . }}</div>{{ end }}
           {{- with $org }}<div class="dbgi-people-card-org">{{ . }}</div>{{ end }}
         </div>
       </a>
@@ -98,7 +96,6 @@
   <section class="dbgi-network-section" style="padding-bottom: clamp(56px, 7vw, 88px);">
     <div class="dbgi-network-section-header">
       <h2>Garden Living Collections</h2>
-      <span>One representative per partner garden</span>
     </div>
     <div class="dbgi-people-grid">
       {{- /* Card order matches the prototype's hardcoded order (kew, fribourg, neuchatel,

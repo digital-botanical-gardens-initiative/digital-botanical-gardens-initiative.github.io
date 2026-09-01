@@ -72,7 +72,7 @@
 [[social]]
   name = "GitHub"
   pre = "fab fa-github"
-  url = "https://github.com/digital-botanical-gardens-initiative/digital-botanical-gardens-initiative.github.io"
+  url = "https://github.com/digital-botanical-gardens-initiative"
   weight = 10
 
 [[social]]

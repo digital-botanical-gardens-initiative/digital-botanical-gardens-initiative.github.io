@@ -27,6 +27,14 @@
   --bs-btn-hover-border-color: #26490d;
 }
 
+// Hero's "See the network" button sits on a photo background and needs a solid white fill,
+// unlike other btn-outline-primary uses (e.g. team page social icons) which stay transparent.
+.dbgi-hero-actions .btn-outline-primary {
+  --bs-btn-bg: #fff;
+  --bs-btn-hover-bg: #fff;
+  --bs-btn-active-bg: #fff;
+}
+
 // Hinode's components/_button.scss adds `margin: $spacer * .25` to anchor buttons. The design
 // has no such margin, and it visibly disagrees with the `gap-2` button rows on the homepage.
 a.btn {

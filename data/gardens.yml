@@ -69,6 +69,9 @@ gardens:
       - Collection workflows
     contacts:
       - rybka-vlastimil
+    members:
+      - bortl-ludvik
+      - rihova-gabriela
 
   - name: Royal Botanic Gardens, Kew
     key: kew
@@ -92,4 +95,6 @@ gardens:
       - jan-smith-eliot
       - kite-geoffrey
       - martel-carlos
+      - pickering-tom
+      - ribera-tort-arnau
       - williams-china
