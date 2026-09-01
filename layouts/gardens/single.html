@@ -15,10 +15,15 @@
 {{- range $garden.contacts }}{{ $people = $people | append . }}{{ end -}}
 {{- range $garden.members }}{{ $people = $people | append . }}{{ end -}}
 {{- $people = uniq $people -}}
+{{- /* Opt-in per garden: only rendered when a "logo.*" page resource exists. */ -}}
+{{- $logo := .Resources.GetMatch "logo.*" -}}
 
 <div class="dbgi-garden-detail">
   <section class="dbgi-garden-detail-head">
     <a class="dbgi-back-link" href="/gardens/"><span aria-hidden="true">←</span> Botanical gardens</a>
+    {{- with $logo }}
+    <img class="dbgi-garden-detail-logo" src="{{ (.Fit "480x300").RelPermalink }}" alt="{{ $garden.name }} logo">
+    {{- end }}
     <h1 class="dbgi-h1-page">{{ $garden.name }}</h1>
     <p class="dbgi-garden-detail-place">{{ $garden.city }}, {{ $garden.country }}</p>
   </section>
